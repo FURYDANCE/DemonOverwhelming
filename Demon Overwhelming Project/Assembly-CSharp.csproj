@@ -56,25 +56,31 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\Button_Sprite.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_Sprite.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Bar.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Assets.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_Bar.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_BarMultiple.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Mesh.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\UtilsClass.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\CMDebug.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\Button_UI.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Mesh.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionTimer.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Sprite.cs" />
-    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_Sprite.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_TextComplex.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\Button_Sprite.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Assets.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\UtilsClass.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_Bar.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_BarMultiple.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\CMDebug.cs" />
+    <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionPeriodic.cs" />
+    <Compile Include="Assets\_Scripts\CameraScripts\FaceToCamera.cs" />
+    <Compile Include="Assets\_Scripts\CameraScripts\CameraBoundCaculate.cs" />
+    <Compile Include="Assets\_Scripts\UIScripts\_TriggerEventManager.cs" />
+    <Compile Include="Assets\_Scripts\UIScripts\_EventManager.cs" />
+    <Compile Include="Assets\_Scripts\UIScripts\BattleUiEventManager.cs" />
+    <Compile Include="Assets\_Scripts\Managers\SceneObjectsManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Tools\CodeMonkey\README.txt" />
@@ -701,8 +707,14 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -766,6 +778,9 @@
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
