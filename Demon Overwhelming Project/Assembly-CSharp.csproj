@@ -56,34 +56,59 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Managers\SceneObjectsManager.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\Button_UI.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
+    <Compile Include="Assets\Scripts\SystemScripts\ConstantStrings.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Bar.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\_EventManager.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionTimer.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_Sprite.cs" />
+    <Compile Include="Assets\Scripts\CameraScripts\FaceToCamera.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\BattleUiEventManager.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_TextComplex.cs" />
+    <Compile Include="Assets\Scripts\UIScripts\_TriggerEventManager.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\Button_Sprite.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Assets.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Sprite.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UtilsClass.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\PositionRendererSorter.cs" />
+    <Compile Include="Assets\Tools\Loaclization\LocaleSelecter.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_Bar.cs" />
+    <Compile Include="Assets\Scripts\Managers\BattleManager.cs" />
+    <Compile Include="Assets\Scripts\CameraScripts\CameraBoundCaculate.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\CMDebug.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\_Scripts\CameraScripts\FaceToCamera.cs" />
-    <Compile Include="Assets\_Scripts\CameraScripts\CameraBoundCaculate.cs" />
-    <Compile Include="Assets\_Scripts\UIScripts\_TriggerEventManager.cs" />
-    <Compile Include="Assets\_Scripts\UIScripts\_EventManager.cs" />
-    <Compile Include="Assets\_Scripts\UIScripts\BattleUiEventManager.cs" />
-    <Compile Include="Assets\_Scripts\Managers\SceneObjectsManager.cs" />
+    <Compile Include="Assets\Scripts\SystemScripts\Enums.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Tools\CodeMonkey\README.txt" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Tools\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -337,6 +362,9 @@
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>E:\unity\EDITER\2021.3.20f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -707,17 +735,11 @@
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    <Reference Include="UnityEditor.CacheServer">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.CacheServer.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -731,8 +753,11 @@
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    <Reference Include="Unity.Addressables">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Localization">
+      <HintPath>Library\ScriptAssemblies\Unity.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -749,11 +774,14 @@
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>Library\ScriptAssemblies\Unity.ResourceManager.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -764,23 +792,47 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
+    <Reference Include="Unity.VisualScripting.Core">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Localization.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Localization.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Shared.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Addressables.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ScriptableBuildPipeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.State">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
