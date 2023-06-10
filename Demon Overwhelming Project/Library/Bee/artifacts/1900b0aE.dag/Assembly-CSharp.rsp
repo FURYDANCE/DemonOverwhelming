@@ -116,6 +116,8 @@
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/Scripts/ExcelScripts/ExcelResolutionForUnity/Excel.dll"
+-r:"Assets/Scripts/ExcelScripts/ExcelResolutionForUnity/ICSharpCode.SharpZipLib.dll"
 -r:"E:/unity/EDITER/2021.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"E:/unity/EDITER/2021.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
 -r:"E:/unity/EDITER/2021.3.20f1/Editor/Data/Managed/UnityEngine/UnityEditor.DiagnosticsModule.dll"
@@ -360,8 +362,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/CameraScripts/CameraBoundCaculate.cs"
 "Assets/Scripts/CameraScripts/FaceToCamera.cs"
+"Assets/Scripts/DialogScripts/PlotsData.cs"
+"Assets/Scripts/ExcelScripts/BuildAssetsByExcel.cs"
+"Assets/Scripts/ExcelScripts/ExcelAccess.cs"
+"Assets/Scripts/ExcelScripts/ExcelDataManager.cs"
 "Assets/Scripts/Managers/BattleManager.cs"
 "Assets/Scripts/Managers/SceneObjectsManager.cs"
+"Assets/Scripts/Mono/Entity.cs"
+"Assets/Scripts/ScriptableObjectScript/MaterialObject.cs"
 "Assets/Scripts/SystemScripts/ConstantStrings.cs"
 "Assets/Scripts/SystemScripts/Enums.cs"
 "Assets/Scripts/UIScripts/BattleUiEventManager.cs"

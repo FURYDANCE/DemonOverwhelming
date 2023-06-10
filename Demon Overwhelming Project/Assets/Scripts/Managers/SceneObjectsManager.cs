@@ -8,6 +8,8 @@ using Cinemachine;
 /// </summary>
 public class SceneObjectsManager : MonoBehaviour
 {
+    [Header("可能被调用的材质的数据集合")]
+    public MaterialObject materialObject;
     [Header("相机")]
     [SerializeField]
     private CinemachineVirtualCamera camera;
@@ -60,5 +62,8 @@ public class SceneObjectsManager : MonoBehaviour
         L = cameraBound_Left;
         R = cameraBound_Right;
     }
-   
+    public void _Test()
+    {
+        Debug.Log("114514");
+    }
 }

@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16aaf5539441f8142a85868f8264b873, type: 3}
+  m_Name: PlotsDatas
+  m_EditorClassIdentifier: 
+  plotsData:
+  - id: 1000001
+    content_cn: "\u6211\u7684\u540D\u5B57\u662F\u6076\u9B54\u9886\u4E3B"
+    isLast: 0
+    left_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u6076\u9B54\u9886\u4E3B"
+    right_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u5438\u8840\u9B3C"
+    event_1: 0
+    event_2: 0
+    event_3: 0
+    event_4: 0
+    haveOption: 0
+    optionContent_1: 0
+    optionContent_2: 0
+    option_1_targetId: 0
+    option_2_targetId: 0
+  - id: 1000002
+    content_cn: "\u5E74\u9F8433\u5C81"
+    isLast: 0
+    left_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u6076\u9B54\u9886\u4E3B"
+    right_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u5438\u8840\u9B3C"
+    event_1: 0
+    event_2: 0
+    event_3: 0
+    event_4: 0
+    haveOption: 0
+    optionContent_1: 0
+    optionContent_2: 0
+    option_1_targetId: 0
+    option_2_targetId: 0
+  - id: 1000003
+    content_cn: "\u5BB6\u4F4F\u5728\u5730\u72F1\u5317\u90E8"
+    isLast: 0
+    left_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u6076\u9B54\u9886\u4E3B"
+    right_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u9ED1\u6697\u795E\u5B98"
+    event_1: 0
+    event_2: 0
+    event_3: 0
+    event_4: 0
+    haveOption: 1
+    optionContent_1: "\u8D76\u7D27\u70B8\u5427"
+    optionContent_2: "\u4F60\u5728\u8BF4\u4EC0\u4E48\u554A\uFF01"
+    option_1_targetId: 1000006
+    option_2_targetId: 1000004
+  - id: 1000004
+    content_cn: "\u4E0D\u62BD\u70DF\uFF0C\u9152\u4E5F\u6D45\u5C1D\u5373\u6B62"
+    isLast: 0
+    left_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u6076\u9B54\u9886\u4E3B"
+    right_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u9ED1\u6697\u795E\u5B98"
+    event_1: 0
+    event_2: 0
+    event_3: 0
+    event_4: 0
+    haveOption: 0
+    optionContent_1: 0
+    optionContent_2: 0
+    option_1_targetId: 0
+    option_2_targetId: 0
+  - id: 1000005
+    content_cn: "\u6BCF\u5929\u53BB\u5F81\u670D\u4E00\u4E2A\u4E16\u754C\uFF0C\u533B\u751F\u90FD\u8BF4\u6211\u5F88\u5065\u5EB7"
+    isLast: 0
+    left_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u6076\u9B54\u9886\u4E3B"
+    right_stand: "\u7ACB\u7ED8-\u770B\u677F\u5A18-\u9B54\u5973\u8428\u66FC\u838E"
+    event_1: 0
+    event_2: 0
+    event_3: 0
+    event_4: 0
+    haveOption: 0
+    optionContent_1: 0
+    optionContent_2: 0
+    option_1_targetId: 0
+    option_2_targetId: 0
+  - id: 1000006
+    content_cn: "\u6211\u53EA\u60F3\u544A\u8BC9\u4F60\u6211\u60F3\u8FFD\u6C42\u5E73\u9759\u7684\u751F\u6D3B"
+    isLast: 0
+    left_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u6076\u9B54\u9886\u4E3B"
+    right_stand: "\u7ACB\u7ED8-\u770B\u677F\u5A18-\u9B54\u5973\u8428\u66FC\u838E"
+    event_1: 0
+    event_2: 0
+    event_3: 0
+    event_4: 0
+    haveOption: 0
+    optionContent_1: 0
+    optionContent_2: 0
+    option_1_targetId: 0
+    option_2_targetId: 0
+  - id: 1000007
+    content_cn: "\u4E0D\u8FC7\u771F\u8981\u6253\u8D77\u6765\u6211\u4E5F\u4E0D\u4F1A\u8F93\u7ED9\u8C01\u5C31\u662F\u4E86"
+    isLast: 1
+    left_stand: "\u7ACB\u7ED8-\u82F1\u96C4-\u6076\u9B54\u9886\u4E3B"
+    right_stand: "\u7ACB\u7ED8-\u770B\u677F\u5A18-\u9B54\u5973\u8428\u66FC\u838E"
+    event_1: 0
+    event_2: 0
+    event_3: 0
+    event_4: 0
+    haveOption: 0
+    optionContent_1: 0
+    optionContent_2: 0
+    option_1_targetId: 0
+    option_2_targetId: 0

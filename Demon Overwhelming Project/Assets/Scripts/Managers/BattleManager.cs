@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
+    /// <summary>
+    /// 待定选择的实体（鼠标悬停在了上面，但还没有按下选择键）
+    /// </summary>
+    [Header("待定选择的实体（鼠标悬停在了上面，但还没有按下选择键）")]
+    public GameObject nowChooseingTarget;
+    /// <summary>
+    /// 被选择了的实体
+    /// </summary>
     [Header("现在选中的实体")]
     public GameObject nowChoosedTarget;
     /// <summary>
     /// 相机的跟随模式（跟随UI中的slider条还是跟随选择的实体）
     /// </summary>
+    [HideInInspector]
     public CameraControlMode cameraControlMode = CameraControlMode.followUi;
 
     /// <summary>
@@ -38,12 +47,16 @@ public class BattleManager : MonoBehaviour
             CameraFollow_ByChoosedTarget();
 
 
-
-        //测试：按A获取到场景中的测试对象，按S释放（相机跟随测试功能）
-        if (Input.GetKeyDown(KeyCode.A))
-            ChooseOneEntity(GameObject.Find("TestA"));
-        if (Input.GetKeyDown(KeyCode.S))
+        //测试：有正在选择的对象时按右键确认选择
+        if (nowChooseingTarget != null && Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            EnshureChooseTarget();
+        }
+        //按左键释放
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
             ReleaseChoosedEntity();
+        }
     }
     /// <summary>
     /// 当有选中的实体时，相机开始跟随这个实体
@@ -54,13 +67,19 @@ public class BattleManager : MonoBehaviour
         cameraFollowTarget.transform.position = new Vector3(nowChoosedTarget.transform.position.x, cameraFollowTarget.transform.position.y, 3);
     }
 
-
-
+    /// <summary>
+    /// 确定选择鼠标所指的实体
+    /// </summary>
+    public void EnshureChooseTarget()
+    {
+        ChooseOneEntity(nowChooseingTarget);
+    }
 
 
     /// <summary>
     /// 选择实体
     /// 1.改变相机的跟随目标到实体所在的X轴位置，切换UI显示模式
+    /// 2.改变其spriterenender的材质显示
     /// </summary>
     /// <param name="Entity"></param>
     public void ChooseOneEntity(GameObject Entity)
@@ -69,13 +88,18 @@ public class BattleManager : MonoBehaviour
             ReleaseChoosedEntity();
         nowChoosedTarget = Entity;
         cameraControlMode = CameraControlMode.followTarget;
+        nowChoosedTarget.GetComponent<SpriteRenderer>().material = SceneObjectsManager.instance.materialObject.onSelectedMaterial;
     }
     /// <summary>
     /// 释放选择的实体
     /// 1.改变相机跟随的目标为默认状态，切换UI显示模式
+    /// 2.将选择的实体的材质变回默认模式
     /// </summary>
     public void ReleaseChoosedEntity()
     {
+        if (nowChoosedTarget == null)
+            return;
+        nowChoosedTarget.GetComponent<SpriteRenderer>().material = SceneObjectsManager.instance.materialObject.defaultMaterial;
         nowChoosedTarget = null;
         cameraControlMode = CameraControlMode.followUi;
     }
