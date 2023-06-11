@@ -3,6 +3,7 @@ public class PlotsData
 {
     public int id;                          //对话id
     public string content_cn;               //对话内容
+    public string speakerNmae;              //说话者名字
     public bool isLast;                     //是否为结束
     public string left_stand;               //左立绘
     public string right_stand;              //右立绘

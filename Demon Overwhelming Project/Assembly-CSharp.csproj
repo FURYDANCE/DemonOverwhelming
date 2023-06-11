@@ -58,18 +58,24 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Managers\SceneObjectsManager.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\Button_UI.cs" />
+    <Compile Include="Assets\Scripts\ExcelScripts\ExcelDataManager.cs" />
+    <Compile Include="Assets\Scripts\ExcelScripts\ExcelAccess.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Mesh.cs" />
     <Compile Include="Assets\Scripts\SystemScripts\Enums.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollowSetup.cs" />
     <Compile Include="Assets\Scripts\SystemScripts\ConstantStrings.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\CameraFollow.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\World_Bar.cs" />
+    <Compile Include="Assets\Scripts\DialogScripts\DialogManager.cs" />
     <Compile Include="Assets\Scripts\UIScripts\_EventManager.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionUpdater.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionTimer.cs" />
+    <Compile Include="Assets\Scripts\Mono\Entity.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_Sprite.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\FaceToCamera.cs" />
     <Compile Include="Assets\Scripts\UIScripts\BattleUiEventManager.cs" />
+    <Compile Include="Assets\Scripts\DialogScripts\PlotsData.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjectScript\MaterialObject.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_TextComplex.cs" />
     <Compile Include="Assets\Scripts\UIScripts\_TriggerEventManager.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\Button_Sprite.cs" />
@@ -82,26 +88,132 @@
     <Compile Include="Assets\Scripts\Managers\BattleManager.cs" />
     <Compile Include="Assets\Scripts\CameraScripts\CameraBoundCaculate.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\MonoBehaviours\ComponentActions.cs" />
+    <Compile Include="Assets\Scripts\ExcelScripts\BuildAssetsByExcel.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\UI_BarMultiple.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\CMDebug.cs" />
     <Compile Include="Assets\Tools\CodeMonkey\Utils\FunctionPeriodic.cs" />
-    <Compile Include="Assets\Scripts\ScriptableObjectScript\MaterialObject.cs" />
-    <Compile Include="Assets\Scripts\Mono\Entity.cs" />
-    <Compile Include="Assets\Scripts\ExcelScripts\BuildAssetsByExcel.cs" />
-    <Compile Include="Assets\Scripts\ExcelScripts\ExcelDataManager.cs" />
-    <Compile Include="Assets\Scripts\ExcelScripts\ExcelAccess.cs" />
-    <Compile Include="Assets\Scripts\DialogScripts\PlotsData.cs" />
+    <Compile Include="Assets\Scripts\DialogScripts\HistoryDialogSlot.cs" />
+    <Compile Include="Assets\Scripts\DialogScripts\HistoryDialogPanel.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCUnitUpgradeManager.cs" />
+    <Compile Include="Assets\RTS Engine\Multiplayer\Scripts\InputManager.cs" />
+    <Compile Include="Assets\RTS Engine\Terrain\Scripts\TerrainManager.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\BuildingManager.cs" />
+    <Compile Include="Assets\RTS Engine\Upgrades\Scripts\BuildingUpgrade.cs" />
+    <Compile Include="Assets\RTS Engine\Multiplayer\Scripts\MultiplayerHelper.cs" />
+    <Compile Include="Assets\RTS Engine\Selection\Scripts\UnitGroupSelection.cs" />
+    <Compile Include="Assets\RTS Engine\UI\Scripts\UIManager.cs" />
+    <Compile Include="Assets\RTS Engine\Scripting\Scripts\Range.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\AttackManager.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\AttackObjectLauncher.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCUpgradeManager.cs" />
+    <Compile Include="Assets\RTS Engine\Main Camera\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\RTS Engine\Minimap Camera\Scripts\MinimapIconManager.cs" />
+    <Compile Include="Assets\RTS Engine\Effects\Scripts\EffectObj.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCBuildingCreator.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\UnitHealth.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCPopulationManager.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\Unit.cs" />
+    <Compile Include="Assets\RTS Engine\Scripting\Scripts\CustomEventsExample.cs" />
+    <Compile Include="Assets\RTS Engine\Selection\Scripts\ResourceSelection.cs" />
+    <Compile Include="Assets\RTS Engine\Minimap Camera\Scripts\AttackWarningManager.cs" />
+    <Compile Include="Assets\RTS Engine\Menus\Scripts\FactionUIInfo.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\Portal.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCTerritoryManager.cs" />
+    <Compile Include="Assets\RTS Engine\UI\Scripts\HoverHealthBar.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\AttackEntity.cs" />
+    <Compile Include="Assets\RTS Engine\UI\Scripts\TaskUI.cs" />
+    <Compile Include="Assets\RTS Engine\Selection\Scripts\FlashEffect.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\Building.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCResourceCollector.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCBuildingRegulator.cs" />
+    <Compile Include="Assets\RTS Engine\Selection\Scripts\UnitSelection.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCComponent.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\Builder.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\ResourceGenerator.cs" />
+    <Compile Include="Assets\RTS Engine\Upgrades\Scripts\Upgrade.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\MovementManager.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\APC.cs" />
+    <Compile Include="Assets\RTS Engine\Faction Entity\Scripts\FactionEntity.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\BuildingAttack.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\AttackLOS.cs" />
+    <Compile Include="Assets\RTS Engine\Factions\Scripts\FactionManager.cs" />
+    <Compile Include="Assets\RTS Engine\Minimap Camera\Scripts\AttackWarning.cs" />
+    <Compile Include="Assets\RTS Engine\Game Managers\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\RTS Engine\Selection\Scripts\SelectionManager.cs" />
+    <Compile Include="Assets\RTS Engine\Map Resources\Scripts\ResourceTypeInfo.cs" />
+    <Compile Include="Assets\RTS Engine\Faction Entity\Scripts\FactionEntityHealth.cs" />
+    <Compile Include="Assets\RTS Engine\Map Resources\Scripts\Treasure.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\AttackWeapon.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCManager.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCBuildingPlacer.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\MultipleAttackManager.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\UnitMovement.cs" />
+    <Compile Include="Assets\RTS Engine\Maps\DemoMap\Scripts\BuildingCustomEvents.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\Healer.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCUnitRegulator.cs" />
+    <Compile Include="Assets\RTS Engine\Menus\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\RTS Engine\God Mode\GodMode.cs" />
+    <Compile Include="Assets\RTS Engine\Scripting\Scripts\RTSHelper.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\BuildingHealth.cs" />
+    <Compile Include="Assets\RTS Engine\Minimap Camera\Scripts\MinimapIcon.cs" />
+    <Compile Include="Assets\RTS Engine\Effects\Scripts\EffectObjPool.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\BuildingPlacer.cs" />
+    <Compile Include="Assets\RTS Engine\Map Resources\Scripts\Resource.cs" />
+    <Compile Include="Assets\RTS Engine\Menus\Scripts\DropDownMenu.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\WorkerManager.cs" />
+    <Compile Include="Assets\RTS Engine\Tasks\Scripts\TaskLauncher.cs" />
+    <Compile Include="Assets\RTS Engine\Maps\DemoMap\Scripts\BuildingConstructionEffect.cs" />
+    <Compile Include="Assets\RTS Engine\Upgrades\Scripts\UnitUpgrade.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\EscapeOnAttack.cs" />
+    <Compile Include="Assets\RTS Engine\Game Managers\Scripts\GameManager.cs" />
+    <Compile Include="Assets\RTS Engine\Selection\Scripts\SelectionEntity.cs" />
+    <Compile Include="Assets\RTS Engine\Scripting\Scripts\CustomEvents.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\AttackObject.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\ResourceCollector.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\UnitComponent.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCDefenseManager.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\Wander.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\TaskManager.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\UnitAttack.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\Converter.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCArmyCreator.cs" />
+    <Compile Include="Assets\RTS Engine\Maps\DemoMap\Scripts\ControlsMenu.cs" />
+    <Compile Include="Assets\RTS Engine\Upgrades\Scripts\UpgradeManager.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCBuildingConstructor.cs" />
+    <Compile Include="Assets\RTS Engine\Maps\DemoMap\Scripts\UnitRagdollEffect.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCBuildingUpgradeManager.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\OneShotStateMachine.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCTaskManager.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCAttackManager.cs" />
+    <Compile Include="Assets\RTS Engine\Maps\DemoMap\Scripts\UnitCustomEvents.cs" />
+    <Compile Include="Assets\RTS Engine\Scripting\Scripts\ChainedSortedList.cs" />
+    <Compile Include="Assets\RTS Engine\Menus\Scripts\SinglePlayerManager.cs" />
+    <Compile Include="Assets\RTS Engine\Map Resources\Scripts\ResourceManager.cs" />
+    <Compile Include="Assets\RTS Engine\Units\Scripts\UnitManager.cs" />
+    <Compile Include="Assets\RTS Engine\Selection\Scripts\BuildingSelection.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\BuildingDropOff.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCRegulator.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\Border.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\DamageOverTime.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCUnitCreator.cs" />
+    <Compile Include="Assets\RTS Engine\AI\Scripts\NPCResourceManager.cs" />
+    <Compile Include="Assets\RTS Engine\Effects\Scripts\EffectObjSpawner.cs" />
+    <Compile Include="Assets\RTS Engine\Factions\Scripts\FactionTypeInfo.cs" />
+    <Compile Include="Assets\RTS Engine\Attack Behavior\Scripts\AttackDamage.cs" />
+    <Compile Include="Assets\RTS Engine\Buildings\Scripts\BuildingPlacement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Scripts\ExcelScripts\ExcelResolutionForUnity\Excel.dll" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\RTS Engine\Maps\DemoMap\Kenney Assets\Castle Kit\License.txt" />
     <None Include="Assets\Scripts\ExcelScripts\ExcelResolutionForUnity\ICSharpCode.SharpZipLib.dll" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Tools\CodeMonkey\README.txt" />
+    <None Include="Assets\RTS Engine\Third Party Assets.txt" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Tools\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -111,6 +223,7 @@
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Tools\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\RTS Engine\README.txt" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Tools\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
@@ -365,6 +478,9 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>E:\unity\EDITER\2021.3.20f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Excel">
+      <HintPath>Assets\Scripts\ExcelScripts\ExcelResolutionForUnity\Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -373,9 +489,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Excel">
-      <HintPath>Assets\Scripts\ExcelScripts\ExcelResolutionForUnity\Excel.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>Assets\Scripts\ExcelScripts\ExcelResolutionForUnity\ICSharpCode.SharpZipLib.dll</HintPath>

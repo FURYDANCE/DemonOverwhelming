@@ -28,19 +28,20 @@ public class ExcelAccess
             {
                 id = int.Parse(collect[i][0].ToString()),
                 content_cn = collect[i][1].ToString(),
-                isLast = collect[i][2].ToString() == "True" ? true : false,
-                left_stand = collect[i][3].ToString(),
-                right_stand = collect[i][4].ToString(),
-                event_1 = collect[i][5].ToString(),
-                event_2 = collect[i][6].ToString(),
-                event_3 = collect[i][7].ToString(),
-                event_4 = collect[i][8].ToString(),
+                speakerNmae = collect[i][2].ToString(),
+                isLast = collect[i][3].ToString() == "True" ? true : false,
+                left_stand = collect[i][4].ToString(),
+                right_stand = collect[i][5].ToString(),
+                event_1 = collect[i][6].ToString(),
+                event_2 = collect[i][7].ToString(),
+                event_3 = collect[i][8].ToString(),
+                event_4 = collect[i][9].ToString(),
 
-                haveOption = collect[i][9].ToString() == "True" ? true : false,
-                optionContent_1 = collect[i][10].ToString(),
-                optionContent_2 = collect[i][11].ToString(),
-                option_1_targetId = int.Parse(collect[i][12].ToString()),
-                option_2_targetId = int.Parse(collect[i][13].ToString()),
+                haveOption = collect[i][10].ToString() == "True" ? true : false,
+                optionContent_1 = collect[i][11].ToString(),
+                optionContent_2 = collect[i][12].ToString(),
+                option_1_targetId = int.Parse(collect[i][13].ToString()),
+                option_2_targetId = int.Parse(collect[i][14].ToString()),
             };
             dataArray.Add(pd);
         }
