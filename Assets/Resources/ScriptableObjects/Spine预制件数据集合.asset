@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3086a6dc1780fd4d87757273ffadd42, type: 3}
+  m_Name: "Spine\u9884\u5236\u4EF6\u6570\u636E\u96C6\u5408"
+  m_EditorClassIdentifier: 
+  spinePrefabs:
+  - id: 3000001
+    m_name: "\u8D64\u8272\u6740\u4EBA\u9B54"
+    spinePrefab: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
+  - id: 3000002
+    m_name: "\u6708\u6218\u8001\u5175"
+    spinePrefab: {fileID: 2450271714722331908, guid: a6d119bda7339614ebe224fab32ed9cc, type: 3}

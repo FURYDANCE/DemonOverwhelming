@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c836621dee7cbb14a99a5eb57a8205ac, type: 3}
+  m_Name: "Buff\u6570\u636E\u96C6\u5408"
+  m_EditorClassIdentifier: 
+  buffs:
+  - buffId: 1000001
+    buffTypeId: 1
+    buffLevel: 1.5
+    buffName: "\u6218\u610F\u9AD8\u6602_\u7B49\u7EA71"
+    buffVfx: {fileID: 7155335147208632822, guid: 97c43495f80a3244fad1301dfafbe252, type: 3}
+    buffTime: 10
+  - buffId: 1000002
+    buffTypeId: 1
+    buffLevel: 1.8
+    buffName: "\u6218\u610F\u9AD8\u6602_\u7B49\u7EA72"
+    buffVfx: {fileID: 7155335147208632822, guid: 97c43495f80a3244fad1301dfafbe252, type: 3}
+    buffTime: 10
+  - buffId: 1000003
+    buffTypeId: 1
+    buffLevel: 4
+    buffName: "\u6218\u610F\u9AD8\u6602_\u7B49\u7EA73"
+    buffVfx: {fileID: 7155335147208632822, guid: 97c43495f80a3244fad1301dfafbe252, type: 3}
+    buffTime: 10
