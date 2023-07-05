@@ -95,9 +95,9 @@ public class BattleManager : MonoBehaviour
     void Update()
     {
         //显示金钱UI
-        objectManager.moneyText.text = "金钱：  " + nowMoneyCost + "/" + money;
+        objectManager.moneyText.text =  nowMoneyCost + "/" + money;
         //显示血液UI
-        objectManager.bloodText.text = "血液：  " + nowBloodCost + "/" + blood;
+        objectManager.bloodText.text =  nowBloodCost + "/" + blood;
         //显示金钱和UI的填充
         objectManager.costFill.fillAmount = nowBloodCost / blood;
         objectManager.moneyFill.fillAmount = nowMoneyCost / money;
@@ -118,19 +118,19 @@ public class BattleManager : MonoBehaviour
             DestoryNowUnitInformation();
         }
         //生成实体测试
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             GenerateOneEntity(Camp.demon, "3000002");
         }
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    GenerateOneEntity(Camp.demon, "1000005");
+        //}
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    GenerateOneEntity(Camp.demon, "1000004");
+        //}
         if (Input.GetKeyDown(KeyCode.Z))
-        {
-            GenerateOneEntity(Camp.demon, "1000005");
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            GenerateOneEntity(Camp.demon, "1000004");
-        }
-        if (Input.GetKeyDown(KeyCode.S))
         {
             Debug_CreateEnemy();
         }
@@ -278,11 +278,13 @@ public class BattleManager : MonoBehaviour
             go = Instantiate(GameDataManager.instance.GetSpinePrefabDataById(id), GameObject.Find("FaceToCamera").transform);
 
         Entity e;
+      
         //获取实体组件
         if (!go.GetComponent<Entity>())
             e = go.AddComponent<Entity>();
         else
             e = go.GetComponent<Entity>();
+        //e.camp = camp;
         e.parameter = new UnitParameter();
         e.parameter.SetValue(GameDataManager.instance.GetEntityDataById(id));
         e.GenerateEntity();
@@ -321,6 +323,7 @@ public class BattleManager : MonoBehaviour
             e = go.AddComponent<Entity>();
         else
             e = go.GetComponent<Entity>();
+        e.camp = camp;
         //读取变量
         e.parameter = new UnitParameter();
         e.parameter.SetValue(GameDataManager.instance.GetEntityDataById(id));

@@ -16,18 +16,11 @@ public class CharacterStateManager : MonoBehaviour
     /// 实体变量
     /// </summary>
     UnitParameter parameter;
-    /// <summary>
-    /// 使用的ai
-    /// </summary>
-    public AiBase nowAi;
     public Transform moveTarget;
-    [HideInInspector]
-    public Transform left;
-    [HideInInspector]
-    public Transform right;
+  
     [Header("当前攻击目标")]
-    public Transform attackTarget;
-    Collider[] enemyChecked;
+    public Entity attackTarget;
+    public Collider[] enemyChecked;
     public List<Collider> enemySelected;
     public bool canAttack;
 
@@ -41,6 +34,15 @@ public class CharacterStateManager : MonoBehaviour
     public bool intoWalking;
     public float start_Y;
 
+    /// <summary>
+    /// 实现角色移动接口的脚本
+    /// </summary>
+    public ICharacterMove moveScript;
+    public ICharacterEnemyCheck enemyCheckScript;
+    public ICharacterChase chaseScript;
+    public ICharacterAttack attackScript;
+
+
     SpriteRenderer spriteRenderer;
     void Start()
     {
@@ -49,8 +51,6 @@ public class CharacterStateManager : MonoBehaviour
         entity = GetComponent<Entity>();
         parameter = GetComponent<Entity>().parameter;
         ChangeState(new CharacterGeneratingState());
-        left = Instantiate(new GameObject(), transform).transform;
-        right = Instantiate(new GameObject(), transform).transform;
         enemySelected = new List<Collider>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer)
@@ -67,19 +67,20 @@ public class CharacterStateManager : MonoBehaviour
             else
                 transform.rotation = Quaternion.Euler(0, 0, 0);
         }
+        GetInterfaceScript();
     }
-
-
+    //获取行动模块
+    public void GetInterfaceScript()
+    {
+        moveScript = GetComponent<ICharacterMove>();
+        enemyCheckScript = GetComponent<ICharacterEnemyCheck>();
+        chaseScript = GetComponent<ICharacterChase>();
+        attackScript = GetComponent<ICharacterAttack>();
+    }
     void Update()
     {
-        if (parameter.nowHp <= 0)
-            return;
         currentState.OnUpdate(this);
-        //if (parameter.nowHp <= 0)
-        //    Destroy(gameObject);
-        right.transform.position = new Vector3(transform.position.x + 1, start_Y, transform.position.z);
-        left.transform.position = new Vector3(transform.position.x - 1, start_Y, transform.position.z);
-
+        CheckEnemy();
     }
     /// <summary>
     /// 改变状态
@@ -92,35 +93,18 @@ public class CharacterStateManager : MonoBehaviour
         currentState = newState;
         currentState.OnEnter(this);
     }
-    /// <summary>
-    /// 位移
-    /// </summary>
-    public void Translate()
+    
+   
+    public void SetAttackTarget(Entity e)
     {
-        if (moveTarget)
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(moveTarget.position.x, moveTarget.position.y, transform.position.z), parameter.character.moveSpeed * Time.deltaTime);
-        if (!entity.spineObject)
+        if (e == null)
         {
-            if (moveTarget && transform.position.x < moveTarget.transform.position.x)
-                spriteRenderer.flipX = false;
-            else
-                spriteRenderer.flipX = true;
+            Debug.Log("将攻击目标设为空");
+            attackTarget = null;
+            return;
         }
-        //else
-        //{
-        //    if (moveTarget && transform.position.x < moveTarget.transform.position.x)
-        //        transform.rotation = Quaternion.Euler(0, 180, 0);
-        //    else
-        //        transform.rotation = Quaternion.Euler(0, 0, 0);
-        //}
-    }
-    /// <summary>
-    /// 改变位移目标
-    /// </summary>
-    /// <param name="target"></param>
-    public void SetMoveTarget(Transform target)
-    {
-        moveTarget = target;
+        Debug.Log("设置了攻击目标");
+        attackTarget = e;
     }
     /// <summary>
     /// 检查攻击范围有没有敌人
@@ -128,33 +112,20 @@ public class CharacterStateManager : MonoBehaviour
     public void CheckEnemy()
     {
         enemySelected.Clear();
-        //enemyChecked = Physics.OverlapBox(entity.camp == Camp.demon ? transform.position + parameter.character.EnemyCheckOffset : transform.position - parameter.character.EnemyCheckOffset, parameter.character.EnemyCheckArea);
+        
         enemyChecked = Physics.OverlapBox(entity.camp == Camp.demon ? new Vector3(transform.position.x + parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
             : new Vector3(transform.position.x - parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
             , parameter.character.EnemyCheckArea);
         foreach (Collider c in enemyChecked)
         {
-            //Entity p = c.transform.parent.GetComponent<Entity>();
-            //if (p && p.camp != entity.camp)
-            //{
-            //    enemySelected.Add(c);
-            //}
+            if (!c)
+                continue;
             Entity e = c.GetComponent<Entity>();
-            if (e && e.camp != entity.camp)
+            if (e  &&c&& e.camp != entity.camp)
             {
                 enemySelected.Add(c);
             }
         }
-    }
-    /// <summary>
-    /// 设置攻击目标
-    /// </summary>
-    /// <param name="e"></param>
-    public void SetEnemy(Entity e)
-    {
-
-        moveTarget = e.transform;
-        attackTarget = e.transform;
     }
     /// <summary>
     /// 检查是否进入攻击状态
@@ -166,27 +137,11 @@ public class CharacterStateManager : MonoBehaviour
         //获取距离碰撞体的最近距离
         Vector3 s = attackTarget.gameObject.GetComponent<Collider>().ClosestPoint(transform.position);
         float attackDistance = Vector3.Distance(transform.position, s);
-        //if (entity.camp == Camp.human)
-        //    Debug.Log("attackDistance:" + parameter.character.attackDistance + "      nowDistance:" + attackDistance);
         if (attackDistance <= parameter.character.attackDistance)
         {
             ChangeState(new CharacterAttackingState());
         }
     }
-    ///// <summary>
-    ///// 检查是否进入追击状态
-    ///// </summary>
-    //public void ChaseingStateCheck()
-    //{
-    //    if (attackTarget == null)
-    //        return;
-    //    float attackDistance = Vector3.Distance(transform.position, attackTarget.transform.position);
-    //    //Debug.Log("距离：" + attackDistance);
-    //    if (attackDistance > parameter.character.attackDistance + 0.1f)
-    //    {
-    //        ChangeState(new CharacterChasingState());
-    //    }
-    //}
     private void OnDrawGizmos()
     {
         if (entity)
@@ -194,17 +149,6 @@ public class CharacterStateManager : MonoBehaviour
             Gizmos.DrawWireCube(entity.camp == Camp.demon ? new Vector3(transform.position.x + parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
             : new Vector3(transform.position.x - parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
             , parameter.character.EnemyCheckArea);
-    }
-    /// <summary>
-    /// 攻击
-    /// </summary>
-    /// <param name="e"></param>
-    public void Attack(Entity e)
-    {
-        if (!canAttack)
-            return;
-        nowAi.Attack(e);
-
     }
 
 }

@@ -8,7 +8,10 @@ public class CharacterAttackingState : CharacterBaseState
 {
     public void OnEnter(CharacterStateManager manager)
     {
+        Debug.Log("½øÈë¹¥»÷×´Ì¬");
         manager.isAttacking = true;
+        //Ö´ĞĞ¹¥»÷Ä£¿é
+        manager.attackScript.Attack();
     }
     public void OnExit(CharacterStateManager manager)
     {
@@ -16,17 +19,6 @@ public class CharacterAttackingState : CharacterBaseState
     }
     public void OnUpdate(CharacterStateManager manager)
     {
-        //if (Vector3.Distance(manager.transform.position, manager.attackTarget.transform.position) > manager.entity.parameter.character.attackDistance + 0.2f)
-        //{
-        //    manager.attackTarget = null;
-        //    manager.ChangeState(new CharacterWalkingState());
-        //}
-        //manager.ChaseingStateCheck();
-        if (manager.attackTarget == null)
-        {
-            manager.ChangeState(new CharacterWalkingState());
-            return;
-        }
-        manager.Attack(manager.attackTarget.GetComponent<Entity>());
+       
     }
 }

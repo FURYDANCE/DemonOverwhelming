@@ -565,8 +565,8 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
+      EnemyCheckArea: {x: 8, y: 8, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 1
@@ -608,6 +608,43 @@ MonoBehaviour:
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.3835
+      missileId: 31000002
+      specialTags:
+      - 0
+      bloodDrop: 1000
+    building:
+      id: 
+      building_canAttack: 0
+  - ID: 4000001
+    type: 0
+    name: "\u6076\u9B54\u9886\u4E3B"
+    sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
+    Hp: 150
+    nowHp: 0
+    hurtDamage: 2
+    hpBarSize: 0.5
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u82F1\u96C4"
+    modleSize: 1
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    character:
+      id: 4000001
+      cost: 0
+      aiType: 0
+      moveSpeed: 3
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 7, y: 7, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 1.5
+      attackTime: 0.5
       missileId: 31000002
       specialTags:
       - 0
@@ -846,8 +883,8 @@ MonoBehaviour:
     haveSkill: 0
     skillId: 0
     skillName: 
-    EnemyCheckArea: {x: 15, y: 15, z: 0}
-    EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
+    EnemyCheckArea: {x: 8, y: 8, z: 0}
+    EnemyCheckOffset: {x: 0, y: 0, z: 0}
     attackDistance: 3
     chaseTime: 0
     attackWaitTime: 1
@@ -872,6 +909,26 @@ MonoBehaviour:
     chaseTime: 0
     attackWaitTime: 1
     attackTime: 0.3835
+    missileId: 31000002
+    specialTags:
+    - 0
+    bloodDrop: 1000
+  - id: 4000001
+    cost: 0
+    aiType: 0
+    moveSpeed: 3
+    defence: 0
+    defence_far: 0
+    defence_magic: 0
+    haveSkill: 0
+    skillId: 0
+    skillName: 
+    EnemyCheckArea: {x: 7, y: 7, z: 0}
+    EnemyCheckOffset: {x: 0, y: 0, z: 0}
+    attackDistance: 3
+    chaseTime: 0
+    attackWaitTime: 1.5
+    attackTime: 0.5
     missileId: 31000002
     specialTags:
     - 0
@@ -1236,6 +1293,36 @@ MonoBehaviour:
     aoeAmount: 0
     arcMoveTime: 0
     arcMoveHeight: 0
+  - id: 33000003
+    name: "\u5355\u4F53\u4F24\u5BB3_\u6076\u9B54\u9886\u4E3B"
+    damageDataId: 41000008
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 0
+    moveType: 2
+    sprite: {fileID: 0}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
   damageDatas:
   - id: 41000000
     name: "\u65E0\u4F24\u5BB3"
@@ -1325,6 +1412,18 @@ MonoBehaviour:
     name: "\u7269\u7406_\u8FDC\u7A0B_\u94C3\u4ED9"
     physicDamage: 0
     farDamage: 30
+    magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000008
+    name: "\u7269\u7406_\u6076\u9B54\u9886\u4E3B\u666E\u653B"
+    physicDamage: 4
+    farDamage: 0
     magicDamage: 0
     buffs:
     - 0

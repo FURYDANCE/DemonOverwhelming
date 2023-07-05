@@ -65,12 +65,8 @@ public class Entity : MonoBehaviour
             return;
         sprite = GetComponent<SpriteRenderer>();
         //设置是否是spine动画
-        Debug.Log(parameter.name);
-
-
         if (parameter.name.Split("/").Length > 1)
         {
-
             spineObject = parameter.name.Split("/")[1].Contains("spine") ? true : false;
         }
         if (parameter.hpBarSize == 0) parameter.hpBarSize = 1;
@@ -122,15 +118,15 @@ public class Entity : MonoBehaviour
             //设置状态管理器
             gameObject.AddComponent<CharacterStateManager>();
             //设置行动ai
-            if (parameter.character.aiType == AiType.warrior)
-            {
-                gameObject.AddComponent<CharacterAi_Warrior>();
-            }
-            if (parameter.character.aiType == AiType.archer)
-            {
-                //Debug.Log("Archer");
-                gameObject.AddComponent<CharacterAi_Archer>();
-            }
+            //if (parameter.character.aiType == AiType.warrior)
+            //{
+            //    gameObject.AddComponent<CharacterAi_Warrior>();
+            //}
+            //if (parameter.character.aiType == AiType.archer)
+            //{
+            //    //Debug.Log("Archer");
+            //    gameObject.AddComponent<CharacterAi_Archer>();
+            //}
             //设置碰撞体(用于处理未旋转碰撞体的数值）
             if (!gameObject.GetComponent<BoxCollider>())
                 boxCollider = gameObject.AddComponent<BoxCollider>();
@@ -141,7 +137,8 @@ public class Entity : MonoBehaviour
             character_SpecialTagBases = new List<Character_SpecialTagBase>();
             //设置特殊词条
             SetTagEventScript();
-
+            //测试中：设置行为脚本
+        
         }
         //当子物体没有名为shadow的对象时，创建shadow影子对象
         if (!transform.Find("shadow"))
@@ -163,6 +160,10 @@ public class Entity : MonoBehaviour
         {
             animator.runtimeAnimatorController = animations.animatorController;
         }
+        gameObject.AddComponent<ICharaMove_InputKey>();  
+        gameObject.AddComponent<ICharaEnemyCheck_Nearest>();
+        gameObject.AddComponent<ICharaChase_TryCloser>();
+        gameObject.AddComponent<ICharaAttack_Normal>();
         settled = true;
     }
 
@@ -218,7 +219,6 @@ public class Entity : MonoBehaviour
             return;
         }
 
-        Debug.Log("执行受伤");
         //根据防御计算伤害
         float realDamage_physic = Mathf.Clamp(damageData.physicDamage - parameter.character.defence, 0, 999999999);
         float realDamage_far = Mathf.Clamp(damageData.farDamage - parameter.character.defence_far, 0, 999999999);
@@ -264,6 +264,7 @@ public class Entity : MonoBehaviour
 
         if (spineObject)
         {
+            Destroy(gameObject);
             PlayAniamtion_Die();
             gameObject.AddComponent<LifeTime>().lifeTime = 50;
             Destroy(this.GetComponent<Entity>());
@@ -426,6 +427,7 @@ public class Entity : MonoBehaviour
     }
     #endregion
 
+    #region 动画相关
     public void PlayAnimation_Idle()
     {
         if (animations != null && animations.animation_Idle != null)
@@ -458,6 +460,7 @@ public class Entity : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
         skAni.state.SetAnimation(0, "attack", true);
-        
+
     }
+    #endregion
 }
