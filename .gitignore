@@ -83,3 +83,4 @@ crashlytics-build.properties
 
 # Deprecated
 /[Aa]ssets/_Deprecated/
+/ProjectSettings/ProjectVersion.txt
