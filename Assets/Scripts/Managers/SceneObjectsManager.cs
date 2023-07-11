@@ -47,7 +47,7 @@ public class SceneObjectsManager : MonoBehaviour
         if (instance != null)
             Destroy(instance);
         instance = this;
-
+        
         if (camera == null)
             camera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
         if (cameraBound_Left == null)
