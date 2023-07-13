@@ -63,6 +63,10 @@ public class SceneObjectsManager : MonoBehaviour
     {
         return camera.transform;
     }
+    public CinemachineVirtualCamera GetCameraScript()
+    {
+        return camera;
+    }
     public Transform GetCameraFollowTarget()
     {
         return cameraFollowTarget;

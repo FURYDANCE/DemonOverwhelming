@@ -99,11 +99,11 @@ public class CharacterStateManager : MonoBehaviour
     {
         if (e == null)
         {
-            Debug.Log("将攻击目标设为空");
+            //Debug.Log("将攻击目标设为空");
             attackTarget = null;
             return;
         }
-        Debug.Log("设置了攻击目标");
+        //Debug.Log("设置了攻击目标");
         attackTarget = e;
     }
     /// <summary>
