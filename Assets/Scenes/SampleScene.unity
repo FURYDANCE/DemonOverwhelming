@@ -1043,6 +1043,10 @@ MonoBehaviour:
     modleSize: 2
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 0
@@ -1154,7 +1158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &385404992
 Transform:
   m_ObjectHideFlags: 0
@@ -1199,6 +1203,10 @@ MonoBehaviour:
     modleSize: 0
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 0
@@ -1345,7 +1353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &454947315
 Transform:
   m_ObjectHideFlags: 0
@@ -1434,6 +1442,10 @@ MonoBehaviour:
     modleSize: 0
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 0
@@ -1828,6 +1840,10 @@ MonoBehaviour:
     modleSize: 0
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 0
@@ -3282,6 +3298,10 @@ MonoBehaviour:
     modleSize: 2
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 0
@@ -3887,6 +3907,10 @@ MonoBehaviour:
     modleSize: 0
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 0
@@ -4002,7 +4026,10 @@ MonoBehaviour:
   emptySpine: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
   emptySoldierCard: {fileID: 7233710488846720462, guid: 0b8ccb7ab2b6c004daa197ce233a3d41, type: 3}
   emptyFormat: {fileID: 2845960953593243496, guid: 9351cfd52d115494cba6bfd9ad4d278d, type: 3}
+  moneyBag: {fileID: 6031362283204591394, guid: 52ab648c64083b046bfe941ce4b88133, type: 3}
+  sceneInformation: {fileID: 2440288260986152513, guid: b7fdd2e851c3e2142be326bddf431fb4, type: 3}
   a: {fileID: 7673479569266096885, guid: a5e80962b1850fb4983ff0d011b7d5da, type: 3}
+  bloodSprite: {fileID: 21300000, guid: 72f08ad45a00d5b40bec7238c07400d3, type: 3}
 --- !u!114 &1245849865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4123,7 +4150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3801147801453170069, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.54748535
+      value: 0.5473633
       objectReference: {fileID: 0}
     - target: {fileID: 3801147801453170069, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4836,6 +4863,10 @@ MonoBehaviour:
     modleSize: 2
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 0
@@ -5030,11 +5061,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2034644077}
   - component: {fileID: 2034644079}
-  - component: {fileID: 2034644080}
   - component: {fileID: 2034644082}
   - component: {fileID: 2034644083}
   - component: {fileID: 2034644084}
-  - component: {fileID: 2034644085}
   m_Layer: 0
   m_Name: TestA
   m_TagString: Untagged
@@ -5109,18 +5138,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2034644080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034644076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65bb605e432424b48b705989caa45d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2034644082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5150,6 +5167,10 @@ MonoBehaviour:
     modleSize: 0
     shadowSize: {x: 0, y: 0, z: 0}
     shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 
       cost: 100
@@ -5213,8 +5234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entity: {fileID: 0}
   moveTarget: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
   attackTarget: {fileID: 0}
   enemyChecked: []
   enemySelected: []
@@ -5227,24 +5246,6 @@ MonoBehaviour:
   isDying: 0
   intoWalking: 0
   start_Y: 0
---- !u!114 &2034644085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034644076}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd2caa50e1665ab41b977ca479486556, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  entity: {fileID: 0}
-  targetChangeTime: 0
-  targetChangeTimer: 0
-  x: {x: 0, y: 0, z: 0}
-  changed: 0
 --- !u!1 &2065548608
 GameObject:
   m_ObjectHideFlags: 0

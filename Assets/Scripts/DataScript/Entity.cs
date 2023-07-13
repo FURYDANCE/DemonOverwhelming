@@ -117,16 +117,8 @@ public class Entity : MonoBehaviour
             }
             //设置状态管理器
             gameObject.AddComponent<CharacterStateManager>();
-            //设置行动ai
-            //if (parameter.character.aiType == AiType.warrior)
-            //{
-            //    gameObject.AddComponent<CharacterAi_Warrior>();
-            //}
-            //if (parameter.character.aiType == AiType.archer)
-            //{
-            //    //Debug.Log("Archer");
-            //    gameObject.AddComponent<CharacterAi_Archer>();
-            //}
+
+
             //设置碰撞体(用于处理未旋转碰撞体的数值）
             if (!gameObject.GetComponent<BoxCollider>())
                 boxCollider = gameObject.AddComponent<BoxCollider>();
@@ -138,7 +130,7 @@ public class Entity : MonoBehaviour
             //设置特殊词条
             SetTagEventScript();
             //测试中：设置行为脚本
-        
+
         }
         //当子物体没有名为shadow的对象时，创建shadow影子对象
         if (!transform.Find("shadow"))
@@ -160,7 +152,14 @@ public class Entity : MonoBehaviour
         {
             animator.runtimeAnimatorController = animations.animatorController;
         }
-        gameObject.AddComponent<ICharaMove_InputKey>();  
+        //设置行动ai
+        if (parameter.aiMode_Move == 0)
+            gameObject.AddComponent<ICharaMove_Direct>();
+        if (parameter.aiMode_Move == 1)
+        {
+            gameObject.AddComponent<ICharaMove_InputKey>();
+            gameObject.AddComponent<MoneyBagCheck>();
+        }
         gameObject.AddComponent<ICharaEnemyCheck_Nearest>();
         gameObject.AddComponent<ICharaChase_TryCloser>();
         gameObject.AddComponent<ICharaAttack_Normal>();
@@ -256,12 +255,26 @@ public class Entity : MonoBehaviour
     {
         //计算血液掉落
         BattleManager.instance.AddBlood(parameter.character.bloodDrop);
-
+        if (parameter.character.bloodDrop != 0)
+        {
+            VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Hit, transform.position, new Vector3(4, 4, 4), 2);
+            BattleManager.instance.CreateSceneInformation(gameObject, GameDataManager.instance.bloodSprite,""+ parameter.character.bloodDrop, false, Color.red);
+        }
         if (BattleManager.instance.nowChoosedTarget == this.gameObject)
             BattleManager.instance.ReleaseChoosedEntity();
         Debug.Log("单位死亡：" + name);
         BattleManager.instance.allSoldiers.Remove(this);
-
+        //特殊词条的钱包掉落
+        foreach (string t in parameter.character.specialTags)
+        {
+            Debug.Log("TAG：：：" + t);
+            if (t.Contains("钱袋"))
+            {
+                float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(t, @"[^0-9]+", ""));
+                Debug.Log(level);
+                BattleManager.instance.CreateMoneyBag(transform.position, level);
+            }
+        }
         if (spineObject)
         {
             Destroy(gameObject);

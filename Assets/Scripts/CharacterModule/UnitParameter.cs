@@ -32,7 +32,11 @@ public class UnitParameter
     [Header("影子尺寸，偏移")]
     public Vector3 shadowSize;
     public float shadowOffset;
-
+    [Header("AI行为模式")]
+    public int aiMode_Move;
+    public int aiMode_Check;
+    public int aiMode_Chase;
+    public int aiMode_Atk;
     [Header("角色变量")]
     public UnitParameter_Character character;
     [Header("建筑变量")]
@@ -55,6 +59,10 @@ public class UnitParameter
         introduct = data.introduct;
         shadowSize = data.shadowSize;
         shadowOffset = data.shadowOffset;
+        aiMode_Move = data.aiMode_Move;
+        aiMode_Check = data.aiMode_Check;
+        aiMode_Chase = data.aiMode_Chase;
+        aiMode_Atk = data.aiMode_Atk;
         character = new UnitParameter_Character();
         character.aiType = data.character.aiType;
         character.attackDistance = data.character.attackDistance;
@@ -97,6 +105,10 @@ public class UnitParameter
         introduct = data.introduct;
         shadowSize = data.shadowSize;
         shadowOffset = data.shadowOffset;
+        aiMode_Move = data.aiMode_Move;
+        aiMode_Check = data.aiMode_Check;
+        aiMode_Chase = data.aiMode_Chase;
+        aiMode_Atk = data.aiMode_Atk;
         character = new UnitParameter_Character();
         character.aiType = data.character.aiType;
         character.attackDistance = data.character.attackDistance;

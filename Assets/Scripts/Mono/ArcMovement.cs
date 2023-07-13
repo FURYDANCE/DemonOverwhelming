@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Å×ÎïÏßÒÆ¶¯
+/// </summary>
 public class ArcMovement : MonoBehaviour
 {
     public AnimationCurve curve;

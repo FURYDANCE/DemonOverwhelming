@@ -22,6 +22,7 @@ public class ICharaMove_InputKey : MonoBehaviour, ICharacterMove
         manager = GetComponent<CharacterStateManager>();
         entity = GetComponent<Entity>();
         speed = entity.parameter.character.moveSpeed;
+        manager.GetInterfaceScript();
     }
 
 

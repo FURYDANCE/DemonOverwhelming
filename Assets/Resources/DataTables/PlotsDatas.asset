@@ -147,6 +147,10 @@ MonoBehaviour:
     modleSize: 0.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000001
       cost: 1
@@ -184,6 +188,10 @@ MonoBehaviour:
     modleSize: 3
     shadowSize: {x: 1, y: 0.3333, z: 0}
     shadowOffset: 0.03
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000002
       cost: 1
@@ -203,7 +211,7 @@ MonoBehaviour:
       attackTime: 0.5
       missileId: 33000001
       specialTags:
-      - 0
+      - "\u94B1\u888B20"
       bloodDrop: 4
     building:
       id: 
@@ -221,6 +229,10 @@ MonoBehaviour:
     modleSize: 1
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000003
       cost: 2
@@ -258,6 +270,10 @@ MonoBehaviour:
     modleSize: 1
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000004
       cost: 4
@@ -295,6 +311,10 @@ MonoBehaviour:
     modleSize: 0.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000005
       cost: 5
@@ -332,6 +352,10 @@ MonoBehaviour:
     modleSize: 0.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000006
       cost: 5
@@ -351,7 +375,7 @@ MonoBehaviour:
       attackTime: 0.5
       missileId: 32000004
       specialTags:
-      - 0
+      - "\u94B1\u888B20"
       bloodDrop: 6
     building:
       id: 
@@ -369,6 +393,10 @@ MonoBehaviour:
     modleSize: 0.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000007
       cost: 5
@@ -406,6 +434,10 @@ MonoBehaviour:
     modleSize: 1.25
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 1000008
       cost: 5
@@ -443,6 +475,10 @@ MonoBehaviour:
     modleSize: 1
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 2000001
       cost: 0
@@ -480,6 +516,10 @@ MonoBehaviour:
     modleSize: 0.75
     shadowSize: {x: 35, y: 10, z: 0}
     shadowOffset: 4
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 2000002
       cost: 0
@@ -517,6 +557,10 @@ MonoBehaviour:
     modleSize: 0.5
     shadowSize: {x: 40, y: 15, z: 0}
     shadowOffset: 6
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 2000003
       cost: 0
@@ -554,6 +598,10 @@ MonoBehaviour:
     modleSize: 5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 3000001
       cost: 0
@@ -591,6 +639,10 @@ MonoBehaviour:
     modleSize: 5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 3000002
       cost: 0
@@ -628,6 +680,10 @@ MonoBehaviour:
     modleSize: 1
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
+    aiMode_Move: 1
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
     character:
       id: 4000001
       cost: 0
@@ -691,7 +747,7 @@ MonoBehaviour:
     attackTime: 0.5
     missileId: 33000001
     specialTags:
-    - 0
+    - "\u94B1\u888B20"
     bloodDrop: 4
   - id: 1000003
     cost: 2
@@ -771,7 +827,7 @@ MonoBehaviour:
     attackTime: 0.5
     missileId: 32000004
     specialTags:
-    - 0
+    - "\u94B1\u888B20"
     bloodDrop: 6
   - id: 1000007
     cost: 5

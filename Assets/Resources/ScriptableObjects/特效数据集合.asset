@@ -25,3 +25,9 @@ MonoBehaviour:
   - id: 4
     name: "\u7194\u7089\u706B"
     vfx: {fileID: 1195354096605370, guid: c785625bfa059c34d9ab1cebb0cd955f, type: 3}
+  - id: 5
+    name: "\u91D1\u94B1\u62D6\u5C3E"
+    vfx: {fileID: 185524, guid: e6177bb1faa07ae4781e14aebfdaebcc, type: 3}
+  - id: 6
+    name: "\u8840\u6DB2\u62D6\u5C3E"
+    vfx: {fileID: 185524, guid: 9af6272a65890794b8bd9d2d8ff3b661, type: 3}

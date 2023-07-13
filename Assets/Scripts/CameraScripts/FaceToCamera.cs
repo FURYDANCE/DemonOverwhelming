@@ -5,10 +5,10 @@ using UnityEngine;
 /// </summary>
 public class FaceToCamera : MonoBehaviour
 {
-
-
+    [Header("角度，不填则为45度")]
+    public float angle;
     void Update()
     {
-        transform.rotation = Quaternion.Euler(-45, transform.rotation.y, transform.rotation.z);
+        transform.rotation = Quaternion.Euler(angle==0? -45:angle, transform.rotation.y, transform.rotation.z);
     }
 }

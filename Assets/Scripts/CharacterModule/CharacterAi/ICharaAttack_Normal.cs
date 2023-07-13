@@ -39,11 +39,9 @@ public class ICharaAttack_Normal : MonoBehaviour,ICharacterAttack
     IEnumerator AttackIenumerator(Entity e)
     {
 
-        //Debug.Log("¹¥»÷£¡£¡");
         manager.canAttack = false;
 
         //¶¯»­
-        //StartCoroutine(AttackAniIenu());
         entity.PlayAniamtion_Attack();
         yield return new WaitForSeconds(entity.parameter.character.attackTime);
         if (e)

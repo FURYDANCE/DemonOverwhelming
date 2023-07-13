@@ -8,11 +8,17 @@ using UnityEngine.UI;
 /// </summary>
 public class BattleManager : MonoBehaviour
 {
+    /// <summary>
+    /// 金钱
+    /// </summary>
     [Header("金钱")]
     public float money;
     public float moneyPerSecond;
     public float moneyAddAmount;
     public float nowMoneyCost;
+    /// <summary>
+    /// 血液
+    /// </summary>
     [Header("血液")]
     public float blood;
     public float nowBloodCost;
@@ -95,9 +101,9 @@ public class BattleManager : MonoBehaviour
     void Update()
     {
         //显示金钱UI
-        objectManager.moneyText.text =  nowMoneyCost + "/" + money;
+        objectManager.moneyText.text = nowMoneyCost + "/" + money;
         //显示血液UI
-        objectManager.bloodText.text =  nowBloodCost + "/" + blood;
+        objectManager.bloodText.text = nowBloodCost + "/" + blood;
         //显示金钱和UI的填充
         objectManager.costFill.fillAmount = nowBloodCost / blood;
         objectManager.moneyFill.fillAmount = nowMoneyCost / money;
@@ -120,7 +126,11 @@ public class BattleManager : MonoBehaviour
         //生成实体测试
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            GenerateOneEntity(Camp.demon, "3000002");
+            GenerateOneEntity(Camp.demon, "1000004");
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GenerateOneEntity(Camp.demon, "4000001");
         }
         //if (Input.GetKeyDown(KeyCode.Z))
         //{
@@ -134,14 +144,22 @@ public class BattleManager : MonoBehaviour
         {
             Debug_CreateEnemy();
         }
-
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Debug_CreateEnemy_2();
+        }
     }
 
     public void Debug_CreateEnemy()
     {
-        GenerateOneEntity(Camp.human, "1000008");
-    }
+        GenerateOneEntity(Camp.human, "1000002");
 
+    }
+    public void Debug_CreateEnemy_2()
+    {
+        GenerateOneEntity(Camp.human, "1000006");
+
+    }
     #region 伤害相关
     /// <summary>
     /// 创建一个aoe伤害区域，参数为中心坐标，检测范围，创造者，阵营，伤害，若要传入buff，其buff的id
@@ -276,9 +294,8 @@ public class BattleManager : MonoBehaviour
             go = Instantiate(GameDataManager.instance.emptyEntity, GameObject.Find("FaceToCamera").transform);
         else
             go = Instantiate(GameDataManager.instance.GetSpinePrefabDataById(id), GameObject.Find("FaceToCamera").transform);
-
         Entity e;
-      
+
         //获取实体组件
         if (!go.GetComponent<Entity>())
             e = go.AddComponent<Entity>();
@@ -620,8 +637,29 @@ public class BattleManager : MonoBehaviour
     {
         blood += amount;
     }
+    /// <summary>
+    /// 以一定数量增加金钱
+    /// </summary>
+    /// <param name="moneyAmount"></param>
+    public void AddMoney(float moneyAmount)
+    {
+        money += moneyAmount;
+        Debug.Log("捡起了钱包");
+    }
+    /// <summary>
+    /// 创造一个钱包
+    /// </summary>
+    /// <returns></returns>
+    public GameObject CreateMoneyBag(Vector3 startPos, float moneyAmount)
+    {
+        GameObject go = Instantiate(GameDataManager.instance.moneyBag, GameObject.Find("FaceToCamera").transform);
+        go.name = "钱包";
 
-
+        go.transform.position = startPos;
+        go.GetComponent<MoneyBag>().moneyAmount = moneyAmount;
+        go.GetComponent<ArcMovement>().targetV3 = startPos + new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), 0);
+        return go;
+    }
     #endregion
 
 
@@ -648,4 +686,35 @@ public class BattleManager : MonoBehaviour
 
     }
 
+
+    #region 显示信息相关
+    public GameObject CreateSceneInformation(GameObject creater, Sprite sprite, string info)
+    {
+        GameObject go = Instantiate(GameDataManager.instance.sceneInformation);
+        go.transform.position = creater.transform.position + new Vector3(-4, 0.5f, 0);
+        go.GetComponent<SceneInformation>().SetInformation(sprite, info);
+        return go;
+    }
+    public GameObject CreateSceneInformation(GameObject creater, Sprite sprite, string info, bool seePanel)
+    {
+        GameObject go = Instantiate(GameDataManager.instance.sceneInformation);
+        go.transform.position = creater.transform.position + new Vector3(-4, 0.5f, 0);
+        SceneInformation s = go.GetComponent<SceneInformation>();
+        s.SetInformation(sprite, info);
+        if (!seePanel)
+            s.panel.color = new Color(1, 1, 1, 0);
+        return go;
+    }
+    public GameObject CreateSceneInformation(GameObject creater, Sprite sprite, string info, bool seePanel, Color textColor)
+    {
+        GameObject go = Instantiate(GameDataManager.instance.sceneInformation);
+        go.transform.position = creater.transform.position + new Vector3(-4, 0.5f, 0);
+        SceneInformation s = go.GetComponent<SceneInformation>();
+        s.SetInformation(sprite, info);
+        if (!seePanel)
+            s.panel.color = new Color(1, 1, 1, 0);
+        s.text.color = textColor;
+        return go;
+    }
+    #endregion
 }

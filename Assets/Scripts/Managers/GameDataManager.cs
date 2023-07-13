@@ -32,7 +32,12 @@ public class GameDataManager : MonoBehaviour
     public GameObject emptySoldierCard;
     [Header("空的布阵卡")]
     public GameObject emptyFormat;
+    [Header("钱包")]
+    public GameObject moneyBag;
+    [Header("场景内的提示信息")]
+    public GameObject sceneInformation;
     public GameObject a;
+    public Sprite bloodSprite;
     public static GameDataManager instance;
     
     private void Awake()
