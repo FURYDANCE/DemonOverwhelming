@@ -30,10 +30,30 @@ public class SoliderGroup : MonoBehaviour
             t.gameObject.AddComponent<FaceToCamera>();
         }
     }
+    /// <summary>
+    /// 设置旗帜贴图
+    /// </summary>
+    /// <param name="sprite"></param>
     public void SetFlagSprite(Sprite sprite)
     {
         flagSprite.sprite = sprite;
     }
+    /// <summary>
+    /// 设置残影具体贴图
+    /// </summary>
+    /// <param name="sprite"></param>
+    public void SetSoldierShadowSprite(Sprite sprite)
+    {
+        foreach (Transform t in soldiers)
+        {
+            UnitParameter p = GameDataManager.instance.GetEntityDataById(Id);
+            t.GetComponent<SpriteRenderer>().sprite = sprite;
+            t.transform.localScale = new Vector3(p.modleSize, p.modleSize, 1);
+        }
+    }
+    /// <summary>
+    /// 生成具体的士兵
+    /// </summary>
     public void Generate()
     {
         //根据坐标和id生成实体  
@@ -55,7 +75,7 @@ public class SoliderGroup : MonoBehaviour
         SetFlagFollowSoldier();
         //transform.SetParent(createdSoldiers[0].transform);
     }
-
+    //当组内士兵死亡时调用的方法
     public void OnSoldierDie(Entity diedSoldier)
     {
         flagSprite.GetComponent<Animator>().Play("HurtEffect");
@@ -72,7 +92,7 @@ public class SoliderGroup : MonoBehaviour
             SetFlagFollowSoldier();
         }
     }
-
+    //设置旗帜跟随的士兵
     void SetFlagFollowSoldier()
     {
         if (createdSoldiers.Count == 0)

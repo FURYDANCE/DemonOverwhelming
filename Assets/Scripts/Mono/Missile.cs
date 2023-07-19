@@ -53,7 +53,6 @@ public class Missile : MonoBehaviour
     {
         //开始时通过id获取到该投射物应有的变量
         parameter = new UnitParameter_Missile();
-        Debug.Log(id);
         SetParameter(id);
         //如果使用生命周期，则开始计时
         if (parameter.useLifeTime)

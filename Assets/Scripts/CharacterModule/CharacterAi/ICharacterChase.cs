@@ -8,4 +8,6 @@ using UnityEngine;
 public interface ICharacterChase 
 {
     public void Chase();
+
+    public void OnStartChase();
 }

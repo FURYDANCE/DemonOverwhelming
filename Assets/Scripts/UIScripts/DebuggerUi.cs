@@ -15,8 +15,10 @@ public class DebuggerUi : MonoBehaviour
     public TMP_InputField mgs_Text;
     public TMP_InputField Blood_Text;
 
-
-
+    public TMP_InputField soldierIdText;
+    public TMP_InputField formatIdText;
+    public Toggle humanToggle;
+    public Toggle demonToggle;
 
     public TMP_InputField searchIdField;
     public TMP_InputField searchIdField_Card;
@@ -74,7 +76,14 @@ public class DebuggerUi : MonoBehaviour
     {
         ShowMoneyAndCost();
     }
+    public void Debug_CreateGroupSoldier()
+    {
+        if (humanToggle.isOn)
+            BattleManager.instance.CreateSoldierWithGroup(Camp.human, soldierIdText.text, formatIdText.text);
+        if(demonToggle.isOn)
+            BattleManager.instance.CreateSoldierWithGroup(Camp.demon, soldierIdText.text, formatIdText.text);
 
+    }
 
 
 

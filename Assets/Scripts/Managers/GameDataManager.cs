@@ -18,7 +18,7 @@ public class GameDataManager : MonoBehaviour
     [Header("可能被调用的材质的数据集合")]
     public MaterialObject materialObject;
     [Header("兵种组的集合")]
-    public SoldierGroupObject soldierGroupObject;
+    public FormationObject formationObject;
     [Header("spine预制件数据集合")]
     public SpinePrefabObject spinePrefabDatas;
     /// <summary>
@@ -39,7 +39,7 @@ public class GameDataManager : MonoBehaviour
     public GameObject a;
     public Sprite bloodSprite;
     public static GameDataManager instance;
-    
+
     private void Awake()
     {
         if (instance != null)
@@ -50,7 +50,7 @@ public class GameDataManager : MonoBehaviour
 
     private void Start()
     {
-        Initialization();   
+        Initialization();
     }
     /// <summary>
     /// 初始化
@@ -99,7 +99,8 @@ public class GameDataManager : MonoBehaviour
     public SoldierCardParameter GetSoldierCardById(string id)
     {
         SoldierCardParameter find = excelDatas.cardDatas.Find((SoldierCardParameter p) => { return p.id == id; });
-        find.content = soldierGroupObject.group.Find((SoldierGroup_ p) => { return p.id == find.id; }).contentObject.GetComponent<SoliderGroup>();
+        find.content = formationObject.formations.Find((Formation p) => { return p.id == find.formationId; }).contentFormation.GetComponent<SoliderGroup>();
+        find.content.Id = find.soldierId;
         return find;
     }
     /// <summary>
@@ -119,7 +120,7 @@ public class GameDataManager : MonoBehaviour
     /// <returns></returns>
     public AnimationsList GetAnimatinosDataById(string id)
     {
-        AnimationsList animations= animationData.animations.Find((AnimationsList p) => { return p.id == id; });
+        AnimationsList animations = animationData.animations.Find((AnimationsList p) => { return p.id == id; });
         return animations;
     }
     public GameObject GetSpinePrefabDataById(string id)
@@ -134,7 +135,7 @@ public class GameDataManager : MonoBehaviour
     /// <returns></returns>
     public DamageData GetDamageDataById(string id)
     {
-        DamageData find= excelDatas.damageDatas.Find((DamageData p) => { return p.id == id; });
+        DamageData find = excelDatas.damageDatas.Find((DamageData p) => { return p.id == id; });
         DamageData d = new DamageData();
         d.id = find.id;
         d.name = find.name;
@@ -148,6 +149,19 @@ public class GameDataManager : MonoBehaviour
         d.startDamageWiatTime = find.startDamageWiatTime;
         return d;
     }
+    /// <summary>
+    /// 通过id获取阵型信息
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public GameObject GetFormationById(string id)
+    {
+        GameObject go = formationObject.formations.Find((Formation f) => { return f.id == id; }).contentFormation.gameObject;
+        if (!go)
+            return null;
+        return go;
+    }
+
     #endregion
 
     #region 数据的读存

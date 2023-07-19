@@ -153,12 +153,11 @@ public class ExcelAccess
                 id = collect_4[i][0].ToString(),
                 name = collect_4[i][1].ToString(),
                 sprite = Resources.Load("Sprites/ModelSprites/" + collect_4[i][2].ToString(), typeof(Sprite)) as Sprite,
-                //cost = float.Parse(collect_4[i][3].ToString()),
-                //hp = float.Parse(collect_4[i][4].ToString()),
                 flagSprite = Resources.Load("Sprites/BuildingSprites/" + collect_4[i][3].ToString(), typeof(Sprite)) as Sprite,
                 moneyCost = float.Parse(collect_4[i][4].ToString()),
                 bloodCost = float.Parse(collect_4[i][5].ToString()),
-
+                formationId = collect_4[i][6].ToString(),
+                soldierId = collect_4[i][7].ToString(),
             };
             dataArray_soldierCard.Add(psc);
         }

@@ -1003,6 +1003,8 @@ MonoBehaviour:
     flagSprite: {fileID: -1896333192, guid: f08bbebc978a9204fa446bc035ce1663, type: 3}
     moneyCost: 10
     bloodCost: 10
+    formationId: 1
+    soldierId: 1000001
     content: {fileID: 0}
   - id: 21000002
     name: "\u72EC\u773C\u6076\u9B54*2"
@@ -1010,6 +1012,8 @@ MonoBehaviour:
     flagSprite: {fileID: -1896333192, guid: f08bbebc978a9204fa446bc035ce1663, type: 3}
     moneyCost: 20
     bloodCost: 10
+    formationId: 2
+    soldierId: 1000003
     content: {fileID: 0}
   - id: 21000003
     name: "\u70AE\u5175*1"
@@ -1017,6 +1021,8 @@ MonoBehaviour:
     flagSprite: {fileID: -1896333192, guid: f08bbebc978a9204fa446bc035ce1663, type: 3}
     moneyCost: 40
     bloodCost: 25
+    formationId: 3
+    soldierId: 1000004
     content: {fileID: 0}
   missileDatas:
   - id: 31000001

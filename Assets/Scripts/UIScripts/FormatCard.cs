@@ -24,8 +24,7 @@ public class FormatCard : MonoBehaviour
     /// 初始位置
     /// </summary>
     Vector3 startPos;
-    float posX;
-    float posY;
+
     /// <summary>
     /// 拖拽UI脚本
     /// </summary>
@@ -41,6 +40,8 @@ public class FormatCard : MonoBehaviour
         connectedSoldierGroup_inScene.transform.position = SceneObjectsManager.instance.playerEntityGeneratePoint.transform.position;
         //设置残影在生成实体士兵时的旗帜贴图
         connectedSoldierGroup_inScene.SetFlagSprite(flagSprite);
+        //设置残影的具体贴图
+        connectedSoldierGroup_inScene.SetSoldierShadowSprite(parentParameter.sprite);
         //将该旗帜对应的兵组位置传给战斗管理器
         BattleManager.instance.soliderFormatGroups.Add(connectedSoldierGroup_inScene);
         startPos = connectedSoldierGroup_inScene.transform.position;

@@ -21,16 +21,19 @@ public class CharacterWalkingState : CharacterBaseState
     }
     public void OnUpdate(CharacterStateManager manager)
     {
+      
+        //当攻击目标不为空时进入追击状态
+        if (manager.attackTarget != null)
+        {
+            manager.ChangeState(new CharacterChasingState());
+            return;
+        }
         //执行行为模块
         if (manager.moveScript != null)
         {
             manager.moveScript.Moving();
         }
-        //当攻击目标不为空时进入追击状态
-        if (manager.attackTarget != null)
-        {
-            manager.ChangeState(new CharacterChasingState());
-        }
+        
     }
 
 

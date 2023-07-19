@@ -5,11 +5,13 @@ using UnityEngine;
 public class CharacterChasingState : CharacterBaseState
 {
 
-    float timer;
     public void OnEnter(CharacterStateManager manager)
     {
         manager.isChaseing = true;
         Debug.Log("进入追击状态");
+       
+
+        manager.chaseScript.OnStartChase();
     }
 
     public void OnExit(CharacterStateManager manager)
@@ -20,6 +22,7 @@ public class CharacterChasingState : CharacterBaseState
 
     public void OnUpdate(CharacterStateManager manager)
     {
+
         manager.chaseScript.Chase();
         //如果范围内不在检测到敌方对象，重新回归到行走状态
         //如果有玩家控制脚本，则按下控制按键时也回到行走状态
@@ -33,6 +36,7 @@ public class CharacterChasingState : CharacterBaseState
         if (manager.attackTarget && (Vector3.Distance(manager.transform.position, manager.attackTarget.transform.position) <= manager.entity.parameter.character.attackDistance))
         {
             manager.ChangeState(new CharacterAttackingState());
+            return;
         }
 
     }
