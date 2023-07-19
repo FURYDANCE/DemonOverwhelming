@@ -1139,6 +1139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73402efe39cba654abc2759451b39ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angle: 0
 --- !u!1 &385404991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,6 +1495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73402efe39cba654abc2759451b39ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angle: 0
 --- !u!212 &454947321
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1811,6 +1813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73402efe39cba654abc2759451b39ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angle: 0
 --- !u!114 &491496141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3402,6 +3405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73402efe39cba654abc2759451b39ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angle: 0
 --- !u!1 &1064033216
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,6 +3976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73402efe39cba654abc2759451b39ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angle: 0
 --- !u!1 &1245849862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4017,10 +4022,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126cfbc5f52e16f468b91b323ca5a9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  excelDatas: {fileID: 0}
+  excelDatas: {fileID: 11400000, guid: a8a7f34daadb0e0429214850826c76c3, type: 2}
   animationData: {fileID: 11400000, guid: 557248ec7b4ace248ad07b0dc060a440, type: 2}
   materialObject: {fileID: 11400000, guid: 0c2213e9a08a5044b89cd2484aef5d1e, type: 2}
-  soldierGroupObject: {fileID: 11400000, guid: 806f40da8563eb441914fdc93ca22017, type: 2}
+  formationObject: {fileID: 11400000, guid: 9b7d402aebbee2746afa3699ab3e6d15, type: 2}
   spinePrefabDatas: {fileID: 11400000, guid: 1a81ba0ff9eb966478c0eefe4d2f9391, type: 2}
   emptyEntity: {fileID: 4785308967260491664, guid: 38d9438aab39da34c843143be4cc8999, type: 3}
   emptySpine: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
@@ -4967,6 +4972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73402efe39cba654abc2759451b39ffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  angle: 0
 --- !u!1 &1923987037
 GameObject:
   m_ObjectHideFlags: 0
@@ -5291,14 +5297,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1329042300}
     m_Modifications:
-    - target: {fileID: 3073234228479770794, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 777891645}
-    - target: {fileID: 3073234228790114827, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -148,6 +148,18 @@ public class BattleManager : MonoBehaviour
         {
             Debug_CreateEnemy_2();
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            CreateSoldierWithGroup(Camp.human, "1000002", "2");
+        }
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            CreateSoldierWithGroup(Camp.human, "1000006", "3");
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            CreateSoldierWithGroup(Camp.demon, "1000005", "1");
+        }
     }
 
     public void Debug_CreateEnemy()
@@ -370,6 +382,24 @@ public class BattleManager : MonoBehaviour
         //只改变相机跟随目标的X轴，不改变YZ
         cameraFollowTarget.transform.position = new Vector3(nowChoosedTarget.transform.position.x, cameraFollowTarget.transform.position.y, 3);
     }
+
+    /// <summary>
+    /// 以组为单位生成士兵，参数为阵营，士兵ID和阵型ID
+    /// </summary>
+    public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId)
+    {
+        genrateAmount++;
+        GameObject go;
+        Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
+        go = Instantiate(GameDataManager.instance.GetFormationById(formationId), GameObject.Find("FaceToCamera").transform);
+        go.transform.position = pos;
+        SoliderGroup sg = go.GetComponent<SoliderGroup>();
+        sg.camp = camp;
+        sg.Id = soldierId;
+        sg.Generate();
+    }
+
+
 
     #region 鼠标选择实体的相关方法s
 

@@ -22,10 +22,14 @@ public class SoldierCardParameter
     /// 血液花费
     /// </summary>
     public float bloodCost;
-    ///// <summary>
-    ///// cost
-    ///// </summary>
-    //public float cost;
+    /// <summary>
+    /// 引用的阵型id
+    /// </summary>
+    public string formationId;
+    /// <summary>
+    /// 引用的士兵id
+    /// </summary>
+    public string soldierId;
 
     /// <summary>
     /// 存放兵种内容的预制件，通过id找到
@@ -39,6 +43,7 @@ public class SoldierCardParameter
         name = data.name;
         moneyCost = data.moneyCost;
         bloodCost = data.bloodCost;
-      
+        formationId = data.formationId;
+        soldierId = data.soldierId;
     }
 }
