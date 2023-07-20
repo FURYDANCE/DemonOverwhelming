@@ -123,55 +123,15 @@ public class BattleManager : MonoBehaviour
             ReleaseChoosedEntity();
             DestoryNowUnitInformation();
         }
-        //生成实体测试
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            GenerateOneEntity(Camp.demon, "1000004");
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            GenerateOneEntity(Camp.demon, "4000001");
-        }
-        //if (Input.GetKeyDown(KeyCode.Z))
-        //{
-        //    GenerateOneEntity(Camp.demon, "1000005");
-        //}
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    GenerateOneEntity(Camp.demon, "1000004");
-        //}
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Debug_CreateEnemy();
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Debug_CreateEnemy_2();
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            CreateSoldierWithGroup(Camp.human, "1000002", "2");
-        }
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            CreateSoldierWithGroup(Camp.human, "1000006", "3");
-        }
+        ////生成实体测试
+      
         if (Input.GetKeyDown(KeyCode.B))
         {
-            CreateSoldierWithGroup(Camp.demon, "1000005", "1");
+            CreateSoldierWithGroup(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers);
         }
     }
 
-    public void Debug_CreateEnemy()
-    {
-        GenerateOneEntity(Camp.human, "1000002");
-
-    }
-    public void Debug_CreateEnemy_2()
-    {
-        GenerateOneEntity(Camp.human, "1000006");
-
-    }
+   
     #region 伤害相关
     /// <summary>
     /// 创建一个aoe伤害区域，参数为中心坐标，检测范围，创造者，阵营，伤害，若要传入buff，其buff的id

@@ -153,11 +153,12 @@ public class Entity : MonoBehaviour
             animator.runtimeAnimatorController = animations.animatorController;
         }
         //设置行动ai
-        if (parameter.aiMode_Move == 0)
+        if (parameter.aiMode_Move == Ai_MoveType.directMove)
             gameObject.AddComponent<ICharaMove_Direct>();
-        if (parameter.aiMode_Move == 1)
+        if (parameter.aiMode_Move == Ai_MoveType.playerInputMove)
         {
             gameObject.AddComponent<ICharaMove_InputKey>();
+            //玩家操控的单位会加上钱包的检测
             gameObject.AddComponent<MoneyBagCheck>();
         }
         gameObject.AddComponent<ICharaEnemyCheck_Nearest>();
@@ -267,7 +268,6 @@ public class Entity : MonoBehaviour
         //特殊词条的钱包掉落
         foreach (string t in parameter.character.specialTags)
         {
-            Debug.Log("TAG：：：" + t);
             if (t.Contains("钱袋"))
             {
                 float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(t, @"[^0-9]+", ""));
