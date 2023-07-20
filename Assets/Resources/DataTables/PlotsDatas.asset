@@ -257,47 +257,6 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 0
-  - ID: 1000004
-    type: 0
-    name: "\u70AE\u5175"
-    sprite: {fileID: -1308631131, guid: fd2a47b5de78e08458767b4cc589912e, type: 3}
-    Hp: 10
-    nowHp: 0
-    hurtDamage: 3
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 18, z: 0}
-    introduct: "\u70AE\u5175"
-    modleSize: 1
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
-    character:
-      id: 1000004
-      cost: 4
-      aiType: 1
-      moveSpeed: 2
-      defence: 2
-      defence_far: 0
-      defence_magic: 0
-      haveSkill: 0
-      skillId: 0
-      skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-      attackDistance: 35
-      chaseTime: 0
-      attackWaitTime: 2.5
-      attackTime: 0.5
-      missileId: 31000004
-      specialTags:
-      - 0
-      bloodDrop: 0
-    building:
-      id: 
-      building_canAttack: 0
   - ID: 1000005
     type: 0
     name: "\u7194\u7089\u86DE\u8753"
@@ -459,6 +418,47 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 6
+    building:
+      id: 
+      building_canAttack: 0
+  - ID: 1000009
+    type: 0
+    name: "\u70AE\u5175"
+    sprite: {fileID: -1308631131, guid: fd2a47b5de78e08458767b4cc589912e, type: 3}
+    Hp: 10
+    nowHp: 0
+    hurtDamage: 3
+    hpBarSize: 0.5
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u70AE\u5175"
+    modleSize: 1
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000009
+      cost: 4
+      aiType: 1
+      moveSpeed: 2
+      defence: 2
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
+      attackDistance: 35
+      chaseTime: 0
+      attackWaitTime: 2.5
+      attackTime: 0.5
+      missileId: 31000004
+      specialTags:
+      - 0
+      bloodDrop: 0
     building:
       id: 
       building_canAttack: 0
@@ -769,26 +769,6 @@ MonoBehaviour:
     specialTags:
     - 0
     bloodDrop: 4
-  - id: 1000004
-    cost: 4
-    aiType: 1
-    moveSpeed: 2
-    defence: 2
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 35, y: 25, z: 0}
-    EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-    attackDistance: 35
-    chaseTime: 0
-    attackWaitTime: 2.5
-    attackTime: 0.5
-    missileId: 31000004
-    specialTags:
-    - 0
-    bloodDrop: 0
   - id: 1000005
     cost: 5
     aiType: 0
@@ -869,6 +849,26 @@ MonoBehaviour:
     specialTags:
     - 0
     bloodDrop: 6
+  - id: 1000009
+    cost: 4
+    aiType: 1
+    moveSpeed: 2
+    defence: 2
+    defence_far: 0
+    defence_magic: 0
+    haveSkill: 0
+    skillId: 0
+    skillName: 
+    EnemyCheckArea: {x: 35, y: 25, z: 0}
+    EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
+    attackDistance: 35
+    chaseTime: 0
+    attackWaitTime: 2.5
+    attackTime: 0.5
+    missileId: 31000004
+    specialTags:
+    - 0
+    bloodDrop: 0
   - id: 2000001
     cost: 0
     aiType: 1

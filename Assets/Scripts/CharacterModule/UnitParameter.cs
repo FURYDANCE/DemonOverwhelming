@@ -33,10 +33,10 @@ public class UnitParameter
     public Vector3 shadowSize;
     public float shadowOffset;
     [Header("AI行为模式")]
-    public int aiMode_Move;
-    public int aiMode_Check;
-    public int aiMode_Chase;
-    public int aiMode_Atk;
+    public Ai_MoveType aiMode_Move;
+    public Ai_CheckType aiMode_Check;
+    public Ai_ChaseType aiMode_Chase;
+    public Ai_AttackType aiMode_Atk;
     [Header("角色变量")]
     public UnitParameter_Character character;
     [Header("建筑变量")]
@@ -90,7 +90,7 @@ public class UnitParameter
         character.defence_magic = data.character.defence_magic;
         character.missileId = data.character.missileId;
         building.building_canAttack = data.building.building_canAttack;
-        
+
     }
     public void SetValue_noSprite(UnitParameter data)
     {
@@ -219,7 +219,7 @@ public class UnitParameter_Missile
         aoeWaitTime = data.aoeWaitTime;
         arcMoveTime = data.arcMoveTime;
         arcMoveHeight = data.arcMoveHeight;
-        
+
         return this;
     }
 }

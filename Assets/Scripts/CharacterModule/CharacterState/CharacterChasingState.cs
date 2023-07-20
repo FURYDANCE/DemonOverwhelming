@@ -8,7 +8,7 @@ public class CharacterChasingState : CharacterBaseState
     public void OnEnter(CharacterStateManager manager)
     {
         manager.isChaseing = true;
-        Debug.Log("½øÈë×·»÷×´Ì¬");
+        //Debug.Log("½øÈë×·»÷×´Ì¬");
        
 
         manager.chaseScript.OnStartChase();
@@ -17,7 +17,7 @@ public class CharacterChasingState : CharacterBaseState
     public void OnExit(CharacterStateManager manager)
     {
         manager.isChaseing = false;
-        Debug.Log("Àë¿ª×·»÷×´Ì¬");
+        //Debug.Log("Àë¿ª×·»÷×´Ì¬");
     }
 
     public void OnUpdate(CharacterStateManager manager)

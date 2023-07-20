@@ -103,10 +103,10 @@ public class ExcelAccess
                 shadowSize = new Vector3(float.Parse(collect[i][10].ToString().Split(",")[0]), float.Parse(collect[i][10].ToString().Split(",")[1])),
                 shadowOffset = float.Parse(collect[i][10].ToString().Split(",")[2]),
 
-                aiMode_Move = int.Parse(collect[i][11].ToString().Split("/")[0]),
-                aiMode_Check = int.Parse(collect[i][11].ToString().Split("/")[1]),
-                aiMode_Chase = int.Parse(collect[i][11].ToString().Split("/")[2]),
-                aiMode_Atk = int.Parse(collect[i][11].ToString().Split("/")[3]),
+                aiMode_Move =(Ai_MoveType) int.Parse(collect[i][11].ToString().Split("/")[0]),
+                aiMode_Check = (Ai_CheckType)int.Parse(collect[i][11].ToString().Split("/")[1]),
+                aiMode_Chase = (Ai_ChaseType)int.Parse(collect[i][11].ToString().Split("/")[2]),
+                aiMode_Atk = (Ai_AttackType)int.Parse(collect[i][11].ToString().Split("/")[3]),
             };
 
             dataArray.Add(up);
