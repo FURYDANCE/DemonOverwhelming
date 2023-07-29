@@ -2,7 +2,7 @@ using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 /// <summary>
 /// 实体类，挂载在场景中所有的实体上（建筑，兵种，英雄）
 /// 鼠标悬停在上面时通过改变material来切换显示

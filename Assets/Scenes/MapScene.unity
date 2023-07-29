@@ -450,7 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: "\u8FD9\u662F\u7B2C2\u5173"
-  targetSceneName: MainScene
+  targetSceneName: SampleScene
   levelSprite: {fileID: 0}
   levelDescription: "\u8FD9\u662F\u7B2C2\u5173\u7684\u5267\u60C5\u4ECB\u7ECD"
   leveltargetDescription: "\u8FD9\u662F\u7B2C2\u5173\u7684\u76EE\u6807\u63CF\u8FF0"
@@ -2255,7 +2255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: "\u8FD9\u662F\u7B2C\u4E00\u5173"
-  targetSceneName: MainScene
+  targetSceneName: SampleScene
   levelSprite: {fileID: 0}
   levelDescription: "\u8FD9\u662F\u7B2C\u4E00\u5173\u7684\u5267\u60C5\u4ECB\u7ECD"
   leveltargetDescription: "\u8FD9\u662F\u7B2C\u4E00\u5173\u7684\u76EE\u6807\u63CF\u8FF0"
@@ -4603,7 +4603,7 @@ MonoBehaviour:
   excelDatas: {fileID: 11400000, guid: a8a7f34daadb0e0429214850826c76c3, type: 2}
   animationData: {fileID: 11400000, guid: 557248ec7b4ace248ad07b0dc060a440, type: 2}
   materialObject: {fileID: 11400000, guid: 0c2213e9a08a5044b89cd2484aef5d1e, type: 2}
-  soldierGroupObject: {fileID: 11400000, guid: 806f40da8563eb441914fdc93ca22017, type: 2}
+  formationObject: {fileID: 0}
   spinePrefabDatas: {fileID: 11400000, guid: 1a81ba0ff9eb966478c0eefe4d2f9391, type: 2}
   emptyEntity: {fileID: 4785308967260491664, guid: 38d9438aab39da34c843143be4cc8999, type: 3}
   emptySpine: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
@@ -5952,7 +5952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: "\u8FD9\u662F\u7B2C3\u5173"
-  targetSceneName: MainScene
+  targetSceneName: SampleScene
   levelSprite: {fileID: 0}
   levelDescription: "\u8FD9\u662F\u7B2C3\u5173\u7684\u5267\u60C5\u4ECB\u7ECD"
   leveltargetDescription: "\u8FD9\u662F\u7B2C3\u5173\u7684\u76EE\u6807\u63CF\u8FF0"

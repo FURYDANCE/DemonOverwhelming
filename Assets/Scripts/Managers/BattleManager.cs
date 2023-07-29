@@ -78,6 +78,13 @@ public class BattleManager : MonoBehaviour
     public static BattleManager instance;
     SceneObjectsManager objectManager;
     Coroutine generateMoneyIenumerator;
+    /// <summary>
+    /// 填充条的起始颜色
+    /// </summary>
+    Color fillStartColor;
+    //计算填充条smoothDamp的两个速度变量
+    float v1;
+    float v2;
     private void Awake()
     {
         if (instance != null)
@@ -93,20 +100,17 @@ public class BattleManager : MonoBehaviour
         //生成右下角的兵种卡
         CreateOneSoldierCard("21000001");
         CreateOneSoldierCard("21000002");
-        //string json1 = JsonConvert.SerializeObject("asd");
-        //Debug.Log(json1);
+        fillStartColor = SceneObjectsManager.instance.costFill.color;
+
+        //GenerateOneEntity(Camp.demon, SoldierIds.hero1);
+
     }
 
 
     void Update()
     {
-        //显示金钱UI
-        objectManager.moneyText.text = nowMoneyCost + "/" + money;
-        //显示血液UI
-        objectManager.bloodText.text = nowBloodCost + "/" + blood;
-        //显示金钱和UI的填充
-        objectManager.costFill.fillAmount = nowBloodCost / blood;
-        objectManager.moneyFill.fillAmount = nowMoneyCost / money;
+        Money_BoloodShowing();
+
         //当有选中的实体时，相机跟随所选择的实体
         if (nowChoosedTarget != null)
             CameraFollow_ByChoosedTarget();
@@ -124,14 +128,39 @@ public class BattleManager : MonoBehaviour
             DestoryNowUnitInformation();
         }
         ////生成实体测试
-      
+
         if (Input.GetKeyDown(KeyCode.B))
         {
-            CreateSoldierWithGroup(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers);
+            CreateSoldierWithGroup(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers, true);
         }
     }
+    #region 界面显示相关
+    /// <summary>
+    /// 显示界面上的金钱与血液，显示填充条的填充效果
+    /// </summary>
+    public void Money_BoloodShowing()
+    {
+        //显示金钱UI
+        objectManager.moneyText.text = nowMoneyCost + "/" + money;
+        //显示血液UI
+        objectManager.bloodText.text = nowBloodCost + "/" + blood;
+        //显示金钱和UI的填充
+        objectManager.costFill.fillAmount = Mathf.SmoothDamp(objectManager.costFill.fillAmount, nowBloodCost / blood, ref v1, 0.25f);
+        objectManager.moneyFill.fillAmount = Mathf.SmoothDamp(objectManager.moneyFill.fillAmount, nowMoneyCost / money, ref v2, 0.25f);
+        //超过最大值时将填充条的颜色变为红色
+        if (nowBloodCost > blood)
+            objectManager.costFill.color = Color.red;
+        else
+            objectManager.costFill.color = fillStartColor;
+        if (nowMoneyCost > money)
+            objectManager.moneyFill.color = Color.red;
+        else
+            objectManager.moneyFill.color = fillStartColor;
 
-   
+
+    }
+    #endregion
+
     #region 伤害相关
     /// <summary>
     /// 创建一个aoe伤害区域，参数为中心坐标，检测范围，创造者，阵营，伤害，若要传入buff，其buff的id
@@ -303,7 +332,11 @@ public class BattleManager : MonoBehaviour
         //生成次数+1
         genrateAmount++;
         //生成空对象，将其纳入FaceToCamera中
-        GameObject go = Instantiate(GameDataManager.instance.emptyEntity, GameObject.Find("FaceToCamera").transform);
+        GameObject go;/* = Instantiate(GameDataManager.instance.emptyEntity, GameObject.Find("FaceToCamera").transform);*/
+        if (GameDataManager.instance.GetEntityDataById(id).name.Split("/").Length == 1)
+            go = Instantiate(GameDataManager.instance.emptyEntity, GameObject.Find("FaceToCamera").transform);
+        else
+            go = Instantiate(GameDataManager.instance.GetSpinePrefabDataById(id), GameObject.Find("FaceToCamera").transform);
         //设置坐标
         go.transform.position = pos;
         //添加或获取实体脚本
@@ -346,19 +379,31 @@ public class BattleManager : MonoBehaviour
     /// <summary>
     /// 以组为单位生成士兵，参数为阵营，士兵ID和阵型ID
     /// </summary>
-    public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId)
+    public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow)
     {
         genrateAmount++;
         GameObject go;
         Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
         go = Instantiate(GameDataManager.instance.GetFormationById(formationId), GameObject.Find("FaceToCamera").transform);
-        go.transform.position = pos;
+        go.transform.position = pos + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0);
         SoliderGroup sg = go.GetComponent<SoliderGroup>();
         sg.camp = camp;
         sg.Id = soldierId;
-        sg.Generate();
+        sg.Generate(destoryShadow);
     }
-
+    public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow,Vector3 Offset)
+    {
+        genrateAmount++;
+        GameObject go;
+        Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
+        go = Instantiate(GameDataManager.instance.GetFormationById(formationId), GameObject.Find("FaceToCamera").transform);
+        go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
+        SoliderGroup sg = go.GetComponent<SoliderGroup>();
+        sg.camp = camp;
+        sg.Id = soldierId;
+        sg.transform.position += Offset;
+        sg.Generate(destoryShadow);
+    }
 
 
     #region 鼠标选择实体的相关方法s
@@ -461,12 +506,7 @@ public class BattleManager : MonoBehaviour
     public void SelectSoldierCard(SoldierCard card)
     {
         Debug.Log("Cost:" + nowBloodCost + "  cardCost:" + card.parameter.bloodCost + "money:" + money + "  cardMoney:" + card.parameter.moneyCost);
-        //计算金钱和cost统计，若超过最大值则不生成
-        if (nowBloodCost + card.parameter.bloodCost > blood || nowMoneyCost + card.parameter.moneyCost > money)
-        {
-            Debug.Log("超过最大值");
-            return;
-        }
+
         //添加金钱与cost统计
         nowMoneyCost += card.parameter.moneyCost;
         nowBloodCost += card.parameter.bloodCost;
@@ -509,7 +549,6 @@ public class BattleManager : MonoBehaviour
         money -= nowMoneyCost;
         blood -= nowBloodCost;
         nowMoneyCost = 0;
-
         //cost回归为0
         nowBloodCost = 0;
         //将上次选择的记录清空
@@ -517,16 +556,25 @@ public class BattleManager : MonoBehaviour
     }
     /// <summary>
     /// 点击水晶球后，遍历当前的旗帜生成对应的兵种，之后取消旗帜
+    /// 更改：超过最大值之后仍然可以生成旗帜，但是不能生成具体兵组
     /// </summary>
     public void GenerateSoldiers()
     {
+        //计算金钱和cost统计，若超过最大值则不生成
+        if (nowBloodCost > blood || nowMoneyCost > money)
+        {
+            Debug.Log("超过最大值");
+            return;
+        }
         //生成兵种
         foreach (SoliderGroup sg in soliderFormatGroups)
         {
-            sg.Generate();
+            sg.Generate(false);
         }
+        money -= nowMoneyCost;
+        blood -= nowBloodCost;
         //清空旗帜，计算花费金钱
-        ClearCardSelect();
+        //ClearCardSelect();
     }
 
     /// <summary>

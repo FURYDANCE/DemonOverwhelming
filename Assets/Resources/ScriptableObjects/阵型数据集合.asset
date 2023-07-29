@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   formations:
   - id: 1
-    contentFormation: {fileID: 1780575785, guid: 275d7f31c7c4a1e4291e8becdb76d667, type: 3}
+    contentFormation: {fileID: 1780575785, guid: 229823e4a4a8ef04c86a78eb10e17637, type: 3}
   - id: 2
-    contentFormation: {fileID: 1780575785, guid: ed03371c3b8b72846885704ba5811e01, type: 3}
+    contentFormation: {fileID: 1780575785, guid: 402768a9629939b4aa9cca8e52255733, type: 3}
   - id: 3
     contentFormation: {fileID: 1780575785, guid: 1556620fc91823540872a3a10057e502, type: 3}
+  - id: 4
+    contentFormation: {fileID: 1780575785, guid: 275d7f31c7c4a1e4291e8becdb76d667, type: 3}
+  - id: 5
+    contentFormation: {fileID: 1780575785, guid: ed03371c3b8b72846885704ba5811e01, type: 3}

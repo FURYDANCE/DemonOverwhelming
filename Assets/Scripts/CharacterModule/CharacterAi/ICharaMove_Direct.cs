@@ -35,7 +35,8 @@ public class ICharaMove_Direct : MonoBehaviour, ICharacterMove
             moveDir = Vector3.left.normalized;
         if (timer < 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, speed * Time.deltaTime);
+            //为了当调试时锁定位置有效，还是要直接调用实体的速度值
+            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, entity.parameter.character.moveSpeed * Time.deltaTime);
             //Debug.Log("动了");
         }
         timer -= Time.deltaTime;

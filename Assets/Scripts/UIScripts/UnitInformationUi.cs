@@ -156,6 +156,10 @@ public class UnitInformationUi : MonoBehaviour
     {
         nowTargetObject.transform.position += Vector3.right * 10;
     }
+    public void KillTarget()
+    {
+        nowTargetObject.GetComponent<Entity>().Die();
+    }
     public void Debug_SpeedLock()
     {
         if (!speedLocked)
