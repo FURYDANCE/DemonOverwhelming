@@ -3,6 +3,12 @@
 /// </summary>
 public class SoldierIds 
 {
+    #region
+    public const string hero1 = "4000001";
+    #endregion
+
+
+    #region Íæ¼ÒÊ¿±ø
     /// <summary>
     /// Ð¡¶ñÄ§
     /// </summary>
@@ -80,6 +86,7 @@ public class SoldierIds
     /// </summary>
     public const string castleObsidian = "1000022";
 
+    #endregion
 
 
 

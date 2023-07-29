@@ -17,7 +17,9 @@ public class SoliderGroup : MonoBehaviour
     /// <summary>
     /// 阵营
     /// </summary>
+    [HideInInspector]
     public Camp camp;
+    [HideInInspector]
     public string Id;
     public SpriteRenderer flagSprite;
 
@@ -54,7 +56,8 @@ public class SoliderGroup : MonoBehaviour
     /// <summary>
     /// 生成具体的士兵
     /// </summary>
-    public void Generate()
+    /// <param name="destoryShadow">是否摧毁场上的虚影</param>
+    public void Generate(bool destoryShadow)
     {
         //根据坐标和id生成实体  
         for (int i = 0; i < soldiers.Length; i++)
@@ -68,7 +71,8 @@ public class SoliderGroup : MonoBehaviour
         //生成之后摧毁虚影
         foreach (Transform t in soldiers)
         {
-            Destroy(t.gameObject);
+            if (destoryShadow)
+                Destroy(t.gameObject);
         }
         //跟随
         //gameObject.AddComponent<FaceToCamera>();

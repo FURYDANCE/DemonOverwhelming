@@ -492,7 +492,7 @@ MonoBehaviour:
       skillName: 
       EnemyCheckArea: {x: 35, y: 25, z: 0}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-      attackDistance: 0
+      attackDistance: 35
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
@@ -881,7 +881,7 @@ MonoBehaviour:
     skillName: 
     EnemyCheckArea: {x: 35, y: 25, z: 0}
     EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-    attackDistance: 0
+    attackDistance: 35
     chaseTime: 0
     attackWaitTime: 0.5
     attackTime: 0.5
@@ -1003,7 +1003,7 @@ MonoBehaviour:
     flagSprite: {fileID: -1896333192, guid: f08bbebc978a9204fa446bc035ce1663, type: 3}
     moneyCost: 10
     bloodCost: 10
-    formationId: 1
+    formationId: 4
     soldierId: 1000001
     content: {fileID: 0}
   - id: 21000002
@@ -1012,7 +1012,7 @@ MonoBehaviour:
     flagSprite: {fileID: -1896333192, guid: f08bbebc978a9204fa446bc035ce1663, type: 3}
     moneyCost: 20
     bloodCost: 10
-    formationId: 2
+    formationId: 3
     soldierId: 1000003
     content: {fileID: 0}
   - id: 21000003
@@ -1021,7 +1021,7 @@ MonoBehaviour:
     flagSprite: {fileID: -1896333192, guid: f08bbebc978a9204fa446bc035ce1663, type: 3}
     moneyCost: 40
     bloodCost: 25
-    formationId: 3
+    formationId: 2
     soldierId: 1000004
     content: {fileID: 0}
   missileDatas:

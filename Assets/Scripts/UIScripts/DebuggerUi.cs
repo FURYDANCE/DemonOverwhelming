@@ -10,7 +10,7 @@ public class DebuggerUi : MonoBehaviour
 {
     public GameObject consolePanel;
     public GameObject debuggerPanel;
-
+    public GameObject introductionPanel;
     public TMP_InputField mps_Text;
     public TMP_InputField mgs_Text;
     public TMP_InputField Blood_Text;
@@ -79,9 +79,9 @@ public class DebuggerUi : MonoBehaviour
     public void Debug_CreateGroupSoldier()
     {
         if (humanToggle.isOn)
-            BattleManager.instance.CreateSoldierWithGroup(Camp.human, soldierIdText.text, formatIdText.text);
+            BattleManager.instance.CreateSoldierWithGroup(Camp.human, soldierIdText.text, formatIdText.text,true);
         if(demonToggle.isOn)
-            BattleManager.instance.CreateSoldierWithGroup(Camp.demon, soldierIdText.text, formatIdText.text);
+            BattleManager.instance.CreateSoldierWithGroup(Camp.demon, soldierIdText.text, formatIdText.text,true);
 
     }
 
@@ -123,6 +123,19 @@ public class DebuggerUi : MonoBehaviour
         else
         {
             debuggerPanel.SetActive(true);
+            return;
+        }
+    }
+    public void ShowIntroduction()
+    {
+        if (introductionPanel.activeInHierarchy)
+        {
+            introductionPanel.SetActive(false);
+            return;
+        }
+        else
+        {
+            introductionPanel.SetActive(true);
             return;
         }
     }
