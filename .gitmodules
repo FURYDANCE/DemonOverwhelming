@@ -1,0 +1,3 @@
+[submodule "Assets/Plugins/BJSYGameCore"]
+	path = Assets/Plugins/BJSYGameCore
+	url = https://github.com/bianjingshiyi/BJSYGameCore.git
