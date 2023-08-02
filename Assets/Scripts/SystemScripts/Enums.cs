@@ -7,7 +7,7 @@ public enum CameraControlMode
 /// </summary>
 public enum EntityType
 {
-    character, building, missle
+    character, building, elite,hero
 }
 /// <summary>
 /// 阵营类型：恶魔、人类

@@ -9,7 +9,6 @@ using UnityEngine;
 public class UnitParameter
 {
     public string ID;
-
     /// <summary>
     /// 实体类型
     /// </summary>
@@ -41,8 +40,6 @@ public class UnitParameter
     public UnitParameter_Character character;
     [Header("建筑变量")]
     public UnitParameter_Building building;
-    //[Header("投射物变量")]
-    //public UnitParameter_Missile missile;
 
 
     public void SetValue(UnitParameter data)
@@ -90,6 +87,9 @@ public class UnitParameter
         character.defence_magic = data.character.defence_magic;
         character.missileId = data.character.missileId;
         building.building_canAttack = data.building.building_canAttack;
+        character.skillIds = data.character.skillIds;
+        character.skillLevels = data.character.skillLevels;
+        character.descriptionAndStory = data.character.descriptionAndStory;
 
     }
     public void SetValue_noSprite(UnitParameter data)
@@ -136,7 +136,9 @@ public class UnitParameter
         character.defence_far = data.character.defence_far;
         character.defence_magic = data.character.defence_magic;
         building.building_canAttack = data.building.building_canAttack;
-
+        character.skillIds = data.character.skillIds;
+        character.skillLevels = data.character.skillLevels;
+        character.descriptionAndStory = data.character.descriptionAndStory;
     }
 }
 [System.Serializable]
@@ -166,6 +168,10 @@ public class UnitParameter_Character
     public string missileId;
     public string[] specialTags;
     public float bloodDrop;
+    public string[] skillIds;
+    public List<Skill> skills;
+    public string[] skillLevels;
+    public string[] descriptionAndStory;
 }
 [System.Serializable]
 public class UnitParameter_Building

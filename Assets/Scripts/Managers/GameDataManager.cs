@@ -161,7 +161,20 @@ public class GameDataManager : MonoBehaviour
             return null;
         return go;
     }
-
+    /// <summary>
+    /// 通过id获取技能信息
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public Skill GetSkillById(string id)
+    {
+        Skill s = excelDatas.skillDatas.Find((Skill p) => { return p.id == id; });
+        Skill skill = new Skill();
+        if (s==null)
+            return null;
+        skill.SetValue(s);
+        return skill;
+    }
     #endregion
 
     #region 数据的读存

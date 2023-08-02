@@ -15,7 +15,7 @@ public class BuildAssetsByExcel : Editor
         ExcelDataManager excel_manager = ScriptableObject.CreateInstance<ExcelDataManager>();
         excel_manager.plotsData = ExcelAccess.SelectMenuTable();
         ExcelAccess.SelectEntityTable(out excel_manager.unitDatas, out excel_manager.characterDatas, out excel_manager.buildingDatas,
-            out excel_manager.cardDatas, out excel_manager.missileDatas, out excel_manager.damageDatas);
+            out excel_manager.cardDatas, out excel_manager.missileDatas, out excel_manager.damageDatas,out excel_manager.skillDatas);
         string Path = "Assets/Resources/DataTables/PlotsDatas.asset";
         AssetDatabase.CreateAsset(excel_manager, Path);
         AssetDatabase.Refresh();

@@ -20,6 +20,10 @@ public class Entity : MonoBehaviour
     /// </summary>
     public List<BuffInformation> buffs;
     public List<Character_SpecialTagBase> character_SpecialTagBases;
+    /// <summary>
+    /// 实体的技能s
+    /// </summary>
+    public List<Skill> skills;
     public UnitParameter parameter;
     public HpShowUi hpBar;
     SpriteRenderer sprite;
@@ -36,6 +40,8 @@ public class Entity : MonoBehaviour
     public Animator animator;
     public AnimationsList animations;
     public SkeletonAnimation skAni;
+    [SerializeField]
+    int[] skillLevels;
     private void Start()
     {
         buffs = new List<BuffInformation>();
@@ -46,8 +52,11 @@ public class Entity : MonoBehaviour
     private void FixedUpdate()
     {
         UpdateBuff();
+        SkillWaitTimeCaculate();
     }
+
     #region 初始化相关
+
     public void SetEntityParameter()
     {
         parameter.SetValue(GameDataManager.instance.GetEntityDataById(parameter.ID));
@@ -152,6 +161,26 @@ public class Entity : MonoBehaviour
         {
             animator.runtimeAnimatorController = animations.animatorController;
         }
+        //设置技能和技能等级
+        parameter.character.skills = new List<Skill>();
+        for (int i = 0; i < parameter.character.skillIds.Length; i++)
+        {
+            if (GameDataManager.instance.GetSkillById(parameter.character.skillIds[i]) != null)
+            {
+                parameter.character.skills.Add(GameDataManager.instance.GetSkillById(parameter.character.skillIds[i]));
+            }
+        }
+        skills = parameter.character.skills;
+        //设置技能等级
+        skillLevels = new int[skills.Count];
+        for (int i = 0; i < skills.Count; i++)
+        {
+            skillLevels[i] = int.Parse(parameter.character.skillLevels[i]);
+        }
+        for (int i = 0; i < skills.Count; i++)
+        {
+            skills[i].skillLevel = skillLevels[i];
+        }
         //设置行动ai
         if (parameter.aiMode_Move == Ai_MoveType.directMove)
             gameObject.AddComponent<ICharaMove_Direct>();
@@ -160,10 +189,14 @@ public class Entity : MonoBehaviour
             gameObject.AddComponent<ICharaMove_InputKey>();
             //玩家操控的单位会加上钱包的检测
             gameObject.AddComponent<MoneyBagCheck>();
+            //玩家操控的单位也会在UI上显示技能样式，在战斗管理器中设置英雄
+            BattleManager.instance.SetHero(this);
         }
         gameObject.AddComponent<ICharaEnemyCheck_Nearest>();
         gameObject.AddComponent<ICharaChase_TryCloser>();
         gameObject.AddComponent<ICharaAttack_Normal>();
+        //设置具体的技能执行脚本和起始事件
+        Skill_StartEvent();
         settled = true;
     }
 
@@ -259,7 +292,7 @@ public class Entity : MonoBehaviour
         if (parameter.character.bloodDrop != 0)
         {
             VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Hit, transform.position, new Vector3(4, 4, 4), 2);
-            BattleManager.instance.CreateSceneInformation(gameObject, GameDataManager.instance.bloodSprite,""+ parameter.character.bloodDrop, false, Color.red);
+            BattleManager.instance.CreateSceneInformation(gameObject, GameDataManager.instance.bloodSprite, "" + parameter.character.bloodDrop, false, Color.red);
         }
         if (BattleManager.instance.nowChoosedTarget == this.gameObject)
             BattleManager.instance.ReleaseChoosedEntity();
@@ -476,4 +509,68 @@ public class Entity : MonoBehaviour
 
     }
     #endregion
+
+    #region 技能相关
+
+    /// <summary>
+    /// 计算技能的冷却时间
+    /// </summary>
+    public void SkillWaitTimeCaculate()
+    {
+        foreach (Skill skill in parameter.character.skills)
+        {
+            if (skill.waitTimer < skill.waitTime)
+                skill.waitTimer += Time.deltaTime;
+        }
+    }
+    /// <summary>
+    /// 遍历所有的技能，设置其执行脚本和起始事件
+    /// </summary>
+    public void Skill_StartEvent()
+    {
+        foreach (Skill s in parameter.character.skills)
+        {
+            if (s.skillName == "漆黑板甲")
+            {
+                s.skillBase = new ISkill_Defence();
+            }
+            if (s.skillName == "夺魂之刃")
+            {
+                s.skillBase = new ISkill_Attack();
+            }
+            if (s.skillBase != null)
+                s.skillBase.OnStart(this);
+        }
+    }
+    public void UseSkill(int index)
+    {
+        Debug.Log("使用技能");
+        if (index >= parameter.character.skills.Count) 
+        {
+            Debug.Log(index);
+
+            return;
+
+        }
+        Debug.Log("使用技能1");
+
+        Skill skill = parameter.character.skills[index];
+        if (skill.waitTimer < skill.waitTime)
+            return;
+        Debug.Log("使用技能2");
+
+        skill.skillBase.OnUse(this, skill);
+    }
+    #endregion
+
+    /// <summary>
+    /// 治疗
+    /// </summary>
+    /// <param name="healAmount"></param>
+    public void Heal(float healAmount)
+    {
+        parameter.nowHp += healAmount;
+        if (parameter.nowHp > parameter.Hp)
+            parameter.nowHp = parameter.Hp;
+    }
 }

@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 3299941604913527093}
   - component: {fileID: 3975841479040268172}
   - component: {fileID: 7056319317694159693}
+  - component: {fileID: -5897797060949693906}
   m_Layer: 5
   m_Name: SoldierCard
   m_TagString: Untagged
@@ -366,14 +367,28 @@ MonoBehaviour:
     name: 
     sprite: {fileID: 0}
     flagSprite: {fileID: 0}
-    hp: 0
     moneyCost: 0
     bloodCost: 0
-    cost: 0
+    formationId: 
+    soldierId: 
     content: {fileID: 0}
   image: {fileID: 7300638804833136271}
   costText: {fileID: 3512897180049735032}
   hpText: {fileID: 8679226033682476884}
+  hoverScript: {fileID: -5897797060949693906}
+--- !u!114 &-5897797060949693906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233710488846720462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00160b496e7b8854b9a661773a2e28f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  descriptionAndStory: []
 --- !u!1 &7247703486204014976
 GameObject:
   m_ObjectHideFlags: 0

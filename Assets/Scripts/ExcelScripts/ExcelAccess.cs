@@ -62,21 +62,23 @@ public class ExcelAccess
     /// <param name="cardDara"></param>
     /// <param name="missileData"></param>
     public static void SelectEntityTable(out List<UnitParameter> entityData, out List<UnitParameter_Character> characterData, out List<UnitParameter_Building> buildingData,
-        out List<SoldierCardParameter> cardDara, out List<UnitParameter_Missile> missileData, out List<DamageData> damageData)
+        out List<SoldierCardParameter> cardDara, out List<UnitParameter_Missile> missileData, out List<DamageData> damageData, out List<Skill> skillData)
     {
         string excelName = EntityExcel + ".xlsx";
         string sheetName = "Entity";
-        string sheetName_character = "Character";
-        string sheetName_building = "Building";
+        //string sheetName_character = "Character";
+        //string sheetName_building = "Building";
         string sheetName_SoldierGroup = "SoldierCard";
         string sheetName_Missile = "Missile";
         string sheetName_Damage = "Damage";
+        string sheetName_Skill = "Skill";
         DataRowCollection collect = ReadExcel(excelName, sheetName);
-        DataRowCollection collect_2 = ReadExcel(excelName, sheetName_character);
-        DataRowCollection collect_3 = ReadExcel(excelName, sheetName_building);
+        //DataRowCollection collect_2 = ReadExcel(excelName, sheetName_character);
+        //DataRowCollection collect_3 = ReadExcel(excelName, sheetName_building);
         DataRowCollection collect_4 = ReadExcel(excelName, sheetName_SoldierGroup);
         DataRowCollection collect_5 = ReadExcel(excelName, sheetName_Missile);
         DataRowCollection collect_6 = ReadExcel(excelName, sheetName_Damage);
+        DataRowCollection collect_7 = ReadExcel(excelName, sheetName_Skill);
 
         List<UnitParameter> dataArray = new List<UnitParameter>();
         List<UnitParameter_Character> dataArray_character = new List<UnitParameter_Character>();
@@ -84,11 +86,14 @@ public class ExcelAccess
         List<SoldierCardParameter> dataArray_soldierCard = new List<SoldierCardParameter>();
         List<UnitParameter_Missile> dataArray_missile = new List<UnitParameter_Missile>();
         List<DamageData> dataArray_damage = new List<DamageData>();
+        List<Skill> dataArray_skill = new List<Skill>();
+        //实体信息变量
         for (int i = 3; i < collect.Count; i++)
         {
             if (collect[i][0].ToString() == "") continue; //行不是空的就开始执行
             UnitParameter up = new UnitParameter
             {
+
                 ID = collect[i][0].ToString(),
                 type = (EntityType)int.Parse(collect[i][1].ToString()),
                 name = collect[i][2].ToString(),
@@ -98,53 +103,43 @@ public class ExcelAccess
                 hpBarOffset = new Vector3(float.Parse(collect[i][5].ToString().Split(",")[0]), float.Parse(collect[i][5].ToString().Split(",")[1])),
                 introduct = collect[i][6].ToString(),
                 Hp = float.Parse(collect[i][7].ToString()),
-                hurtDamage = float.Parse(collect[i][8].ToString()),
-                modleSize = float.Parse(collect[i][9].ToString()),
-                shadowSize = new Vector3(float.Parse(collect[i][10].ToString().Split(",")[0]), float.Parse(collect[i][10].ToString().Split(",")[1])),
-                shadowOffset = float.Parse(collect[i][10].ToString().Split(",")[2]),
+                //hurtDamage = float.Parse(collect[i][8].ToString()),
+                modleSize = float.Parse(collect[i][8].ToString()),
+                shadowSize = new Vector3(float.Parse(collect[i][9].ToString().Split(",")[0]), float.Parse(collect[i][9].ToString().Split(",")[1])),
+                shadowOffset = float.Parse(collect[i][9].ToString().Split(",")[2]),
 
-                aiMode_Move =(Ai_MoveType) int.Parse(collect[i][11].ToString().Split("/")[0]),
-                aiMode_Check = (Ai_CheckType)int.Parse(collect[i][11].ToString().Split("/")[1]),
-                aiMode_Chase = (Ai_ChaseType)int.Parse(collect[i][11].ToString().Split("/")[2]),
-                aiMode_Atk = (Ai_AttackType)int.Parse(collect[i][11].ToString().Split("/")[3]),
+                aiMode_Move = (Ai_MoveType)int.Parse(collect[i][10].ToString().Split("/")[0]),
+                aiMode_Check = (Ai_CheckType)int.Parse(collect[i][10].ToString().Split("/")[1]),
+                aiMode_Chase = (Ai_ChaseType)int.Parse(collect[i][10].ToString().Split("/")[2]),
+                aiMode_Atk = (Ai_AttackType)int.Parse(collect[i][10].ToString().Split("/")[3]),
+
+
             };
+            up.character = new UnitParameter_Character();
+            up.character.id = up.ID;
+            up.character.defence = float.Parse(collect[i][11].ToString());
+            up.character.defence_far = float.Parse(collect[i][12].ToString());
+            up.character.defence_magic = float.Parse(collect[i][13].ToString());
+            up.character.attackTime = float.Parse(collect[i][14].ToString());
+            up.character.attackWaitTime = float.Parse(collect[i][15].ToString());
+            up.character.EnemyCheckArea = new Vector3(float.Parse(collect[i][16].ToString().Split(",")[0]), float.Parse(collect[i][16].ToString().Split(",")[1]));
+            up.character.EnemyCheckOffset = new Vector3(float.Parse(collect[i][17].ToString().Split(",")[0]), float.Parse(collect[i][17].ToString().Split(",")[1]));
+            up.character.attackDistance = float.Parse(collect[i][18].ToString());
+            up.character.haveSkill = collect[i][19].ToString() == "True" ? true : false;
+            up.character.moveSpeed = float.Parse(collect[i][20].ToString());
+            up.character.aiType = (AiType)int.Parse(collect[i][21].ToString());
+            up.character.missileId = collect[i][22].ToString();
+            up.character.specialTags = collect[i][23].ToString().Split(",");
+            up.character.bloodDrop = float.Parse(collect[i][24].ToString());
 
+            up.character.skillIds = collect[i][25].ToString().Split("/");
+            up.character.skillLevels = collect[i][26].ToString().Split("/");
+            up.character.descriptionAndStory = collect[i][27].ToString().Split("|");
             dataArray.Add(up);
         }
-        for (int i = 3; i < collect_2.Count; i++)
-        {
-            if (collect_2[i][0].ToString() == "") continue; //行不是空的就开始执行
-            UnitParameter_Character pc = new UnitParameter_Character
-            {
-                id = collect_2[i][0].ToString(),
-                cost = int.Parse(collect_2[i][1].ToString()),
-                defence = float.Parse(collect_2[i][2].ToString()),
-                defence_far= float.Parse(collect_2[i][3].ToString()),
-                defence_magic= float.Parse(collect_2[i][4].ToString()),
-                attackTime = float.Parse(collect_2[i][5].ToString()),
-                attackWaitTime = float.Parse(collect_2[i][6].ToString()),
-                EnemyCheckArea = new Vector3(float.Parse(collect_2[i][7].ToString().Split(",")[0]), float.Parse(collect_2[i][7].ToString().Split(",")[1])),
-                EnemyCheckOffset = new Vector3(float.Parse(collect_2[i][8].ToString().Split(",")[0]), float.Parse(collect_2[i][8].ToString().Split(",")[1])),
-                attackDistance = float.Parse(collect_2[i][9].ToString()),
-                haveSkill = collect_2[i][10].ToString() == "True" ? true : false,
-                moveSpeed = float.Parse(collect_2[i][11].ToString()),
-                aiType = (AiType)int.Parse(collect_2[i][12].ToString()),
-                missileId = collect_2[i][13].ToString(),
-                specialTags = collect_2[i][14].ToString().Split(","),
-                bloodDrop = float.Parse(collect_2[i][15].ToString()),
-            };
-            dataArray_character.Add(pc);
-        }
-        for (int i = 1; i < collect_3.Count; i++)
-        {
-            if (collect_3[i][0].ToString() == "") continue; //行不是空的就开始执行
-            UnitParameter_Building pb = new UnitParameter_Building
-            {
-                id = collect_3[i][0].ToString(),
-                building_canAttack = collect_3[i][1].ToString() == "True" ? true : false,
-            };
-            dataArray_building.Add(pb);
-        }
+
+       
+        //兵种卡变量
         for (int i = 3; i < collect_4.Count; i++)
         {
             if (collect_4[i][0].ToString() == "") continue; //行不是空的就开始执行
@@ -161,6 +156,7 @@ public class ExcelAccess
             };
             dataArray_soldierCard.Add(psc);
         }
+        //投射物变量
         for (int i = 3; i < collect_5.Count; i++)
         {
             if (collect_5[i][0].ToString() == "") continue; //行不是空的就开始执行
@@ -176,7 +172,7 @@ public class ExcelAccess
                 lifeTime = float.Parse(collect_5[i][7].ToString()),
                 useAoe = collect_5[i][8].ToString() == "True" ? true : false,
                 aoeArea = new Vector3(float.Parse(collect_5[i][9].ToString().Split(",")[0]), float.Parse(collect_5[i][9].ToString().Split(",")[1]), 0),
-   
+
                 createNewObjectWhenDie = collect_5[i][10].ToString() == "True" ? true : false,
                 objectCreatedWhenDieId = collect_5[i][11].ToString(),
                 startObjectId = collect_5[i][12].ToString(),
@@ -189,6 +185,7 @@ public class ExcelAccess
             };
             dataArray_missile.Add(pm);
         }
+        //伤害变量
         for (int i = 3; i < collect_6.Count; i++)
         {
             if (collect_5[i][0].ToString() == "") continue; //行不是空的就开始执行
@@ -207,26 +204,45 @@ public class ExcelAccess
             };
             dataArray_damage.Add(dd);
         }
-        foreach (UnitParameter up in dataArray)
+        //技能变量
+        for (int i = 3; i < collect_7.Count; i++)
         {
-            //获取角色数值
-            if (up.type == EntityType.character)
+            if (collect_7[i][0].ToString() == "") continue; //行不是空的就开始执行
+            Skill sl = new Skill
             {
-                up.character = dataArray_character.Find((UnitParameter_Character p) => { return p.id == up.ID; });
-                Debug.Log(up.character);
-            }
-            if (up.type == EntityType.building)
-            {
-                up.character = dataArray_character.Find((UnitParameter_Character p) => { return p.id == up.ID; });
-                up.building = dataArray_building.Find((UnitParameter_Building p) => { return p.id == up.ID; });
-            }
+                id = collect_7[i][0].ToString(),
+                skillName = collect_7[i][1].ToString(),
+                skillLevel = int.Parse(collect_7[i][2].ToString()),
+                waitTime = float.Parse(collect_7[i][3].ToString()),
+                bloodCost = float.Parse(collect_7[i][4].ToString()),
+                moneyCost = float.Parse(collect_7[i][5].ToString()),
+                skillIcon = Resources.Load("Sprites/SkillIcons/" + collect_7[i][6].ToString(), typeof(Sprite)) as Sprite,
+                eachLevelDescriptions= collect_7[i][7].ToString().Split("|"),
+            };
+            dataArray_skill.Add(sl);
         }
+        //弃用的：赋值单位的角色、建筑变量
+        //foreach (UnitParameter up in dataArray)
+        //{
+        //    //获取角色数值
+        //    if (up.type == EntityType.character)
+        //    {
+        //        up.character = dataArray_character.Find((UnitParameter_Character p) => { return p.id == up.ID; });
+        //        Debug.Log(up.character);
+        //    }
+        //    if (up.type == EntityType.building)
+        //    {
+        //        up.character = dataArray_character.Find((UnitParameter_Character p) => { return p.id == up.ID; });
+        //        up.building = dataArray_building.Find((UnitParameter_Building p) => { return p.id == up.ID; });
+        //    }
+        //}
         entityData = dataArray;
         characterData = dataArray_character;
         buildingData = dataArray_building;
         cardDara = dataArray_soldierCard;
         missileData = dataArray_missile;
         damageData = dataArray_damage;
+        skillData = dataArray_skill;
     }
 
 

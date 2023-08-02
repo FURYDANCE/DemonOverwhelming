@@ -31,3 +31,6 @@ MonoBehaviour:
   - id: 6
     name: "\u8840\u6DB2\u62D6\u5C3E"
     vfx: {fileID: 185524, guid: 9af6272a65890794b8bd9d2d8ff3b661, type: 3}
+  - id: 7
+    name: "aoe\u6D4B\u8BD5"
+    vfx: {fileID: 1883610838541854, guid: aa72280b4bb67cb468b0ffc37bcfc9c0, type: 3}

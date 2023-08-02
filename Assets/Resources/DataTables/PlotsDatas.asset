@@ -140,7 +140,7 @@ MonoBehaviour:
     sprite: {fileID: -173189554, guid: d1bae7b8333aa464081d307433121cb8, type: 3}
     Hp: 15
     nowHp: 0
-    hurtDamage: 1
+    hurtDamage: 0
     hpBarSize: 0.6
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u6076\u9B54\u5C0F\u5175\n\u4E00\u53EA\u6742\u9C7C"
@@ -153,7 +153,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000001
-      cost: 1
+      cost: 0
       aiType: 0
       moveSpeed: 5
       defence: 0
@@ -172,6 +172,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 4
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - "\u73A9\u5BB6\u83B7\u5F97\u7684\u7B2C\u4E00\u4E2A\u5355\u4F4D\uFF0C\u662F\u80FD\u529B\u5747\u8861\u7684\u4F4E\u7EA7\u5175\u79CD\u3002\u5145\u5F53\u6709\u6218\u6597\u529B\u7684\u6B65\u5175\u90E8\u961F\u3002\u5C0F\u6076\u9B54\u4E5F\u6709\u4ED6\u4EEC\u7684\u5C40\u9650\u6027\uFF0C\u4ED6\u4EEC\u5728\u9762\u5BF9\u66F4\u4E3A\u7CBE\u9510\u7684\u654C\u519B\u65F6\u53EF\u80FD\u663E\u5F97\u7A0D\u663E\u52A3\u52BF\u3002\u56E0\u6B64\uFF0C\u5728\u6218\u6597\u4E2D\uFF0C\u5408\u7406\u5229\u7528\u4ED6\u4EEC\u7684\u6570\u91CF\u4F18\u52BF\u5E76\u7ED3\u5408\u5176\u4ED6\u5175\u79CD\u7684\u7279\u8272\u5C06\u662F\u5173\u952E\u3002\n"
+      - "\n\u5C0F\u6076\u9B54\u7684\u751F\u6D3B\u5E76\u4E0D\u8F7B\u677E\u3002\u4ED6\u4EEC\u751F\u6765\u5C31\u662F\u5730\u72F1\u4E2D\u6700\u5F31\u5C0F\u7684\u5B58\u5728\uFF0C\u8EAB\u4F53\u7B28\u62D9\u3001\u529B\u91CF\u6709\u9650\u3002\u4F46\u4ED6\u4EEC\u4E5F\u662F\u6700\u5355\u7EAF\u7684\u6076\u9B54\uFF0C\u6C38\u8FDC\u71C3\u70E7\u7740\u5BF9\u529B\u91CF\u7684\u6E34\u671B\uFF0C\u56E0\u6B64\u4F1A\u81EA\u613F\u6210\u7FA4\u7ED3\u961F\u5730\u8FFD\u968F\u7740\u5F3A\u5927\u7684\u5B58\u5728\uFF0C\u8EAB\u5148\u58EB\u5352\u5730\u6295\u5165\u6700\u53EF\u6015\u7684\u6218\u4E89\u4E2D\u3002\n"
     building:
       id: 
       building_canAttack: 0
@@ -181,7 +189,7 @@ MonoBehaviour:
     sprite: {fileID: 115280096, guid: 8b41c55fa71d081428d126fc498ad802, type: 3}
     Hp: 15
     nowHp: 0
-    hurtDamage: 1
+    hurtDamage: 0
     hpBarSize: 0.1
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u654C\u65B9\u6B65\u5175\n\u4E5F\u662F\u6742\u9C7C"
@@ -194,7 +202,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000002
-      cost: 1
+      cost: 0
       aiType: 0
       moveSpeed: 5
       defence: 0
@@ -213,6 +221,15 @@ MonoBehaviour:
       specialTags:
       - "\u94B1\u888B20"
       bloodDrop: 4
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - "\u5F31\u5C0F\u7684\u4F4E\u7EA7\u6B65\u5175\uFF0C\u6CA1\u6709\u53EF\u89C2\u7684\u8F93\u51FA\u80FD\u529B\u3002\u4ED6\u4EEC\u552F\u4E00\u7684\u4F18\u70B9\u5C31\u662F\u975E\u5E38\u4FBF\u5B9C\uFF0C\u662F\u6570\u91CF\u4F17\u591A\u7684\u70AE\u7070\u90E8\u961F\u3002\u9AB8\u9AA8\u58EB\u5175\u4E3B\u8981\u80FD\u529B\u5C31\u662F\u4EE5\u5927\u91CF\u7684\u6570\u91CF\u5438\u6536\u706B\u529B\u548C\u62D6\u5EF6\u65F6\u95F4\u7EA0\u7F20\u963B\u6321\u654C\u4EBA\uFF0C\u8BA9\u654C\u4EBA\u65E0\u6CD5\u4F24\u5BB3\u771F\u6B63\u91CD\u8981\u7684\u5355\u4F4D\u3002\u5728\u5347\u7EA7\u9AB8\u9AA8\u58EB\u5175\u65F6\u4F1A\u589E\u52A0\u6BCF\u652F\u90E8\u961F\u7684\u9AB8\u9AA8\u58EB\u5175\u4EBA\u6570\u3002\n"
+      - "\n\u8FD9\u4E9B\u65B9\u5FA8\u7684\u4EA1\u8005\u662F\u5730\u72F1\u4E2D\u6700\u5E38\u89C1\u7684\u666F\u8C61\uFF0C\u4ED6\u4EEC\u7684\u5B58\u5728\u65E0\u5904\u4E0D\u5728\u3002
+        \u6BCF\u4E00\u5177\u88F8\u9732\u7684\u3001\u8D70\u52A8\u7684\u9AA8\u67B6\u90FD\u662F\u5DF2\u7ECF\u5FD8\u5374\u8FC7\u53BB\u8FF7\u5931\u81EA\u6211\u7684\u6B7B\u8005\u3002\u8FD9\u4E9B\u53EF\u60B2\u7684\u5B58\u5728\u9ED1\u6697\u9B54\u6CD5\u7684\u5F71\u54CD\u4E0B\u88AB\u8FEB\u6325\u52A8\u7740\u7C97\u7CD9\u7684\u6B66\u5668\u8FDB\u5165\u6218\u573A\uFF0C\u6210\u4E3A\u65E0\u7A77\u6218\u4E89\u4E2D\u6700\u65B9\u4FBF\u7684\u5080\u5121\u70AE\u7070"
     building:
       id: 
       building_canAttack: 0
@@ -222,7 +239,7 @@ MonoBehaviour:
     sprite: {fileID: 1075952493, guid: 13100308197d6394292990a4a5c96188, type: 3}
     Hp: 5
     nowHp: 0
-    hurtDamage: 2
+    hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u5F13\u7BAD\u624B"
@@ -235,7 +252,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000003
-      cost: 2
+      cost: 0
       aiType: 1
       moveSpeed: 3
       defence: 0
@@ -254,6 +271,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 4
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - "\u4F5C\u4E3A\u7B2C\u4E00\u4E2A\u53EF\u4EE5\u88AB\u62DB\u52DF\u7684\u8FDC\u7A0B\u5175\u79CD\uFF0C\u72EC\u773C\u6076\u9B54\u4E3A\u73A9\u5BB6\u7684\u519B\u961F\u63D0\u4F9B\u4E86\u53EF\u4EE5\u4F9D\u8D56\u7684\uFF0C\u4E0D\u65AD\u7684\u8FDC\u7A0B\u706B\u529B\u3002\u4ED6\u4EEC\u80FD\u51C6\u786E\u5730\u7784\u51C6\u654C\u4EBA\uFF0C\u4ECE\u800C\u5728\u5B89\u5168\u7684\u8DDD\u79BB\u5185\u9020\u6210\u4F24\u5BB3\u3002\u7F3A\u70B9\u662F\u81EA\u8EAB\u76F8\u8F83\u8106\u5F31\uFF0C\u9700\u8981\u8FD1\u6218\u90E8\u961F\u7684\u63A9\u62A4\u3002\n"
+      - "\n\u8FD9\u79CD\u7279\u6B8A\u7684\u5C0F\u6076\u9B54\u90A3\u9897\u5DE8\u5927\u7684\u72EC\u773C\u8BA9\u4ED6\u4EEC\u6210\u4E3A\u4E86\u5929\u751F\u7684\u5F13\u7BAD\u624B\u3002\u72EC\u773C\u6076\u9B54\u7684\u773C\u775B\u80FD\u591F\u770B\u5230\u8FDC\u8D85\u5E38\u751F\u7269\u7684\u8DDD\u79BB\uFF0C\u4ED6\u4EEC\u7684\u76EE\u5149\u53EF\u4EE5\u7A7F\u900F\u9ED1\u6697\u7684\u70DF\u96FE\uFF0C\u6E05\u6670\u5730\u89C2\u5BDF\u5230\u8FDC\u5904\u7684\u4E00\u5207\u3002\u72EC\u773C\u6076\u9B54\u4EE5\u81EA\u5DF1\u7684\u65B9\u5F0F\u5728\u6218\u573A\u4E0A\u6E38\u8D70\u3002\u6BCF\u4E00\u6B21\u5C04\u51FB\uFF0C\u90FD\u662F\u5BF9\u654C\u4EBA\u7684\u6B7B\u4EA1\u5BA3\u544A"
     building:
       id: 
       building_canAttack: 0
@@ -263,7 +288,7 @@ MonoBehaviour:
     sprite: {fileID: 1585632083, guid: 2497323eb23c32446b4258892d43fea4, type: 3}
     Hp: 15
     nowHp: 0
-    hurtDamage: 2
+    hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: 0, y: 30, z: 0}
     introduct: "aoe\u5175"
@@ -276,7 +301,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000005
-      cost: 5
+      cost: 0
       aiType: 0
       moveSpeed: 4
       defence: 0
@@ -295,6 +320,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 6
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
@@ -304,7 +337,7 @@ MonoBehaviour:
     sprite: {fileID: -548590224, guid: 140bf5eca4712ed4bb8054f820190b60, type: 3}
     Hp: 30
     nowHp: 0
-    hurtDamage: 4
+    hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: -6.4, y: 30, z: 0}
     introduct: "aoe\u5175"
@@ -317,7 +350,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000006
-      cost: 5
+      cost: 0
       aiType: 0
       moveSpeed: 4
       defence: 0
@@ -336,6 +369,14 @@ MonoBehaviour:
       specialTags:
       - "\u94B1\u888B20"
       bloodDrop: 6
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
@@ -345,7 +386,7 @@ MonoBehaviour:
     sprite: {fileID: 1560929264, guid: 827b271fd07dd9a4b8f679673033f4d0, type: 3}
     Hp: 30
     nowHp: 0
-    hurtDamage: 4
+    hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: -6.4, y: 30, z: 0}
     introduct: "aoe\u5175"
@@ -358,7 +399,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000007
-      cost: 5
+      cost: 0
       aiType: 0
       moveSpeed: 4
       defence: 0
@@ -377,6 +418,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 6
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
@@ -386,7 +435,7 @@ MonoBehaviour:
     sprite: {fileID: -1188037559, guid: 204c70f2d2269c24cacefa7f1e51ae66, type: 3}
     Hp: 200
     nowHp: 0
-    hurtDamage: 10
+    hurtDamage: 0
     hpBarSize: 1
     hpBarOffset: {x: 0, y: 15, z: 0}
     introduct: "aoe\u5175"
@@ -399,7 +448,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000008
-      cost: 5
+      cost: 0
       aiType: 0
       moveSpeed: 1.5
       defence: 0
@@ -418,6 +467,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 6
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
@@ -427,7 +484,7 @@ MonoBehaviour:
     sprite: {fileID: -1308631131, guid: fd2a47b5de78e08458767b4cc589912e, type: 3}
     Hp: 10
     nowHp: 0
-    hurtDamage: 3
+    hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u70AE\u5175"
@@ -440,7 +497,7 @@ MonoBehaviour:
     aiMode_Atk: 0
     character:
       id: 1000009
-      cost: 4
+      cost: 0
       aiType: 1
       moveSpeed: 2
       defence: 2
@@ -459,6 +516,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
@@ -468,7 +533,7 @@ MonoBehaviour:
     sprite: {fileID: 470249903, guid: 3d2dc2a49b8eff14d8eb2f17f1a05009, type: 3}
     Hp: 20
     nowHp: 0
-    hurtDamage: 3
+    hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854\n\u653B\u51FB\u8BBE\u65BD"
@@ -500,8 +565,16 @@ MonoBehaviour:
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
-      id: 2000001
+      id: 
       building_canAttack: 0
   - ID: 2000002
     type: 1
@@ -541,9 +614,17 @@ MonoBehaviour:
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
-      id: 2000002
-      building_canAttack: 1
+      id: 
+      building_canAttack: 0
   - ID: 2000003
     type: 1
     name: "\u4EBA\u7C7B\u57CE\u5821"
@@ -582,8 +663,16 @@ MonoBehaviour:
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
-      id: 2000003
+      id: 
       building_canAttack: 0
   - ID: 3000001
     type: 0
@@ -623,6 +712,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 1000
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
@@ -664,6 +761,14 @@ MonoBehaviour:
       specialTags:
       - 0
       bloodDrop: 1000
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
@@ -671,9 +776,9 @@ MonoBehaviour:
     type: 0
     name: "\u6076\u9B54\u9886\u4E3B"
     sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
-    Hp: 150
+    Hp: 100
     nowHp: 0
-    hurtDamage: 2
+    hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u82F1\u96C4"
@@ -692,7 +797,7 @@ MonoBehaviour:
       defence: 0
       defence_far: 0
       defence_magic: 0
-      haveSkill: 0
+      haveSkill: 1
       skillId: 0
       skillName: 
       EnemyCheckArea: {x: 7, y: 7, z: 0}
@@ -701,301 +806,25 @@ MonoBehaviour:
       chaseTime: 0
       attackWaitTime: 1.5
       attackTime: 0.5
-      missileId: 31000002
+      missileId: 33000003
       specialTags:
       - 0
       bloodDrop: 1000
+      skillIds:
+      - 51000001
+      - 51000002
+      skills: []
+      skillLevels:
+      - 1
+      - 2
+      descriptionAndStory:
+      - 0
+      - 0
     building:
       id: 
       building_canAttack: 0
-  characterDatas:
-  - id: 1000001
-    cost: 1
-    aiType: 0
-    moveSpeed: 5
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 15, y: 15, z: 0}
-    EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
-    attackDistance: 3
-    chaseTime: 0
-    attackWaitTime: 1
-    attackTime: 0.5
-    missileId: 33000001
-    specialTags:
-    - 0
-    bloodDrop: 4
-  - id: 1000002
-    cost: 1
-    aiType: 0
-    moveSpeed: 5
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 15, y: 15, z: 0}
-    EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
-    attackDistance: 3
-    chaseTime: 0
-    attackWaitTime: 1
-    attackTime: 0.5
-    missileId: 33000001
-    specialTags:
-    - "\u94B1\u888B20"
-    bloodDrop: 4
-  - id: 1000003
-    cost: 2
-    aiType: 1
-    moveSpeed: 3
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 35, y: 25, z: 0}
-    EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-    attackDistance: 35
-    chaseTime: 0
-    attackWaitTime: 1
-    attackTime: 1
-    missileId: 31000001
-    specialTags:
-    - 0
-    bloodDrop: 4
-  - id: 1000005
-    cost: 5
-    aiType: 0
-    moveSpeed: 4
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 15, y: 15, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 5
-    chaseTime: 0
-    attackWaitTime: 2
-    attackTime: 0.5
-    missileId: 32000003
-    specialTags:
-    - 0
-    bloodDrop: 6
-  - id: 1000006
-    cost: 5
-    aiType: 0
-    moveSpeed: 4
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 18, y: 18, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 4
-    chaseTime: 0
-    attackWaitTime: 2
-    attackTime: 0.5
-    missileId: 32000004
-    specialTags:
-    - "\u94B1\u888B20"
-    bloodDrop: 6
-  - id: 1000007
-    cost: 5
-    aiType: 0
-    moveSpeed: 4
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 18, y: 18, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 4
-    chaseTime: 0
-    attackWaitTime: 2
-    attackTime: 0.5
-    missileId: 32000004
-    specialTags:
-    - 0
-    bloodDrop: 6
-  - id: 1000008
-    cost: 5
-    aiType: 0
-    moveSpeed: 1.5
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 18, y: 18, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 10
-    chaseTime: 0
-    attackWaitTime: 3.5
-    attackTime: 2
-    missileId: 32000005
-    specialTags:
-    - 0
-    bloodDrop: 6
-  - id: 1000009
-    cost: 4
-    aiType: 1
-    moveSpeed: 2
-    defence: 2
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 35, y: 25, z: 0}
-    EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-    attackDistance: 35
-    chaseTime: 0
-    attackWaitTime: 2.5
-    attackTime: 0.5
-    missileId: 31000004
-    specialTags:
-    - 0
-    bloodDrop: 0
-  - id: 2000001
-    cost: 0
-    aiType: 1
-    moveSpeed: 0
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 35, y: 25, z: 0}
-    EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-    attackDistance: 35
-    chaseTime: 0
-    attackWaitTime: 0.5
-    attackTime: 0.5
-    missileId: 31000001
-    specialTags:
-    - "\u4E0D\u52A8\u5982\u5C71"
-    bloodDrop: 0
-  - id: 2000002
-    cost: 0
-    aiType: 0
-    moveSpeed: 0
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 0, y: 0, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 0
-    chaseTime: 0
-    attackWaitTime: 0
-    attackTime: 0
-    missileId: 0
-    specialTags:
-    - "\u4E0D\u52A8\u5982\u5C71"
-    bloodDrop: 0
-  - id: 2000003
-    cost: 0
-    aiType: 0
-    moveSpeed: 0
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 0, y: 0, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 0
-    chaseTime: 0
-    attackWaitTime: 0
-    attackTime: 0
-    missileId: 0
-    specialTags:
-    - "\u4E0D\u52A8\u5982\u5C71"
-    bloodDrop: 0
-  - id: 3000001
-    cost: 0
-    aiType: 0
-    moveSpeed: 5
-    defence: 10
-    defence_far: 10
-    defence_magic: 10
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 8, y: 8, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 3
-    chaseTime: 0
-    attackWaitTime: 1
-    attackTime: 0.3835
-    missileId: 33000002
-    specialTags:
-    - 0
-    bloodDrop: 1000
-  - id: 3000002
-    cost: 0
-    aiType: 0
-    moveSpeed: 3
-    defence: 10
-    defence_far: 10
-    defence_magic: 10
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 35, y: 25, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 40
-    chaseTime: 0
-    attackWaitTime: 1
-    attackTime: 0.3835
-    missileId: 31000002
-    specialTags:
-    - 0
-    bloodDrop: 1000
-  - id: 4000001
-    cost: 0
-    aiType: 0
-    moveSpeed: 3
-    defence: 0
-    defence_far: 0
-    defence_magic: 0
-    haveSkill: 0
-    skillId: 0
-    skillName: 
-    EnemyCheckArea: {x: 7, y: 7, z: 0}
-    EnemyCheckOffset: {x: 0, y: 0, z: 0}
-    attackDistance: 3
-    chaseTime: 0
-    attackWaitTime: 1.5
-    attackTime: 0.5
-    missileId: 31000002
-    specialTags:
-    - 0
-    bloodDrop: 1000
-  buildingDatas:
-  - id: 2000001
-    building_canAttack: 0
-  - id: 2000002
-    building_canAttack: 1
-  - id: 2000003
-    building_canAttack: 0
+  characterDatas: []
+  buildingDatas: []
   cardDatas:
   - id: 21000001
     name: "\u6076\u9B54\u5C0F\u5175*3"
@@ -1448,7 +1277,7 @@ MonoBehaviour:
     startDamageWiatTime: 0
   - id: 41000005
     name: "\u7269\u7406_\u8FD1\u6218aoe_\u98CE\u8F66\u5DE8\u4EBA"
-    physicDamage: 13.5
+    physicDamage: 20
     farDamage: 0
     magicDamage: 0
     buffs:
@@ -1494,3 +1323,33 @@ MonoBehaviour:
     vfxId: 0
     vfxSize: 0
     startDamageWiatTime: 0
+  skillDatas:
+  - id: 51000001
+    skillName: "\u6F06\u9ED1\u677F\u7532"
+    skillLevel: 1
+    waitTime: 0.001
+    waitTimer: 0
+    bloodCost: 0
+    moneyCost: 0
+    skillIcon: {fileID: 21300000, guid: 3d79f3cc6a9e7e942a864552eec475d7, type: 3}
+    eachLevelDescriptions:
+    - "\u7B49\u7EA71:<color=red>25%</color> \u7269\u7406\u51CF\u4F24"
+    - "\n\u7B49\u7EA72:<color=red>30%</color> \u7269\u7406\u51CF\u4F24"
+    - "\n\u7B49\u7EA73:\u989D\u5916\u7684<color=red>5%</color> \u653B\u51FB\u52A0\u6210"
+    - 
+  - id: 51000002
+    skillName: "\u593A\u9B42\u4E4B\u5203"
+    skillLevel: 1
+    waitTime: 10
+    waitTimer: 0
+    bloodCost: 0
+    moneyCost: 0
+    skillIcon: {fileID: 21300000, guid: da48a6e4a5818fd419b290ed2781402d, type: 3}
+    eachLevelDescriptions:
+    - "\u7B49\u7EA71:\u9020\u6210\u4F24\u5BB3<color=red>15 </color> \u7684\u7FA4\u4F53\u653B\u51FB\uFF0C\u6BCF\u6B21\u653B\u51FB\u7ED9\u4E88\u82F1\u96C4\u9020\u6210\u4F24\u5BB3\u7684<color=red>10%</color>
+      \u7684\u6CBB\u7597"
+    - "\n\u7B49\u7EA72:\u9020\u6210\u4F24\u5BB3<color=red>20</color> \u7684\u7FA4\u4F53\u653B\u51FB\uFF0C\u6BCF\u6B21\u653B\u51FB\u7ED9\u4E88\u82F1\u96C4\u9020\u6210\u4F24\u5BB3\u7684<color=red>15%</color>
+      \u7684\u6CBB\u7597"
+    - "\n\u7B49\u7EA73:\u5728\u7B2C\u4E00\u6B21\u653B\u51FB<color=red>0.5</color>
+      \u79D2\u540E\u518D\u9020\u6210\u4E00\u6B21\u653B\u51FB"
+    - 

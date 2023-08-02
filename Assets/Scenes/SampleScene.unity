@@ -333,6 +333,7 @@ MonoBehaviour:
   cameraBound_Right: {fileID: 1414833669}
   moneyFill: {fileID: 896666655}
   costFill: {fileID: 1013255708}
+  objectInfoUI: {fileID: 1587443795904757170}
   playerFinalStrongHold: {fileID: 491496137}
   gameOverPanel: {fileID: 61613825}
 --- !u!114 &35679578 stripped
@@ -414,7 +415,7 @@ RectTransform:
   - {fileID: 1207073210}
   - {fileID: 471353677}
   m_Father: {fileID: 820069713}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -846,6 +847,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3801147801453170069, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
   m_PrefabInstance: {fileID: 1275665446}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &320675835 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5945796912800201337, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
+  m_PrefabInstance: {fileID: 1275665446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7b28782af574a4ab2c90c32ec58ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &322663809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,6 +1044,7 @@ MonoBehaviour:
   camp: 0
   spineObject: 0
   buffs: []
+  skills: []
   parameter:
     ID: 2000001
     type: 1
@@ -1070,6 +1083,10 @@ MonoBehaviour:
       missileId: 
       specialTags: []
       bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
     building:
       id: 
       building_canAttack: 1
@@ -1086,6 +1103,7 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  skillLevels: 
 --- !u!65 &343375691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1196,7 +1214,7 @@ MonoBehaviour:
         soldierId: 1000005
         formationId: 5
         offset: {x: 0, y: 0}
-  debug_DontWork: 0
+  debug_DontWork: 1
 --- !u!1 &385404991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,6 +1265,7 @@ MonoBehaviour:
   camp: 1
   spineObject: 0
   buffs: []
+  skills: []
   parameter:
     ID: 2000003
     type: 1
@@ -1285,6 +1304,10 @@ MonoBehaviour:
       missileId: 
       specialTags: []
       bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
     building:
       id: 
       building_canAttack: 1
@@ -1301,6 +1324,7 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  skillLevels: 
 --- !u!212 &385404996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1475,6 +1499,7 @@ MonoBehaviour:
   camp: 1
   spineObject: 0
   buffs: []
+  skills: []
   parameter:
     ID: 
     type: 1
@@ -1513,6 +1538,10 @@ MonoBehaviour:
       missileId: 
       specialTags: []
       bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
     building:
       id: 
       building_canAttack: 1
@@ -1529,6 +1558,7 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  skillLevels: 
 --- !u!114 &454947320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1875,6 +1905,7 @@ MonoBehaviour:
   camp: 0
   spineObject: 0
   buffs: []
+  skills: []
   parameter:
     ID: 2000002
     type: 1
@@ -1913,6 +1944,10 @@ MonoBehaviour:
       missileId: 
       specialTags: []
       bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
     building:
       id: 
       building_canAttack: 0
@@ -1929,6 +1964,7 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  skillLevels: 
 --- !u!65 &491496142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2454,6 +2490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36ccf7472f3fb24484491d95b8d73a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hero: {fileID: 0}
   money: 100
   moneyPerSecond: 1
   moneyAddAmount: 1
@@ -2468,6 +2505,7 @@ MonoBehaviour:
   unitInformationUI: {fileID: 8622467214577021552, guid: e708a9fe6604b1e43a21bddb2b703e6e, type: 3}
   cardSelectUI: {fileID: 506551616}
   formationMakingUI: {fileID: 35679578}
+  heroInfoUI: {fileID: 320675835}
   formatCards: []
   allSoldiers: []
   cameraControlMode: 0
@@ -2506,6 +2544,7 @@ RectTransform:
   m_Children:
   - {fileID: 571789850}
   - {fileID: 274484493}
+  - {fileID: 1587443795904757169}
   - {fileID: 61613824}
   m_Father: {fileID: 2065548609}
   m_RootOrder: 0
@@ -3405,6 +3444,7 @@ MonoBehaviour:
   camp: 1
   spineObject: 0
   buffs: []
+  skills: []
   parameter:
     ID: 2000001
     type: 1
@@ -3443,6 +3483,10 @@ MonoBehaviour:
       missileId: 
       specialTags: []
       bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
     building:
       id: 
       building_canAttack: 1
@@ -3459,6 +3503,7 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  skillLevels: 
 --- !u!212 &1056600350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4017,6 +4062,7 @@ MonoBehaviour:
   camp: 0
   spineObject: 0
   buffs: []
+  skills: []
   parameter:
     ID: 2000001
     type: 1
@@ -4055,6 +4101,10 @@ MonoBehaviour:
       missileId: 
       specialTags: []
       bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
     building:
       id: 
       building_canAttack: 1
@@ -4071,6 +4121,7 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  skillLevels: 
 --- !u!65 &1235263193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4665,7 +4716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541464992}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.2, y: -11.9, z: 0}
+  m_LocalPosition: {x: 27.2, y: -11.9, z: 0}
   m_LocalScale: {x: 20, y: 30, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5090,6 +5141,7 @@ MonoBehaviour:
   camp: 1
   spineObject: 0
   buffs: []
+  skills: []
   parameter:
     ID: 2000001
     type: 1
@@ -5128,6 +5180,10 @@ MonoBehaviour:
       missileId: 
       specialTags: []
       bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
     building:
       id: 
       building_canAttack: 1
@@ -5144,6 +5200,7 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  skillLevels: 
 --- !u!212 &1880707960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5459,6 +5516,119 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2319076217595515335, guid: 921461a887118d94b8cee0fb43b2fd46, type: 3}
   m_PrefabInstance: {fileID: 1003553240}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1587443795904757168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 820069713}
+    m_Modifications:
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -540
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327915891796751747, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+      propertyPath: m_Name
+      value: ObjectInfoUI
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+--- !u!224 &1587443795904757169 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3255748330547537279, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+  m_PrefabInstance: {fileID: 1587443795904757168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1587443795904757170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4609146132840011827, guid: ed62b1b9ab975c04e9cd01038996806b, type: 3}
+  m_PrefabInstance: {fileID: 1587443795904757168}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac1a751c18ab514f8d27334759f24c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3073234228817565341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5476,11 +5646,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5488,19 +5658,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -7.9958496
+      value: 1912.0042
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5536,7 +5706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -540
       objectReference: {fileID: 0}
     - target: {fileID: 3073234229655399993, guid: ebd1809aad0900c4c9cbcfebd39c6dce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

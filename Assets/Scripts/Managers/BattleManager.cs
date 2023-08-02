@@ -8,6 +8,8 @@ using UnityEngine.UI;
 /// </summary>
 public class BattleManager : MonoBehaviour
 {
+    [Header("英雄")]
+    public Entity hero;
     /// <summary>
     /// 金钱
     /// </summary>
@@ -47,6 +49,8 @@ public class BattleManager : MonoBehaviour
     public Image cardSelectUI;
     [Header("布阵界面")]
     public Image formationMakingUI;
+    [Header("英雄信息界面")]
+    public HeroInformationUI heroInfoUI;
     /// <summary>
     /// 当前布阵界面上的所有旗帜
     /// </summary>
@@ -102,6 +106,9 @@ public class BattleManager : MonoBehaviour
         CreateOneSoldierCard("21000002");
         fillStartColor = SceneObjectsManager.instance.costFill.color;
 
+        cardSelectUI = GameObject.Find("CardSelectArea").transform.GetComponent<Image>();
+        formationMakingUI = GameObject.Find("FormationMakingArea").transform.GetComponent<Image>();
+        heroInfoUI = GameObject.Find("HeroInfoArea").transform.GetComponent<HeroInformationUI>();
         //GenerateOneEntity(Camp.demon, SoldierIds.hero1);
 
     }
@@ -133,7 +140,33 @@ public class BattleManager : MonoBehaviour
         {
             CreateSoldierWithGroup(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers, true);
         }
+        //英雄技能测试
+        if (hero && Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            hero.UseSkill(0);
+        }
+        if (hero && Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            hero.UseSkill(1);
+        }
     }
+
+    #region 英雄相关
+
+    /// <summary>
+    /// 设置英雄
+    /// </summary>
+    /// <param name="hero"></param>
+    public void SetHero(Entity hero)
+    {
+        this.hero = hero;
+        heroInfoUI.SetHero(hero);
+    }
+
+    #endregion
+
+
+
     #region 界面显示相关
     /// <summary>
     /// 显示界面上的金钱与血液，显示填充条的填充效果
@@ -189,14 +222,15 @@ public class BattleManager : MonoBehaviour
     }
     /// <summary>
     /// 伤害方法,同时根据伤害信息生成buff和特殊效果，伤害执行时也会触发被攻击者的特殊词条效果，参数为伤害的制造者，伤害信息，伤害目标
+    /// 返回值为造成的最终伤害
     /// </summary>
     /// <param name="伤害者"></param>
     /// <param name="伤害信息"></param>
     /// <param name="被伤害者"></param>
-    public void CreateDamage(Entity creater, DamageData damageData, Entity target)
+    public float CreateDamage(Entity creater, DamageData damageData, Entity target)
     {
         if (creater.camp == target.camp)
-            return;
+            return 0;
         float finalDamage;
         //使其受伤
         if (target && creater)
@@ -214,15 +248,17 @@ public class BattleManager : MonoBehaviour
             //伤害承受者的受伤后词条事件
             target.TagEvent_AfterHurt(target, finalDamage, creater, damageData);
             //buff检测
-            for (int i = 0; i < damageData.buffs.Length; i++)
-            {
-                BuffManager.instance.EntityAddBuff(target, damageData.buffs[i]);
-            }
+            if (damageData.buffs != null)
+                for (int i = 0; i < damageData.buffs.Length; i++)
+                {
+                    BuffManager.instance.EntityAddBuff(target, damageData.buffs[i]);
+                }
+            return finalDamage;
         }
+        return 0;
     }
 
     #endregion
-
 
     #region 投射物相关
 
@@ -329,6 +365,8 @@ public class BattleManager : MonoBehaviour
     /// <param name="坐标"></param>
     public Entity GenerateOneEntity(Camp camp, string id, Vector3 pos)
     {
+        if (GameDataManager.instance.GetEntityDataById(id) == null)
+            return null;
         //生成次数+1
         genrateAmount++;
         //生成空对象，将其纳入FaceToCamera中
@@ -391,7 +429,7 @@ public class BattleManager : MonoBehaviour
         sg.Id = soldierId;
         sg.Generate(destoryShadow);
     }
-    public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow,Vector3 Offset)
+    public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 Offset)
     {
         genrateAmount++;
         GameObject go;
@@ -754,5 +792,9 @@ public class BattleManager : MonoBehaviour
         s.text.color = textColor;
         return go;
     }
+
+    
+
+
     #endregion
 }

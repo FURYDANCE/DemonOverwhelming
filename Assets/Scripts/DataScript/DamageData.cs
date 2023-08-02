@@ -15,5 +15,19 @@ public class DamageData
     public float vfxSize;
     public float startDamageWiatTime;
 
- 
+    public DamageData SetDamageData(float physicDamage, float farDamage, float magicDamage)
+    {
+        this.physicDamage = physicDamage;
+        this.farDamage = farDamage;
+        this.magicDamage = magicDamage;
+        return this;
+            
+    }
+    public DamageData SetDamageData(float physicDamage, float farDamage,float magicDamage,string[] buffs, string vfxid,string vfxSize)
+    {
+        this.physicDamage = physicDamage;
+        this.farDamage = farDamage;
+        this.magicDamage = magicDamage;
+        return this;
+    }
 }
