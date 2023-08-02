@@ -13,10 +13,12 @@ public class SoldierCard : MonoBehaviour
     public Image image;
     public TextMeshProUGUI costText;
     public TextMeshProUGUI hpText;
-
+    MouseHover_SoldierCard hoverScript;
     private void Start()
     {
         Generate();
+        hoverScript = GetComponent<MouseHover_SoldierCard>();
+        hoverScript.descriptionAndStory = GameDataManager.instance.GetEntityDataById(parameter.soldierId).character.descriptionAndStory;
     }
     /// <summary>
     /// 初始化，通过id显示对应的数值

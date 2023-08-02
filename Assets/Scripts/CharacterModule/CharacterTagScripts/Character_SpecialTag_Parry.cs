@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 特殊词条：格挡：给予level%的物理减伤
+/// </summary>
 public class Character_SpecialTag_Parry : Character_SpecialTagBase
 {
     public float level;
+    /// <summary>
+    /// 特殊词条：格挡：给予level%的物理减伤
+    /// </summary>
     public Character_SpecialTag_Parry(float level)
     {
         this.level = level;

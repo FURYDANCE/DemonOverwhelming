@@ -63,6 +63,14 @@ public class SoliderGroup : MonoBehaviour
         for (int i = 0; i < soldiers.Length; i++)
         {
             Entity e = BattleManager.instance.GenerateOneEntity(camp, Id, soldiers[i].position);
+            if (!e)
+            {
+                Debug.Log("实体没有正确生成！（也许是生成的id出错或其他问题）");
+                foreach (Transform t in soldiers)
+                    Destroy(t.gameObject);
+                Destroy(flagSprite.gameObject);
+                return;
+            }
             e.transform.localPosition = new Vector3(e.transform.localPosition.x, e.transform.localPosition.y, 0);
             e.SetParentSoldierGroup(this);
             createdSoldiers.Add(e);

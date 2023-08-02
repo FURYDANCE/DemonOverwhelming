@@ -11,6 +11,7 @@ using TMPro;
 /// </summary>
 public class SceneObjectsManager : MonoBehaviour
 {
+
     [Header("金钱text")]
     public TextMeshProUGUI moneyText;
     [Header("costText")]
@@ -37,6 +38,8 @@ public class SceneObjectsManager : MonoBehaviour
     [Header("金钱和cost的填充")]
     public Image moneyFill;
     public Image costFill;
+    [Header("鼠标悬停时的对象信息显示UI")]
+    public ObjectInfoUI objectInfoUI;
     [Header("玩家最终据点")]
     public GameObject playerFinalStrongHold;
     [Header("GAMEOVER界面")]
@@ -81,5 +84,9 @@ public class SceneObjectsManager : MonoBehaviour
         L = cameraBound_Left;
         R = cameraBound_Right;
     }
-  
+    
+    public void ShowObjectInfoUI(bool isTrue)
+    {
+        objectInfoUI.gameObject.SetActive(isTrue);
+    }
 }

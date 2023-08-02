@@ -13,4 +13,5 @@ public class ExcelDataManager : ScriptableObject
     public List<SoldierCardParameter> cardDatas;
     public List<UnitParameter_Missile> missileDatas;
     public List<DamageData> damageDatas;
+    public List<Skill> skillDatas;
 }
