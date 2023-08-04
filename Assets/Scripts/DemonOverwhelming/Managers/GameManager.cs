@@ -9,7 +9,6 @@ namespace DemonOverwhelming
     {
         public void Start()
         {
-            resourceManager
         }
         public ResourceManager resourceManager;
     }
