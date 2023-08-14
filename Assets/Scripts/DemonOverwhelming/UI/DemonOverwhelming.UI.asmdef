@@ -1,9 +1,8 @@
 {
-    "name": "DemonOverwhelming",
+    "name": "DemonOverwhelming.UI",
     "rootNamespace": "",
     "references": [
-        "GUID:f442f5613a5123d4aac2450609bd288a",
-        "GUID:fc0ed105cd9f8474f8f426a9eaa198a5"
+        "GUID:f442f5613a5123d4aac2450609bd288a"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
