@@ -14,9 +14,13 @@ public class CharacterAttackingState : CharacterBaseState
     public void OnExit(CharacterStateManager manager)
     {
         manager.isAttacking = false;
+        //如果存在父级兵组，则开始让阵型回归初始位置
+        if (manager.entity.parentSoldierGroup)
+            manager.entity.parentSoldierGroup.SetUnitBackingToRelativePos();
+
     }
     public void OnUpdate(CharacterStateManager manager)
     {
-       
+
     }
 }
