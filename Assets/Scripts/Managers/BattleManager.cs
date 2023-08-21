@@ -427,6 +427,7 @@ public class BattleManager : MonoBehaviour
         SoliderGroup sg = go.GetComponent<SoliderGroup>();
         sg.camp = camp;
         sg.Id = soldierId;
+        sg.Initialize();
         sg.Generate(destoryShadow);
     }
     public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 Offset)

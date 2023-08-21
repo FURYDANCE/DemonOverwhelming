@@ -15,7 +15,7 @@ public class BuffInformation
     public string buffName;
     [Header("buff特效")]
     public GameObject buffVfx;
-    [Header("buff持续时间")]
+    [Header("buff持续时间（超过99999则不会计算buff的结束时间）")]
     public float buffTime;
 
     //构造方法

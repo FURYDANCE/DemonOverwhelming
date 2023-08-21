@@ -40,7 +40,8 @@ public class UnitParameter
     public UnitParameter_Character character;
     [Header("建筑变量")]
     public UnitParameter_Building building;
-
+    [Header("增益变量（全部为百分比）")]
+    public UnitParameter_Buff buffParameter;
 
     public void SetValue(UnitParameter data)
     {
@@ -90,7 +91,7 @@ public class UnitParameter
         character.skillIds = data.character.skillIds;
         character.skillLevels = data.character.skillLevels;
         character.descriptionAndStory = data.character.descriptionAndStory;
-
+        buffParameter = new UnitParameter_Buff();
     }
     public void SetValue_noSprite(UnitParameter data)
     {
@@ -230,3 +231,8 @@ public class UnitParameter_Missile
     }
 }
 
+[System.Serializable]
+public class UnitParameter_Buff
+{
+    public float speedBuff;
+}
