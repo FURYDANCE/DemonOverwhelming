@@ -8,13 +8,14 @@ namespace DemonOverwhelming
     {
         public LoadingPanel ShowLoadingUI()
         {
+            if (getPanel<LoadingPanel>() is LoadingPanel loadingUI)
+            {
+                loadingUI.Show();
+                return loadingUI;
+            }
             //实例化加载界面
-            LoadingPanel loadingUI = createPanel(loadingUIPrefab);
+            loadingUI = createPanel(loadingUIPrefab);
             return loadingUI;
-        }
-        public T GetPanel<T>() where T : UIObject
-        {
-            return GetComponentInChildren<T>(true);
         }
         public LoadingPanel loadingUIPrefab;
         public string mainMenuPrefabPath;

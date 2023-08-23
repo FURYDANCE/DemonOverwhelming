@@ -3,6 +3,7 @@ using BJSYGameCore.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DemonOverwhelming
 {
@@ -35,7 +36,21 @@ namespace DemonOverwhelming
         }
         private void OnClickStartButtonMainMenu()
         {
-
+            //隐藏主菜单UI
+            MainMenuPanel mainMenuPanel = uiManager.getPanel<MainMenuPanel>();
+            mainMenuPanel.Hide();
+            //显示加载界面
+            LoadingPanel loadingUI = uiManager.ShowLoadingUI();
+            //加载大地图场景
+            LoadSceneOperationBase loadOperation = resourceManager.loadSceneAsync(_mapScenePath, LoadSceneMode.Additive);
+            loadOperation.onComplete += OnMapSceneLoaded;
+            //绑定加载界面
+            loadingUI.Display(loadOperation);
+        }
+        private void OnMapSceneLoaded(object obj)
+        {
+            //隐藏加载界面
+            uiManager.getPanel<LoadingPanel>().Hide();
         }
         private void OnClickExitButtonMainMenu()
         {
@@ -48,5 +63,7 @@ namespace DemonOverwhelming
 
         public ResourceManager resourceManager;
         public UIManager uiManager;
+        [SerializeField]
+        private string _mapScenePath;
     }
 }
