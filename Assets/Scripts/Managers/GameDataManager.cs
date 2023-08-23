@@ -100,7 +100,8 @@ public class GameDataManager : MonoBehaviour
     {
         SoldierCardParameter find = excelDatas.cardDatas.Find((SoldierCardParameter p) => { return p.id == id; });
         find.content = formationObject.formations.Find((Formation p) => { return p.id == find.formationId; }).contentFormation.GetComponent<SoliderGroup>();
-        find.content.Id = find.soldierId;
+        find.content.finalSoldierId = find.soldierId;
+        Debug.Log("FINDµ½µÄID==" + find.soldierId);
         return find;
     }
     /// <summary>

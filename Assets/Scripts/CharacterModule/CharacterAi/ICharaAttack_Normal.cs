@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// 普通攻击单位：执行一次攻击，攻击完毕之后回到行动状态
 /// </summary>
-public class ICharaAttack_Normal : MonoBehaviour,ICharacterAttack
+public class ICharaAttack_Normal : MonoBehaviour, ICharacterAttack
 {
     Entity entity;
     CharacterStateManager manager;
@@ -14,9 +14,10 @@ public class ICharaAttack_Normal : MonoBehaviour,ICharacterAttack
         //manager.Attack(manager.attackTarget);
         StartCoroutine(AttackIenumerator(manager.attackTarget));
         StartCoroutine(ReturnToNormal());
+        manager.entity.FlipTo(manager.attackTarget.transform.position);
     }
 
-   
+
     void Start()
     {
         entity = GetComponent<Entity>();
@@ -29,7 +30,7 @@ public class ICharaAttack_Normal : MonoBehaviour,ICharacterAttack
         yield return new WaitForSeconds(time);
         manager.ChangeState(new CharacterWalkingState());
     }
-   
+
 
     /// <summary>
     /// 攻击（协程）

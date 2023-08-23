@@ -35,10 +35,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0402, y: 1.8953}
-  m_SizeDelta: {x: 39.6212, y: 63.5409}
+  m_AnchorMin: {x: 0.50352085, y: 0.50100005}
+  m_AnchorMax: {x: 0.50352085, y: 0.50100005}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1966293176090819807
 CanvasRenderer:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1896333192, guid: f08bbebc978a9204fa446bc035ce1663, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4023f108d38a0ca40a18f7451c0245a5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,6 +90,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746c976dc241cfb438f5e4a3a493bf50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  parentParameter:
+    id: 
+    name: 
+    sprite: {fileID: 0}
+    flagSprite: {fileID: 0}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 
+    soldierId: 
+    content: {fileID: 0}
   connectedSoldierGroup: {fileID: 1780575785, guid: a5e80962b1850fb4983ff0d011b7d5da, type: 3}
   connectedSoldierGroup_inScene: {fileID: 0}
 --- !u!114 &-661767304568044353
@@ -104,3 +114,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961c2be939dd0c24ebed3acdd92bd85c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  relativeGap: {x: 0, y: 0, z: 0}
+  container: {fileID: 0}
+  startPos: {x: 0, y: 0, z: 0}
+  minX: 0
+  maxX: 0
+  minY: 0
+  maxY: 0

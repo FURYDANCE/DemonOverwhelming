@@ -41,16 +41,16 @@ public class BattleManager : MonoBehaviour
     /// <summary>
     /// 战斗界面UI
     /// </summary>
-    [Header("战斗界面UI")]
-    public GameObject BattleUI;
+    //[Header("战斗界面UI")]
+    //public GameObject BattleUI;
     [Header("对象信息提示框(预制件）")]
     public UnitInformationUi unitInformationUI;
-    [Header("选卡界面")]
-    public Image cardSelectUI;
-    [Header("布阵界面")]
-    public Image formationMakingUI;
-    [Header("英雄信息界面")]
-    public HeroInformationUI heroInfoUI;
+    //[Header("选卡界面")]
+    //public Image cardSelectUI;
+    //[Header("布阵界面")]
+    //public Image formationMakingUI;
+    //[Header("英雄信息界面")]
+    //public HeroInformationUI heroInfoUI;
     /// <summary>
     /// 当前布阵界面上的所有旗帜
     /// </summary>
@@ -89,6 +89,11 @@ public class BattleManager : MonoBehaviour
     //计算填充条smoothDamp的两个速度变量
     float v1;
     float v2;
+
+    public List<string> historySelectedCard;
+    public List<Vector3> historyCardPos;
+    public List<Vector3> historyShadowPos;
+    public List<float> historyX, historyY;
     private void Awake()
     {
         if (instance != null)
@@ -104,12 +109,18 @@ public class BattleManager : MonoBehaviour
         //生成右下角的兵种卡
         CreateOneSoldierCard("21000001");
         CreateOneSoldierCard("21000002");
+        CreateOneSoldierCard("21000003");
+        CreateOneSoldierCard("21000004");
+        CreateOneSoldierCard("21000005");
+        CreateOneSoldierCard("21000006");
+        CreateOneSoldierCard("21000007");
+        CreateOneSoldierCard("21000008");
         fillStartColor = SceneObjectsManager.instance.costFill.color;
 
-        cardSelectUI = GameObject.Find("CardSelectArea").transform.GetComponent<Image>();
-        formationMakingUI = GameObject.Find("FormationMakingArea").transform.GetComponent<Image>();
-        heroInfoUI = GameObject.Find("HeroInfoArea").transform.GetComponent<HeroInformationUI>();
-        //GenerateOneEntity(Camp.demon, SoldierIds.hero1);
+        //cardSelectUI = GameObject.Find("CardSelectArea").transform.GetComponent<Image>();
+        //formationMakingUI = GameObject.Find("FormationMakingArea").transform.GetComponent<Image>();
+        //heroInfoUI = GameObject.Find("HeroInfoArea").transform.GetComponent<HeroInformationUI>();
+
 
     }
 
@@ -160,7 +171,7 @@ public class BattleManager : MonoBehaviour
     public void SetHero(Entity hero)
     {
         this.hero = hero;
-        heroInfoUI.SetHero(hero);
+        SceneObjectsManager.instance.heroInfoUI.SetHero(hero);
     }
 
     #endregion
@@ -419,14 +430,20 @@ public class BattleManager : MonoBehaviour
     /// </summary>
     public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow)
     {
+        //生成次数++
         genrateAmount++;
+        //空对象
         GameObject go;
+        //根据阵营判断生成在哪一边
         Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
+        //生成阵型和随机位置偏移
         go = Instantiate(GameDataManager.instance.GetFormationById(formationId), GameObject.Find("FaceToCamera").transform);
         go.transform.position = pos + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0);
+        //获取组件，赋值组件
         SoliderGroup sg = go.GetComponent<SoliderGroup>();
         sg.camp = camp;
-        sg.Id = soldierId;
+        Debug.Log("生成时的士兵ID：" + soldierId);
+        sg.finalSoldierId = soldierId;
         sg.Initialize();
         sg.Generate(destoryShadow);
     }
@@ -439,7 +456,9 @@ public class BattleManager : MonoBehaviour
         go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
         SoliderGroup sg = go.GetComponent<SoliderGroup>();
         sg.camp = camp;
-        sg.Id = soldierId;
+        Debug.Log("生成时的士兵ID：" + soldierId);
+
+        sg.finalSoldierId = soldierId;
         sg.transform.position += Offset;
         sg.Generate(destoryShadow);
     }
@@ -461,7 +480,7 @@ public class BattleManager : MonoBehaviour
     public void CreateInforMationUi()
     {
         DestoryNowUnitInformation();
-        nowUnitInformationUI = GameObject.Instantiate(unitInformationUI, BattleUI.transform);
+        nowUnitInformationUI = GameObject.Instantiate(unitInformationUI, SceneObjectsManager.instance.BattleUI.transform);
         nowUnitInformationUI.SetInformation(nowChoosedTarget.GetComponent<Entity>().parameter, nowChoosedTarget);
     }
     /// <summary>
@@ -519,13 +538,27 @@ public class BattleManager : MonoBehaviour
     /// <returns></returns>
     public SoldierCard CreateOneSoldierCard(string id)
     {
-        SoldierCard card = Instantiate(GameDataManager.instance.emptySoldierCard, BattleUI.transform.Find("BattleUI_Down_Image").transform.Find("CardSelectArea").transform).GetComponent<SoldierCard>();
+        SoldierCard card = Instantiate(GameDataManager.instance.emptySoldierCard, SceneObjectsManager.instance.BattleUI.transform.Find("BattleUI_Down_Image").transform.Find("CardSelectArea").transform).GetComponent<SoldierCard>();
 
         card.parameter.id = id;
         card.name = "SoldierCard:" + id;
         soldierCards.Add(card);
 
         return card;
+    }
+    /// <summary>
+    /// 通过id获取到创建了的兵种卡
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    public SoldierCard GetOneSoldierCard(string id)
+    {
+        foreach (SoldierCard c in soldierCards)
+        {
+            if (c.parameter.id == id)
+                return c;
+        }
+        return null;
     }
     /// <summary>
     /// 清空右下角的兵牌
@@ -542,7 +575,7 @@ public class BattleManager : MonoBehaviour
     /// 选择兵牌，当点击右下角的兵牌之后，在布阵区生成旗帜，传入兵牌，在兵牌中有对应兵组的引用，将传给旗帜对应的兵组
     /// </summary>
     /// <param name="card"></param>
-    public void SelectSoldierCard(SoldierCard card)
+    public FormatCard SelectSoldierCard(SoldierCard card)
     {
         Debug.Log("Cost:" + nowBloodCost + "  cardCost:" + card.parameter.bloodCost + "money:" + money + "  cardMoney:" + card.parameter.moneyCost);
 
@@ -550,18 +583,22 @@ public class BattleManager : MonoBehaviour
         nowMoneyCost += card.parameter.moneyCost;
         nowBloodCost += card.parameter.bloodCost;
         //在布阵区生成旗帜
-        FormatCard formatCard = Instantiate(GameDataManager.instance.emptyFormat, formationMakingUI.transform).GetComponent<FormatCard>();
+        FormatCard formatCard = Instantiate(GameDataManager.instance.emptyFormat, SceneObjectsManager.instance.formationMakingUI.transform).GetComponent<FormatCard>();
+
         formatCard.SetParentParameter(card.parameter);
         //将兵牌对应的兵组传给旗帜
         formatCard.connectedSoldierGroup = card.parameter.content;
         //设置旗帜贴图
         formatCard.SetFlagSprite(card.parameter.flagSprite);
+
         //设置旗帜的拖拽范围
         formatCard.GetComponent<UiDrag>().container = formatCard.transform.parent.gameObject.GetComponent<RectTransform>();
         //将旗帜加入统计
         formatCards.Add(formatCard);
         //设置点击生成的卡为最后点击的卡
         SetLastSelectCard(formatCard);
+
+        return formatCard;
     }
 
     #region 撤销，清空选择记录的方法s
@@ -585,11 +622,11 @@ public class BattleManager : MonoBehaviour
         soliderFormatGroups.Clear();
 
         //金钱血液计算，计算完成后归零
-        money -= nowMoneyCost;
-        blood -= nowBloodCost;
-        nowMoneyCost = 0;
-        //cost回归为0
-        nowBloodCost = 0;
+        //money -= nowMoneyCost;
+        //blood -= nowBloodCost;
+        //nowMoneyCost = 0;
+        ////cost回归为0
+        //nowBloodCost = 0;
         //将上次选择的记录清空
         SetLastSelectCard(null);
     }
@@ -599,6 +636,7 @@ public class BattleManager : MonoBehaviour
     /// </summary>
     public void GenerateSoldiers()
     {
+        List<SoliderGroup> newGroupList = new List<SoliderGroup>();
         //计算金钱和cost统计，若超过最大值则不生成
         if (nowBloodCost > blood || nowMoneyCost > money)
         {
@@ -608,14 +646,64 @@ public class BattleManager : MonoBehaviour
         //生成兵种
         foreach (SoliderGroup sg in soliderFormatGroups)
         {
+            //记录当前界面上的兵种位置和信息
+            SoliderGroup NG = Instantiate(sg.gameObject, sg.transform.parent).GetComponent<SoliderGroup>();
+            sg.parentFormatCard.SetConnectGroup(NG);
+            newGroupList.Add(NG);
+
+
             sg.Generate(false);
+
         }
         money -= nowMoneyCost;
         blood -= nowBloodCost;
+        //生成兵种之后，场上的残影就会消失，跟随生成了的兵种，需要再原地生成一样的残影，同时设置关联残影的布阵卡
+        soliderFormatGroups.Clear();
+        foreach (SoliderGroup s in newGroupList)
+        {
+            soliderFormatGroups.Add(s);
+        }
+        //Debug.Log("到这里了");
+        //ReBuildSoldierGroups();
+
         //清空旗帜，计算花费金钱
         //ClearCardSelect();
-    }
 
+        //ReBuildSoldierGroups();
+    }
+    ///// <summary>
+    ///// 生成兵牌之后，重新设置场上的兵种卡
+    ///// 由于兵种生成后，已经生成过的兵组父对象不能再作用到下一波生成的兵队
+    ///// 故需要清除目前的记录，再在相同位置生成一样的新兵种父对象，再统计这些新的对象
+    ///// </summary>
+    //public void ReBuildSoldierGroups()
+    //{
+    //    foreach (FormatCard card in formatCards)
+    //    {
+    //        historySelectedCard.Add(card.parentParameter.id);
+    //        historyCardPos.Add(card.transform.position);
+    //        historyShadowPos.Add(card.connectedSoldierGroup.transform.position);
+    //        historyX.Add(card.x);
+    //        historyY.Add(card.y);
+    //    }
+    //    ClearCardSelect();
+    //    for (int i = 0; i < historySelectedCard.Count; i++)
+    //    {
+    //        string id = historySelectedCard[i];
+
+    //        FormatCard c = SelectSoldierCard(GetOneSoldierCard(id));
+    //        c.noOffset = true;
+    //        c.transform.position = historyCardPos[i];
+    //        c.connectedSoldierGroup.transform.position = historyShadowPos[i];
+    //        c.x = historyX[i];
+    //        c.y = historyY[i];
+    //        c.transform.position -= new Vector3(c.x, c.y);
+    //        //c.connectedSoldierGroup.transform.position -= new Vector3(c.x, c.y);
+    //    }
+    //    historyCardPos.Clear();
+    //    historySelectedCard.Clear();
+    //    historyShadowPos.Clear();
+    //}
     /// <summary>
     /// 设置最后点击的兵牌记录（用于撤销）
     /// </summary>
@@ -794,7 +882,7 @@ public class BattleManager : MonoBehaviour
         return go;
     }
 
-    
+
 
 
     #endregion
