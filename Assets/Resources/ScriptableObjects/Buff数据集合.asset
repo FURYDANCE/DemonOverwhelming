@@ -36,4 +36,4 @@ MonoBehaviour:
     buffLevel: 1
     buffName: "\u7B49\u5F85\u961F\u5458\u56DE\u5F52\u9635\u578B"
     buffVfx: {fileID: 0}
-    buffTime: 999
+    buffTime: -1

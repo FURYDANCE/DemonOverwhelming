@@ -15,3 +15,7 @@ public class Tags
     public const string Hero = "Hero";
     public const string MoneyBag = "MoneyBag";
 }
+public class BuffNames
+{
+    public const string Buff_AttackStrengthen = "1";
+}
