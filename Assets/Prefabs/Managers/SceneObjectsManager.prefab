@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &575584828384544740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 575584828384544739}
+  - component: {fileID: 575584828384544738}
+  m_Layer: 0
+  m_Name: SceneObjectsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &575584828384544739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575584828384544740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575584828384544738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575584828384544740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e323964fb1011634d8c11deaf8805d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 0}
+  bloodText: {fileID: 0}
+  playerEntityGeneratePoint: {fileID: 0}
+  enemyEntityGeneratePoint: {fileID: 0}
+  hpBarObject: {fileID: 2319076217595515334, guid: 921461a887118d94b8cee0fb43b2fd46, type: 3}
+  camera: {fileID: 0}
+  cameraFollowTarget: {fileID: 0}
+  cameraBound_Left: {fileID: 0}
+  cameraBound_Right: {fileID: 0}
+  moneyFill: {fileID: 0}
+  costFill: {fileID: 0}
+  objectInfoUI: {fileID: 0}
+  playerFinalStrongHold: {fileID: 0}
+  gameOverPanel: {fileID: 0}
+  BattleUI: {fileID: 0}
+  cardSelectUI: {fileID: 0}
+  formationMakingUI: {fileID: 0}
+  heroInfoUI: {fileID: 0}

@@ -13,12 +13,13 @@ public class FormatCard : MonoBehaviour
     /// <summary>
     /// 兵组
     /// </summary>
-    [HideInInspector]
+ 
     public SoliderGroup connectedSoldierGroup;
+    public Shadow connectedShadow;
     /// <summary>
     /// 兵组（在场景中生成后的）
     /// </summary>
-    [HideInInspector]
+
     public SoliderGroup connectedSoldierGroup_inScene;
     /// <summary>
     /// 初始位置
@@ -30,28 +31,42 @@ public class FormatCard : MonoBehaviour
     /// </summary>
     UiDrag drag;
     Sprite flagSprite;
+
+    public bool noOffset;
+    public float x, y;
     private void Start()
     {
-        float x = Random.Range(-80, 80);
-        float y = Random.Range(-50, 50);
+       
         drag = GetComponent<UiDrag>();
         //生成残影
         connectedSoldierGroup_inScene = Instantiate(connectedSoldierGroup, GameObject.Find("FaceToCamera").transform);
         connectedSoldierGroup_inScene.transform.position = SceneObjectsManager.instance.playerEntityGeneratePoint.transform.position;
+        //设置变量
+        connectedSoldierGroup_inScene.SetParentFormatCard(this);
         //设置残影在生成实体士兵时的旗帜贴图
         connectedSoldierGroup_inScene.SetFlagSprite(flagSprite);
         //设置残影的具体贴图
         connectedSoldierGroup_inScene.SetSoldierShadowSprite(parentParameter.sprite);
+
         //将该旗帜对应的兵组位置传给战斗管理器
         BattleManager.instance.soliderFormatGroups.Add(connectedSoldierGroup_inScene);
         startPos = connectedSoldierGroup_inScene.transform.position;
-        //设置旗帜的位置偏移
+        if (!noOffset)
+        {
+            Debug.LogError("有OFFSET！");
+            //设置旗帜的位置偏移
+            x = Random.Range(-80, 80);
+            y = Random.Range(-50, 50);
+
+          
+
+        }
         transform.position += new Vector3(x, y, 0);
         drag.startPos = transform.position - new Vector3(x, y, 0);
     }
     private void Update()
     {
-        ///计算ui拖拽的相对位置，改变残影的位置
+        //计算ui拖拽的相对位置，改变残影的位置
         if (connectedSoldierGroup_inScene)
         {
             connectedSoldierGroup_inScene.transform.position = startPos + new Vector3(drag.relativeGap.x * 0.15f, drag.relativeGap.y * 0.35f + 4, 0);
@@ -60,6 +75,8 @@ public class FormatCard : MonoBehaviour
     public void SetParentParameter(SoldierCardParameter parameter)
     {
         parentParameter = parameter;
+        if (parameter.flagSprite != null)
+            GetComponent<Image>().sprite = parameter.flagSprite;
     }
     public void ClearThis()
     {
@@ -69,5 +86,9 @@ public class FormatCard : MonoBehaviour
     public void SetFlagSprite(Sprite sprite)
     {
         this.flagSprite = sprite;
+    }
+    public void SetConnectGroup(SoliderGroup soliderGroup)
+    {
+        connectedSoldierGroup_inScene = soliderGroup;
     }
 }

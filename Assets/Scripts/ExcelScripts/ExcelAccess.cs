@@ -17,6 +17,26 @@ public class ExcelAccess
     /// </summary>
     public static string EntityExcel = "EntityExcel";
 
+
+    public static Sprite LoadSprite(string path)
+    {
+        if (path.Contains("A") || path.Contains("B") || path.Contains("C") || path.Contains("D"))
+            return Resources.Load("Sprites/ModelSprites/EnemySoldierSprite/" + path, typeof(Sprite)) as Sprite;
+        else
+        {
+            if (Resources.Load("Sprites/ModelSprites/PlayerSoldierSprite/" + path, typeof(Sprite)) as Sprite != null)
+                return Resources.Load("Sprites/ModelSprites/PlayerSoldierSprite/" + path, typeof(Sprite)) as Sprite;
+            else
+                return Resources.Load("Sprites/ModelSprites/" + path, typeof(Sprite)) as Sprite;
+        }
+
+
+    }
+    public static Sprite LoadFlagSprite(string path)
+    {
+        Debug.Log(Resources.Load("Sprites/ModelSprites/FlagSprite/" + path, typeof(Sprite)) as Sprite);
+        return Resources.Load("Sprites/ModelSprites/FlagSprite/" + path, typeof(Sprite)) as Sprite;
+    }
     /// <summary>
     /// 读表，生成每句对话的对象，通过读表将对应的内容赋值给对象
     /// </summary>
@@ -97,7 +117,7 @@ public class ExcelAccess
                 ID = collect[i][0].ToString(),
                 type = (EntityType)int.Parse(collect[i][1].ToString()),
                 name = collect[i][2].ToString(),
-                sprite = Resources.Load("Sprites/ModelSprites/" + collect[i][3].ToString(), typeof(Sprite)) as Sprite,
+                sprite = LoadSprite(collect[i][3].ToString()), /*Resources.Load("Sprites/ModelSprites/" + collect[i][3].ToString(), typeof(Sprite)) as Sprite,*/
                 //sprite = AssetDatabase.FindAssets("Sprites/ModelSprites/" + collect[i][3].ToString()) as Sprite,
                 hpBarSize = float.Parse(collect[i][4].ToString()),
                 hpBarOffset = new Vector3(float.Parse(collect[i][5].ToString().Split(",")[0]), float.Parse(collect[i][5].ToString().Split(",")[1])),
@@ -138,7 +158,7 @@ public class ExcelAccess
             dataArray.Add(up);
         }
 
-       
+
         //兵种卡变量
         for (int i = 3; i < collect_4.Count; i++)
         {
@@ -147,8 +167,8 @@ public class ExcelAccess
             {
                 id = collect_4[i][0].ToString(),
                 name = collect_4[i][1].ToString(),
-                sprite = Resources.Load("Sprites/ModelSprites/" + collect_4[i][2].ToString(), typeof(Sprite)) as Sprite,
-                flagSprite = Resources.Load("Sprites/BuildingSprites/" + collect_4[i][3].ToString(), typeof(Sprite)) as Sprite,
+                sprite =LoadSprite(collect_4[i][2].ToString()),/* Resources.Load("Sprites/ModelSprites/" + collect_4[i][2].ToString(), typeof(Sprite)) as Sprite*/
+                flagSprite = LoadFlagSprite(collect_4[i][3].ToString()),
                 moneyCost = float.Parse(collect_4[i][4].ToString()),
                 bloodCost = float.Parse(collect_4[i][5].ToString()),
                 formationId = collect_4[i][6].ToString(),
@@ -217,7 +237,7 @@ public class ExcelAccess
                 bloodCost = float.Parse(collect_7[i][4].ToString()),
                 moneyCost = float.Parse(collect_7[i][5].ToString()),
                 skillIcon = Resources.Load("Sprites/SkillIcons/" + collect_7[i][6].ToString(), typeof(Sprite)) as Sprite,
-                eachLevelDescriptions= collect_7[i][7].ToString().Split("|"),
+                eachLevelDescriptions = collect_7[i][7].ToString().Split("|"),
             };
             dataArray_skill.Add(sl);
         }

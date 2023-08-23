@@ -108,12 +108,12 @@ TextureImporter:
       name: "\u5EFA\u7B51-\u9ED1\u6697\u5C16\u5854_0"
       rect:
         serializedVersion: 2
-        x: 110
-        y: 159
-        width: 3778
-        height: 3662
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 10
+        y: 629
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,6 +121,48 @@ TextureImporter:
       bones: []
       spriteID: a9c1cc2e392da914c9ebdaec420eab52
       internalID: 1258104761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u5EFA\u7B51-\u9ED1\u6697\u5C16\u5854_1"
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 112
+        width: 2946
+        height: 2748
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93873dfdfecf1b428a316a98c423a9f
+      internalID: 993317238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u5EFA\u7B51-\u9ED1\u6697\u5C16\u5854_2"
+      rect:
+        serializedVersion: 2
+        x: 2983
+        y: 629
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c42cf128755a740905807556dc6834
+      internalID: 2070459569
       vertices: []
       indices: 
       edges: []
@@ -137,6 +179,8 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       "\u5EFA\u7B51-\u9ED1\u6697\u5C16\u5854_0": 1258104761
+      "\u5EFA\u7B51-\u9ED1\u6697\u5C16\u5854_1": 993317238
+      "\u5EFA\u7B51-\u9ED1\u6697\u5C16\u5854_2": 2070459569
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
