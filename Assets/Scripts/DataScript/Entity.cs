@@ -398,8 +398,8 @@ public class Entity : MonoBehaviour
             VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Buff, transform, parameter.type == EntityType.building ? new Vector3(5, 5, 5) : new Vector3(1, 1, 1), buff.buffTime);
         //buff的触发方法
         buff.buff.OnAddBuff(this, buff.buffLevel);
-        //当buff时间超出99999时，这个buff视为无限时间的buff（可以被取消buff取消掉）
-        if (buff.buffTime < 99999)
+        //当buff时间小于0时，这个buff视为无限时间的buff（可以被取消buff取消掉）
+        if (buff.buffTime < 0)
         {
             yield return new WaitForSeconds(buff.buffTime);
             Debug.Log("buff结束");

@@ -24,10 +24,10 @@ public class BuffManager : MonoBehaviour
     /// <returns></returns>
     public BuffBase SetBuffScript(string buffTypeId)
     {
-        if (buffTypeId == "1")
+        if (buffTypeId == BuffNames.Buff_AttackStrengthen)
             return new Buff_AttackStrengthen();
-        if (buffTypeId == "4")
-            return new Buff_WaitForReorganizeTheFormation();
+        //if (buffTypeId == "4")
+        //    return new Buff_WaitForReorganizeTheFormation();
         else
             return null;
     }
