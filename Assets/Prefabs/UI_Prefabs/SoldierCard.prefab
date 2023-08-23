@@ -244,7 +244,7 @@ RectTransform:
   m_GameObject: {fileID: 7233710488846720462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2296108542901701778}
@@ -375,7 +375,6 @@ MonoBehaviour:
   image: {fileID: 7300638804833136271}
   costText: {fileID: 3512897180049735032}
   hpText: {fileID: 8679226033682476884}
-  hoverScript: {fileID: -5897797060949693906}
 --- !u!114 &-5897797060949693906
 MonoBehaviour:
   m_ObjectHideFlags: 0

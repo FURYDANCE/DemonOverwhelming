@@ -56,10 +56,12 @@ MonoBehaviour:
   - {fileID: 3509277376989154954}
   - {fileID: 4061904738375481547}
   - {fileID: 8141624574325947143}
+  unitOffsetsToCaptain: []
   createdSoldiers: []
   camp: 0
   Id: 1000003
   flagSprite: {fileID: 922088829538616858}
+  flagFollowingSoldier: {fileID: 0}
 --- !u!1001 &769505348193998026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -198,6 +200,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 190985959877568599}
     m_Modifications:
+    - target: {fileID: 1267545568925134567, guid: eb71acfbdf00b314694d92aaac83f579, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4023f108d38a0ca40a18f7451c0245a5, type: 3}
     - target: {fileID: 7955978827087134782, guid: eb71acfbdf00b314694d92aaac83f579, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -212,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7955978827087134782, guid: eb71acfbdf00b314694d92aaac83f579, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7955978827087134782, guid: eb71acfbdf00b314694d92aaac83f579, type: 3}
       propertyPath: m_LocalPosition.x

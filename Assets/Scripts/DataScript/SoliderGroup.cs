@@ -20,8 +20,9 @@ public class SoliderGroup : MonoBehaviour
     /// </summary>
     [HideInInspector]
     public Camp camp;
-    [HideInInspector]
-    public string Id;
+
+    public FormatCard parentFormatCard;
+    public string finalSoldierId;
     public SpriteRenderer flagSprite;
     /// <summary>
     /// 当前旗帜跟随的单位，也就是一队的队长
@@ -78,7 +79,8 @@ public class SoliderGroup : MonoBehaviour
     {
         foreach (Transform t in soldiers)
         {
-            UnitParameter p = GameDataManager.instance.GetEntityDataById(Id);
+
+            UnitParameter p = GameDataManager.instance.GetEntityDataById(finalSoldierId/*parentFormatCard.parentParameter.soldierId*/);
             t.GetComponent<SpriteRenderer>().sprite = sprite;
             t.transform.localScale = new Vector3(p.modleSize, p.modleSize, 1);
         }
@@ -89,10 +91,16 @@ public class SoliderGroup : MonoBehaviour
     /// <param name="destoryShadow">是否摧毁场上的虚影</param>
     public void Generate(bool destoryShadow)
     {
+        //SoliderGroup newGroup = flagSprite.gameObject.AddComponent<SoliderGroup>();
+        //newGroup = Instantiate(this);
+        //Debug.Log(newGroup.gameObject.name);
+        //SoliderGroup NG = Instantiate(this.gameObject, this.transform.parent).GetComponent<SoliderGroup>();
+        //parentFormatCard.SetConnectGroup(NG);
         //根据坐标和id生成实体  
         for (int i = 0; i < soldiers.Length; i++)
         {
-            Entity e = BattleManager.instance.GenerateOneEntity(camp, Id, soldiers[i].position);
+
+            Entity e = BattleManager.instance.GenerateOneEntity(camp, parentFormatCard != null ? parentFormatCard.parentParameter.soldierId : finalSoldierId, soldiers[i].position);
             if (!e)
             {
                 Debug.Log("实体没有正确生成！（也许是生成的id出错或其他问题）");
@@ -110,7 +118,7 @@ public class SoliderGroup : MonoBehaviour
         //生成之后摧毁虚影
         foreach (Transform t in soldiers)
         {
-            if (destoryShadow)
+            //if (destoryShadow)
                 Destroy(t.gameObject);
         }
         //跟随
@@ -119,6 +127,9 @@ public class SoliderGroup : MonoBehaviour
         //设置具体士兵和队长的相对位置
         SetUnitOffset();
         //transform.SetParent(createdSoldiers[0].transform);
+        //BattleManager.instance.soliderFormatGroups.Remove(this);
+        //BattleManager.instance.soliderFormatGroups.Add(NG);
+
     }
     //当组内士兵死亡时调用的方法
     public void OnSoldierDie(Entity diedSoldier)
@@ -192,7 +203,7 @@ public class SoliderGroup : MonoBehaviour
                         //此时已经回到相对位置，在所有士兵到齐之前原地待命
                         //if (e != createdSoldiers[0])
                         //{
-                            e.SetSpeedBuff(-100);
+                        e.SetSpeedBuff(-100);
                         //}
 
                         //完成重整的士兵数量+1
@@ -214,8 +225,8 @@ public class SoliderGroup : MonoBehaviour
                     {
                         //if (e2 != createdSoldiers[0])
                         //{
-                            Debug.Log("解除待命："+e2.name);
-                            e2.SetSpeedBuff(100);
+                        Debug.Log("解除待命：" + e2.name);
+                        e2.SetSpeedBuff(100);
                         //}
                     }
                     //BuffManager.instance.EntityRemoveBuff(createdSoldiers[0], "2000001");
@@ -227,5 +238,14 @@ public class SoliderGroup : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetParentFormatCard(FormatCard card)
+    {
+        this.parentFormatCard = card;
+    }
+    public FormatCard GetParentFormatCard()
+    {
+        return parentFormatCard;
     }
 }
