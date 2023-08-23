@@ -783,16 +783,20 @@ Transform:
   m_Father: {fileID: 4877290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &213606855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5563149539382419247, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
   m_PrefabInstance: {fileID: 1275665446}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
 --- !u!224 &274484493 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3801147801453170069, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
   m_PrefabInstance: {fileID: 1275665446}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &300880585
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +916,8 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
 --- !u!1 &322663809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,11 +1200,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1915150193238468972, guid: 643ff0c38df1bb4479c0f3e329588c2f, type: 3}
   m_PrefabInstance: {fileID: 1915150193418244887}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 --- !u!4 &358535322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 610548751953611390, guid: 05bed1216577c2141b2c2985cf77a684, type: 3}
   m_PrefabInstance: {fileID: 610548752169442020}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
 --- !u!1 &385404991
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,6 +2717,128 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5347558406992297200, guid: b74d2eb705cef374184be47c2108a95d, type: 3}
   m_PrefabInstance: {fileID: 5347558406838423250}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
+=======
+--- !u!1 &963194225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963194228}
+  - component: {fileID: 963194227}
+  - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &963194226
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+--- !u!20 &963194227
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 18.5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &963194228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_LocalRotation: {x: -0.38268343, y: -0, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: -18.4, y: -44.9, z: -7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 29987231}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
 --- !u!1 &971369618
 GameObject:
   m_ObjectHideFlags: 0
@@ -4844,6 +4975,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &1952617188 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3182893332567872055, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
@@ -4855,6 +4987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
 --- !u!1 &2065548608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4905,10 +5039,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1189802822}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+<<<<<<< HEAD
       propertyPath: BattleUI
       value: 
       objectReference: {fileID: 213606855}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
       propertyPath: costFill
       value: 
       objectReference: {fileID: 1013255708}
@@ -4925,18 +5062,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1690597444}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+<<<<<<< HEAD
       propertyPath: cardSelectUI
       value: 
       objectReference: {fileID: 1952617188}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
       propertyPath: objectInfoUI
       value: 
       objectReference: {fileID: 1587443795904757170}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+<<<<<<< HEAD
       propertyPath: allUnitParent
       value: 
       objectReference: {fileID: 4877290}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 61613825}
@@ -4949,10 +5092,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1414833669}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+<<<<<<< HEAD
       propertyPath: formationMakingUI
       value: 
       objectReference: {fileID: 137593828}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
       propertyPath: cameraFollowTarget
       value: 
       objectReference: {fileID: 1785195721}
@@ -5018,6 +5164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &610548752169442020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5075,6 +5222,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05bed1216577c2141b2c2985cf77a684, type: 3}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
 --- !u!1001 &1587443795904757168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5577,10 +5726,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1133896458}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 8191951234441727460, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
       propertyPath: heroDatas
       value: 
       objectReference: {fileID: 11400000, guid: f522f4e94fb13b5488d38a409f22aadc, type: 2}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
     - target: {fileID: 8191951234441727466, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
       propertyPath: m_Name
       value: GameDataManager

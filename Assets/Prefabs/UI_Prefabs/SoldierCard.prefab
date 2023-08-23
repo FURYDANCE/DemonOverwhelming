@@ -244,7 +244,11 @@ RectTransform:
   m_GameObject: {fileID: 7233710488846720462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 0.85, y: 0.85, z: 1}
+=======
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2296108542901701778}
