@@ -8,7 +8,7 @@ public class Buff_WaitForReorganizeTheFormation : BuffBase
     float lateSpeed;
     public void OnAddBuff(Entity e, float buffLevel)
     {
-
+        Debug.Log("…œ¡Àbuff");
         e.SetSpeedBuff(-100);
     }
 
