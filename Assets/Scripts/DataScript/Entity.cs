@@ -40,8 +40,21 @@ public class Entity : MonoBehaviour
     public Animator animator;
     public AnimationsList animations;
     public SkeletonAnimation skAni;
+    /// <summary>
+    /// 和组内参照对象之间的相对距离
+    /// </summary>
+    [Header("和组内参照对象之间的相对距离")]
+    public Vector3 OffsetToCaptain;
+    [Header("是否正在回到初始的相对位置")]
+    public bool isBackingRelativePos;
+    /// <summary>
+    /// 开始回到初始位置时，最初的位置
+    /// </summary>
+    public Vector3 backingRelativeStartPos;
     [SerializeField]
     int[] skillLevels;
+
+    
     private void Start()
     {
         buffs = new List<BuffInformation>();
@@ -49,6 +62,7 @@ public class Entity : MonoBehaviour
             SetEntityParameter();
         GenerateEntity();
     }
+   
     private void FixedUpdate()
     {
         UpdateBuff();
@@ -238,6 +252,17 @@ public class Entity : MonoBehaviour
     #endregion
 
     #region 受伤，死亡相关
+
+    /// <summary>
+    /// 治疗
+    /// </summary>
+    /// <param name="healAmount"></param>
+    public void Heal(float healAmount)
+    {
+        parameter.nowHp += healAmount;
+        if (parameter.nowHp > parameter.Hp)
+            parameter.nowHp = parameter.Hp;
+    }
     /// <summary>
     /// 实体受伤时调用的方法，传入伤害信息，伤害者，输出最终伤害
     /// </summary>
@@ -368,13 +393,20 @@ public class Entity : MonoBehaviour
         //添加buff
         buffs.Add(buff);
         Debug.Log("buff开始");
-        VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Buff, transform, parameter.type == EntityType.building ? new Vector3(5, 5, 5) : new Vector3(1, 1, 1), buff.buffTime);
+        //生成buff特效
+        if (buff.buffVfx != null)
+            VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Buff, transform, parameter.type == EntityType.building ? new Vector3(5, 5, 5) : new Vector3(1, 1, 1), buff.buffTime);
+        //buff的触发方法
         buff.buff.OnAddBuff(this, buff.buffLevel);
-        yield return new WaitForSeconds(buff.buffTime);
-        Debug.Log("buff结束");
-        buff.buff.OnRemoveBuff(this, buff.buffLevel);
+        //当buff时间小于0时，这个buff视为无限时间的buff（可以被取消buff取消掉）
+        if (buff.buffTime < 0)
+        {
+            yield return new WaitForSeconds(buff.buffTime);
+            Debug.Log("buff结束");
+            buff.buff.OnRemoveBuff(this, buff.buffLevel);
 
-        buffs.Remove(buff);
+            buffs.Remove(buff);
+        }
     }
 
     #endregion
@@ -545,7 +577,7 @@ public class Entity : MonoBehaviour
     public void UseSkill(int index)
     {
         Debug.Log("使用技能");
-        if (index >= parameter.character.skills.Count) 
+        if (index >= parameter.character.skills.Count)
         {
             Debug.Log(index);
 
@@ -563,14 +595,83 @@ public class Entity : MonoBehaviour
     }
     #endregion
 
+    #region 变量存取相关
+    
     /// <summary>
-    /// 治疗
+    /// 获取是否处于重整阵型状态
     /// </summary>
-    /// <param name="healAmount"></param>
-    public void Heal(float healAmount)
+    /// <returns></returns>
+    public bool GetBackingToRelativePos() => isBackingRelativePos;
+    /// <summary>
+    /// 设置处于重整阵型状态
+    /// </summary>
+    /// <param name="isTrue"></param>
+    public void SetBackingToRelativePos(bool isTrue)
     {
-        parameter.nowHp += healAmount;
-        if (parameter.nowHp > parameter.Hp)
-            parameter.nowHp = parameter.Hp;
+        //Debug.Log("执行了");
+        isBackingRelativePos = isTrue;
+
     }
+    /// <summary>
+    /// 设置spriteRenender的转向
+    /// </summary>
+    /// <param name="isTrue"></param>
+    public void SetFlipX(bool isTrue)
+    {
+        sprite.flipX = isTrue;
+    }
+    /// <summary>
+    /// 设置实体的初始速度值
+    /// </summary>
+    /// <param name="newSpeed"></param>
+    public void SetSpeed(float newSpeed)
+    {
+        Debug.Log("新速度：" + newSpeed);
+        parameter.character.moveSpeed = newSpeed;
+    }
+    /// <summary>
+    /// 设置实体的速度加成值
+    /// </summary>
+    /// <param name="newBuff"></param>
+    public void SetSpeedBuff(float newBuff)
+    {
+        if (newBuff < 0 && parameter.buffParameter.speedBuff <= -100)
+            return;
+        parameter.buffParameter.speedBuff += newBuff;
+    }
+
+    /// <summary>
+    /// 获取速度的加成值
+    /// </summary>
+    /// <returns></returns>
+    public float GetSpeedBuff()
+    {
+        return parameter.buffParameter.speedBuff;
+    }
+
+    /// <summary>
+    /// 获取实体的速度值（速度初始值+速度buff）
+    /// </summary>
+    /// <returns></returns>
+    public float GetSpeed()
+    {
+        float s = parameter.character.moveSpeed;
+        float endS = (s + s * (parameter.buffParameter.speedBuff * 0.01f));
+        //Debug.Log("S==" + s + "   buff==" + parameter.buffParameter.speedBuff * 0.01f + "    final==" + endS);
+        return endS;
+    }
+
+    /// <summary>
+    /// 朝着目标转向
+    /// </summary>
+    /// <param name="target"></param>
+    public void FlipTo(Vector3 target)
+    {
+        if (transform.position.x > target.x)
+            SetFlipX(true);
+        if (transform.position.x < target.x)
+            SetFlipX(false);
+    }
+
+    #endregion
 }

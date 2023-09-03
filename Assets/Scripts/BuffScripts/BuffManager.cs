@@ -24,10 +24,16 @@ public class BuffManager : MonoBehaviour
     /// <returns></returns>
     public BuffBase SetBuffScript(string buffTypeId)
     {
-        if (buffTypeId == "1")
+        if (buffTypeId == BuffNames.Buff_AttackStrengthen)
             return new Buff_AttackStrengthen();
+        //if (buffTypeId == "4")
+        //    return new Buff_WaitForReorganizeTheFormation();
         else
             return null;
+    }
+    public void RemoveBuffScript(Entity e, string buffTypeId)
+    {
+
     }
     /// <summary>
     /// 通过id找到buff的数据的方法
@@ -64,5 +70,24 @@ public class BuffManager : MonoBehaviour
             return;
         b.buff = SetBuffScript(b.buffTypeId);
         e.AddBuff(b);
+        Debug.Log("上buff完成：" + b.buffName);
+    }
+    /// <summary>
+    /// 给实体移除buff
+    /// </summary>
+    /// <param name="e"></param>
+    /// <param name="buffId"></param>
+    public void EntityRemoveBuff(Entity e, string buffId)
+    {
+        if (e.buffs.Count != 0)
+            for (int i = 0; i < e.buffs.Count; i++)
+                if (e.buffs[i].buffId == buffId)
+                {
+                    //执行buff的取消buff方法
+                    e.buffs[i].buff.OnRemoveBuff(e, e.buffs[i].buffLevel);
+                    RemoveBuffScript(e, buffId);
+                    e.buffs.Remove(e.buffs[i]);
+                }
+
     }
 }

@@ -14,7 +14,7 @@ public class ICharaMove_Direct : MonoBehaviour, ICharacterMove
     void Start()
     {
         entity = GetComponent<Entity>();
-        speed = entity.parameter.character.moveSpeed;
+
         manager = GetComponent<CharacterStateManager>();
         timer = 0.1f;
     }
@@ -35,13 +35,23 @@ public class ICharaMove_Direct : MonoBehaviour, ICharacterMove
             moveDir = Vector3.left.normalized;
         if (timer < 0)
         {
-            //为了当调试时锁定位置有效，还是要直接调用实体的速度值
-            transform.position = Vector3.MoveTowards(transform.position, transform.position + moveDir, entity.parameter.character.moveSpeed * Time.deltaTime);
-            //Debug.Log("动了");
+            //当单位不处于重整队形状态时候的移动
+            if (!entity.isBackingRelativePos)
+            {
+                Vector3 target = new Vector3(transform.position.x + moveDir.x, manager.start_Y, transform.position.z);
+                transform.position = Vector3.MoveTowards(transform.position, target, entity.GetSpeed() * Time.deltaTime);
+                entity.FlipTo(target);
+            }
+            //当单位处于重整队形状态时候的移动
+            if (entity.isBackingRelativePos)
+            {
+                Vector3 target = entity.parentSoldierGroup.flagFollowingSoldier.transform.position - entity.OffsetToCaptain;
+                //Debug.Log("正在回到初始阵型位置");
+                transform.position = Vector3.MoveTowards(transform.position, target, entity.GetSpeed() * Time.deltaTime);
+                entity.FlipTo(target);
+            }
         }
         timer -= Time.deltaTime;
     }
-
-
 
 }

@@ -31,3 +31,9 @@ MonoBehaviour:
     buffName: "\u6218\u610F\u9AD8\u6602_\u7B49\u7EA73"
     buffVfx: {fileID: 7155335147208632822, guid: 97c43495f80a3244fad1301dfafbe252, type: 3}
     buffTime: 10
+  - buffId: 2000001
+    buffTypeId: 4
+    buffLevel: 1
+    buffName: "\u7B49\u5F85\u961F\u5458\u56DE\u5F52\u9635\u578B"
+    buffVfx: {fileID: 0}
+    buffTime: -1

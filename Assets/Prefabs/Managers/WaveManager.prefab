@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1915150193238468973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915150193238468972}
+  - component: {fileID: 1915150193238468971}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1915150193238468972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915150193238468973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1915150193238468971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915150193238468973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cabb7644cb5f974b944ab488ebd0099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  battleIntensity: 0
+  battleIntensityLevel: 0
+  maxIntensityLevel: 2
+  createWaitTime: 4
+  createWaitTimer: 4
+  usingSameLevelCaculation: 0
+  intensityLevelClassification_Same: 20
+  intensityLevelClassification_Different: 0a000000280000003c000000
+  intensityIncreaseSpeed: 1
+  wavesEveryIntensityLevel:
+  - name: "\u70C8\u5EA6\u7B49\u7EA7\u30101\u3011\u53EF\u80FD\u51FA\u73B0\u7684\u654C\u4EBA\u6CE2\u6B21s"
+    possibleWaves:
+    - name: "\u70C8\u5EA6\u7B49\u7EA71\u53EF\u80FD\u51FA\u73B0\u7684\u654C\u4EBA\u6CE2\u6B21\u30101\u3011"
+      groups:
+      - name: "\u5C0F\u6076\u9B54\u7EC4_4\u4EBA"
+        soldierId: 1000001
+        formationId: 4
+        offset: {x: -5, y: 0}
+      - name: "\u9AB7\u9AC5\u5175\u7EC4_2\u4EBA"
+        soldierId: 1000002
+        formationId: 2
+        offset: {x: 5, y: 0}
+    - name: "\u70C8\u5EA6\u7B49\u7EA71\u53EF\u80FD\u51FA\u73B0\u7684\u654C\u4EBA\u6CE2\u6B21\u30102\u3011"
+      groups:
+      - name: "\u72EC\u773C\u6076\u9B54\u7EC4_3\u4EBA"
+        soldierId: 1000003
+        formationId: 3
+        offset: {x: -5, y: 0}
+      - name: "\u98CE\u8F66\u5DE8\u4EBA\u7EC4_1\u4EBA"
+        soldierId: 1000008
+        formationId: 1
+        offset: {x: 0, y: 0}
+  - name: "\u70C8\u5EA6\u7B49\u7EA7\u30102\u3011\u53EF\u80FD\u51FA\u73B0\u7684\u654C\u4EBA\u6CE2\u6B21s"
+    possibleWaves:
+    - name: "\u70C8\u5EA6\u7B49\u7EA7\u30102\u3011\u53EF\u80FD\u51FA\u73B0\u7684\u654C\u4EBA\u6CE2\u6B21_1"
+      groups:
+      - name: "\u7194\u7089\u866B\u7EC4_5\u4EBA"
+        soldierId: 1000005
+        formationId: 5
+        offset: {x: 0, y: 0}
+  debug_DontWork: 1

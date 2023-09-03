@@ -9,6 +9,7 @@ using TMPro;
 /// 管理场景中可能被其他类调用的对象的管理器，需要调用时调用其中的get方法
 /// 思路是，难免会遇到需要其他类调用的对象，比如计算UI可能需要相机相关的变量，从这个单例中获取到所需的对象更好溯源？
 /// </summary>
+
 public class SceneObjectsManager : MonoBehaviour
 {
 
@@ -44,20 +45,56 @@ public class SceneObjectsManager : MonoBehaviour
     public GameObject playerFinalStrongHold;
     [Header("GAMEOVER界面")]
     public GameOverUI gameOverPanel;
+    [Header("战斗界面UI")]
+    [Header("UI相关s")]
+    public GameObject BattleUI;
+    [Header("选卡界面")]
+    public Image cardSelectUI;
+    [Header("布阵界面")]
+    public Image formationMakingUI;
+    [Header("英雄信息界面")]
+    public HeroInformationUI heroInfoUI;
     public static SceneObjectsManager instance;
     private void Awake()
     {
         if (instance != null)
             Destroy(instance);
         instance = this;
-        
+        Initialize();
+
+    }
+    public void Initialize()
+    {
         if (camera == null)
             camera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
         if (cameraBound_Left == null)
             cameraBound_Left = GameObject.Find("LeftCameraBound").transform;
         if (cameraBound_Right == null)
             cameraBound_Right = GameObject.Find("RightCameraBound").transform;
+        if (playerEntityGeneratePoint == null)
+            playerEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Left").transform;
+        if (enemyEntityGeneratePoint == null)
+            enemyEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Right").transform;
+        if (moneyFill == null)
+            moneyFill = GameObject.Find("MoneyFill").GetComponent<Image>();
+        if (costFill == null)
+            costFill = GameObject.Find("BolldFill").GetComponent<Image>();
+        if (objectInfoUI == null)
+            objectInfoUI = GameObject.Find("ObjectInfoUI").GetComponent<ObjectInfoUI>();
+        if (playerFinalStrongHold == null)
+            playerFinalStrongHold = GameObject.Find("Player's Stronghold");
+        if (gameOverPanel == null)
+            gameOverPanel = GameObject.Find("GameOverUi").GetComponent<GameOverUI>();
+        if (!BattleUI)
+            BattleUI = GameObject.Find("BattleUI");
+        if(!cardSelectUI)
+            cardSelectUI = GameObject.Find("CardSelectArea").GetComponent<Image>();
+        if (!formationMakingUI)
+            formationMakingUI = GameObject.Find("FormationMakingArea").GetComponent<Image>();
+        if(!heroInfoUI)
+            heroInfoUI = GameObject.Find("HeroInfoArea").GetComponent<HeroInformationUI>();
     }
+
     /// <summary>
     /// 获取相机对象
     /// </summary>
@@ -84,7 +121,7 @@ public class SceneObjectsManager : MonoBehaviour
         L = cameraBound_Left;
         R = cameraBound_Right;
     }
-    
+
     public void ShowObjectInfoUI(bool isTrue)
     {
         objectInfoUI.gameObject.SetActive(isTrue);
