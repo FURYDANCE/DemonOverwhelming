@@ -155,6 +155,7 @@ MonoBehaviour:
   resourceManager: {fileID: 979786160}
   uiManager: {fileID: 2027940644}
   _mapScenePath: Assets/Scenes/MapScene.unity
+  _gameScenePath: Assets/Scenes/SampleScene.unity
 --- !u!4 &291383954
 Transform:
   m_ObjectHideFlags: 0

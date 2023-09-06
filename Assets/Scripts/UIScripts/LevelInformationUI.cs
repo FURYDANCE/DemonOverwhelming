@@ -11,7 +11,11 @@ public class LevelInformationUI : MonoBehaviour
     public Image levelSpriteImage;
     public TextMeshProUGUI levelDescriptionText;
     public TextMeshProUGUI levelTargetText;
-
+    public Button intoGameBtn;
+    private void Start()
+    {
+        intoGameBtn.onClick.AddListener(IntoLevel);
+    }
     public void SetInformation(LevelBtn information)
     {
         levelNameText.text = information.levelName;

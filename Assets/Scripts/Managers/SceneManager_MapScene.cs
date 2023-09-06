@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using DemonOverwhelming;
 public class SceneManager_MapScene : MonoBehaviour
 {
+    public GameManager gameManager;
     public GameObject levelInformationUI;
     [Header("创建关卡信息Ui的父对象")]
     public Transform levelInfoParent;
@@ -22,6 +23,10 @@ public class SceneManager_MapScene : MonoBehaviour
             Destroy(instance);
         instance = this;
     }
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
     /// <summary>
     /// 当点击关卡图标之后执行的方法，创造关卡详细信息界面
     /// </summary>
@@ -38,6 +43,7 @@ public class SceneManager_MapScene : MonoBehaviour
         go.name = "LEVEL INFO UI";
         Debug.Log("生成了UI");
         nowLevelInformation.GetComponent<LevelInformationUI>().SetInformation(information);
+        nowLevelInformation.GetComponent<LevelInformationUI>().intoGameBtn.onClick.AddListener(gameManager.OnClickIntoGameButtonMapScene);
     }
     /// <summary>
     /// 当点击取消按钮后执行的方法，消除关卡信息界面

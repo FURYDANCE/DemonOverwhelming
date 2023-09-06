@@ -1315,19 +1315,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5044582230147477635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2751933607315982070}
-        m_TargetAssemblyTypeName: LevelInformationUI, Assembly-CSharp
-        m_MethodName: IntoLevel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &4283189052981554433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,6 +1767,7 @@ MonoBehaviour:
   levelSpriteImage: {fileID: 4571340276023876768}
   levelDescriptionText: {fileID: 7028669737893667007}
   levelTargetText: {fileID: 5484046272398320743}
+  intoGameBtn: {fileID: 6432927373193269413}
 --- !u!95 &9106380594677460942
 Animator:
   serializedVersion: 5

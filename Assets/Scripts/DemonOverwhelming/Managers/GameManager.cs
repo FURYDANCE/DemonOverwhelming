@@ -60,10 +60,22 @@ namespace DemonOverwhelming
             Application.Quit();
 #endif
         }
+        public void OnClickIntoGameButtonMapScene()
+        {
+            //显示加载界面
+            LoadingPanel loadingUI = uiManager.ShowLoadingUI();
+            //加载场景
+            LoadSceneOperationBase loadOperation = resourceManager.loadSceneAsync(_gameScenePath, LoadSceneMode.Additive);
+            loadOperation.onComplete += OnMapSceneLoaded;
+            //绑定加载界面
+            loadingUI.Display(loadOperation);
+        }
 
         public ResourceManager resourceManager;
         public UIManager uiManager;
         [SerializeField]
         private string _mapScenePath;
+        [SerializeField]
+        private string _gameScenePath;
     }
 }
