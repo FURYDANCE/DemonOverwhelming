@@ -28,4 +28,5 @@ public class LevelInformationUI : MonoBehaviour
     {
         SceneManager_MapScene.instance.ReSelectLevel();
     }
+   
 }

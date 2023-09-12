@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class ICharaMove_InputKey : MonoBehaviour, ICharacterMove
 {
     Entity entity;
@@ -10,6 +9,7 @@ public class ICharaMove_InputKey : MonoBehaviour, ICharacterMove
     public float moveDir_Y;
     public Vector3 moveDir;
     CharacterStateManager manager;
+    
     public void Moving()
     {
         transform.position = Vector3.MoveTowards(transform.position, moveDir, speed * Time.deltaTime);
