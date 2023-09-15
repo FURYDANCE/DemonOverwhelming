@@ -4933,6 +4933,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1587443795904757170}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
+      propertyPath: allUnitParent
+      value: 
+      objectReference: {fileID: 4877290}
+    - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 61613825}
@@ -5031,11 +5035,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 610548751953611390, guid: 05bed1216577c2141b2c2985cf77a684, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.539025
+      value: -16.06
       objectReference: {fileID: 0}
     - target: {fileID: 610548751953611390, guid: 05bed1216577c2141b2c2985cf77a684, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -25.5321
+      value: -21.18
       objectReference: {fileID: 0}
     - target: {fileID: 610548751953611390, guid: 05bed1216577c2141b2c2985cf77a684, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5573,6 +5577,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1133896458}
     m_Modifications:
+    - target: {fileID: 8191951234441727460, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
+      propertyPath: heroDatas
+      value: 
+      objectReference: {fileID: 11400000, guid: f522f4e94fb13b5488d38a409f22aadc, type: 2}
     - target: {fileID: 8191951234441727466, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
       propertyPath: m_Name
       value: GameDataManager

@@ -1689,6 +1689,7 @@ GameObject:
   - component: {fileID: 2751933607315982070}
   - component: {fileID: 9106380594677460942}
   - component: {fileID: 8388393363138861343}
+  - component: {fileID: 699349805594561846}
   m_Layer: 5
   m_Name: LevelInformationUI
   m_TagString: Untagged
@@ -1812,6 +1813,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &699349805594561846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5995294974692615909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1948bed657d7d4743bd280acf542133b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ui: {fileID: 0}
+  _useController: 0
+  _initStates: []
+  _uiManager: {fileID: 0}
+  _intoGameButton: {fileID: 6432927373193269413}
 --- !u!1 &6791234187284202907
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,16 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
-/// <summary>
-/// 临时的游戏结束后UI文字脚本
-/// </summary>
-public class GameOverUI : MonoBehaviour
+namespace DemonOverwhelming
 {
-    public TextMeshProUGUI endText;
 
-    public void RetryLevel()
+    /// <summary>
+    /// 临时的游戏结束后UI文字脚本
+    /// </summary>
+    public class GameOverUI : MonoBehaviour
     {
-        Scene s = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(s.name);
+        public TextMeshProUGUI endText;
+
+        public void RetryLevel()
+        {
+            Scene s = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(s.name);
+        }
     }
 }

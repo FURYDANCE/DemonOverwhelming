@@ -325,6 +325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1690597444}
   bloodText: {fileID: 1757327583}
+  allUnitParent: {fileID: 0}
   playerEntityGeneratePoint: {fileID: 1923987038}
   enemyEntityGeneratePoint: {fileID: 1541464993}
   hpBarObject: {fileID: 2319076217595515334, guid: 921461a887118d94b8cee0fb43b2fd46, type: 3}
@@ -337,6 +338,10 @@ MonoBehaviour:
   objectInfoUI: {fileID: 0}
   playerFinalStrongHold: {fileID: 491496137}
   gameOverPanel: {fileID: 61613825}
+  BattleUI: {fileID: 1733141156}
+  cardSelectUI: {fileID: 1097462394}
+  formationMakingUI: {fileID: 137785150}
+  heroInfoUI: {fileID: 1265537296}
 --- !u!1 &35525297
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,17 +473,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 8.939999, y: 9.429999, z: 0.2}
   m_Center: {x: 0, y: 4.7149997, z: 0}
---- !u!114 &35679578 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3629767566515221188, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
-  m_PrefabInstance: {fileID: 1275665446}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &55211696
 GameObject:
   m_ObjectHideFlags: 0
@@ -933,6 +927,17 @@ Material:
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+--- !u!114 &137785150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3629767566515221188, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
+  m_PrefabInstance: {fileID: 1275665446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &162852657
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,11 +969,6 @@ Transform:
   m_Father: {fileID: 4877290}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &274484492 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5563149539382419247, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
-  m_PrefabInstance: {fileID: 1275665446}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &274484493 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3801147801453170069, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
@@ -1207,6 +1207,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 1
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -1220,6 +1222,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!65 &343375691
 BoxCollider:
@@ -1374,6 +1379,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 1
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -1387,6 +1394,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!212 &385404996
 SpriteRenderer:
@@ -1619,6 +1629,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 1
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -1632,6 +1644,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!114 &454947320
 MonoBehaviour:
@@ -2109,6 +2124,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -2122,6 +2139,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!65 &491496142
 BoxCollider:
@@ -2149,17 +2169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
---- !u!114 &506551616 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3182893332567872055, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
-  m_PrefabInstance: {fileID: 1275665446}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &571789850 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8626620565904456999, guid: aa5e1e001ddd87f4abff562575a2947c, type: 3}
@@ -2808,7 +2817,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &777891644
 Transform:
   m_ObjectHideFlags: 0
@@ -2847,15 +2856,16 @@ MonoBehaviour:
   soliderFormatGroups: []
   nowChooseingTarget: {fileID: 0}
   nowChoosedTarget: {fileID: 0}
-  BattleUI: {fileID: 274484492}
   unitInformationUI: {fileID: 8622467214577021552, guid: e708a9fe6604b1e43a21bddb2b703e6e, type: 3}
-  cardSelectUI: {fileID: 506551616}
-  formationMakingUI: {fileID: 35679578}
-  heroInfoUI: {fileID: 0}
   formatCards: []
   allSoldiers: []
   cameraControlMode: 0
   mouseOveringInfoUI: 0
+  historySelectedCard: []
+  historyCardPos: []
+  historyShadowPos: []
+  historyX: []
+  historyY: []
 --- !u!1 &820069712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,6 +3663,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 1
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -3666,6 +3678,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!212 &1056600350
 SpriteRenderer:
@@ -3748,7 +3763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1064033217
 Transform:
   m_ObjectHideFlags: 0
@@ -3861,6 +3876,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1097462394 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3182893332567872055, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
+  m_PrefabInstance: {fileID: 1275665446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1133896457
 GameObject:
   m_ObjectHideFlags: 0
@@ -4197,6 +4223,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 1
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -4210,6 +4238,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!65 &1235263193
 BoxCollider:
@@ -4287,6 +4318,7 @@ MonoBehaviour:
   materialObject: {fileID: 11400000, guid: 0c2213e9a08a5044b89cd2484aef5d1e, type: 2}
   formationObject: {fileID: 0}
   spinePrefabDatas: {fileID: 11400000, guid: 1a81ba0ff9eb966478c0eefe4d2f9391, type: 2}
+  heroDatas: {fileID: 0}
   emptyEntity: {fileID: 4785308967260491664, guid: 38d9438aab39da34c843143be4cc8999, type: 3}
   emptySpine: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
   emptySoldierCard: {fileID: 7233710488846720462, guid: 0b8ccb7ab2b6c004daa197ce233a3d41, type: 3}
@@ -4362,6 +4394,17 @@ MonoBehaviour:
   minX: -100
   minY: -60
   targetScale: 1
+--- !u!114 &1265537296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5945796912800201337, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
+  m_PrefabInstance: {fileID: 1275665446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7b28782af574a4ab2c90c32ec58ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1275665446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4857,6 +4900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31756f7bd34b2d4e84c5cbb8bba21cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
   levelInformationUI: {fileID: 5995294974692615909, guid: b2d29db2bfa8da348b081d68b5cc50b4, type: 3}
   levelInfoParent: {fileID: 820069713}
   isInformationing: 0
@@ -5190,6 +5234,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1733141156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5563149539382419247, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
+  m_PrefabInstance: {fileID: 1275665446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1757327583 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8767496714695924680, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
@@ -5448,6 +5497,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 1
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -5461,6 +5512,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!212 &1880707960
 SpriteRenderer:
@@ -5980,6 +6034,8 @@ MonoBehaviour:
     building:
       id: 
       building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
   hpBar: {fileID: 0}
   parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
@@ -5993,6 +6049,9 @@ MonoBehaviour:
     animation_Walk: {fileID: 0}
     animation_Die: {fileID: 0}
   skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
 --- !u!65 &2034644083
 BoxCollider:

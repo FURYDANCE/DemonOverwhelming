@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class PlaySoundEffectOnStart : MonoBehaviour
+namespace DemonOverwhelming
 {
-    public AudioClip clip;
-    private void Start()
+
+    public class PlaySoundEffectOnStart : MonoBehaviour
     {
-        SoundManager.instacne.PlayeSoundEffect(clip);
+        public AudioClip clip;
+        private void Start()
+        {
+            SoundManager.instacne.PlayeSoundEffect(clip);
+        }
     }
 }
