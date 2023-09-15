@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class MoneyBagCheck : MonoBehaviour
+namespace DemonOverwhelming
 {
-    void Update()
+    public class MoneyBagCheck : MonoBehaviour
     {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, 4);
-        foreach (Collider c in colliders)
+        void Update()
         {
-            if (c.tag == Tags.MoneyBag)
+            Collider[] colliders = Physics.OverlapSphere(transform.position, 4);
+            foreach (Collider c in colliders)
             {
-                MoneyBag mb = c.GetComponent<MoneyBag>();
-                mb.StartWork();
+                if (c.tag == Tags.MoneyBag)
+                {
+                    MoneyBag mb = c.GetComponent<MoneyBag>();
+                    mb.StartWork();
+                }
             }
+
         }
-         
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(transform.position, 4);
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, 4);
+        }
     }
 }

@@ -1,33 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Buff_WaitForReorganizeTheFormation : BuffBase
+namespace DemonOverwhelming
 {
-    float startSpeed;
-    float lateSpeed;
-    public void OnAddBuff(Entity e, float buffLevel)
+
+    public class Buff_WaitForReorganizeTheFormation : BuffBase
     {
-        Debug.Log("上了buff");
-        e.SetSpeedBuff(-100);
+        float startSpeed;
+        float lateSpeed;
+        public void OnAddBuff(Entity e, float buffLevel)
+        {
+            Debug.Log("上了buff");
+            e.SetSpeedBuff(-100);
+        }
+
+        public void OnAddbuff_Missile(Missile m, float buffLevel)
+        {
+
+        }
+
+        public void OnRemoveBuff(Entity e, float buffLevel)
+        {
+
+            e.SetSpeedBuff(100);
+
+        }
+
+        public void OnUpdateBuff(Entity e, float buffLevel)
+        {
+
+        }
+
+
     }
-
-    public void OnAddbuff_Missile(Missile m, float buffLevel)
-    {
-
-    }
-
-    public void OnRemoveBuff(Entity e, float buffLevel)
-    {
-
-        e.SetSpeedBuff(100);
-
-    }
-
-    public void OnUpdateBuff(Entity e, float buffLevel)
-    {
-
-    }
-
-
 }

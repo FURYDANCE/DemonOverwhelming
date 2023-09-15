@@ -5,6 +5,7 @@ using Excel;
 using UnityEditor;
 using System.IO;
 using System.Data;
+using DemonOverwhelming;
 public class ExcelAccess
 {
     /// <summary>
@@ -81,7 +82,7 @@ public class ExcelAccess
     /// <param name="buildingData"></param>
     /// <param name="cardDara"></param>
     /// <param name="missileData"></param>
-    public static void SelectEntityTable(out List<UnitParameter> entityData, out List<UnitParameter_Character> characterData, out List<UnitParameter_Building> buildingData,
+    public static void SelectEntityTable(out List<UnitData> entityData, out List<UnitParameter_Character> characterData, out List<UnitParameter_Building> buildingData,
         out List<SoldierCardParameter> cardDara, out List<UnitParameter_Missile> missileData, out List<DamageData> damageData, out List<Skill> skillData)
     {
         string excelName = EntityExcel + ".xlsx";
@@ -100,7 +101,7 @@ public class ExcelAccess
         DataRowCollection collect_6 = ReadExcel(excelName, sheetName_Damage);
         DataRowCollection collect_7 = ReadExcel(excelName, sheetName_Skill);
 
-        List<UnitParameter> dataArray = new List<UnitParameter>();
+        List<UnitData> dataArray = new List<UnitData>();
         List<UnitParameter_Character> dataArray_character = new List<UnitParameter_Character>();
         List<UnitParameter_Building> dataArray_building = new List<UnitParameter_Building>();
         List<SoldierCardParameter> dataArray_soldierCard = new List<SoldierCardParameter>();
@@ -111,7 +112,7 @@ public class ExcelAccess
         for (int i = 3; i < collect.Count; i++)
         {
             if (collect[i][0].ToString() == "") continue; //行不是空的就开始执行
-            UnitParameter up = new UnitParameter
+            UnitData up = new UnitData
             {
 
                 ID = collect[i][0].ToString(),

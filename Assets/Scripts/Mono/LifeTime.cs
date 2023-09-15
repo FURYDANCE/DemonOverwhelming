@@ -1,17 +1,21 @@
 using UnityEngine;
-/// <summary>
-/// 生命周期脚本，计时结束时摧毁自身
-/// </summary>
-public class LifeTime : MonoBehaviour
+namespace DemonOverwhelming
 {
-    public float lifeTime;
-   
-    void Update()
+
+    /// <summary>
+    /// 生命周期脚本，计时结束时摧毁自身
+    /// </summary>
+    public class LifeTime : MonoBehaviour
     {
-        lifeTime -= Time.deltaTime;
-        if (lifeTime <= 0)
+        public float lifeTime;
+
+        void Update()
         {
-            Destroy(gameObject);
+            lifeTime -= Time.deltaTime;
+            if (lifeTime <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DemonOverwhelming;
 /// <summary>
 /// 对话管理器
 /// 通过startDialog方法，传入对话开始的id来执行对话

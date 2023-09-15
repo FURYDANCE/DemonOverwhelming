@@ -1,42 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ICharaEnemyCheck_Nearest : MonoBehaviour, ICharacterEnemyCheck
+namespace DemonOverwhelming
 {
-    CharacterStateManager manager;
-    /// <summary>
-    /// 根据索敌范围内最近的目标选取追击目标
-    /// </summary>
-    /// <returns></returns>
-    public Entity EnemyCheck()
+
+    public class ICharaEnemyCheck_Nearest : MonoBehaviour, ICharacterEnemyCheck
     {
-        Entity selected = null;
-        if (manager.enemySelected.Count != 0)
+        CharacterStateManager manager;
+        /// <summary>
+        /// 根据索敌范围内最近的目标选取追击目标
+        /// </summary>
+        /// <returns></returns>
+        public Entity EnemyCheck()
         {
-            float minDistance = Vector3.Distance(transform.position, manager.enemySelected[0].transform.position);
-
-            foreach (Collider c in manager.enemySelected)
+            Entity selected = null;
+            if (manager.enemySelected.Count != 0)
             {
-                if (!c)
-                    continue;
-                if (Vector3.Distance(transform.position, c.transform.position) <= minDistance)
+                float minDistance = Vector3.Distance(transform.position, manager.enemySelected[0].transform.position);
+
+                foreach (Collider c in manager.enemySelected)
                 {
-                    minDistance = Vector3.Distance(transform.position, c.transform.position);
-                    selected = c.GetComponent<Entity>();
+                    if (!c)
+                        continue;
+                    if (Vector3.Distance(transform.position, c.transform.position) <= minDistance)
+                    {
+                        minDistance = Vector3.Distance(transform.position, c.transform.position);
+                        selected = c.GetComponent<Entity>();
+                    }
                 }
+                return selected;
             }
-            return selected;
+            else
+                return null;
         }
-        else
-            return null;
+
+
+        void Start()
+        {
+            manager = GetComponent<CharacterStateManager>();
+        }
+
+
     }
-
-
-    void Start()
-    {
-        manager = GetComponent<CharacterStateManager>();
-    }
-
-
 }

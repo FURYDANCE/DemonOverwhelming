@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/// <summary>
-/// ¡Ÿ ±µƒ≈–∂œ ‰”ÆΩ≈±æ
-/// </summary>
-public class PlayersStrongHold : MonoBehaviour
+namespace DemonOverwhelming
 {
-    public bool isPlayer;
-    private void OnDestroy()
+
+    /// <summary>
+    /// ¡Ÿ ±µƒ≈–∂œ ‰”ÆΩ≈±æ
+    /// </summary>
+    public class PlayersStrongHold : MonoBehaviour
     {
-        BattleManager.instance.EndBattle(isPlayer);
+        public bool isPlayer;
+        private void OnDestroy()
+        {
+            BattleManager.instance.EndBattle(isPlayer);
+        }
     }
 }

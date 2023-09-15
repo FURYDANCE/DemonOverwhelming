@@ -1,11 +1,15 @@
-/// <summary>
-/// 阵型id常量
-/// </summary>
-public class FormationIds
+namespace DemonOverwhelming
 {
-    public const string Formation_4Soldiers="1";
-    public const string Formation_5Soldiers="2";
-    public const string Formation_3Soldiers="3";
-    public const string Formation_2Soldiers="4";
-    public const string Formation_1Soldiers="5";
+
+    /// <summary>
+    /// 阵型id常量
+    /// </summary>
+    public class FormationIds
+    {
+        public const string Formation_4Soldiers = "1";
+        public const string Formation_5Soldiers = "2";
+        public const string Formation_3Soldiers = "3";
+        public const string Formation_2Soldiers = "4";
+        public const string Formation_1Soldiers = "5";
+    }
 }

@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class SceneInformation : MonoBehaviour
+namespace DemonOverwhelming
 {
-    public Image image;
-    public TextMeshProUGUI text;
-    public Image panel;
-  
 
-     public void SetInformation(Sprite sprite,string information)
+    public class SceneInformation : MonoBehaviour
     {
-        image.sprite = sprite;
-        text.text = information;
+        public Image image;
+        public TextMeshProUGUI text;
+        public Image panel;
+
+
+        public void SetInformation(Sprite sprite, string information)
+        {
+            image.sprite = sprite;
+            text.text = information;
+        }
     }
 }
