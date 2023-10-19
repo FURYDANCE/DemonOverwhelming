@@ -575,7 +575,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610548751953611389}
-  m_LocalRotation: {x: -0.38268346, y: -0, z: -0, w: 0.9238795}
+  m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: -13.539025, y: -25.5321, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
@@ -585,7 +585,7 @@ Transform:
   - {fileID: 610548751713625275}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
 --- !u!114 &610548751953611329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,19 +602,6 @@ MonoBehaviour:
   spineObject: 0
   buffs: []
   skills:
-  - id: 51000001
-    skillName: "\u6F06\u9ED1\u677F\u7532"
-    skillLevel: 1
-    waitTime: 0.001
-    waitTimer: 0.02
-    bloodCost: 0
-    moneyCost: 0
-    skillIcon: {fileID: 21300000, guid: 3d79f3cc6a9e7e942a864552eec475d7, type: 3}
-    eachLevelDescriptions:
-    - "\u7B49\u7EA71:<color=red>25%</color> \u7269\u7406\u51CF\u4F24"
-    - "\n\u7B49\u7EA72:<color=red>30%</color> \u7269\u7406\u51CF\u4F24"
-    - "\n\u7B49\u7EA73:\u989D\u5916\u7684<color=red>5%</color> \u653B\u51FB\u52A0\u6210"
-    - 
   - id: 51000002
     skillName: "\u593A\u9B42\u4E4B\u5203"
     skillLevel: 2
@@ -630,6 +617,19 @@ MonoBehaviour:
       \u7684\u6CBB\u7597"
     - "\n\u7B49\u7EA73:\u5728\u7B2C\u4E00\u6B21\u653B\u51FB<color=red>0.5</color>
       \u79D2\u540E\u518D\u9020\u6210\u4E00\u6B21\u653B\u51FB"
+    - 
+  - id: 51000001
+    skillName: "\u6F06\u9ED1\u677F\u7532"
+    skillLevel: 1
+    waitTime: 0.001
+    waitTimer: 0.02
+    bloodCost: 0
+    moneyCost: 0
+    skillIcon: {fileID: 21300000, guid: 3d79f3cc6a9e7e942a864552eec475d7, type: 3}
+    eachLevelDescriptions:
+    - "\u7B49\u7EA71:<color=red>25%</color> \u7269\u7406\u51CF\u4F24"
+    - "\n\u7B49\u7EA72:<color=red>30%</color> \u7269\u7406\u51CF\u4F24"
+    - "\n\u7B49\u7EA73:\u989D\u5916\u7684<color=red>5%</color> \u653B\u51FB\u52A0\u6210"
     - 
   parameter:
     ID: 4000001
@@ -671,22 +671,9 @@ MonoBehaviour:
       - 0
       bloodDrop: 1000
       skillIds:
-      - 51000001
       - 51000002
+      - 51000001
       skills:
-      - id: 51000001
-        skillName: "\u6F06\u9ED1\u677F\u7532"
-        skillLevel: 1
-        waitTime: 0.001
-        waitTimer: 0.02
-        bloodCost: 0
-        moneyCost: 0
-        skillIcon: {fileID: 21300000, guid: 3d79f3cc6a9e7e942a864552eec475d7, type: 3}
-        eachLevelDescriptions:
-        - "\u7B49\u7EA71:<color=red>25%</color> \u7269\u7406\u51CF\u4F24"
-        - "\n\u7B49\u7EA72:<color=red>30%</color> \u7269\u7406\u51CF\u4F24"
-        - "\n\u7B49\u7EA73:\u989D\u5916\u7684<color=red>5%</color> \u653B\u51FB\u52A0\u6210"
-        - 
       - id: 51000002
         skillName: "\u593A\u9B42\u4E4B\u5203"
         skillLevel: 2
@@ -702,6 +689,19 @@ MonoBehaviour:
           \u7684\u6CBB\u7597"
         - "\n\u7B49\u7EA73:\u5728\u7B2C\u4E00\u6B21\u653B\u51FB<color=red>0.5</color>
           \u79D2\u540E\u518D\u9020\u6210\u4E00\u6B21\u653B\u51FB"
+        - 
+      - id: 51000001
+        skillName: "\u6F06\u9ED1\u677F\u7532"
+        skillLevel: 1
+        waitTime: 0.001
+        waitTimer: 0.02
+        bloodCost: 0
+        moneyCost: 0
+        skillIcon: {fileID: 21300000, guid: 3d79f3cc6a9e7e942a864552eec475d7, type: 3}
+        eachLevelDescriptions:
+        - "\u7B49\u7EA71:<color=red>25%</color> \u7269\u7406\u51CF\u4F24"
+        - "\n\u7B49\u7EA72:<color=red>30%</color> \u7269\u7406\u51CF\u4F24"
+        - "\n\u7B49\u7EA73:\u989D\u5916\u7684<color=red>5%</color> \u653B\u51FB\u52A0\u6210"
         - 
       skillLevels:
       - 1
@@ -785,7 +785,7 @@ SpriteRenderer:
   m_SortingLayerID: -565239623
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11ff0888aec51d4489d3680e2dd84f56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
