@@ -29,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 2845960953593243496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,11 @@ MonoBehaviour:
     soldierId: 
     content: {fileID: 0}
   connectedSoldierGroup: {fileID: 1780575785, guid: a5e80962b1850fb4983ff0d011b7d5da, type: 3}
+  connectedShadow: {fileID: 0}
   connectedSoldierGroup_inScene: {fileID: 0}
+  noOffset: 0
+  x: 0
+  y: 0
 --- !u!114 &-661767304568044353
 MonoBehaviour:
   m_ObjectHideFlags: 0
