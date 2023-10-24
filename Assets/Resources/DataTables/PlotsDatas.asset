@@ -18,8 +18,8 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
-    event_1: 1
+    right_stand: {fileID: 0}
+    event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
@@ -33,8 +33,8 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
-    event_1: 2
+    right_stand: {fileID: 0}
+    event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 5b17fb7c1fa9dd5449bbaac7176bc9ae, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
@@ -60,11 +60,11 @@ MonoBehaviour:
     option_2_targetId: 1000004
   - id: 1000004
     content_cn: "\u4E0D\u62BD\u70DF\uFF0C\u9152\u4E5F\u6D45\u5C1D\u5373\u6B62"
-    speakerNmae: "\u54FC\u54FC\u554A\u554A\u554A\u554A\u554A"
+    speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 5b17fb7c1fa9dd5449bbaac7176bc9ae, type: 3}
-    event_1: 3
+    right_stand: {fileID: 0}
+    event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
@@ -93,12 +93,12 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
-    haveOption: 1
+    haveOption: 0
     optionContent_1: "\u963F\u5DF4\u5DF4"
     optionContent_2: "\u963F\u5DF4\u963F\u5DF4"
     option_1_targetId: 1000007
@@ -108,7 +108,7 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
     content_cn: "*DNA\u8F6C\u5F55\u5B8C\u6BD5"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 1
-    left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    left_stand: {fileID: 0}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
