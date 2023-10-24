@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ebb3e6b21ad17c245b44fc850510864d
+=======
+guid: 4d5574321e9f26a48b5dd98b7ae8e609
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,8 +49,13 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
+<<<<<<< HEAD
   alignment: 9
   spritePivot: {x: 0.5, y: 0.14035094}
+=======
+  alignment: 7
+  spritePivot: {x: 0.5, y: 0.5}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -108,7 +117,11 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
+<<<<<<< HEAD
     internalID: 1537655665
+=======
+    internalID: 0
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
     vertices: []
     indices: 
     edges: []

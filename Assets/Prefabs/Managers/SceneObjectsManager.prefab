@@ -46,7 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyText: {fileID: 0}
   bloodText: {fileID: 0}
+<<<<<<< HEAD
   allUnitParent: {fileID: 0}
+=======
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   playerEntityGeneratePoint: {fileID: 0}
   enemyEntityGeneratePoint: {fileID: 0}
   hpBarObject: {fileID: 2319076217595515334, guid: 921461a887118d94b8cee0fb43b2fd46, type: 3}

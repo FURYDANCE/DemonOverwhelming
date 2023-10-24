@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 6a27d6c8921643b4a9f8a9b736548499
-=======
-guid: 25c928a57668e9e458e4f08f998019bf
->>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
+guid: b7f24045f74d0544d8804bbe99886360
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -46,19 +42,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.18219274}
-=======
-  spriteMode: 2
-  spriteExtrude: 1
-  spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
->>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -115,52 +103,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-<<<<<<< HEAD
     sprites: []
-=======
-    sprites:
-    - serializedVersion: 2
-      name: "2-\u9AB8\u9AA8\u6218\u58EB_0"
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 111
-        width: 368
-        height: 295
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bdb690cc642733d4585a393583089357
-      internalID: -1861476040
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
->>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-<<<<<<< HEAD
-    internalID: 1537655665
-=======
     internalID: 0
->>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
     nameFileIdTable: {}
-=======
-    nameFileIdTable:
-      "2-\u9AB8\u9AA8\u6218\u58EB_0": -1861476040
->>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

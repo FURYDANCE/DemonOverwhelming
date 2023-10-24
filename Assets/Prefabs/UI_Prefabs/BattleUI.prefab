@@ -97,8 +97,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 2.8, y: 14.6}
   m_SizeDelta: {x: 180, y: 180}
+=======
+  m_AnchoredPosition: {x: 0.000015259, y: 9.7}
+  m_SizeDelta: {x: 171.5332, y: 167.0009}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1884350066
 CanvasRenderer:
@@ -128,7 +133,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: 56d3c58d3ac28504b9ca39f02834bad1, type: 3}
+=======
+  m_Sprite: {fileID: 378026871, guid: d3a609df66da1e54a9f84b702156877c, type: 3}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -840,7 +849,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< HEAD
   m_Sprite: {fileID: 1411341628, guid: e177214cea8f7044e8cf5f9a4b0ba55b, type: 3}
+=======
+  m_Sprite: {fileID: -1733123259, guid: c763d32a7b76763488c7f4c8e4b99a3d, type: 3}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -961,8 +974,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -6.3, y: -6.1}
   m_SizeDelta: {x: 328.4922, y: 22.6346}
+=======
+  m_AnchoredPosition: {x: -8.1824, y: 0}
+  m_SizeDelta: {x: 276.0363, y: 22.2209}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8052317939806297427
 CanvasRenderer:
@@ -1389,8 +1407,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 86.7, y: 87.245}
   m_SizeDelta: {x: 55, y: 55}
+=======
+  m_AnchoredPosition: {x: 63.0812, y: 66.5168}
+  m_SizeDelta: {x: 38.5532, y: 38.9793}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5407992147899498166
 CanvasRenderer:
@@ -1900,8 +1923,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 711.03186, y: -49.50107}
   m_SizeDelta: {x: 457.9455, y: 210.8981}
+=======
+  m_AnchoredPosition: {x: 751.78296, y: -39.297165}
+  m_SizeDelta: {x: 369.2781, y: 174.8871}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6272024768432231155
 CanvasRenderer:
@@ -1924,7 +1952,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1954,15 +1986,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
+<<<<<<< HEAD
     m_Left: 2
     m_Right: 0
     m_Top: -9
+=======
+    m_Left: -13
+    m_Right: 0
+    m_Top: -17
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
+<<<<<<< HEAD
   m_CellSize: {x: 115.05, y: 120}
   m_Spacing: {x: -6.15, y: -11.81}
+=======
+  m_CellSize: {x: 115, y: 120}
+  m_Spacing: {x: -28, y: -31.76}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &3921024803328937056
@@ -2001,7 +2044,11 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 70.8, y: 53.2}
+=======
+  m_AnchoredPosition: {x: 75.59915, y: 53.555725}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_SizeDelta: {x: 361.9673, y: 40.2422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9144488961692741893
@@ -2025,7 +2072,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2298,8 +2349,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -79.90886, y: 87.24486}
   m_SizeDelta: {x: 55, y: 55}
+=======
+  m_AnchoredPosition: {x: -62.6, y: 66.517}
+  m_SizeDelta: {x: 40.3278, y: 40.773}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3847247587305562969
 CanvasRenderer:
@@ -2687,8 +2743,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: -0.0024624, y: -0.0010014}
   m_SizeDelta: {x: 406.91, y: 150.62}
+=======
+  m_AnchoredPosition: {x: 0.869751, y: -7.8022}
+  m_SizeDelta: {x: 194.5384, y: 103.6242}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3940734976184832637
 CanvasRenderer:
@@ -3715,8 +3776,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   m_AnchoredPosition: {x: 234.9158, y: -51.431}
   m_SizeDelta: {x: 406.9026, y: 150.62}
+=======
+  m_AnchoredPosition: {x: 344.9, y: -57.268}
+  m_SizeDelta: {x: 366.6931, y: 194.5386}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1754805890121931301
 CanvasRenderer:
@@ -3739,7 +3805,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_Color: {r: 1, g: 1, b: 1, a: 0}
+=======
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+>>>>>>> c920aad3 (8.23 修改了战斗界面，加入几个新兵种卡（目前可以同时存在8张卡），修复了兵种生成相关的bug)
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
