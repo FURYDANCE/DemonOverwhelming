@@ -18,8 +18,8 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
-    event_1: 1
+    right_stand: {fileID: 0}
+    event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
@@ -33,8 +33,8 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
-    event_1: 2
+    right_stand: {fileID: 0}
+    event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 5b17fb7c1fa9dd5449bbaac7176bc9ae, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
@@ -60,11 +60,11 @@ MonoBehaviour:
     option_2_targetId: 1000004
   - id: 1000004
     content_cn: "\u4E0D\u62BD\u70DF\uFF0C\u9152\u4E5F\u6D45\u5C1D\u5373\u6B62"
-    speakerNmae: "\u54FC\u54FC\u554A\u554A\u554A\u554A\u554A"
+    speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 5b17fb7c1fa9dd5449bbaac7176bc9ae, type: 3}
-    event_1: 3
+    right_stand: {fileID: 0}
+    event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
@@ -93,12 +93,12 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
     event_4: 0
-    haveOption: 1
+    haveOption: 0
     optionContent_1: "\u963F\u5DF4\u5DF4"
     optionContent_2: "\u963F\u5DF4\u963F\u5DF4"
     option_1_targetId: 1000007
@@ -108,7 +108,7 @@ MonoBehaviour:
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
@@ -122,8 +122,8 @@ MonoBehaviour:
     content_cn: "*DNA\u8F6C\u5F55\u5B8C\u6BD5"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 1
-    left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
-    right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
+    left_stand: {fileID: 0}
+    right_stand: {fileID: 0}
     event_1: 0
     event_2: 0
     event_3: 0
@@ -137,14 +137,14 @@ MonoBehaviour:
   - ID: 1000001
     type: 0
     name: "\u6076\u9B54\u5C0F\u5175"
-    sprite: {fileID: -173189554, guid: d1bae7b8333aa464081d307433121cb8, type: 3}
+    sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
     Hp: 15
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.6
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u6076\u9B54\u5C0F\u5175\n\u4E00\u53EA\u6742\u9C7C"
-    modleSize: 0.5
+    modleSize: 1.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
     aiMode_Move: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckArea: {x: 15, y: 15, z: 100}
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
     hpBarSize: 0.1
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u654C\u65B9\u6B65\u5175\n\u4E5F\u662F\u6742\u9C7C"
-    modleSize: 2
+    modleSize: 1.5
     shadowSize: {x: 1, y: 0.3333, z: 0}
     shadowOffset: 0.03
     aiMode_Move: 0
@@ -213,7 +213,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckArea: {x: 15, y: 15, z: 100}
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -240,7 +240,7 @@ MonoBehaviour:
   - ID: 1000003
     type: 0
     name: "\u72EC\u773C\u6076\u9B54"
-    sprite: {fileID: -539490308, guid: 630b5b3afb5cfca4dae45f233331ae22, type: 3}
+    sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
     Hp: 5
     nowHp: 0
     hurtDamage: 0
@@ -265,7 +265,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckArea: {x: 35, y: 25, z: 100}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 35
       chaseTime: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
   - ID: 1000005
     type: 0
     name: "\u7194\u7089\u86DE\u8753"
-    sprite: {fileID: 21300000, guid: 8d985e3679c63a34699c146681f150cd, type: 3}
+    sprite: {fileID: 21300000, guid: 8228375f9698f8a419e415c918753dd2, type: 3}
     Hp: 15
     nowHp: 0
     hurtDamage: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckArea: {x: 15, y: 15, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 5
       chaseTime: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 0}
+      EnemyCheckArea: {x: 18, y: 18, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
@@ -418,7 +418,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 0}
+      EnemyCheckArea: {x: 18, y: 18, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
@@ -469,7 +469,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 0}
+      EnemyCheckArea: {x: 18, y: 18, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 10
       chaseTime: 0
@@ -520,7 +520,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckArea: {x: 35, y: 25, z: 100}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 35
       chaseTime: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
   - ID: 1000010
     type: 0
     name: "\u9AB7\u9AC5\u5175"
-    sprite: {fileID: -1861476040, guid: 25c928a57668e9e458e4f08f998019bf, type: 3}
+    sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
     Hp: 20
     nowHp: 0
     hurtDamage: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckArea: {x: 15, y: 15, z: 100}
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 2
       chaseTime: 0
@@ -597,7 +597,7 @@ MonoBehaviour:
   - ID: 1000011
     type: 0
     name: "\u707E\u7978\u5DEB\u5E08"
-    sprite: {fileID: 21300000, guid: 4d5574321e9f26a48b5dd98b7ae8e609, type: 3}
+    sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
     Hp: 20
     nowHp: 0
     hurtDamage: 0
@@ -622,7 +622,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 25, y: 15, z: 0}
+      EnemyCheckArea: {x: 25, y: 15, z: 100}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 30
       chaseTime: 0
@@ -673,7 +673,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckArea: {x: 35, y: 25, z: 100}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 35
       chaseTime: 0
@@ -724,7 +724,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
+      EnemyCheckArea: {x: 0, y: 0, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
+      EnemyCheckArea: {x: 0, y: 0, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
@@ -826,7 +826,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 8, y: 8, z: 0}
+      EnemyCheckArea: {x: 8, y: 8, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -877,7 +877,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckArea: {x: 35, y: 25, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 40
       chaseTime: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
       haveSkill: 1
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 7, y: 7, z: 0}
+      EnemyCheckArea: {x: 7, y: 7, z: 100}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -939,8 +939,8 @@ MonoBehaviour:
       - 0
       bloodDrop: 1000
       skillIds:
-      - 51000001
       - 51000002
+      - 51000001
       skills: []
       skillLevels:
       - 1
@@ -958,22 +958,22 @@ MonoBehaviour:
   cardDatas:
   - id: 21000001
     name: "\u6076\u9B54\u5C0F\u5175*4"
-    sprite: {fileID: -173189554, guid: d1bae7b8333aa464081d307433121cb8, type: 3}
+    sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
     flagSprite: {fileID: 21300000, guid: 4023f108d38a0ca40a18f7451c0245a5, type: 3}
     moneyCost: 10
     bloodCost: 10
     formationId: 4
     soldierId: 1000001
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 275d7f31c7c4a1e4291e8becdb76d667, type: 3}
   - id: 21000002
     name: "\u72EC\u773C\u6076\u9B54*3"
-    sprite: {fileID: -539490308, guid: 630b5b3afb5cfca4dae45f233331ae22, type: 3}
+    sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
     flagSprite: {fileID: 21300000, guid: 37854454a721a3f4f87bd5c694f1d697, type: 3}
     moneyCost: 20
     bloodCost: 10
     formationId: 3
     soldierId: 1000003
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 1556620fc91823540872a3a10057e502, type: 3}
   - id: 21000003
     name: "\u70AE\u5175*2"
     sprite: {fileID: 21300000, guid: 327eca966f1b04549b356b0d12c012f6, type: 3}
@@ -982,16 +982,16 @@ MonoBehaviour:
     bloodCost: 25
     formationId: 2
     soldierId: 1000009
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 402768a9629939b4aa9cca8e52255733, type: 3}
   - id: 21000004
     name: "\u7194\u7089\u86DE\u8753*3"
-    sprite: {fileID: 21300000, guid: 8d985e3679c63a34699c146681f150cd, type: 3}
+    sprite: {fileID: 21300000, guid: 8228375f9698f8a419e415c918753dd2, type: 3}
     flagSprite: {fileID: 21300000, guid: 61fa88a972180fe4083764689df3a15b, type: 3}
     moneyCost: 20
     bloodCost: 10
     formationId: 3
     soldierId: 1000005
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 1556620fc91823540872a3a10057e502, type: 3}
   - id: 21000005
     name: "\u5904\u5211\u8005*2"
     sprite: {fileID: 21300000, guid: 0ce94e54587e35c4da44f1404256a36c, type: 3}
@@ -1000,7 +1000,7 @@ MonoBehaviour:
     bloodCost: 10
     formationId: 2
     soldierId: 1000006
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 402768a9629939b4aa9cca8e52255733, type: 3}
   - id: 21000006
     name: "\u6076\u9B54\u9886\u4E3B"
     sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
@@ -1009,25 +1009,25 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 4000001
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 229823e4a4a8ef04c86a78eb10e17637, type: 3}
   - id: 21000007
     name: "\u9AB7\u9AC5\u5175"
-    sprite: {fileID: -1861476040, guid: 25c928a57668e9e458e4f08f998019bf, type: 3}
+    sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
     flagSprite: {fileID: 21300000, guid: ca4eca51012f8cb44af5edaa4de19790, type: 3}
     moneyCost: 10
     bloodCost: 10
     formationId: 5
     soldierId: 1000010
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: ed03371c3b8b72846885704ba5811e01, type: 3}
   - id: 21000008
     name: "\u707E\u7978\u5DEB\u5E08"
-    sprite: {fileID: 21300000, guid: 4d5574321e9f26a48b5dd98b7ae8e609, type: 3}
+    sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
     flagSprite: {fileID: 21300000, guid: 838cc8b96537da3409f82ab076e84718, type: 3}
     moneyCost: 30
     bloodCost: 30
     formationId: 2
     soldierId: 1000011
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 402768a9629939b4aa9cca8e52255733, type: 3}
   missileDatas:
   - id: 31000001
     name: "\u7BAD"
@@ -1049,7 +1049,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
+    aoeArea: {x: 0, y: 0, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1079,7 +1079,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
+    aoeArea: {x: 0, y: 0, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
+    aoeArea: {x: 0, y: 0, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1139,7 +1139,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
+    aoeArea: {x: 0, y: 0, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 1
     objectCreatedWhenDieId: 32000002
@@ -1169,7 +1169,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 10, y: 10, z: 0}
+    aoeArea: {x: 10, y: 10, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1199,7 +1199,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 7, y: 7, z: 0}
+    aoeArea: {x: 7, y: 7, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1229,7 +1229,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 5.5, y: 5.5, z: 0}
+    aoeArea: {x: 5.5, y: 5.5, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1259,7 +1259,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 4, y: 4, z: 0}
+    aoeArea: {x: 4, y: 4, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1289,7 +1289,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 15, y: 15, z: 0}
+    aoeArea: {x: 15, y: 15, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1319,7 +1319,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
+    aoeArea: {x: 0, y: 0, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
+    aoeArea: {x: 0, y: 0, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1379,7 +1379,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
+    aoeArea: {x: 0, y: 0, z: 50}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0

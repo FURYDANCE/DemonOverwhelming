@@ -2,28 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-/// <summary>
-/// 点击一个按钮之后，显示对应的UI，隐藏其他的UI
-/// </summary>
-public class UI_SelectGroup : MonoBehaviour
+namespace DemonOverwhelming
 {
-    public Button[] btns;
-    public GameObject[] uis;
-    void Start()
+
+    /// <summary>
+    /// 点击一个按钮之后，显示对应的UI，隐藏其他的UI
+    /// </summary>
+    public class UI_SelectGroup : MonoBehaviour
     {
-        SelectBtn(0);
-    }
-    public void SelectBtn(int index)
-    {
-        foreach (Button btn in btns)
+        public Button[] btns;
+        public GameObject[] uis;
+        void Start()
         {
-            btn.GetComponent<Image>().color = Color.white;
+            SelectBtn(0);
         }
-        btns[index].GetComponent<Image>().color = Color.red;
-        foreach(GameObject go in uis)
+        public void SelectBtn(int index)
         {
-            go.SetActive(false);
+            foreach (Button btn in btns)
+            {
+                btn.GetComponent<Image>().color = Color.white;
+            }
+            btns[index].GetComponent<Image>().color = Color.red;
+            foreach (GameObject go in uis)
+            {
+                go.SetActive(false);
+            }
+            uis[index].SetActive(true);
         }
-        uis[index].SetActive(true);
     }
 }

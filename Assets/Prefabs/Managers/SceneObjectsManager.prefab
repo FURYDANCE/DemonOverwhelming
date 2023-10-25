@@ -46,6 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moneyText: {fileID: 0}
   bloodText: {fileID: 0}
+  allUnitParent: {fileID: 0}
   playerEntityGeneratePoint: {fileID: 0}
   enemyEntityGeneratePoint: {fileID: 0}
   hpBarObject: {fileID: 2319076217595515334, guid: 921461a887118d94b8cee0fb43b2fd46, type: 3}

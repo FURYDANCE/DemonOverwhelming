@@ -65,5 +65,7 @@ namespace DemonOverwhelming
         public UIManager uiManager;
         [SerializeField]
         private string _mapScenePath;
+        [SerializeField]
+        private string _gameScenePath;
     }
 }

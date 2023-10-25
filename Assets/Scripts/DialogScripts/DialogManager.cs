@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DemonOverwhelming;
 /// <summary>
 /// 对话管理器
 /// 通过startDialog方法，传入对话开始的id来执行对话
@@ -82,7 +83,12 @@ public class DialogManager : MonoBehaviour
     bool isShowingHistory;
     string assetName = "DataTables/PlotsDatas";
 
-   
+    private void Update()
+    {
+        //粗略地测试一下对话开启
+        if (Input.GetKeyDown(KeyCode.G))
+            StartDialog(1000001);
+    }
     /// <summary>
     /// 核心：获取对话信息
     /// </summary>
@@ -102,8 +108,12 @@ public class DialogManager : MonoBehaviour
     /// 开始对话
     /// </summary>
     /// <param name="startId"></param>
-    public void startDialog(int startId)
+    public void StartDialog(int startId)
     {
+        //开始对话时隐藏战斗UI，结束对话时再显示战斗UI
+        SceneObjectsManager.instance.BattleUI.SetActive(false);
+
+
         isDuringDilaog = true;
         AllPanel.SetActive(true);
         this.startId = startId;
@@ -128,13 +138,13 @@ public class DialogManager : MonoBehaviour
         nameText.text = nowData.speakerNmae;
         //获取贴图
         {
-            if (nowData.left_stand)
+            if (nowData.left_stand == null)
                 leftStand.color = new Color(0, 0, 0, 0);
             else
             {
                 leftStand.sprite = nowData.left_stand;
             }
-            if (nowData.right_stand)
+            if (nowData.right_stand == null)
                 rightStand.color = new Color(0, 0, 0, 0);
             else
                 rightStand.sprite = nowData.right_stand;
@@ -163,7 +173,7 @@ public class DialogManager : MonoBehaviour
 
     }
 
- /// <summary>
+    /// <summary>
     /// 点击面板时触发的继续对话的判断
     /// </summary>
     public void NextDialogCheck()
@@ -231,6 +241,9 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void EndDialog()
     {
+        //开始对话时隐藏战斗UI，结束对话时再显示战斗UI
+        SceneObjectsManager.instance.BattleUI.SetActive(true);
+
         AllPanel.SetActive(false);
         isDuringDilaog = false;
         nowData = null;
