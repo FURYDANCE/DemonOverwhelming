@@ -6,6 +6,8 @@ using UnityEditor;
 using System.IO;
 using System.Data;
 using DemonOverwhelming;
+using System;
+
 public class ExcelAccess
 {
     /// <summary>
@@ -59,16 +61,12 @@ public class ExcelAccess
                 isLast = collect[i][3].ToString() == "True" ? true : false,
                 left_stand = Resources.Load("Sprites/CharacterSprites/" + collect[i][4].ToString(), typeof(Sprite)) as Sprite,
                 right_stand = Resources.Load("Sprites/CharacterSprites/" + collect[i][5].ToString(), typeof(Sprite)) as Sprite,
-                event_1 = collect[i][6].ToString(),
-                event_2 = collect[i][7].ToString(),
-                event_3 = collect[i][8].ToString(),
-                event_4 = collect[i][9].ToString(),
+                events = collect[i][6].ToString().Split("/"),
 
-                haveOption = collect[i][10].ToString() == "True" ? true : false,
-                optionContent_1 = collect[i][11].ToString(),
-                optionContent_2 = collect[i][12].ToString(),
-                option_1_targetId = int.Parse(collect[i][13].ToString()),
-                option_2_targetId = int.Parse(collect[i][14].ToString()),
+                haveOption = collect[i][7].ToString() == "True" ? true : false,
+                optionContents = collect[i][8].ToString().Split("/"),
+
+                optionTargetIds = Array.ConvertAll<string, int>(collect[i][9].ToString().Split("/"), delegate (string s) { return int.Parse(s); }),
             };
             dataArray.Add(pd);
         }
@@ -94,8 +92,6 @@ public class ExcelAccess
         string sheetName_Damage = "Damage";
         string sheetName_Skill = "Skill";
         DataRowCollection collect = ReadExcel(excelName, sheetName);
-        //DataRowCollection collect_2 = ReadExcel(excelName, sheetName_character);
-        //DataRowCollection collect_3 = ReadExcel(excelName, sheetName_building);
         DataRowCollection collect_4 = ReadExcel(excelName, sheetName_SoldierGroup);
         DataRowCollection collect_5 = ReadExcel(excelName, sheetName_Missile);
         DataRowCollection collect_6 = ReadExcel(excelName, sheetName_Damage);
@@ -168,7 +164,7 @@ public class ExcelAccess
             {
                 id = collect_4[i][0].ToString(),
                 name = collect_4[i][1].ToString(),
-                sprite =LoadSprite(collect_4[i][2].ToString()),/* Resources.Load("Sprites/ModelSprites/" + collect_4[i][2].ToString(), typeof(Sprite)) as Sprite*/
+                sprite = LoadSprite(collect_4[i][2].ToString()),/* Resources.Load("Sprites/ModelSprites/" + collect_4[i][2].ToString(), typeof(Sprite)) as Sprite*/
                 flagSprite = LoadFlagSprite(collect_4[i][3].ToString()),
                 moneyCost = float.Parse(collect_4[i][4].ToString()),
                 bloodCost = float.Parse(collect_4[i][5].ToString()),

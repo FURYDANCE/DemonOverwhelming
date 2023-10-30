@@ -36,6 +36,7 @@ namespace DemonOverwhelming
                 moveDir = Vector3.right.normalized;
             else
                 moveDir = Vector3.left.normalized;
+            entity.FlipTo(entity.transform.position + moveDir);
             if (timer < 0)
             {
                 //当单位不处于重整队形状态时候的移动

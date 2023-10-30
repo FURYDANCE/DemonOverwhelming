@@ -19,120 +19,98 @@ MonoBehaviour:
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
-    event_1: 1
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 1
     haveOption: 0
-    optionContent_1: 0
-    optionContent_2: 0
-    option_1_targetId: 0
-    option_2_targetId: 0
+    optionContents:
+    - 0
+    optionTargetIds: 00000000
   - id: 1000002
     content_cn: "\u5E74\u9F8433\u5C81"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
-    event_1: 2
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 2
     haveOption: 0
-    optionContent_1: 0
-    optionContent_2: 0
-    option_1_targetId: 0
-    option_2_targetId: 0
+    optionContents:
+    - 0
+    optionTargetIds: 00000000
   - id: 1000003
     content_cn: "\u5BB6\u4F4F\u5728\u5730\u72F1\u5317\u90E8"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 21300000, guid: 5b17fb7c1fa9dd5449bbaac7176bc9ae, type: 3}
-    event_1: 0
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 0
     haveOption: 1
-    optionContent_1: "\u8D76\u7D27\u70B8\u5427"
-    optionContent_2: "\u4F60\u5728\u8BF4\u4EC0\u4E48\u554A\uFF01"
-    option_1_targetId: 1000006
-    option_2_targetId: 1000004
+    optionContents:
+    - "\u8D76\u7D27\u70B8\u5427"
+    - "\u4F60\u5728\u8BF4\u4EC0\u4E48\u554A"
+    optionTargetIds: 46420f0044420f00
   - id: 1000004
     content_cn: "\u4E0D\u62BD\u70DF\uFF0C\u9152\u4E5F\u6D45\u5C1D\u5373\u6B62"
     speakerNmae: "\u54FC\u54FC\u554A\u554A\u554A\u554A\u554A"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 21300000, guid: 5b17fb7c1fa9dd5449bbaac7176bc9ae, type: 3}
-    event_1: 3
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 3
     haveOption: 0
-    optionContent_1: 0
-    optionContent_2: 0
-    option_1_targetId: 0
-    option_2_targetId: 0
+    optionContents:
+    - 0
+    optionTargetIds: 00000000
   - id: 1000005
     content_cn: "\u6BCF\u5929\u53BB\u5F81\u670D\u4E00\u4E2A\u4E16\u754C\uFF0C\u533B\u751F\u90FD\u8BF4\u6211\u5F88\u5065\u5EB7"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
-    event_1: 0
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 0
     haveOption: 0
-    optionContent_1: 0
-    optionContent_2: 0
-    option_1_targetId: 0
-    option_2_targetId: 0
+    optionContents:
+    - 0
+    optionTargetIds: 00000000
   - id: 1000006
     content_cn: "\u6211\u53EA\u60F3\u544A\u8BC9\u4F60\u6211\u60F3\u8FFD\u6C42\u5E73\u9759\u7684\u751F\u6D3B"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
-    event_1: 0
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 0
     haveOption: 1
-    optionContent_1: "\u963F\u5DF4\u5DF4"
-    optionContent_2: "\u963F\u5DF4\u963F\u5DF4"
-    option_1_targetId: 1000007
-    option_2_targetId: 1000001
+    optionContents:
+    - "\u597D\u597D\u597D"
+    - "\u4F60\u80FD\u518D\u8BF4\u4E00\u904D\u4E48"
+    optionTargetIds: 47420f0041420f00
   - id: 1000007
     content_cn: "\u4E0D\u8FC7\u771F\u8981\u6253\u8D77\u6765\u6211\u4E5F\u4E0D\u4F1A\u8F93\u7ED9\u8C01\u5C31\u662F\u4E86"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 0
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
-    event_1: 0
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 0
     haveOption: 0
-    optionContent_1: 0
-    optionContent_2: 0
-    option_1_targetId: 0
-    option_2_targetId: 0
+    optionContents:
+    - 0
+    optionTargetIds: 00000000
   - id: 1000008
     content_cn: "*DNA\u8F6C\u5F55\u5B8C\u6BD5"
     speakerNmae: "\u6076\u9B54\u9886\u4E3B"
     isLast: 1
     left_stand: {fileID: 21300000, guid: 909d0c2f8ac1903408990750ba66d320, type: 3}
     right_stand: {fileID: 21300000, guid: 3a107214ab9fd5640953125006130680, type: 3}
-    event_1: 0
-    event_2: 0
-    event_3: 0
-    event_4: 0
+    events:
+    - 0
     haveOption: 0
-    optionContent_1: 0
-    optionContent_2: 0
-    option_1_targetId: 0
-    option_2_targetId: 0
+    optionContents:
+    - 0
+    optionTargetIds: 00000000
   unitDatas:
   - ID: 1000001
     type: 0
@@ -162,7 +140,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 100}
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -213,7 +191,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 100}
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -265,7 +243,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 100}
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 35
       chaseTime: 0
@@ -316,7 +294,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 100}
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 5
       chaseTime: 0
@@ -367,7 +345,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 100}
+      EnemyCheckArea: {x: 18, y: 18, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
@@ -418,7 +396,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 100}
+      EnemyCheckArea: {x: 18, y: 18, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
@@ -469,7 +447,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 100}
+      EnemyCheckArea: {x: 18, y: 18, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 10
       chaseTime: 0
@@ -520,7 +498,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 100}
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 35
       chaseTime: 0
@@ -571,7 +549,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 100}
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 2
       chaseTime: 0
@@ -622,7 +600,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 25, y: 15, z: 100}
+      EnemyCheckArea: {x: 25, y: 15, z: 0}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 30
       chaseTime: 0
@@ -673,7 +651,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 100}
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 35
       chaseTime: 0
@@ -724,7 +702,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 100}
+      EnemyCheckArea: {x: 0, y: 0, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
@@ -757,7 +735,7 @@ MonoBehaviour:
     hpBarSize: 1
     hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u654C\u65B9\u636E\u70B9"
-    modleSize: 0.5
+    modleSize: 1.5
     shadowSize: {x: 40, y: 15, z: 0}
     shadowOffset: 6
     aiMode_Move: 0
@@ -775,7 +753,109 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 100}
+      EnemyCheckArea: {x: 0, y: 0, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 0
+      chaseTime: 0
+      attackWaitTime: 0
+      attackTime: 0
+      missileId: 0
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 2000004
+    type: 1
+    name: "\u8981\u585E-\u4EBA\u7C7B"
+    sprite: {fileID: 0}
+    Hp: 50
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 1
+    hpBarOffset: {x: 0, y: 0, z: 0}
+    introduct: "\u654C\u65B9\u8981\u585E"
+    modleSize: 1.5
+    shadowSize: {x: 40, y: 15, z: 0}
+    shadowOffset: 6
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 2000004
+      cost: 0
+      aiType: 0
+      moveSpeed: 0
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 0, y: 0, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 0
+      chaseTime: 0
+      attackWaitTime: 0
+      attackTime: 0
+      missileId: 0
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 2000005
+    type: 1
+    name: "\u8981\u585E-\u6076\u9B54"
+    sprite: {fileID: 0}
+    Hp: 50
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 1
+    hpBarOffset: {x: 0, y: 0, z: 0}
+    introduct: "\u6211\u65B9\u8981\u585E"
+    modleSize: 1.5
+    shadowSize: {x: 40, y: 15, z: 0}
+    shadowOffset: 6
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 2000005
+      cost: 0
+      aiType: 0
+      moveSpeed: 0
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 0, y: 0, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
@@ -826,7 +906,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 8, y: 8, z: 100}
+      EnemyCheckArea: {x: 8, y: 8, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -877,7 +957,7 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 100}
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 40
       chaseTime: 0
@@ -928,7 +1008,7 @@ MonoBehaviour:
       haveSkill: 1
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 7, y: 7, z: 100}
+      EnemyCheckArea: {x: 7, y: 7, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
@@ -964,7 +1044,7 @@ MonoBehaviour:
     bloodCost: 10
     formationId: 4
     soldierId: 1000001
-    content: {fileID: 1780575785, guid: 275d7f31c7c4a1e4291e8becdb76d667, type: 3}
+    content: {fileID: 0}
   - id: 21000002
     name: "\u72EC\u773C\u6076\u9B54*3"
     sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
@@ -973,7 +1053,7 @@ MonoBehaviour:
     bloodCost: 10
     formationId: 3
     soldierId: 1000003
-    content: {fileID: 1780575785, guid: 1556620fc91823540872a3a10057e502, type: 3}
+    content: {fileID: 0}
   - id: 21000003
     name: "\u70AE\u5175*2"
     sprite: {fileID: 21300000, guid: 327eca966f1b04549b356b0d12c012f6, type: 3}
@@ -982,7 +1062,7 @@ MonoBehaviour:
     bloodCost: 25
     formationId: 2
     soldierId: 1000009
-    content: {fileID: 1780575785, guid: 402768a9629939b4aa9cca8e52255733, type: 3}
+    content: {fileID: 0}
   - id: 21000004
     name: "\u7194\u7089\u86DE\u8753*3"
     sprite: {fileID: 21300000, guid: 8228375f9698f8a419e415c918753dd2, type: 3}
@@ -991,7 +1071,7 @@ MonoBehaviour:
     bloodCost: 10
     formationId: 3
     soldierId: 1000005
-    content: {fileID: 1780575785, guid: 1556620fc91823540872a3a10057e502, type: 3}
+    content: {fileID: 0}
   - id: 21000005
     name: "\u5904\u5211\u8005*2"
     sprite: {fileID: 21300000, guid: 0ce94e54587e35c4da44f1404256a36c, type: 3}
@@ -1000,7 +1080,7 @@ MonoBehaviour:
     bloodCost: 10
     formationId: 2
     soldierId: 1000006
-    content: {fileID: 1780575785, guid: 402768a9629939b4aa9cca8e52255733, type: 3}
+    content: {fileID: 0}
   - id: 21000006
     name: "\u6076\u9B54\u9886\u4E3B"
     sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
@@ -1009,7 +1089,7 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 4000001
-    content: {fileID: 1780575785, guid: 229823e4a4a8ef04c86a78eb10e17637, type: 3}
+    content: {fileID: 0}
   - id: 21000007
     name: "\u9AB7\u9AC5\u5175"
     sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
@@ -1018,7 +1098,7 @@ MonoBehaviour:
     bloodCost: 10
     formationId: 5
     soldierId: 1000010
-    content: {fileID: 1780575785, guid: ed03371c3b8b72846885704ba5811e01, type: 3}
+    content: {fileID: 0}
   - id: 21000008
     name: "\u707E\u7978\u5DEB\u5E08"
     sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
@@ -1027,7 +1107,7 @@ MonoBehaviour:
     bloodCost: 30
     formationId: 2
     soldierId: 1000011
-    content: {fileID: 1780575785, guid: 402768a9629939b4aa9cca8e52255733, type: 3}
+    content: {fileID: 0}
   missileDatas:
   - id: 31000001
     name: "\u7BAD"
@@ -1049,7 +1129,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 50}
+    aoeArea: {x: 0, y: 0, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1079,7 +1159,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 50}
+    aoeArea: {x: 0, y: 0, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1109,7 +1189,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 50}
+    aoeArea: {x: 0, y: 0, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1139,7 +1219,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 50}
+    aoeArea: {x: 0, y: 0, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 1
     objectCreatedWhenDieId: 32000002
@@ -1169,7 +1249,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 10, y: 10, z: 50}
+    aoeArea: {x: 10, y: 10, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1199,7 +1279,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 7, y: 7, z: 50}
+    aoeArea: {x: 7, y: 7, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1229,7 +1309,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 5.5, y: 5.5, z: 50}
+    aoeArea: {x: 5.5, y: 5.5, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1259,7 +1339,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 4, y: 4, z: 50}
+    aoeArea: {x: 4, y: 4, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1289,7 +1369,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 1
-    aoeArea: {x: 15, y: 15, z: 50}
+    aoeArea: {x: 15, y: 15, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1319,7 +1399,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 50}
+    aoeArea: {x: 0, y: 0, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1349,7 +1429,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 50}
+    aoeArea: {x: 0, y: 0, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
@@ -1379,7 +1459,7 @@ MonoBehaviour:
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 50}
+    aoeArea: {x: 0, y: 0, z: 0}
     aoeWaitTime: 0
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
