@@ -179,8 +179,6 @@ namespace DemonOverwhelming
 
         #endregion
 
-
-
         #region 界面显示相关
         /// <summary>
         /// 显示界面上的金钱与血液，显示填充条的填充效果
@@ -785,7 +783,6 @@ namespace DemonOverwhelming
         void ClearSelectRecord()
         {
             formatCards.Clear();
-
         }
 
         #endregion
@@ -905,6 +902,39 @@ namespace DemonOverwhelming
         }
 
 
+
+
+        #endregion
+
+
+        #region 战斗进度相关
+
+
+        /// <summary>
+        /// 攻陷据点的方法，传入场景中的据点，根据其具体变量决定要如何执行
+        /// </summary>
+        /// <param name="sceneStrongHold"></param>
+        public void CaptureStrongHold(SceneStrongHold sceneStrongHold)
+        {
+            sceneStrongHold.gameObjectSetActiveWhenDestory.SetActive(true);
+            //双方生成点位的切换
+
+            ChangePlayerUnitSpawnPoint(sceneStrongHold.connectedUnitSpawnPoint_Player);
+            ChangeEnemyUnitSpawnPoint(sceneStrongHold.connectedUnitSpawnPoint_Enemy);
+
+            RevokeAllCardSelect();
+            sceneStrongHold.gameObject.SetActive(false);
+        }
+        /// <summary>
+        /// 改变玩家的单位生成点位
+        /// </summary>
+        /// <param name="newPoint"></param>
+        public void ChangePlayerUnitSpawnPoint(Transform newPoint) => SceneObjectsManager.instance.playerEntityGeneratePoint = newPoint;
+        /// <summary>
+        /// 改变敌人的单位生成点位
+        /// </summary>
+        /// <param name="newPoint"></param>
+        public void ChangeEnemyUnitSpawnPoint(Transform newPoint) => SceneObjectsManager.instance.enemyEntityGeneratePoint = newPoint;
 
 
         #endregion

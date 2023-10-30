@@ -9,13 +9,16 @@ public class PlotsData
     public bool isLast;                     //是否为结束
     public Sprite left_stand;               //左立绘
     public Sprite right_stand;              //右立绘
-    public string event_1;                  //对话事件
-    public string event_2;
-    public string event_3;
-    public string event_4;
+    public string[] events;                 //对话事件
+    //public string event_1;                  //对话事件
+    //public string event_2;
+    //public string event_3;
+    //public string event_4;
     public bool haveOption;                 //是否有选项
-    public string optionContent_1;          //选项1内容
-    public string optionContent_2;          //选项2内容
-    public int option_1_targetId;           //选项1跳转id
-    public int option_2_targetId;           //选项2跳转id
+    public string[] optionContents;          //选项内容s
+    //public string optionContent_1;          //选项1内容
+    //public string optionContent_2;          //选项2内容
+    public int[] optionTargetIds;           //选项跳转ids
+    //public int option_1_targetId;           //选项1跳转id
+    //public int option_2_targetId;           //选项2跳转id
 }

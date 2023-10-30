@@ -10,7 +10,6 @@ using DemonOverwhelming;
 /// </summary>
 public class DialogManager : MonoBehaviour
 {
-    //public List<StandParameter> standDatas;
     /// <summary>
     /// 总面板
     /// </summary>
@@ -27,10 +26,10 @@ public class DialogManager : MonoBehaviour
     /// 当前id
     /// </summary>
     public int nowId;
-    /// <summary>
-    /// 历史对话统计
-    /// </summary>
-    public HistoryDialogPanel historyDialogPanel;
+    ///// <summary>
+    ///// 历史对话统计
+    ///// </summary>
+    //public HistoryDialogPanel historyDialogPanel;
     /// <summary>
     /// 单个的历史对话表现对象
     /// </summary>
@@ -59,23 +58,40 @@ public class DialogManager : MonoBehaviour
     /// speaker名称
     /// </summary>
     public TextMeshProUGUI nameText;
-    /// <summary>
-    /// 选项面板
-    /// </summary>
-    public GameObject opinionPanel;
+    ///// <summary>
+    ///// 选项面板
+    ///// </summary>
+    //public GameObject opinionPanel;
+
     /// <summary>
     /// 按钮
     /// </summary>
-    public Button opinionBtn_1;
-    public TextMeshProUGUI opinionBtn_1_text;
-    public Button opinionBtn_2;
-    public TextMeshProUGUI opinionBtn_2_text;
+    [Header("按钮对象")]
+    public GameObject optionBtn;
+    [Header("按钮的父对象")]
+    public Transform optionParent;
+    //public TextMeshProUGUI opinionBtn_1_text;
+    //public Button opinionBtn_2;
+    //public TextMeshProUGUI opinionBtn_2_text;
+    ///// <summary>
+    ///// 用于显示历史对话中选项的变量
+    ///// </summary>
+    //[HideInInspector]
+    //public int selectionIndex;
+    //public List<string> selections;
+    [Header("历史对话面板")]
+    public GameObject HistoryDialogPanel;
     /// <summary>
-    /// 用于显示历史对话中选项的变量
+    /// 当前所有收集了的历史对话信息
     /// </summary>
-    [HideInInspector]
-    public int selectionIndex;
-    public List<string> selections;
+    [Header("当前所有收集了的历史对话信息")]
+    public List<HistoryDialogInformatioin> historyDialogs;
+    /// <summary>
+    /// 历史对话信息的父对象
+    /// </summary>
+    [Header("历史对话信息的父对象")]
+    public Transform historyDialogParent;
+
     Coroutine typingCoroutine;
     bool isDuringDilaog;
     bool isTyping;
@@ -83,7 +99,11 @@ public class DialogManager : MonoBehaviour
     bool isShowingHistory;
     string assetName = "DataTables/PlotsDatas";
 
-   
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+            startDialog(1000001);
+    }
     /// <summary>
     /// 核心：获取对话信息
     /// </summary>
@@ -105,6 +125,12 @@ public class DialogManager : MonoBehaviour
     /// <param name="startId"></param>
     public void startDialog(int startId)
     {
+        //每次开始对话时清空历史对话记录
+        historyDialogs.Clear();
+        DestoryHistoryDialogs();
+
+        //隐藏战斗UI
+        SceneObjectsManager.instance.BattleUI.SetActive(false);
         isDuringDilaog = true;
         AllPanel.SetActive(true);
         this.startId = startId;
@@ -116,8 +142,16 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void RefreshText()
     {
+     
+        //如果按钮父对象的子物体数量不为空则摧毁所有按钮
+        if (optionParent.childCount != 0)
+        {
+            foreach (Transform go in optionParent.transform)
+                Destroy(go.gameObject);
+        }
 
-        opinionPanel.SetActive(false);
+
+
         leftStand.color = new Color(1, 1, 1, 1);
         rightStand.color = new Color(1, 1, 1, 1);
         leftStand.sprite = null;
@@ -129,13 +163,13 @@ public class DialogManager : MonoBehaviour
         nameText.text = nowData.speakerNmae;
         //获取贴图
         {
-            if (nowData.left_stand)
+            if (!nowData.left_stand)
                 leftStand.color = new Color(0, 0, 0, 0);
             else
             {
                 leftStand.sprite = nowData.left_stand;
             }
-            if (nowData.right_stand)
+            if (!nowData.right_stand)
                 rightStand.color = new Color(0, 0, 0, 0);
             else
                 rightStand.sprite = nowData.right_stand;
@@ -143,28 +177,39 @@ public class DialogManager : MonoBehaviour
         //获取选项
         if (nowData.haveOption)
         {
-            opinionBtn_1.onClick.RemoveAllListeners();
-            opinionBtn_2.onClick.RemoveAllListeners();
+            //遍历按钮选项内容并且生成按钮，设置其文字与点击方法
+            for (int i = 0; i < nowData.optionContents.Length; i++)
+            {
+                string btnContent = nowData.optionContents[i];
+                GameObject go = Instantiate(optionBtn, optionParent);
+                go.name = "Option_" + nowData.optionTargetIds[i];
+                go.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = btnContent;
+                Button btn = go.GetComponent<Button>();
+
+                btn.onClick.AddListener(delegate
+                {
+                    ChooseOption(int.Parse(btn.name.Replace("Option_", "")));
+                });
+                btn.onClick.AddListener(delegate { AddHistoryTextByOption(btn); });
+            }
+
+
+
             isOpinioning = true;
-            opinionPanel.SetActive(true);
-            opinionBtn_1_text.text = nowData.optionContent_1;
-            opinionBtn_1.onClick.AddListener(ChooseOpinion_1);
-            opinionBtn_2_text.text = nowData.optionContent_2;
-            opinionBtn_2.onClick.AddListener(ChooseOpinion_2);
+
 
         }
-        historyDialogPanel.ids.Add(nowId);
+
         //对话事件
         {
-            DialogEvent(nowData.event_1);
-            DialogEvent(nowData.event_2);
-            DialogEvent(nowData.event_3);
-            DialogEvent(nowData.event_4);
+            foreach (string s in nowData.events)
+                DialogEvent(s);
         }
-
+        //添加历史对话记录
+        AddHistoryTextByNowId();
     }
 
- /// <summary>
+    /// <summary>
     /// 点击面板时触发的继续对话的判断
     /// </summary>
     public void NextDialogCheck()
@@ -210,6 +255,7 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void EndTypingText()
     {
+        StopCoroutine(typingCoroutine);
         contentText.text = nowData.content_cn;
         isTyping = false;
 
@@ -232,13 +278,15 @@ public class DialogManager : MonoBehaviour
     /// </summary>
     public void EndDialog()
     {
+        SceneObjectsManager.instance.BattleUI.SetActive(true);
+
         AllPanel.SetActive(false);
         isDuringDilaog = false;
         nowData = null;
         nowId = 0;
-        selections.Clear();
-        selectionIndex = 0;
-        historyDialogPanel.ids.Clear();
+        //selections.Clear();
+        //selectionIndex = 0;
+
     }
     /// <summary>
     /// 对话事件
@@ -263,7 +311,7 @@ public class DialogManager : MonoBehaviour
         }
     }
     //选项相关方法
-    public void ChooseOpinion(int targetId)
+    public void ChooseOption(int targetId)
     {
         Debug.Log("目标id" + targetId);
 
@@ -274,24 +322,7 @@ public class DialogManager : MonoBehaviour
         RefreshText();
 
     }
-    public void ChooseOpinion_1()
-    {
-        Debug.Log("选择了选项1");
-        historyDialogPanel.ids.Add(selectionIndex);
-        selections.Add(nowData.optionContent_1);
-        selectionIndex++;
-        ChooseOpinion(nowData.option_1_targetId);
 
-    }
-    public void ChooseOpinion_2()
-    {
-        historyDialogPanel.ids.Add(selectionIndex);
-
-        selections.Add(nowData.optionContent_2);
-        selectionIndex++;
-        ChooseOpinion(nowData.option_2_targetId);
-
-    }
     /// <summary>
     /// 展示历史对话
     /// 激活历史对话面板即可，在其中的脚本中，当激活时便会创造历史对话
@@ -301,16 +332,77 @@ public class DialogManager : MonoBehaviour
         if (!isShowingHistory)
         {
             isShowingHistory = true;
-            historyDialogPanel.gameObject.SetActive(true);
+            HistoryDialogPanel.SetActive(true);
+            CreateHistoryDialogs();
             return;
         }
         else
         {
             isShowingHistory = false;
-            historyDialogPanel.gameObject.SetActive(false);
+            HistoryDialogPanel.SetActive(false);
+            DestoryHistoryDialogs();
             return;
         }
     }
-
     #endregion
+
+    /// <summary>
+    /// 根据现在的对话id创建新的历史对话记录
+    /// </summary>
+    public void AddHistoryTextByNowId()
+    {
+        HistoryDialogInformatioin hi = new HistoryDialogInformatioin(nowId, nowData.speakerNmae, nowData.content_cn, Color.white);
+        historyDialogs.Add(hi);
+    }
+    /// <summary>
+    /// 根据选项创建新的历史对话记录
+    /// </summary>
+    /// <param name="btn"></param>
+    public void AddHistoryTextByOption(Button btn)
+    {
+        HistoryDialogInformatioin hi = new HistoryDialogInformatioin(nowId, "选项", btn.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text, Color.red);
+        historyDialogs.Add(hi);
+    }
+    /// <summary>
+    /// 遍历收集了的历史对话信息，生成所有的历史对话对象
+    /// </summary>
+    public void CreateHistoryDialogs()
+    {
+        if (historyDialogs.Count != 0)
+            foreach (HistoryDialogInformatioin hi in historyDialogs)
+            {
+                //在正确的父物体下生成单个的历史对话表现对象
+                HistoryDialogSlot slot = GameObject.Instantiate(historyDialogSlot, historyDialogParent).GetComponent<HistoryDialogSlot>();
+                //根据数据赋值其各个文字和颜色
+                slot.nameText.text = hi.speaker;
+                slot.contentText.text = hi.contentText;
+                slot.nameText.color = hi.textColor;
+                slot.contentText.color = hi.textColor;
+            }
+    }
+    public void DestoryHistoryDialogs()
+    {
+        if (historyDialogParent.childCount != 0)
+            foreach (Transform t in historyDialogParent.transform)
+                Destroy(t.gameObject);
+    }
+}
+
+/// <summary>
+/// 每句历史对话的信息
+/// </summary>
+[System.Serializable]
+public class HistoryDialogInformatioin
+{
+    public int dialogId;
+    public string speaker;
+    public string contentText;
+    public Color textColor;
+    public HistoryDialogInformatioin(int id, string speaker, string content, Color color)
+    {
+        dialogId = id;
+        this.speaker = speaker;
+        contentText = content;
+        textColor = color;
+    }
 }
