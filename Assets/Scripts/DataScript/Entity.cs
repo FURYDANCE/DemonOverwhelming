@@ -16,6 +16,10 @@ namespace DemonOverwhelming
         /// ’Û”™
         /// </summary>
         public Camp camp;
+        /// <summary>
+        ///  «∑Ò «”¢–€
+        /// </summary>
+        public bool isHero;
         public bool spineObject;
         /// <summary>
         /// buff
