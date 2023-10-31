@@ -164,13 +164,13 @@ namespace DemonOverwhelming
         /// </summary>
         public void SetUnitOffset()
         {
-
-            for (int i = 0; i < createdSoldiers.Count; i++)
-            {
-                Debug.Log(unitOffsetsToCaptain.Length);
-                if (unitOffsetsToCaptain[i] != null)
-                    createdSoldiers[i].OffsetToCaptain = unitOffsetsToCaptain[i];
-            }
+            if (unitOffsetsToCaptain.Length != 0)
+                for (int i = 0; i < createdSoldiers.Count; i++)
+                {
+                    Debug.Log(unitOffsetsToCaptain.Length);
+                    if (unitOffsetsToCaptain[i] != null)
+                        createdSoldiers[i].OffsetToCaptain = unitOffsetsToCaptain[i];
+                }
         }
         /// <summary>
         /// 遍历所有生成了的士兵，让其处于正在回到相对位置的状态之中（原先有给队长上减速buff，但是后面改成了队长在原地等待其他士兵汇合

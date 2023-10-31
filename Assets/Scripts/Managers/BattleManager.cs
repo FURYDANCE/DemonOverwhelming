@@ -467,11 +467,32 @@ namespace DemonOverwhelming
             sg.Initialize();
             sg.Generate(destoryShadow);
         }
+        /// <summary>
+        /// 以组为单位生成士兵，参数为阵营，士兵ID,阵型ID,是否摧毁虚影，生成在相应召唤点位的相对偏移位置
+        /// </summary>
         public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 Offset)
         {
             genrateAmount++;
             GameObject go;
             Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
+            go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
+            go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
+            SoliderGroup sg = go.GetComponent<SoliderGroup>();
+            sg.camp = camp;
+            Debug.Log("生成时的士兵ID：" + soldierId);
+
+            sg.finalSoldierId = soldierId;
+            sg.transform.position += Offset;
+            sg.Generate(destoryShadow);
+        }
+        /// <summary>
+        /// 以组为单位生成士兵，参数为阵营，士兵ID,阵型ID,是否摧毁虚影，生成位置，相对偏移位置
+        /// </summary>
+        public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 StartPos, Vector3 Offset)
+        {
+            genrateAmount++;
+            GameObject go;
+            Vector3 pos = StartPos;/* = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;*/
             go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
             go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
             SoliderGroup sg = go.GetComponent<SoliderGroup>();
@@ -916,7 +937,8 @@ namespace DemonOverwhelming
         /// <param name="sceneStrongHold"></param>
         public void CaptureStrongHold(SceneStrongHold sceneStrongHold)
         {
-            sceneStrongHold.gameObjectSetActiveWhenDestory.SetActive(true);
+            if (sceneStrongHold.gameObjectSetActiveWhenDestory != null)
+                sceneStrongHold.gameObjectSetActiveWhenDestory.SetActive(true);
             //双方生成点位的切换
 
             ChangePlayerUnitSpawnPoint(sceneStrongHold.connectedUnitSpawnPoint_Player);
