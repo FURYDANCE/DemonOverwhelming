@@ -325,7 +325,34 @@ namespace DemonOverwhelming
             m.SetTarget(pos);
             return m;
         }
+        /// <summary>
+        /// 生成投射物，参数为目标具体坐标，id、生成阵营,创造者
+        /// 最后的变量是不在选取范围内的目标
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <param name="id"></param>
+        /// <param name="camp"></param>
+        /// <returns></returns>
+        public Missile GenerateOneMissle(Vector3 pos, string id, Camp camp, Entity creater,Entity entityNotAttack)
+        {
+            GameObject go = Instantiate(new GameObject(), GameObject.Find("Missiles").transform);
+            go.transform.position = pos;
+            go.transform.SetParent(GameObject.Find("Missiles").transform);
+            SpriteRenderer spriteRenderer = go.AddComponent<SpriteRenderer>();
 
+            spriteRenderer.sortingLayerName = "Layer1";
+            //spriteRenderer.sortingLayerID = 1;
+            go.AddComponent<FaceToCamera>();
+            Missile m = go.AddComponent<Missile>();
+            m.creater = creater;
+            m.id = id;
+            m.camp = camp;
+            //m.SetParameter(id);
+            m.SetTarget(pos);
+            m.entitiesNotInAttackTarget = new List<Entity>();
+            m.entitiesNotInAttackTarget.Add(entityNotAttack);
+            return m;
+        }
         #endregion
 
         #region 实体相关 创建实体，选择实体，相机跟随，创建信息，释放选择的实体
@@ -777,7 +804,8 @@ namespace DemonOverwhelming
 
 
             //摧毁该布阵卡
-            Destroy(lastSelectCard.gameObject);
+            if (lastSelectCard)
+                Destroy(lastSelectCard.gameObject);
 
 
             //当count大于零时，继续将集合中下标最高的对象作为上次点击的对象
