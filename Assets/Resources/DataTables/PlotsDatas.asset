@@ -199,7 +199,7 @@ MonoBehaviour:
       attackTime: 0.5
       missileId: 33000001
       specialTags:
-      - "\u94B1\u888B20"
+      - "\u9B54\u6CD5\u6297\u602790/\u5492\u6B7B"
       bloodDrop: 4
       skillIds:
       - 0
@@ -606,7 +606,7 @@ MonoBehaviour:
       chaseTime: 0
       attackWaitTime: 1.5
       attackTime: 0.5
-      missileId: 33000001
+      missileId: 31000005
       specialTags:
       - 0
       bloodDrop: 0
@@ -1229,6 +1229,66 @@ MonoBehaviour:
     aoeAmount: 0
     arcMoveTime: 1.5
     arcMoveHeight: 30
+  - id: 31000005
+    name: "\u707E\u7978\u5DEB\u5E08\u7684\u7BAD\uFF08\u521D\u59CB\uFF09"
+    damageDataId: 41000009
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 30
+    moveType: 0
+    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 1
+    objectCreatedWhenDieId: 31000006
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
+  - id: 31000006
+    name: "\u707E\u7978\u5DEB\u5E08\u7684\u7BAD\uFF08\u8DF3\u5F39\uFF09"
+    damageDataId: 41000009
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 30
+    moveType: 3
+    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
   - id: 32000001
     name: "\u8303\u56F4\u4F24\u5BB31"
     damageDataId: 41000001
@@ -1571,6 +1631,18 @@ MonoBehaviour:
     physicDamage: 4
     farDamage: 0
     magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000009
+    name: "\u9B54\u6CD5\u4F24\u5BB3_5"
+    physicDamage: 0
+    farDamage: 0
+    magicDamage: 5
     buffs:
     - 0
     specialEffects:

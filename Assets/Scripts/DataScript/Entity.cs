@@ -449,6 +449,24 @@ namespace DemonOverwhelming
                     Debug.Log(level);
                     character_SpecialTagBases.Add(new Character_SpecialTag_Parry(level));
                 }
+                if (tag.Contains("盾墙"))
+                {
+                    float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(tag, @"[^0-9]+", ""));
+                    Debug.Log(level);
+                    character_SpecialTagBases.Add(new Character_SpecialTag_ShieldWall());
+                }
+                if (tag.Contains("物理抗性"))
+                {
+                    float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(tag, @"[^0-9]+", ""));
+                    Debug.Log(level);
+                    character_SpecialTagBases.Add(new Character_SpecialTag_PhysicResist(level));
+                }
+                if (tag.Contains("魔法抗性"))
+                {
+                    float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(tag, @"[^0-9]+", ""));
+                    Debug.Log(level);
+                    character_SpecialTagBases.Add(new Character_SpecialTag_MagicResist(level));
+                }
             }
         }
 

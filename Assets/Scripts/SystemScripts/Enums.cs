@@ -30,7 +30,8 @@ namespace DemonOverwhelming
     /// </summary>
     public enum MissileMoveType
     {
-        direct, parabola, teleport
+        direct, parabola, teleport,
+        ChooseNearTarget_direct,ChooseNearTarget_parabloa
     }
     /// <summary>
     /// 单位移动方式：直线移动，玩家控制移动

@@ -7040,7 +7040,7 @@ PrefabInstance:
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
       propertyPath: enemyEntityGeneratePoint
       value: 
-      objectReference: {fileID: 1541464993}
+      objectReference: {fileID: 1113402985}
     - target: {fileID: 575584828384544738, guid: 0a0d0b025292a6f428f5dc0605f2bfea, type: 3}
       propertyPath: playerEntityGeneratePoint
       value: 
@@ -7907,6 +7907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestSummonTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 4732571585688089744, guid: 7d588988b61ed2a40ba60b9181eeaed8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4732571585688089746, guid: 7d588988b61ed2a40ba60b9181eeaed8, type: 3}
       propertyPath: summonTargetTransform
       value: 
@@ -8139,6 +8143,10 @@ PrefabInstance:
       propertyPath: heroDatas
       value: 
       objectReference: {fileID: 11400000, guid: f522f4e94fb13b5488d38a409f22aadc, type: 2}
+    - target: {fileID: 8191951234441727460, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
+      propertyPath: excelDatas
+      value: 
+      objectReference: {fileID: 11400000, guid: a8a7f34daadb0e0429214850826c76c3, type: 2}
     - target: {fileID: 8191951234441727466, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
       propertyPath: m_Name
       value: GameDataManager

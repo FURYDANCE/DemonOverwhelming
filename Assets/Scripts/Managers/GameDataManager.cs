@@ -49,12 +49,15 @@ namespace DemonOverwhelming
             if (instance != null)
                 Destroy(instance);
             instance = this;
-            excelDatas = (ExcelDataManager)Resources.Load("DataTables/PlotsDatas");
+            if (excelDatas == null)
+                excelDatas = (ExcelDataManager)Resources.Load("DataTables/PlotsDatas");
         }
 
         private void Start()
         {
             Initialization();
+            if (excelDatas == null)
+                excelDatas = (ExcelDataManager)Resources.Load("DataTables/PlotsDatas");
         }
         /// <summary>
         /// ≥ı ºªØ
