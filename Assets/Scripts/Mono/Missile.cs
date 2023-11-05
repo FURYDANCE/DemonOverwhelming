@@ -16,10 +16,13 @@ namespace DemonOverwhelming
 
         bool set;
         int nowAoeAmount;
+        [SerializeField]
         Vector3 targetV3;
         Vector3 nearPos;
         //根据battlemanager中的生成投射物方法中传入的是transform还是v3，决定是向目标的transform移动还是v3移动
+        [SerializeField]
         Transform targetTransform;
+        [SerializeField]
         BoxCollider targetCollider;
         Entity targetEntity;
         public List<Entity> entitiesNotInAttackTarget;

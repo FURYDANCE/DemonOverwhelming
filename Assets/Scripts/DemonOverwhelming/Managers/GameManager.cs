@@ -51,6 +51,7 @@ namespace DemonOverwhelming
         {
             //隐藏加载界面
             uiManager.getPanel<LoadingPanel>().Hide();
+           
         }
         private void OnClickExitButtonMainMenu()
         {
@@ -60,6 +61,35 @@ namespace DemonOverwhelming
             Application.Quit();
 #endif
         }
+
+        /// <summary>
+        /// 执行进入具体游戏关卡？
+        /// </summary>
+        public void OnClickIntoGameSceneButton()
+        {
+            //隐藏当前场景？
+            /*UnloadSceneOperation unLoadOperation = */resourceManager.unloadSceneAsync(_mapScenePath,null);
+            //显示加载界面
+            LoadingPanel loadingUI = uiManager.ShowLoadingUI();
+            //加载大地图场景
+            LoadSceneOperationBase loadOperation = resourceManager.loadSceneAsync(_gameScenePath, LoadSceneMode.Additive);
+            //绑定加载界面
+            loadOperation.onComplete += OnGameSceneLoaded;
+            
+            loadingUI.Display(loadOperation);
+        }
+        private void OnGameSceneLoaded(object obj)
+        {
+            //隐藏加载界面
+            uiManager.getPanel<LoadingPanel>().Hide();
+           
+        }
+
+
+
+
+
+
 
         public ResourceManager resourceManager;
         public UIManager uiManager;

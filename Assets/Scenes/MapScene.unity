@@ -295,7 +295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &34215332
 Transform:
   m_ObjectHideFlags: 0
@@ -503,6 +503,7 @@ Transform:
   m_Children:
   - {fileID: 29987231}
   - {fileID: 705507995}
+  - {fileID: 1476827625}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1159,6 +1160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 0
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []
@@ -1331,6 +1333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 1
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []
@@ -1581,6 +1584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 1
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []
@@ -2076,6 +2080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 0
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []
@@ -3615,6 +3620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 1
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []
@@ -4175,6 +4181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 0
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []
@@ -4856,6 +4863,68 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1389559446}
+--- !u!1001 &1476827624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 55211697}
+    m_Modifications:
+    - target: {fileID: 463181197089070637, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_Name
+      value: Camer_or_EventSystemExistCheck
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+--- !u!4 &1476827625 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6574935534775154366, guid: 3e9e375df6949b84e8dc9a4f5df20a4b, type: 3}
+  m_PrefabInstance: {fileID: 1476827624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1512121866
 GameObject:
   m_ObjectHideFlags: 0
@@ -4901,7 +4970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
-  levelInformationUI: {fileID: 5995294974692615909, guid: b2d29db2bfa8da348b081d68b5cc50b4, type: 3}
+  levelInformationUI: {fileID: 2751933607315982070, guid: b2d29db2bfa8da348b081d68b5cc50b4, type: 3}
   levelInfoParent: {fileID: 820069713}
   isInformationing: 0
   nowLevelInformation: {fileID: 0}
@@ -5449,6 +5518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 1
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []
@@ -5986,6 +6056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camp: 0
+  isHero: 0
   spineObject: 0
   buffs: []
   skills: []

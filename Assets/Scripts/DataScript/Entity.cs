@@ -466,6 +466,13 @@ namespace DemonOverwhelming
                     float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(tag, @"[^0-9]+", ""));
                     Debug.Log(level);
                     character_SpecialTagBases.Add(new Character_SpecialTag_MagicResist(level));
+
+                }
+                if (tag.Contains("¹¥³Ç"))
+                {
+                    float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(tag, @"[^0-9]+", ""));
+                    Debug.Log(level);
+                    character_SpecialTagBases.Add(new Character_SpecialTag_AttackCastle(level));
                 }
             }
         }

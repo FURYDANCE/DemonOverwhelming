@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using BJSYGameCore.UI;
 namespace DemonOverwhelming
 {
     public class SceneManager_MapScene : MonoBehaviour
     {
         public GameManager gameManager;
-        public GameObject levelInformationUI;
+        public LevelInformationUI levelInformationUI;
         [Header("创建关卡信息Ui的父对象")]
         public Transform levelInfoParent;
         [Header("是否有打开的关卡信息UI")]
@@ -23,6 +24,7 @@ namespace DemonOverwhelming
             if (instance != null)
                 Destroy(instance);
             instance = this;
+            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         }
         /// <summary>
         /// 当点击关卡图标之后执行的方法，创造关卡详细信息界面
@@ -35,11 +37,13 @@ namespace DemonOverwhelming
             mapDrag.SetCameraScale(15);
             mapDrag.RefreshPos(information.transform.position, new Vector2(10, -8));
             isInformationing = true;
-            GameObject go = Instantiate(levelInformationUI, levelInfoParent);
-            nowLevelInformation = go;
-            go.name = "LEVEL INFO UI";
+            //LevelInformationUI createdLevelInformationUI = gameManager.uiManager.createPanel(levelInformationUI);
+            LevelInformationUI createdLevelInformationUI = Instantiate(levelInformationUI, levelInfoParent);
+            nowLevelInformation = createdLevelInformationUI.gameObject;
+            createdLevelInformationUI.name = "LEVEL INFO UI";
+            createdLevelInformationUI.mapSceneManager = this;
+            createdLevelInformationUI.SetInformation(information);
 
-            nowLevelInformation.GetComponent<LevelInformationUI>().SetInformation(information);
         }
 
         /// <summary>
