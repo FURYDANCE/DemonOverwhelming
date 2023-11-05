@@ -199,7 +199,7 @@ MonoBehaviour:
       attackTime: 0.5
       missileId: 33000001
       specialTags:
-      - "\u9B54\u6CD5\u6297\u602790/\u5492\u6B7B"
+      - 0
       bloodDrop: 4
       skillIds:
       - 0

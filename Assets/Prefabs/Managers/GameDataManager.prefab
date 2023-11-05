@@ -45,11 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126cfbc5f52e16f468b91b323ca5a9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  excelDatas: {fileID: 0}
+  excelDatas: {fileID: 11400000, guid: a8a7f34daadb0e0429214850826c76c3, type: 2}
   animationData: {fileID: 11400000, guid: 557248ec7b4ace248ad07b0dc060a440, type: 2}
   materialObject: {fileID: 11400000, guid: 0c2213e9a08a5044b89cd2484aef5d1e, type: 2}
   formationObject: {fileID: 11400000, guid: 9b7d402aebbee2746afa3699ab3e6d15, type: 2}
   spinePrefabDatas: {fileID: 11400000, guid: 1a81ba0ff9eb966478c0eefe4d2f9391, type: 2}
+  heroDatas: {fileID: 11400000, guid: f522f4e94fb13b5488d38a409f22aadc, type: 2}
   emptyEntity: {fileID: 4785308967260491664, guid: 38d9438aab39da34c843143be4cc8999, type: 3}
   emptySpine: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
   emptySoldierCard: {fileID: 7233710488846720462, guid: 0b8ccb7ab2b6c004daa197ce233a3d41, type: 3}

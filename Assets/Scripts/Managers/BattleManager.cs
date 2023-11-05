@@ -348,7 +348,7 @@ namespace DemonOverwhelming
             m.id = id;
             m.camp = camp;
             //m.SetParameter(id);
-            m.SetTarget(pos);
+            //m.SetTarget(pos);
             m.entitiesNotInAttackTarget = new List<Entity>();
             m.entitiesNotInAttackTarget.Add(entityNotAttack);
             return m;
