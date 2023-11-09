@@ -72,9 +72,9 @@ namespace DemonOverwhelming
             if (!File.Exists(Application.persistentDataPath + "/" + JsonEditor.missileFileName + ".json"))
                 SaveJson(Application.persistentDataPath, JsonEditor.missileFileName, excelDatas.missileDatas);
             //读取存档文件
-            ReadJson_Unit();
-            ReadJson_Card();
-            ReadJson_Missile();
+            //ReadJson_Unit();
+            //ReadJson_Card();
+            //ReadJson_Missile();
         }
         #region 通过id获取各个内容
         /// <summary>
@@ -94,7 +94,9 @@ namespace DemonOverwhelming
         /// <returns></returns>
         public UnitData GetEntityDataById(string id)
         {
+            Debug.Log("传入的id：" + id);
             UnitData find = excelDatas.unitDatas.Find((UnitData p) => { return p.ID == id; });
+            Debug.Log("找到的数据：" + find);
             return find;
         }
         /// <summary>

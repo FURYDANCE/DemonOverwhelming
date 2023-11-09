@@ -114,7 +114,7 @@ namespace DemonOverwhelming
             CreateOneSoldierCard("21000003");
             CreateOneSoldierCard("21000004");
             CreateOneSoldierCard("21000005");
-            CreateOneSoldierCard("21000006");
+            CreateOneSoldierCard("21000009");
             CreateOneSoldierCard("21000007");
             CreateOneSoldierCard("21000008");
             fillStartColor = SceneObjectsManager.instance.costFill.color;

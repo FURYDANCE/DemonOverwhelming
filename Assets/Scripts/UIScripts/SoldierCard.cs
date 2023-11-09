@@ -21,7 +21,8 @@ namespace DemonOverwhelming
         {
             Generate();
             hoverScript = GetComponent<MouseHover_SoldierCard>();
-            hoverScript.descriptionAndStory = GameDataManager.instance.GetEntityDataById(parameter.soldierId).character.descriptionAndStory;
+            if (hoverScript)
+                hoverScript.descriptionAndStory = GameDataManager.instance.GetEntityDataById(parameter.soldierId).character.descriptionAndStory;
         }
         /// <summary>
         /// 初始化，通过id显示对应的数值
