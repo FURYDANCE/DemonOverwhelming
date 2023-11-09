@@ -116,7 +116,7 @@ MonoBehaviour:
     type: 0
     name: "\u6076\u9B54\u5C0F\u5175"
     sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
-    Hp: 15
+    Hp: 23
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.6
@@ -144,12 +144,12 @@ MonoBehaviour:
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
-      attackWaitTime: 1
+      attackWaitTime: 0.5
       attackTime: 0.5
       missileId: 33000001
       specialTags:
       - 0
-      bloodDrop: 4
+      bloodDrop: 1
       skillIds:
       - 0
       skills: []
@@ -167,7 +167,7 @@ MonoBehaviour:
     type: 0
     name: "\u6B65\u5175"
     sprite: {fileID: 21300000, guid: 7578dabf3644ee5428892700f48676bc, type: 3}
-    Hp: 15
+    Hp: 20
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.1
@@ -195,12 +195,12 @@ MonoBehaviour:
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
-      attackWaitTime: 1
+      attackWaitTime: 0.5
       attackTime: 0.5
       missileId: 33000001
       specialTags:
       - 0
-      bloodDrop: 4
+      bloodDrop: 1
       skillIds:
       - 0
       skills: []
@@ -236,7 +236,7 @@ MonoBehaviour:
       id: 1000003
       cost: 0
       aiType: 1
-      moveSpeed: 3
+      moveSpeed: 4
       defence: 0
       defence_far: 0
       defence_magic: 0
@@ -245,14 +245,14 @@ MonoBehaviour:
       skillName: 
       EnemyCheckArea: {x: 35, y: 25, z: 0}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-      attackDistance: 35
+      attackDistance: 25
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 1
       missileId: 31000001
       specialTags:
       - 0
-      bloodDrop: 4
+      bloodDrop: 1
       skillIds:
       - 0
       skills: []
@@ -270,7 +270,7 @@ MonoBehaviour:
     type: 0
     name: "\u7194\u7089\u86DE\u8753"
     sprite: {fileID: 21300000, guid: 8228375f9698f8a419e415c918753dd2, type: 3}
-    Hp: 15
+    Hp: 20
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.1
@@ -296,14 +296,14 @@ MonoBehaviour:
       skillName: 
       EnemyCheckArea: {x: 15, y: 15, z: 0}
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
-      attackDistance: 5
+      attackDistance: 6
       chaseTime: 0
-      attackWaitTime: 2
+      attackWaitTime: 0.5
       attackTime: 0.5
       missileId: 32000003
       specialTags:
       - 0
-      bloodDrop: 6
+      bloodDrop: 2
       skillIds:
       - 0
       skills: []
@@ -326,7 +326,7 @@ MonoBehaviour:
     hurtDamage: 0
     hpBarSize: 0.1
     hpBarOffset: {x: -6.4, y: 18, z: 0}
-    introduct: "aoe\u5175"
+    introduct: "\u654C\u65B9aoe\u5175"
     modleSize: 1.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
@@ -338,7 +338,7 @@ MonoBehaviour:
       id: 1000006
       cost: 0
       aiType: 0
-      moveSpeed: 4
+      moveSpeed: 4.5
       defence: 0
       defence_far: 0
       defence_magic: 0
@@ -353,8 +353,8 @@ MonoBehaviour:
       attackTime: 0.5
       missileId: 32000004
       specialTags:
-      - "\u94B1\u888B20"
-      bloodDrop: 6
+      - "\u94B1\u888B10"
+      bloodDrop: 1
       skillIds:
       - 0
       skills: []
@@ -377,7 +377,7 @@ MonoBehaviour:
     hurtDamage: 0
     hpBarSize: 0.1
     hpBarOffset: {x: -6.4, y: 18, z: 0}
-    introduct: "aoe\u5175"
+    introduct: "\u654C\u65B9\u7CBE\u82F1aoe\u5175"
     modleSize: 1.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
@@ -389,7 +389,7 @@ MonoBehaviour:
       id: 1000007
       cost: 0
       aiType: 0
-      moveSpeed: 4
+      moveSpeed: 4.5
       defence: 0
       defence_far: 0
       defence_magic: 0
@@ -400,12 +400,12 @@ MonoBehaviour:
       EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
-      attackWaitTime: 2
+      attackWaitTime: 1
       attackTime: 0.5
       missileId: 32000004
       specialTags:
-      - 0
-      bloodDrop: 6
+      - "\u94B1\u888B10"
+      bloodDrop: 1
       skillIds:
       - 0
       skills: []
@@ -423,12 +423,12 @@ MonoBehaviour:
     type: 0
     name: "\u98CE\u8F66\u5DE8\u4EBA"
     sprite: {fileID: 21300000, guid: d8369191b0324034cbbad23b2b02ca62, type: 3}
-    Hp: 200
+    Hp: 250
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 1
     hpBarOffset: {x: 0, y: 15, z: 0}
-    introduct: "aoe\u5175"
+    introduct: "\u654C\u65B9\u7CBE\u82F1aoe\u5DE8\u4EBA"
     modleSize: 1.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
@@ -440,7 +440,7 @@ MonoBehaviour:
       id: 1000008
       cost: 0
       aiType: 0
-      moveSpeed: 1.5
+      moveSpeed: 3.5
       defence: 0
       defence_far: 0
       defence_magic: 0
@@ -452,11 +452,11 @@ MonoBehaviour:
       attackDistance: 10
       chaseTime: 0
       attackWaitTime: 3.5
-      attackTime: 2
+      attackTime: 0.75
       missileId: 32000005
       specialTags:
-      - 0
-      bloodDrop: 6
+      - "\u65E0\u8840\u8005/\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 0
       skillIds:
       - 0
       skills: []
@@ -474,7 +474,7 @@ MonoBehaviour:
     type: 0
     name: "\u70AE\u5175"
     sprite: {fileID: 21300000, guid: 327eca966f1b04549b356b0d12c012f6, type: 3}
-    Hp: 10
+    Hp: 20
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.1
@@ -491,8 +491,8 @@ MonoBehaviour:
       id: 1000009
       cost: 0
       aiType: 1
-      moveSpeed: 2
-      defence: 2
+      moveSpeed: 3.5
+      defence: 0
       defence_far: 0
       defence_magic: 0
       haveSkill: 0
@@ -500,13 +500,13 @@ MonoBehaviour:
       skillName: 
       EnemyCheckArea: {x: 35, y: 25, z: 0}
       EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
-      attackDistance: 35
+      attackDistance: 38
       chaseTime: 0
-      attackWaitTime: 2.5
+      attackWaitTime: 2
       attackTime: 0.5
       missileId: 31000004
       specialTags:
-      - 0
+      - "\u65E0\u8840\u8005/\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
       skillIds:
       - 0
@@ -525,12 +525,12 @@ MonoBehaviour:
     type: 0
     name: "\u9AB7\u9AC5\u5175"
     sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
-    Hp: 20
+    Hp: 7
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.1
     hpBarOffset: {x: -5, y: 18, z: 0}
-    introduct: "\u9AB7\u9AC5\u5175"
+    introduct: "\u70AE\u7070"
     modleSize: 1.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
@@ -542,7 +542,7 @@ MonoBehaviour:
       id: 1000010
       cost: 0
       aiType: 0
-      moveSpeed: 6
+      moveSpeed: 5.5
       defence: 0
       defence_far: 0
       defence_magic: 0
@@ -553,11 +553,11 @@ MonoBehaviour:
       EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 2
       chaseTime: 0
-      attackWaitTime: 1.5
+      attackWaitTime: 0.3
       attackTime: 0.5
-      missileId: 33000001
+      missileId: 33000006
       specialTags:
-      - 0
+      - "\u65E0\u8840\u8005"
       bloodDrop: 0
       skillIds:
       - 0
@@ -576,12 +576,12 @@ MonoBehaviour:
     type: 0
     name: "\u707E\u7978\u5DEB\u5E08"
     sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
-    Hp: 20
+    Hp: 15
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.1
     hpBarOffset: {x: -5, y: 18, z: 0}
-    introduct: "\u707E\u7978\u5DEB\u5E08"
+    introduct: "\u540E\u6392debuffer"
     modleSize: 1.5
     shadowSize: {x: 6, y: 2, z: 0}
     shadowOffset: 0.5
@@ -592,8 +592,8 @@ MonoBehaviour:
     character:
       id: 1000011
       cost: 0
-      aiType: 0
-      moveSpeed: 6
+      aiType: 1
+      moveSpeed: 4.8
       defence: 0
       defence_far: 0
       defence_magic: 0
@@ -606,10 +606,2305 @@ MonoBehaviour:
       chaseTime: 0
       attackWaitTime: 1.5
       attackTime: 0.5
-      missileId: 31000005
+      missileId: 33000004
       specialTags:
       - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000012
+    type: 0
+    name: "\u5730\u72F1\u519B\u56E2"
+    sprite: {fileID: 21300000, guid: 2614ff22f50acf94e8638827f32883b4, type: 3}
+    Hp: 45
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.13
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u524D\u6392\u5766\u514B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000012
+      cost: 0
+      aiType: 0
+      moveSpeed: 4.9
+      defence: 0
+      defence_far: 10
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 2
+      attackTime: 0.8
+      missileId: 33000005
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000013
+    type: 0
+    name: "\u9B3C\u9B42"
+    sprite: {fileID: 21300000, guid: cd1c8d255d508d24295b88073d0d1be4, type: 3}
+    Hp: 7
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u53EC\u5524\u7269\u70AE\u7070"
+    modleSize: 1.5
+    shadowSize: {x: 0, y: 0, z: 0}
+    shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000013
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.7
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
+      attackDistance: 2
+      chaseTime: 0
+      attackWaitTime: 0.4
+      attackTime: 0.5
+      missileId: 33000006
+      specialTags:
+      - "\u65E0\u8840\u8005"
       bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000014
+    type: 0
+    name: "[WIP]\u9C9C\u8840\u795E\u50CF"
+    sprite: {fileID: 21300000, guid: d8b8c19fd8e953c4f8eb92f30eae7cac, type: 3}
+    Hp: 30
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u6CBB\u7597\u8005"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000014
+      cost: 0
+      aiType: 1
+      moveSpeed: 4.8
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
+      attackDistance: 20
+      chaseTime: 0
+      attackWaitTime: 1.5
+      attackTime: 0.5
+      missileId: 33000004
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000015
+    type: 0
+    name: "\u77F3\u50CF\u9B3C"
+    sprite: {fileID: 21300000, guid: dca3dc6b91c9e544783ad1fe06bc0e29, type: 3}
+    Hp: 15
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u57FA\u7840\u9B54\u6CD5\u6B65\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 0, y: 0, z: 0}
+    shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000015
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.7
+      defence: 10
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
+      attackDistance: 2
+      chaseTime: 0
+      attackWaitTime: 0.4
+      attackTime: 0.5
+      missileId: 33000007
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000016
+    type: 0
+    name: "\u6B7B\u795E\u5316\u8EAB"
+    sprite: {fileID: 21300000, guid: ed2a31a8958d3d746bb9a5f1a5ae1f6a, type: 3}
+    Hp: 70
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.3
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u6DF7\u5408\u4F24\u5BB3\u5DE8\u517D"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000016
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 10
+      defence_far: 0
+      defence_magic: 10
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 4
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 32000005
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000017
+    type: 0
+    name: "[WIP]\u68A6\u9B47"
+    sprite: {fileID: 21300000, guid: 1a6b7345947709a4fab8236c6f78864a, type: 3}
+    Hp: 20
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u8DF3\u8DC3\u523A\u5BA2"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000017
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 2
+      chaseTime: 0
+      attackWaitTime: 0.4
+      attackTime: 0.5
+      missileId: 31000004
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000018
+    type: 0
+    name: "\u6B7B\u7075\u6CD5\u5E08"
+    sprite: {fileID: 21300000, guid: 093172b4730ed194f81352eb87cfd42f, type: 3}
+    Hp: 20
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u53EC\u5524\u5E08"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000018
+      cost: 0
+      aiType: 1
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 25
+      chaseTime: 0
+      attackWaitTime: 0.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000019
+    type: 0
+    name: "\u65E0\u5934\u9A91\u58EB"
+    sprite: {fileID: 21300000, guid: 0d241ac15d47e384998d6308ab0dca15, type: 3}
+    Hp: 10
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u53EC\u5524\u7269\u70AE\u7070"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000019
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 0.4
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000020
+    type: 0
+    name: "\u5730\u72F1\u9A91\u58EB"
+    sprite: {fileID: 21300000, guid: 6defde429a0d2fd4bb09866c4147545d, type: 3}
+    Hp: 60
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u7CBE\u82F1\u6B65\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000020
+      cost: 0
+      aiType: 0
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 2
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000021
+    type: 0
+    name: "\u5438\u8840\u9B3C"
+    sprite: {fileID: 21300000, guid: 3b2909ee9afc8664d916bf196afd34b1, type: 3}
+    Hp: 20
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u8840\u725B\u6B65\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000021
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 2
+      chaseTime: 0
+      attackWaitTime: 0.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000022
+    type: 0
+    name: "\u706B\u5C71\u5DE8\u4EBA"
+    sprite: {fileID: 21300000, guid: 1114fe5963167a24583b5686d7ee7c9a, type: 3}
+    Hp: 300
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.8
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "Aoe\u5DE8\u517D"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000022
+      cost: 0
+      aiType: 0
+      moveSpeed: 4
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 10
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000023
+    type: 0
+    name: "\u5730\u72F1\u519B\u56E2\u94F3\u67AA\u624B"
+    sprite: {fileID: 21300000, guid: 7070b1ccc5a0d144e9b42e3773d55555, type: 3}
+    Hp: 18
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u9B54\u6CD5\u5C04\u624B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000023
+      cost: 0
+      aiType: 1
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 27
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000024
+    type: 0
+    name: "\u9ED1\u66DC\u57CE\u5821"
+    sprite: {fileID: 21300000, guid: 57df24887c6026d41be89d8580dc5798, type: 3}
+    Hp: 325
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u5DE8\u517D\u70AE\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000024
+      cost: 0
+      aiType: 1
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 33
+      chaseTime: 0
+      attackWaitTime: 3
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005/\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000025
+    type: 0
+    name: "\u6076\u9B54\u5C60\u592B"
+    sprite: {fileID: 21300000, guid: f1166286c2139d846b9362f01585c10e, type: 3}
+    Hp: 40
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u4F4E\u7EA7\u5766\u514B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000025
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 2
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000026
+    type: 0
+    name: "\u5C01\u5730\u6B65\u5175"
+    sprite: {fileID: 21300000, guid: 4f6db7a951b4f4648b8b201b303fbd67, type: 3}
+    Hp: 22
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u70AE\u7070"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000026
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 0.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000027
+    type: 0
+    name: "\u730E\u4EBA"
+    sprite: {fileID: 21300000, guid: da881e0a7a9624e4184556544f6e9289, type: 3}
+    Hp: 15
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u5C04\u624B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000027
+      cost: 0
+      aiType: 1
+      moveSpeed: 5.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 27
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 1
+      missileId: 33000001
+      specialTags:
+      - "\u94B1\u888B5"
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000028
+    type: 0
+    name: "\u89C1\u4E60\u4FEE\u5973"
+    sprite: {fileID: 21300000, guid: 7bf3ff54d84cfe844bc3fc379861c31b, type: 3}
+    Hp: 15
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u6CBB\u7597\u795D\u798Fbuffer"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000028
+      cost: 0
+      aiType: 1
+      moveSpeed: 5.2
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 25
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000029
+    type: 0
+    name: "\u6E38\u4FA0\u9A91\u58EB"
+    sprite: {fileID: 21300000, guid: 0144dfc494720fa4485fa6f1925671f2, type: 3}
+    Hp: 40
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u524D\u6392\u5766\u514B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000029
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.3
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 4
+      chaseTime: 0
+      attackWaitTime: 0.6
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 2
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000030
+    type: 0
+    name: "\u6811\u4EBA"
+    sprite: {fileID: 21300000, guid: 4f2706ab6701c5743baec43de0fef327, type: 3}
+    Hp: 30
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u8840\u725B\u53EC\u5524\u7269"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000030
+      cost: 0
+      aiType: 0
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 2
+      chaseTime: 0
+      attackWaitTime: 0.8
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000031
+    type: 0
+    name: "\u8352\u91CE\u6CD5\u5E08"
+    sprite: {fileID: 21300000, guid: 2ae14a9e79ce494469990b83d64a27e9, type: 3}
+    Hp: 25
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u53EC\u5524\u5E08"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000031
+      cost: 0
+      aiType: 1
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 26
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000032
+    type: 0
+    name: "\u77EE\u4EBA\u96A7\u9053\u5DE5"
+    sprite: {fileID: 21300000, guid: 0232ccea44bdabe409ca649347283192, type: 3}
+    Hp: 24
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u4E2D\u7EA7\u6B65\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000032
+      cost: 0
+      aiType: 0
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 0.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000033
+    type: 0
+    name: "\u77EE\u4EBA\u6218\u58EB"
+    sprite: {fileID: 21300000, guid: 54955276e2a3e0049a4e440b6cdc0f34, type: 3}
+    Hp: 27
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u4E2D\u7EA7\u6B65\u5175+"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000033
+      cost: 0
+      aiType: 0
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 0.7
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000034
+    type: 0
+    name: "\u77EE\u4EBA\u98DE\u65A7\u624B"
+    sprite: {fileID: 21300000, guid: 377d8652c9744c34ea81e2fd08467a5b, type: 3}
+    Hp: 24
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u6B65\u5175\u4F34\u968F\u5C04\u624B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000034
+      cost: 0
+      aiType: 1
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 9
+      chaseTime: 0
+      attackWaitTime: 0.8
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000035
+    type: 0
+    name: "\u987D\u56FA\u6295\u77F3\u673A"
+    sprite: {fileID: 21300000, guid: 774874d80ed3ebd469451d624701eb72, type: 3}
+    Hp: 18
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u8FDC\u7A0B\u70AE\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000035
+      cost: 0
+      aiType: 1
+      moveSpeed: 4
+      defence: 10
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 28
+      chaseTime: 0
+      attackWaitTime: 2
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000036
+    type: 0
+    name: "\u77EE\u4EBA\u63B7\u5F39\u5175"
+    sprite: {fileID: 21300000, guid: 65ea9e282ec9226478c676ef3856fb5a, type: 3}
+    Hp: 24
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u6B65\u5175\u4F34\u968F\u70AE\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000036
+      cost: 0
+      aiType: 1
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 12
+      chaseTime: 0
+      attackWaitTime: 1.8
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000037
+    type: 0
+    name: "[WIP]\u917F\u9152\u5927\u5E08"
+    sprite: {fileID: 21300000, guid: 491fb94bf04d742439bfae1bfe70c126, type: 3}
+    Hp: 24
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u6B65\u5175\u4F34\u968Fbuffer"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000037
+      cost: 0
+      aiType: 0
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 9
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 2
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000038
+    type: 0
+    name: "\u730E\u5DEB\u4EBA"
+    sprite: {fileID: 21300000, guid: c0c2f87be4a88ac459511d8cbbf18dd7, type: 3}
+    Hp: 15
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u654C\u6CD5"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000038
+      cost: 0
+      aiType: 0
+      moveSpeed: 6
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 5
+      chaseTime: 0
+      attackWaitTime: 3
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u653E\u9010/\u94B1\u888B30"
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000039
+    type: 0
+    name: "\u7B26\u6587\u9B54\u50CF"
+    sprite: {fileID: 21300000, guid: 77a727e0f941e51428f7913ee5f0e6f4, type: 3}
+    Hp: 200
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "AoE\u5DE8\u517D"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000039
+      cost: 0
+      aiType: 0
+      moveSpeed: 4
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 10
+      chaseTime: 0
+      attackWaitTime: 2
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000040
+    type: 0
+    name: "\u738B\u56FD\u536B\u961F"
+    sprite: {fileID: 21300000, guid: cfbb4c6c192adb2469080bb8b5a9b595, type: 3}
+    Hp: 23
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u9AD8\u7EA7\u6B65\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000040
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 0.6
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000041
+    type: 0
+    name: "\u7687\u5BB6\u9A91\u58EB"
+    sprite: {fileID: 21300000, guid: d2694fdbdaae9b240ae2b602b84c3767, type: 3}
+    Hp: 23
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u9AD8\u7EA7\u6B65\u5175+"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000041
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.3
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 15, y: 15, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 0.6
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000042
+    type: 0
+    name: "\u94C1\u7532\u706B\u67AA\u624B"
+    sprite: {fileID: 21300000, guid: 68ae88e801073044b9d31274d87b0fe7, type: 3}
+    Hp: 20
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u540E\u6392\u5C04\u624B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000042
+      cost: 0
+      aiType: 1
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 18
+      chaseTime: 0
+      attackWaitTime: 3
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000043
+    type: 0
+    name: "\u7CBE\u7075\u795E\u5C04\u624B"
+    sprite: {fileID: 21300000, guid: 43ba0822667e95649a2569eeb82e38b7, type: 3}
+    Hp: 23
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u9B54\u6CD5\u540E\u6392\u5C04\u624B"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000043
+      cost: 0
+      aiType: 1
+      moveSpeed: 5.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 33
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000044
+    type: 0
+    name: "\u5723\u5802\u4F20\u6559\u58EB"
+    sprite: {fileID: 21300000, guid: c43e64a2644513647bc5f7763169d375, type: 3}
+    Hp: 70
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u654C\u6CD5\u7CBE\u82F1"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000044
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 3
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71/\u653E\u9010/\u94B1\u888B30"
+      bloodDrop: 15
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000045
+    type: 0
+    name: "[WIP]\u767D\u8863\u4E3B\u6559"
+    sprite: {fileID: 21300000, guid: c7202f26681582d4da76133509b3f552, type: 3}
+    Hp: 30
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: healer
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000045
+      cost: 0
+      aiType: 1
+      moveSpeed: 4.3
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 8
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000046
+    type: 0
+    name: "\u5B66\u9662\u6CD5\u5E08"
+    sprite: {fileID: 21300000, guid: cad1a34c1100a9545b894f892674c33e, type: 3}
+    Hp: 18
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u9B54\u6CD5\u70AE\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000046
+      cost: 0
+      aiType: 1
+      moveSpeed: 4.3
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 27
+      chaseTime: 0
+      attackWaitTime: 1.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 2
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000047
+    type: 0
+    name: "\u88C5\u7532\u5217\u8F66"
+    sprite: {fileID: 21300000, guid: 4607df583aed20b45a2cea46bce260b1, type: 3}
+    Hp: 45
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u6DF7\u5408\u70AE\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000047
+      cost: 0
+      aiType: 1
+      moveSpeed: 4.1
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 35
+      chaseTime: 0
+      attackWaitTime: 2.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - 0
+      bloodDrop: 1
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000048
+    type: 0
+    name: "\u94A2\u96E8\u8FEB\u51FB\u70AE"
+    sprite: {fileID: 21300000, guid: 894db781610b0804f9b5c38ab6cc33c0, type: 3}
+    Hp: 20
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u5E7F\u57DF\u70AE\u5175"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000048
+      cost: 0
+      aiType: 1
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 20
+      chaseTime: 0
+      attackWaitTime: 3
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000049
+    type: 0
+    name: "\u82F1\u7075\u6218\u58EB"
+    sprite: {fileID: 21300000, guid: d9eb92afc55ff08459f4c35852c83639, type: 3}
+    Hp: 20
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u7075\u4F53\u6218\u58EB"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000049
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 2
+      chaseTime: 0
+      attackWaitTime: 0.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000050
+    type: 0
+    name: "\u82F1\u7075\u6807\u67AA\u624B"
+    sprite: {fileID: 21300000, guid: 55c4c66b5a4e1e14b80f4c90532d2c2a, type: 3}
+    Hp: 20
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u7075\u4F53\u957F\u624B\u6218\u58EB"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000050
+      cost: 0
+      aiType: 0
+      moveSpeed: 5.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 4
+      chaseTime: 0
+      attackWaitTime: 0.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000051
+    type: 0
+    name: "\u82F1\u7075\u55B7\u706B\u8005"
+    sprite: {fileID: 21300000, guid: c0de7d7d4bc84ea4faddca84b9e1e10f, type: 3}
+    Hp: 18
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u7075\u4F53Aoe\u6218\u58EB"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000051
+      cost: 0
+      aiType: 0
+      moveSpeed: 4.5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 7
+      chaseTime: 0
+      attackWaitTime: 0.5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u65E0\u8840\u8005"
+      bloodDrop: 0
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000052
+    type: 0
+    name: "\u5F81\u6218\u5929\u4F7F"
+    sprite: {fileID: 21300000, guid: 7718df4c28c419047948118af778b362, type: 3}
+    Hp: 80
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u9B54\u6CD5\u8840\u725B\u6218\u58EB"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000052
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 5
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 10
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000053
+    type: 0
+    name: "\u548F\u5531\u5929\u4F7F"
+    sprite: {fileID: 21300000, guid: 57292ad43deb40d489e13b645d434990, type: 3}
+    Hp: 300
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u5168\u80FD\u5766\u514B\u6218\u58EB"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000053
+      cost: 0
+      aiType: 0
+      moveSpeed: 5
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 5
+      chaseTime: 0
+      attackWaitTime: 1
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 10
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000054
+    type: 0
+    name: "\u51C0\u5316\u5F15\u64CE"
+    sprite: {fileID: 21300000, guid: ed01157b3e6f6b84a993ededfb244837, type: 3}
+    Hp: 600
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u9A71\u9B54\u5149\u73AF"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000054
+      cost: 0
+      aiType: 1
+      moveSpeed: 3
+      defence: 10
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 35
+      chaseTime: 0
+      attackWaitTime: 5
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71"
+      bloodDrop: 20
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000055
+    type: 0
+    name: "\u5973\u6B66\u795E"
+    sprite: {fileID: 21300000, guid: a91da052498405a4f9189224397b37dc, type: 3}
+    Hp: 250
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.1
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u5FEB\u901F\u523A\u5BA2"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000055
+      cost: 0
+      aiType: 0
+      moveSpeed: 3
+      defence: 10
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 5
+      chaseTime: 0
+      attackWaitTime: 2
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71/\u653E\u9010"
+      bloodDrop: 10
+      skillIds:
+      - 0
+      skills: []
+      skillLevels:
+      - 0
+      descriptionAndStory:
+      - 0
+      - 0
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  - ID: 1000056
+    type: 0
+    name: "\u5927\u5929\u4F7F"
+    sprite: {fileID: 21300000, guid: 8cc9a4339ac249d4d8c63a6d6281d074, type: 3}
+    Hp: 250
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0.5
+    hpBarOffset: {x: 0, y: 18, z: 0}
+    introduct: "\u5149\u73AF\u5DE8\u517D"
+    modleSize: 1.5
+    shadowSize: {x: 6, y: 2, z: 0}
+    shadowOffset: 0.5
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 1000056
+      cost: 0
+      aiType: 0
+      moveSpeed: 3
+      defence: 10
+      defence_far: 10
+      defence_magic: 10
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 35, y: 25, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 6
+      chaseTime: 0
+      attackWaitTime: 3
+      attackTime: 0.5
+      missileId: 33000001
+      specialTags:
+      - "\u4E0D\u52A8\u5982\u5C71/\u653E\u9010"
+      bloodDrop: 10
       skillIds:
       - 0
       skills: []
@@ -1037,76 +3332,481 @@ MonoBehaviour:
   buildingDatas: []
   cardDatas:
   - id: 21000001
-    name: "\u6076\u9B54\u5C0F\u5175*4"
+    name: Imps*4
     sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
     flagSprite: {fileID: 21300000, guid: 4023f108d38a0ca40a18f7451c0245a5, type: 3}
-    moneyCost: 10
-    bloodCost: 10
+    moneyCost: 5
+    bloodCost: 2
     formationId: 4
     soldierId: 1000001
     content: {fileID: 0}
   - id: 21000002
-    name: "\u72EC\u773C\u6076\u9B54*3"
+    name: Cyclopean Imps*3
     sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
     flagSprite: {fileID: 21300000, guid: 37854454a721a3f4f87bd5c694f1d697, type: 3}
-    moneyCost: 20
-    bloodCost: 10
+    moneyCost: 15
+    bloodCost: 4
     formationId: 3
     soldierId: 1000003
     content: {fileID: 0}
   - id: 21000003
-    name: "\u70AE\u5175*2"
+    name: Hellfire Mortar*2
     sprite: {fileID: 21300000, guid: 327eca966f1b04549b356b0d12c012f6, type: 3}
     flagSprite: {fileID: 21300000, guid: 767781f26f669144c98914b10b7a3b9a, type: 3}
-    moneyCost: 40
-    bloodCost: 25
+    moneyCost: 30
+    bloodCost: 10
     formationId: 2
     soldierId: 1000009
     content: {fileID: 0}
   - id: 21000004
-    name: "\u7194\u7089\u86DE\u8753*3"
+    name: Furnance Slugs*3
     sprite: {fileID: 21300000, guid: 8228375f9698f8a419e415c918753dd2, type: 3}
     flagSprite: {fileID: 21300000, guid: 61fa88a972180fe4083764689df3a15b, type: 3}
-    moneyCost: 20
-    bloodCost: 10
+    moneyCost: 40
+    bloodCost: 4
     formationId: 3
     soldierId: 1000005
     content: {fileID: 0}
   - id: 21000005
-    name: "\u5904\u5211\u8005*2"
+    name: Executioner*2
     sprite: {fileID: 21300000, guid: 0ce94e54587e35c4da44f1404256a36c, type: 3}
     flagSprite: {fileID: 21300000, guid: 9aa0f072889962d4f8c381db230eb028, type: 3}
-    moneyCost: 10
-    bloodCost: 10
+    moneyCost: 0
+    bloodCost: 0
     formationId: 2
     soldierId: 1000006
     content: {fileID: 0}
   - id: 21000006
-    name: "\u6076\u9B54\u9886\u4E3B"
+    name: Demon Lord
     sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
-    flagSprite: {fileID: 0}
+    flagSprite: {fileID: 21300000, guid: d91704cfda237cd46be9f5e9b2ffb1e0, type: 3}
     moneyCost: 0
     bloodCost: 0
     formationId: 1
     soldierId: 4000001
     content: {fileID: 0}
   - id: 21000007
-    name: "\u9AB7\u9AC5\u5175"
+    name: Skeleton*5
     sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
     flagSprite: {fileID: 21300000, guid: ca4eca51012f8cb44af5edaa4de19790, type: 3}
     moneyCost: 10
-    bloodCost: 10
+    bloodCost: 12
     formationId: 5
     soldierId: 1000010
     content: {fileID: 0}
   - id: 21000008
-    name: "\u707E\u7978\u5DEB\u5E08"
+    name: Calamity Mage*2
     sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
     flagSprite: {fileID: 21300000, guid: 838cc8b96537da3409f82ab076e84718, type: 3}
     moneyCost: 30
-    bloodCost: 30
+    bloodCost: 5
     formationId: 2
     soldierId: 1000011
+    content: {fileID: 0}
+  - id: 21000009
+    name: Hell Ligeionnare*3
+    sprite: {fileID: 21300000, guid: 2614ff22f50acf94e8638827f32883b4, type: 3}
+    flagSprite: {fileID: 21300000, guid: d91704cfda237cd46be9f5e9b2ffb1e0, type: 3}
+    moneyCost: 30
+    bloodCost: 20
+    formationId: 3
+    soldierId: 1000012
+    content: {fileID: 0}
+  - id: 21000011
+    name: Phantom*5
+    sprite: {fileID: 21300000, guid: cd1c8d255d508d24295b88073d0d1be4, type: 3}
+    flagSprite: {fileID: 21300000, guid: 016871e88fffc024d97712f987969286, type: 3}
+    moneyCost: 16
+    bloodCost: 0
+    formationId: 5
+    soldierId: 1000013
+    content: {fileID: 0}
+  - id: 21000012
+    name: Blood Efigy*1
+    sprite: {fileID: 21300000, guid: d8b8c19fd8e953c4f8eb92f30eae7cac, type: 3}
+    flagSprite: {fileID: 21300000, guid: a9e557981ddff8642b0532708e66f074, type: 3}
+    moneyCost: 30
+    bloodCost: 30
+    formationId: 1
+    soldierId: 1000014
+    content: {fileID: 0}
+  - id: 21000013
+    name: Gargoyle+4
+    sprite: {fileID: 21300000, guid: dca3dc6b91c9e544783ad1fe06bc0e29, type: 3}
+    flagSprite: {fileID: 21300000, guid: 7d2a6d0c3a16e7246bd28e1137f0ebe6, type: 3}
+    moneyCost: 15
+    bloodCost: 2
+    formationId: 4
+    soldierId: 1000015
+    content: {fileID: 0}
+  - id: 21000014
+    name: Grim Avatar*1
+    sprite: {fileID: 21300000, guid: ed2a31a8958d3d746bb9a5f1a5ae1f6a, type: 3}
+    flagSprite: {fileID: 21300000, guid: 7f458496f0d952046950d26b8d8d9d35, type: 3}
+    moneyCost: 35
+    bloodCost: 12
+    formationId: 1
+    soldierId: 1000016
+    content: {fileID: 0}
+  - id: 21000015
+    name: Nightmare*5
+    sprite: {fileID: 21300000, guid: 1a6b7345947709a4fab8236c6f78864a, type: 3}
+    flagSprite: {fileID: 21300000, guid: 29e9660c32c0a48469fa48777827b317, type: 3}
+    moneyCost: 16
+    bloodCost: 2
+    formationId: 5
+    soldierId: 1000017
+    content: {fileID: 0}
+  - id: 21000016
+    name: Necromancer*1
+    sprite: {fileID: 21300000, guid: 093172b4730ed194f81352eb87cfd42f, type: 3}
+    flagSprite: {fileID: 21300000, guid: 0a7466bb1dcf35e41a3f6596550fe0c7, type: 3}
+    moneyCost: 10
+    bloodCost: 12
+    formationId: 1
+    soldierId: 1000018
+    content: {fileID: 0}
+  - id: 21000017
+    name: Headless Knight*3
+    sprite: {fileID: 21300000, guid: 0d241ac15d47e384998d6308ab0dca15, type: 3}
+    flagSprite: {fileID: 21300000, guid: 0af26bbcca9ac044fbc005a6094e291e, type: 3}
+    moneyCost: 10
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000019
+    content: {fileID: 0}
+  - id: 21000018
+    name: Hell Knight*3
+    sprite: {fileID: 21300000, guid: 6defde429a0d2fd4bb09866c4147545d, type: 3}
+    flagSprite: {fileID: 21300000, guid: f67c349c8a8f613419d91d4b7674b903, type: 3}
+    moneyCost: 40
+    bloodCost: 30
+    formationId: 3
+    soldierId: 1000020
+    content: {fileID: 0}
+  - id: 21000019
+    name: Vampire*3
+    sprite: {fileID: 21300000, guid: 3b2909ee9afc8664d916bf196afd34b1, type: 3}
+    flagSprite: {fileID: 21300000, guid: 4c04f968eeb0db04c82dc0e0a3d84815, type: 3}
+    moneyCost: 6
+    bloodCost: 8
+    formationId: 3
+    soldierId: 1000021
+    content: {fileID: 0}
+  - id: 21000020
+    name: Volcanic Giant*1
+    sprite: {fileID: 21300000, guid: 1114fe5963167a24583b5686d7ee7c9a, type: 3}
+    flagSprite: {fileID: 21300000, guid: 85d37abb674f6f54aa0cdeb23fcc01f7, type: 3}
+    moneyCost: 40
+    bloodCost: 20
+    formationId: 1
+    soldierId: 1000022
+    content: {fileID: 0}
+  - id: 21000021
+    name: Ligeionnare Musketeers*3
+    sprite: {fileID: 21300000, guid: 7070b1ccc5a0d144e9b42e3773d55555, type: 3}
+    flagSprite: {fileID: 21300000, guid: 1908889e535b8cd4687192c0ab773fe2, type: 3}
+    moneyCost: 15
+    bloodCost: 8
+    formationId: 3
+    soldierId: 1000023
+    content: {fileID: 0}
+  - id: 21000022
+    name: Castle Obsidian*1
+    sprite: {fileID: 21300000, guid: 57df24887c6026d41be89d8580dc5798, type: 3}
+    flagSprite: {fileID: 21300000, guid: 8665cec7011bce346ae24815027df2d5, type: 3}
+    moneyCost: 50
+    bloodCost: 20
+    formationId: 1
+    soldierId: 1000024
+    content: {fileID: 0}
+  - id: 21000023
+    name: Devil Butcher*2
+    sprite: {fileID: 21300000, guid: f1166286c2139d846b9362f01585c10e, type: 3}
+    flagSprite: {fileID: 21300000, guid: d75802bd455c6754ebf4643c91449d7d, type: 3}
+    moneyCost: 13
+    bloodCost: 2
+    formationId: 2
+    soldierId: 1000025
+    content: {fileID: 0}
+  - id: 21000024
+    name: PH
+    sprite: {fileID: 21300000, guid: 4f6db7a951b4f4648b8b201b303fbd67, type: 3}
+    flagSprite: {fileID: 21300000, guid: 4f3374c065bb36d40b076bbc4854e83f, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 4
+    soldierId: 1000026
+    content: {fileID: 0}
+  - id: 21000025
+    name: PH
+    sprite: {fileID: 21300000, guid: da881e0a7a9624e4184556544f6e9289, type: 3}
+    flagSprite: {fileID: 21300000, guid: f83e4c9dd1ffcfa41a97dc520f301170, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000027
+    content: {fileID: 0}
+  - id: 21000026
+    name: PH
+    sprite: {fileID: 21300000, guid: 7bf3ff54d84cfe844bc3fc379861c31b, type: 3}
+    flagSprite: {fileID: 21300000, guid: 939663f88b120f54fbe5dc0692e3deb9, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 2
+    soldierId: 1000028
+    content: {fileID: 0}
+  - id: 21000027
+    name: PH
+    sprite: {fileID: 21300000, guid: 0144dfc494720fa4485fa6f1925671f2, type: 3}
+    flagSprite: {fileID: 21300000, guid: f59734968023e12409cbc640de052c1b, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000029
+    content: {fileID: 0}
+  - id: 21000028
+    name: PH
+    sprite: {fileID: 21300000, guid: 4f2706ab6701c5743baec43de0fef327, type: 3}
+    flagSprite: {fileID: 21300000, guid: 25a9afe0c90b2044d82077e715c5a422, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000030
+    content: {fileID: 0}
+  - id: 21000029
+    name: PH
+    sprite: {fileID: 21300000, guid: 2ae14a9e79ce494469990b83d64a27e9, type: 3}
+    flagSprite: {fileID: 21300000, guid: 7d25be31bc74693468f2431b0e969d56, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000031
+    content: {fileID: 0}
+  - id: 21000030
+    name: PH
+    sprite: {fileID: 21300000, guid: 0232ccea44bdabe409ca649347283192, type: 3}
+    flagSprite: {fileID: 21300000, guid: a18c17647fac69445bc5129d846138d1, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000032
+    content: {fileID: 0}
+  - id: 21000031
+    name: PH
+    sprite: {fileID: 21300000, guid: 54955276e2a3e0049a4e440b6cdc0f34, type: 3}
+    flagSprite: {fileID: 21300000, guid: ff232f452c8b19c43a2da4843ad7455e, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 4
+    soldierId: 1000033
+    content: {fileID: 0}
+  - id: 21000032
+    name: PH
+    sprite: {fileID: 21300000, guid: 377d8652c9744c34ea81e2fd08467a5b, type: 3}
+    flagSprite: {fileID: 21300000, guid: 2cc3b92db693b144e8b42986d5b2ecb5, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000034
+    content: {fileID: 0}
+  - id: 21000033
+    name: PH
+    sprite: {fileID: 21300000, guid: 774874d80ed3ebd469451d624701eb72, type: 3}
+    flagSprite: {fileID: 21300000, guid: c7c97d0e5154ad244b6d608820cd1f1f, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000035
+    content: {fileID: 0}
+  - id: 21000034
+    name: PH
+    sprite: {fileID: 21300000, guid: 65ea9e282ec9226478c676ef3856fb5a, type: 3}
+    flagSprite: {fileID: 21300000, guid: 48022bb4a69ab3c4eb590b2392366672, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000036
+    content: {fileID: 0}
+  - id: 21000035
+    name: PH
+    sprite: {fileID: 21300000, guid: 491fb94bf04d742439bfae1bfe70c126, type: 3}
+    flagSprite: {fileID: 21300000, guid: 58049daf9a10803488a9c36c19fe7b7d, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 2
+    soldierId: 1000037
+    content: {fileID: 0}
+  - id: 21000036
+    name: PH
+    sprite: {fileID: 21300000, guid: c0c2f87be4a88ac459511d8cbbf18dd7, type: 3}
+    flagSprite: {fileID: 21300000, guid: 0405ad304ac603943a26b37ee293be81, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 2
+    soldierId: 1000038
+    content: {fileID: 0}
+  - id: 21000037
+    name: PH
+    sprite: {fileID: 21300000, guid: 77a727e0f941e51428f7913ee5f0e6f4, type: 3}
+    flagSprite: {fileID: 21300000, guid: 3c64542413ed2d045a097732af50c52b, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000039
+    content: {fileID: 0}
+  - id: 21000038
+    name: PH
+    sprite: {fileID: 21300000, guid: cfbb4c6c192adb2469080bb8b5a9b595, type: 3}
+    flagSprite: {fileID: 21300000, guid: 1f33f178d5cb3ec47ab58c79dd4172de, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 4
+    soldierId: 1000040
+    content: {fileID: 0}
+  - id: 21000039
+    name: PH
+    sprite: {fileID: 21300000, guid: d2694fdbdaae9b240ae2b602b84c3767, type: 3}
+    flagSprite: {fileID: 21300000, guid: 897586642b1ef244180e627d0328ccbe, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 4
+    soldierId: 1000041
+    content: {fileID: 0}
+  - id: 21000040
+    name: PH
+    sprite: {fileID: 21300000, guid: 68ae88e801073044b9d31274d87b0fe7, type: 3}
+    flagSprite: {fileID: 21300000, guid: 9abbc6bb50222244a80d58c9760da94e, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000042
+    content: {fileID: 0}
+  - id: 21000041
+    name: PH
+    sprite: {fileID: 21300000, guid: 43ba0822667e95649a2569eeb82e38b7, type: 3}
+    flagSprite: {fileID: 21300000, guid: 0ab913e98bb08a549be78c9bd1349ba9, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000043
+    content: {fileID: 0}
+  - id: 21000042
+    name: PH
+    sprite: {fileID: 21300000, guid: c43e64a2644513647bc5f7763169d375, type: 3}
+    flagSprite: {fileID: 21300000, guid: 8ee4342f10006cf428d2f83ee48ded07, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 2
+    soldierId: 1000044
+    content: {fileID: 0}
+  - id: 21000043
+    name: PH
+    sprite: {fileID: 21300000, guid: c7202f26681582d4da76133509b3f552, type: 3}
+    flagSprite: {fileID: 21300000, guid: 4adcd48c1e917ab47a1c68125f4e4c5d, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000045
+    content: {fileID: 0}
+  - id: 21000044
+    name: PH
+    sprite: {fileID: 21300000, guid: cad1a34c1100a9545b894f892674c33e, type: 3}
+    flagSprite: {fileID: 21300000, guid: 99cc392282f95dc4191a5f4f80603b33, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000046
+    content: {fileID: 0}
+  - id: 21000045
+    name: PH
+    sprite: {fileID: 21300000, guid: 4607df583aed20b45a2cea46bce260b1, type: 3}
+    flagSprite: {fileID: 21300000, guid: fcf573cb51394a347ad30421593c8105, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000047
+    content: {fileID: 0}
+  - id: 21000046
+    name: PH
+    sprite: {fileID: 21300000, guid: 894db781610b0804f9b5c38ab6cc33c0, type: 3}
+    flagSprite: {fileID: 21300000, guid: 486c17ebe755bc94cb0b1301efe2c244, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000048
+    content: {fileID: 0}
+  - id: 21000047
+    name: PH
+    sprite: {fileID: 21300000, guid: d9eb92afc55ff08459f4c35852c83639, type: 3}
+    flagSprite: {fileID: 21300000, guid: 464117506dadee04994a4bff7010cd80, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 4
+    soldierId: 1000049
+    content: {fileID: 0}
+  - id: 21000048
+    name: PH
+    sprite: {fileID: 21300000, guid: 55c4c66b5a4e1e14b80f4c90532d2c2a, type: 3}
+    flagSprite: {fileID: 21300000, guid: 1e235e6875d0941429490ad8aadadf18, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000050
+    content: {fileID: 0}
+  - id: 21000049
+    name: PH
+    sprite: {fileID: 21300000, guid: c0de7d7d4bc84ea4faddca84b9e1e10f, type: 3}
+    flagSprite: {fileID: 21300000, guid: 0744f4533d6eadb4f850959cb276f796, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 3
+    soldierId: 1000051
+    content: {fileID: 0}
+  - id: 21000050
+    name: PH
+    sprite: {fileID: 21300000, guid: 7718df4c28c419047948118af778b362, type: 3}
+    flagSprite: {fileID: 21300000, guid: 41fcd0ae4ff127841819b7569cef36f6, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 2
+    soldierId: 1000052
+    content: {fileID: 0}
+  - id: 21000051
+    name: PH
+    sprite: {fileID: 21300000, guid: 57292ad43deb40d489e13b645d434990, type: 3}
+    flagSprite: {fileID: 21300000, guid: efbff1a7008d257418785b10bc5b70f7, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000053
+    content: {fileID: 0}
+  - id: 21000052
+    name: PH
+    sprite: {fileID: 21300000, guid: ed01157b3e6f6b84a993ededfb244837, type: 3}
+    flagSprite: {fileID: 21300000, guid: ed3aa7efbd7bf7e4d8768be52dd535dd, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000054
+    content: {fileID: 0}
+  - id: 21000053
+    name: PH
+    sprite: {fileID: 21300000, guid: a91da052498405a4f9189224397b37dc, type: 3}
+    flagSprite: {fileID: 21300000, guid: 550d162aa6e3a92478c0df9e768720ee, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000055
+    content: {fileID: 0}
+  - id: 21000054
+    name: PH
+    sprite: {fileID: 21300000, guid: 8cc9a4339ac249d4d8c63a6d6281d074, type: 3}
+    flagSprite: {fileID: 21300000, guid: d0ab66b9b290d1a42b7c96b642b63721, type: 3}
+    moneyCost: 0
+    bloodCost: 0
+    formationId: 1
+    soldierId: 1000056
     content: {fileID: 0}
   missileDatas:
   - id: 31000001
@@ -1229,66 +3929,6 @@ MonoBehaviour:
     aoeAmount: 0
     arcMoveTime: 1.5
     arcMoveHeight: 30
-  - id: 31000005
-    name: "\u707E\u7978\u5DEB\u5E08\u7684\u7BAD\uFF08\u521D\u59CB\uFF09"
-    damageDataId: 41000009
-    damageData:
-      id: 
-      name: 
-      physicDamage: 0
-      farDamage: 0
-      magicDamage: 0
-      buffs: []
-      specialEffects: []
-      vfxId: 
-      vfxSize: 0
-      startDamageWiatTime: 0
-    speed: 30
-    moveType: 0
-    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
-    useLifeTime: 0
-    lifeTime: 0
-    useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
-    aoeWaitTime: 0
-    createNewObjectWhenDie: 1
-    objectCreatedWhenDieId: 31000006
-    startObjectId: 0
-    endObjectId: 0
-    trailId: 0
-    aoeAmount: 0
-    arcMoveTime: 0
-    arcMoveHeight: 0
-  - id: 31000006
-    name: "\u707E\u7978\u5DEB\u5E08\u7684\u7BAD\uFF08\u8DF3\u5F39\uFF09"
-    damageDataId: 41000009
-    damageData:
-      id: 
-      name: 
-      physicDamage: 0
-      farDamage: 0
-      magicDamage: 0
-      buffs: []
-      specialEffects: []
-      vfxId: 
-      vfxSize: 0
-      startDamageWiatTime: 0
-    speed: 30
-    moveType: 3
-    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
-    useLifeTime: 0
-    lifeTime: 0
-    useAoe: 0
-    aoeArea: {x: 0, y: 0, z: 0}
-    aoeWaitTime: 0
-    createNewObjectWhenDie: 0
-    objectCreatedWhenDieId: 0
-    startObjectId: 0
-    endObjectId: 0
-    trailId: 0
-    aoeAmount: 0
-    arcMoveTime: 0
-    arcMoveHeight: 0
   - id: 32000001
     name: "\u8303\u56F4\u4F24\u5BB31"
     damageDataId: 41000001
@@ -1529,6 +4169,216 @@ MonoBehaviour:
     aoeAmount: 0
     arcMoveTime: 0
     arcMoveHeight: 0
+  - id: 33000004
+    name: "\u5355\u4F53\u4F24\u5BB3_\u8FDC\u7A0B_\u4E22\u9AB7\u9AC5\u5934"
+    damageDataId: 41000010
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 18
+    moveType: 2
+    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 1.5
+    arcMoveHeight: 5
+  - id: 33000005
+    name: "\u5355\u4F53\u4F24\u5BB3_\u8FD1\u6218_\u5730\u72F1\u519B\u56E2"
+    damageDataId: 41000011
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 0
+    moveType: 2
+    sprite: {fileID: 0}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
+  - id: 33000006
+    name: "\u70AE\u7070\u8FD1\u6218\u6320\u75D2\u75D2"
+    damageDataId: 41000012
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 0
+    moveType: 2
+    sprite: {fileID: 0}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
+  - id: 33000007
+    name: "\u77F3\u50CF\u9B3C\u653B\u51FB"
+    damageDataId: 41000013
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 2
+    moveType: 0
+    sprite: {fileID: 0}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
+  - id: 33000008
+    name: "\u8FD1\u6218-\u5C0F"
+    damageDataId: 41000014
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 0
+    moveType: 2
+    sprite: {fileID: 0}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
+  - id: 33000009
+    name: "\u8FD1\u6218-\u4E2D"
+    damageDataId: 41000015
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 0
+    moveType: 2
+    sprite: {fileID: 0}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
+  - id: 33000010
+    name: "\u8FD1\u6218-\u5927"
+    damageDataId: 41000016
+    damageData:
+      id: 
+      name: 
+      physicDamage: 0
+      farDamage: 0
+      magicDamage: 0
+      buffs: []
+      specialEffects: []
+      vfxId: 
+      vfxSize: 0
+      startDamageWiatTime: 0
+    speed: 0
+    moveType: 2
+    sprite: {fileID: 0}
+    useLifeTime: 0
+    lifeTime: 0
+    useAoe: 0
+    aoeArea: {x: 0, y: 0, z: 0}
+    aoeWaitTime: 0
+    createNewObjectWhenDie: 0
+    objectCreatedWhenDieId: 0
+    startObjectId: 0
+    endObjectId: 0
+    trailId: 0
+    aoeAmount: 0
+    arcMoveTime: 0
+    arcMoveHeight: 0
   damageDatas:
   - id: 41000000
     name: "\u65E0\u4F24\u5BB3"
@@ -1544,7 +4394,7 @@ MonoBehaviour:
     startDamageWiatTime: 0
   - id: 41000001
     name: "\u7269\u7406_\u8FD1\u6218_1"
-    physicDamage: 1
+    physicDamage: 2
     farDamage: 0
     magicDamage: 0
     buffs:
@@ -1592,7 +4442,7 @@ MonoBehaviour:
     startDamageWiatTime: 0
   - id: 41000005
     name: "\u7269\u7406_\u8FD1\u6218aoe_\u98CE\u8F66\u5DE8\u4EBA"
-    physicDamage: 20
+    physicDamage: 18
     farDamage: 0
     magicDamage: 0
     buffs:
@@ -1639,10 +4489,94 @@ MonoBehaviour:
     vfxSize: 0
     startDamageWiatTime: 0
   - id: 41000009
-    name: "\u9B54\u6CD5\u4F24\u5BB3_5"
+    name: "\u7269\u7406_\u8FDC\u7A0B_\u5F13\u7BAD"
+    physicDamage: 0
+    farDamage: 3
+    magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000010
+    name: "\u7269\u7406_\u8FDC\u7A0B_\u9AB7\u9AC5\u6295\u5C04\u7269"
+    physicDamage: 0
+    farDamage: 2
+    magicDamage: 1
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000011
+    name: "\u7269\u7406_\u8FD1\u6218_\u5730\u72F1\u519B\u56E2\u780D\u51FB"
+    physicDamage: 10
+    farDamage: 0
+    magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000012
+    name: "\u70AE\u7070\u8FD1\u6218\u6320\u75D2\u75D2"
+    physicDamage: 1
+    farDamage: 0
+    magicDamage: 1
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000013
+    name: "\u77F3\u50CF\u9B3C\u653B\u51FB"
     physicDamage: 0
     farDamage: 0
-    magicDamage: 5
+    magicDamage: 2.5
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000014
+    name: "\u8FD1\u6218-\u5C0F"
+    physicDamage: 2
+    farDamage: 0
+    magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000015
+    name: "\u8FD1\u6218-\u4E2D"
+    physicDamage: 6
+    farDamage: 1
+    magicDamage: 1
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 41000016
+    name: "\u8FD1\u6218-\u5927"
+    physicDamage: 15
+    farDamage: 0
+    magicDamage: 10
     buffs:
     - 0
     specialEffects:

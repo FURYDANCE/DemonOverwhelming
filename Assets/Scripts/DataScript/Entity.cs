@@ -122,6 +122,7 @@ namespace DemonOverwhelming
                 if (!spineObject && sprite == null)
                 {
                     sprite = gameObject.AddComponent<SpriteRenderer>();
+                    Debug.Log(parameter.sprite.name);
                     sprite.sprite = parameter.sprite;
                     sprite.sortingLayerName = "Layer1";
                     //…Ë÷√≤ƒ÷ 

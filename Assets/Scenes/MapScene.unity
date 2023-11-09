@@ -454,11 +454,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21790a6d0dac2b04ca0c2f1dc6d3bfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: "\u8FD9\u662F\u7B2C2\u5173"
+  levelName: SecondLevel
   targetSceneName: SampleScene
   levelSprite: {fileID: 0}
-  levelDescription: "\u8FD9\u662F\u7B2C2\u5173\u7684\u5267\u60C5\u4ECB\u7ECD"
-  leveltargetDescription: "\u8FD9\u662F\u7B2C2\u5173\u7684\u76EE\u6807\u63CF\u8FF0"
+  levelDescription: TEXT1
+  leveltargetDescription: TEXT1
   Selecting: 0
 --- !u!65 &35525302
 BoxCollider:
@@ -2291,11 +2291,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21790a6d0dac2b04ca0c2f1dc6d3bfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: "\u8FD9\u662F\u7B2C\u4E00\u5173"
+  levelName: FirstLevel
   targetSceneName: SampleScene
   levelSprite: {fileID: 0}
-  levelDescription: "\u8FD9\u662F\u7B2C\u4E00\u5173\u7684\u5267\u60C5\u4ECB\u7ECD"
-  leveltargetDescription: "\u8FD9\u662F\u7B2C\u4E00\u5173\u7684\u76EE\u6807\u63CF\u8FF0"
+  levelDescription: TEXT1
+  leveltargetDescription: TEXT1
   Selecting: 0
 --- !u!65 &583508283
 BoxCollider:
@@ -5763,11 +5763,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21790a6d0dac2b04ca0c2f1dc6d3bfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: "\u8FD9\u662F\u7B2C3\u5173"
+  levelName: ThridLevel
   targetSceneName: SampleScene
   levelSprite: {fileID: 0}
-  levelDescription: "\u8FD9\u662F\u7B2C3\u5173\u7684\u5267\u60C5\u4ECB\u7ECD"
-  leveltargetDescription: "\u8FD9\u662F\u7B2C3\u5173\u7684\u76EE\u6807\u63CF\u8FF0"
+  levelDescription: TEXT1
+  leveltargetDescription: TEXT1
   Selecting: 0
 --- !u!65 &1889571354
 BoxCollider:
