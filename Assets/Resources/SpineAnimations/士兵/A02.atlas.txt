@@ -1,0 +1,83 @@
+
+A02.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+右手臂
+  rotate: true
+  xy: 2, 726
+  size: 102, 114
+  orig: 102, 114
+  offset: 0, 0
+  index: -1
+右脚
+  rotate: true
+  xy: 400, 730
+  size: 76, 131
+  orig: 76, 131
+  offset: 0, 0
+  index: -1
+右腿
+  rotate: true
+  xy: 118, 752
+  size: 76, 143
+  orig: 76, 143
+  offset: 0, 0
+  index: -1
+头
+  rotate: true
+  xy: 609, 808
+  size: 184, 210
+  orig: 184, 210
+  offset: 0, 0
+  index: -1
+左大臂
+  rotate: true
+  xy: 263, 732
+  size: 74, 135
+  orig: 74, 135
+  offset: 0, 0
+  index: -1
+左手掌
+  rotate: false
+  xy: 2, 830
+  size: 375, 165
+  orig: 375, 165
+  offset: 0, 0
+  index: -1
+左手臂
+  rotate: true
+  xy: 796, 713
+  size: 63, 75
+  orig: 63, 75
+  offset: 0, 0
+  index: -1
+左脚
+  rotate: true
+  xy: 533, 730
+  size: 76, 130
+  orig: 76, 130
+  offset: 0, 0
+  index: -1
+左腿
+  rotate: true
+  xy: 665, 730
+  size: 76, 129
+  orig: 76, 129
+  offset: 0, 0
+  index: -1
+盾牌
+  rotate: false
+  xy: 379, 808
+  size: 228, 187
+  orig: 228, 187
+  offset: 0, 0
+  index: -1
+身体
+  rotate: false
+  xy: 821, 778
+  size: 174, 217
+  orig: 174, 217
+  offset: 0, 0
+  index: -1

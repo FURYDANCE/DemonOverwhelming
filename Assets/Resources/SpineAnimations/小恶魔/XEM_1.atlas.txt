@@ -1,0 +1,90 @@
+
+XEM_1.png
+size: 2048, 2048
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+XEM_0
+  rotate: false
+  xy: 2, 468
+  size: 619, 352
+  orig: 619, 352
+  offset: 0, 0
+  index: -1
+XEM_1
+  rotate: false
+  xy: 45, 120
+  size: 395, 347
+  orig: 395, 347
+  offset: 0, 0
+  index: -1
+XEM_10
+  rotate: false
+  xy: 557, 822
+  size: 89, 145
+  orig: 89, 145
+  offset: 0, 0
+  index: -1
+XEM_11
+  rotate: false
+  xy: 2, 2
+  size: 235, 116
+  orig: 235, 116
+  offset: 0, 0
+  index: -1
+XEM_2
+  rotate: false
+  xy: 2, 822
+  size: 553, 467
+  orig: 553, 467
+  offset: 0, 0
+  index: -1
+XEM_3
+  rotate: false
+  xy: 2, 1291
+  size: 553, 467
+  orig: 553, 467
+  offset: 0, 0
+  index: -1
+XEM_4
+  rotate: false
+  xy: 557, 969
+  size: 105, 122
+  orig: 105, 122
+  offset: 0, 0
+  index: -1
+XEM_5
+  rotate: false
+  xy: 442, 33
+  size: 93, 146
+  orig: 93, 146
+  offset: 0, 0
+  index: -1
+XEM_6
+  rotate: false
+  xy: 442, 181
+  size: 177, 286
+  orig: 177, 286
+  offset: 0, 0
+  index: -1
+XEM_7
+  rotate: true
+  xy: 239, 15
+  size: 103, 200
+  orig: 103, 200
+  offset: 0, 0
+  index: -1
+XEM_8
+  rotate: false
+  xy: 557, 1093
+  size: 81, 120
+  orig: 81, 120
+  offset: 0, 0
+  index: -1
+XEM_9
+  rotate: false
+  xy: 537, 58
+  size: 110, 121
+  orig: 110, 121
+  offset: 0, 0
+  index: -1
