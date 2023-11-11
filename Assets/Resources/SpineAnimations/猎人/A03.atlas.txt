@@ -1,0 +1,104 @@
+
+A03.png
+size: 512, 512
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+右大臂
+  rotate: false
+  xy: 103, 160
+  size: 85, 123
+  orig: 85, 123
+  offset: 0, 0
+  index: -1
+右手掌
+  rotate: false
+  xy: 433, 333
+  size: 73, 67
+  orig: 73, 67
+  offset: 0, 0
+  index: -1
+右手臂
+  rotate: false
+  xy: 432, 74
+  size: 78, 86
+  orig: 78, 86
+  offset: 0, 0
+  index: -1
+右脚
+  rotate: false
+  xy: 2, 155
+  size: 99, 128
+  orig: 99, 128
+  offset: 0, 0
+  index: -1
+左脚
+  rotate: false
+  xy: 2, 155
+  size: 99, 128
+  orig: 99, 128
+  offset: 0, 0
+  index: -1
+右腿
+  rotate: true
+  xy: 218, 186
+  size: 108, 130
+  orig: 108, 130
+  offset: 0, 0
+  index: -1
+左腿
+  rotate: true
+  xy: 218, 186
+  size: 108, 130
+  orig: 108, 130
+  offset: 0, 0
+  index: -1
+头
+  rotate: false
+  xy: 2, 285
+  size: 214, 225
+  orig: 214, 225
+  offset: 0, 0
+  index: -1
+左大臂
+  rotate: false
+  xy: 433, 402
+  size: 70, 108
+  orig: 70, 108
+  offset: 0, 0
+  index: -1
+左手掌
+  rotate: true
+  xy: 109, 80
+  size: 78, 90
+  orig: 78, 90
+  offset: 0, 0
+  index: -1
+左手臂
+  rotate: false
+  xy: 2, 66
+  size: 105, 87
+  orig: 105, 87
+  offset: 0, 0
+  index: -1
+弓
+  rotate: true
+  xy: 205, 113
+  size: 197, 275
+  orig: 197, 275
+  offset: 0, 0
+  index: -1
+箭
+  rotate: false
+  xy: 350, 174
+  size: 29, 120
+  orig: 29, 120
+  offset: 0, 0
+  index: -1
+身体
+  rotate: true
+  xy: 218, 296
+  size: 214, 213
+  orig: 214, 213
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,83 @@
+
+A05.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+下半身
+  rotate: false
+  xy: 2, 686
+  size: 241, 258
+  orig: 241, 258
+  offset: 0, 0
+  index: -1
+书
+  rotate: true
+  xy: 814, 635
+  size: 127, 130
+  orig: 127, 130
+  offset: 0, 0
+  index: -1
+十字架
+  rotate: false
+  xy: 814, 764
+  size: 116, 180
+  orig: 116, 180
+  offset: 0, 0
+  index: -1
+右大臂
+  rotate: true
+  xy: 245, 640
+  size: 76, 101
+  orig: 76, 101
+  offset: 0, 0
+  index: -1
+右手臂
+  rotate: false
+  xy: 636, 626
+  size: 105, 103
+  orig: 105, 103
+  offset: 0, 0
+  index: -1
+头
+  rotate: false
+  xy: 444, 690
+  size: 214, 254
+  orig: 214, 254
+  offset: 0, 0
+  index: -1
+头巾
+  rotate: true
+  xy: 245, 718
+  size: 226, 198
+  orig: 226, 198
+  offset: 0, 0
+  index: -1
+左大臂
+  rotate: true
+  xy: 441, 638
+  size: 89, 129
+  orig: 89, 129
+  offset: 0, 0
+  index: -1
+左手
+  rotate: true
+  xy: 602, 903
+  size: 41, 48
+  orig: 41, 48
+  offset: 0, 0
+  index: -1
+左手臂
+  rotate: false
+  xy: 2, 624
+  size: 104, 60
+  orig: 104, 60
+  offset: 0, 0
+  index: -1
+身体
+  rotate: true
+  xy: 659, 731
+  size: 213, 153
+  orig: 213, 153
+  offset: 0, 0
+  index: -1

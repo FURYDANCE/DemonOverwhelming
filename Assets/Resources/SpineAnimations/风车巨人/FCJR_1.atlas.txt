@@ -1,0 +1,90 @@
+
+FCJR_1.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+FCJR_0
+  rotate: false
+  xy: 647, 600
+  size: 71, 71
+  orig: 71, 71
+  offset: 0, 0
+  index: -1
+FCJR_1
+  rotate: false
+  xy: 2, 367
+  size: 643, 646
+  orig: 643, 646
+  offset: 0, 0
+  index: -1
+FCJR_10
+  rotate: true
+  xy: 801, 384
+  size: 137, 204
+  orig: 137, 204
+  offset: 0, 0
+  index: -1
+FCJR_11
+  rotate: true
+  xy: 865, 110
+  size: 123, 136
+  orig: 123, 136
+  offset: 0, 0
+  index: -1
+FCJR_2
+  rotate: 180
+  xy: 647, 176
+  size: 261, 334
+  orig: 261, 334
+  offset: 0, 0
+  index: -1
+FCJR_3
+  rotate: true
+  xy: 911, 634
+  size: 186, 96
+  orig: 186, 96
+  offset: 0, 0
+  index: -1
+FCJR_4
+  rotate: true
+  xy: 2, 34
+  size: 331, 607
+  orig: 331, 607
+  offset: 0, 0
+  index: -1
+FCJR_5
+  rotate: true
+  xy: 647, 673
+  size: 340, 156
+  orig: 340, 156
+  offset: 0, 0
+  index: -1
+FCJR_6
+  rotate: false
+  xy: 611, 102
+  size: 169, 117
+  orig: 169, 117
+  offset: 0, 0
+  index: -1
+FCJR_7
+  rotate: 180
+  xy: 680, 468
+  size: 230, 352
+  orig: 230, 352
+  offset: 0, 0
+  index: -1
+FCJR_8
+  rotate: false
+  xy: 805, 822
+  size: 170, 191
+  orig: 170, 191
+  offset: 0, 0
+  index: -1
+FCJR_9
+  rotate: false
+  xy: 909, 251
+  size: 104, 131
+  orig: 104, 131
+  offset: 0, 0
+  index: -1

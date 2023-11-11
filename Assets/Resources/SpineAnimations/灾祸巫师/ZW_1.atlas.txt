@@ -1,0 +1,62 @@
+
+ZW_1.png
+size: 1024, 1024
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+ZW_0
+  rotate: true
+  xy: 286, 654
+  size: 262, 352
+  orig: 262, 352
+  offset: 0, 0
+  index: -1
+ZW_1
+  rotate: false
+  xy: 537, 315
+  size: 262, 336
+  orig: 262, 336
+  offset: 0, 0
+  index: -1
+ZW_2
+  rotate: true
+  xy: 286, 249
+  size: 402, 249
+  orig: 402, 249
+  offset: 0, 0
+  index: -1
+ZW_3
+  rotate: false
+  xy: 801, 335
+  size: 188, 348
+  orig: 188, 348
+  offset: 0, 0
+  index: -1
+ZW_4
+  rotate: false
+  xy: 640, 685
+  size: 286, 304
+  orig: 286, 304
+  offset: 0, 0
+  index: -1
+ZW_5
+  rotate: false
+  xy: 2, 249
+  size: 282, 740
+  orig: 282, 740
+  offset: 0, 0
+  index: -1
+ZW_6
+  rotate: false
+  xy: 537, 237
+  size: 142, 76
+  orig: 142, 76
+  offset: 0, 0
+  index: -1
+ZW_7
+  rotate: true
+  xy: 801, 232
+  size: 101, 145
+  orig: 101, 145
+  offset: 0, 0
+  index: -1
