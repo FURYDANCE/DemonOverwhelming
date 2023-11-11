@@ -72,6 +72,16 @@ namespace DemonOverwhelming
 
         [Header("调试：勾选后不自然生成波次")]
         public bool debug_DontWork;
+
+        public static WaveManager instance;
+        private void Awake()
+        {
+            if (instance != null)
+            {
+                Destroy(instance);
+            }
+            instance = this;
+        }
         private void Start()
         {
             createWaitTimer = createWaitTime;
@@ -122,7 +132,21 @@ namespace DemonOverwhelming
             if (battleIntensityLevel > maxIntensityLevel)
                 battleIntensityLevel = maxIntensityLevel;
         }
-
+        /// <summary>
+        /// 战斗烈度累计值增加
+        /// </summary>
+        public void AddBattleIntensity(float addAmount)
+        {
+            battleIntensity += addAmount;
+        }
+        /// <summary>
+        /// 战斗烈度等级增加
+        /// </summary>
+        /// <param name="addAmount"></param>
+        public void AddBattleIntensityLevel(int addAmount)
+        {
+            battleIntensityLevel += addAmount;
+        }
         /// <summary>
         /// 根据当前的烈度等级，生成对应的烈度等级中可能出现的波次中的其中一波敌人
         /// </summary>

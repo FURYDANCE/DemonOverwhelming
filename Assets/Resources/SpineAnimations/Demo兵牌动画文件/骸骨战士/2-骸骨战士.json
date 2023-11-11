@@ -1,0 +1,64 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/骸骨战士/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "HG_12", "bone": "root", "attachment": "HG_12" },
+	{ "name": "HG_11", "bone": "root", "attachment": "HG_11" },
+	{ "name": "HG_10", "bone": "root", "attachment": "HG_10" },
+	{ "name": "HG_9", "bone": "root", "attachment": "HG_9" },
+	{ "name": "HG_8", "bone": "root", "attachment": "HG_8" },
+	{ "name": "HG_7", "bone": "root", "attachment": "HG_7" },
+	{ "name": "HG_6", "bone": "root", "attachment": "HG_6" },
+	{ "name": "HG_5", "bone": "root", "attachment": "HG_5" },
+	{ "name": "HG_4", "bone": "root", "attachment": "HG_4" },
+	{ "name": "HG_3", "bone": "root", "attachment": "HG_3" },
+	{ "name": "HG_2", "bone": "root", "attachment": "HG_2" },
+	{ "name": "HG_1", "bone": "root", "attachment": "HG_1" },
+	{ "name": "HG_0", "bone": "root", "attachment": "HG_0" }
+],
+"skins": {
+	"default": {
+		"HG_12": {
+			"HG_12": { "x": 1021.5, "y": -1361, "width": 125, "height": 302 }
+		},
+		"HG_11": {
+			"HG_11": { "x": 1015, "y": -1452.5, "width": 154, "height": 231 }
+		},
+		"HG_10": {
+			"HG_10": { "x": 852.5, "y": -1361, "width": 125, "height": 302 }
+		},
+		"HG_9": {
+			"HG_9": { "x": 846, "y": -1452.5, "width": 154, "height": 231 }
+		},
+		"HG_8": {
+			"HG_8": { "x": 1157.5, "y": -1059, "width": 259, "height": 274 }
+		},
+		"HG_7": {
+			"HG_7": { "x": 1185.5, "y": -1121.5, "width": 203, "height": 155 }
+		},
+		"HG_6": {
+			"HG_6": { "x": 952, "y": -1109.5, "width": 218, "height": 411 }
+		},
+		"HG_5": {
+			"HG_5": { "x": 954, "y": -1029, "width": 284, "height": 270 }
+		},
+		"HG_4": {
+			"HG_4": { "x": 1172, "y": -1087, "width": 1350, "height": 474 }
+		},
+		"HG_3": {
+			"HG_3": { "x": 1208, "y": -1082, "width": 158, "height": 142 }
+		},
+		"HG_2": {
+			"HG_2": { "x": 815.5, "y": -1019.5, "width": 197, "height": 319 }
+		},
+		"HG_1": {
+			"HG_1": { "x": 759.5, "y": -1171, "width": 187, "height": 234 }
+		},
+		"HG_0": {
+			"HG_0": { "x": 994.5, "y": -776, "width": 337, "height": 334 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

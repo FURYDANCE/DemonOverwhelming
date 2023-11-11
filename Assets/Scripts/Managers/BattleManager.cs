@@ -10,6 +10,8 @@ namespace DemonOverwhelming
     /// </summary>
     public class BattleManager : MonoBehaviour
     {
+        [Header("为demo临时添加的：关卡编号")]
+        public int levelId;
         [Header("英雄")]
         public Entity hero;
         /// <summary>
@@ -109,14 +111,27 @@ namespace DemonOverwhelming
             cameraFollowTarget = SceneObjectsManager.instance.GetCameraFollowTarget();
             StartAddMoney();
             //生成右下角的兵种卡
-            CreateOneSoldierCard("21000001");
-            CreateOneSoldierCard("21000002");
-            CreateOneSoldierCard("21000003");
-            CreateOneSoldierCard("21000004");
-            CreateOneSoldierCard("21000005");
-            CreateOneSoldierCard("21000009");
-            CreateOneSoldierCard("21000007");
-            CreateOneSoldierCard("21000008");
+            if (levelId == 1)
+            {
+                CreateOneSoldierCard("21000001");
+                CreateOneSoldierCard("21000002");
+                CreateOneSoldierCard("21000007");
+                CreateOneSoldierCard("21000004");
+            }
+            if (levelId == 2)
+            {
+                CreateOneSoldierCard("21000001");
+                CreateOneSoldierCard("21000007");
+                CreateOneSoldierCard("21000009");
+                CreateOneSoldierCard("21000013");
+                CreateOneSoldierCard("21000021");
+
+            
+            }
+            //CreateOneSoldierCard("21000005");
+            //CreateOneSoldierCard("21000009");
+            //CreateOneSoldierCard("21000007");
+            //CreateOneSoldierCard("21000008");
             fillStartColor = SceneObjectsManager.instance.costFill.color;
 
             //cardSelectUI = GameObject.Find("CardSelectArea").transform.GetComponent<Image>();

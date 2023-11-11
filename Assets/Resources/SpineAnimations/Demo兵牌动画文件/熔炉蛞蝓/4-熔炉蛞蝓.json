@@ -1,0 +1,52 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/熔炉蛞蝓/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "RL_9", "bone": "root", "attachment": "RL_9" },
+	{ "name": "RL_8", "bone": "root", "attachment": "RL_8" },
+	{ "name": "RL_7", "bone": "root", "attachment": "RL_7" },
+	{ "name": "RL_6", "bone": "root", "attachment": "RL_6" },
+	{ "name": "RL_5", "bone": "root", "attachment": "RL_5" },
+	{ "name": "RL_4", "bone": "root", "attachment": "RL_4" },
+	{ "name": "RL_3", "bone": "root", "attachment": "RL_3" },
+	{ "name": "RL_2", "bone": "root", "attachment": "RL_2" },
+	{ "name": "RL_1", "bone": "root", "attachment": "RL_1" },
+	{ "name": "RL_0", "bone": "root", "attachment": "RL_0" }
+],
+"skins": {
+	"default": {
+		"RL_9": {
+			"RL_9": { "x": 728, "y": -1444.5, "width": 542, "height": 233 }
+		},
+		"RL_8": {
+			"RL_8": { "x": 977.5, "y": -1362.5, "width": 577, "height": 393 }
+		},
+		"RL_7": {
+			"RL_7": { "x": 1388, "y": -1020.5, "width": 468, "height": 357 }
+		},
+		"RL_6": {
+			"RL_6": { "x": 1343.5, "y": -1188, "width": 253, "height": 252 }
+		},
+		"RL_5": {
+			"RL_5": { "x": 1435.5, "y": -1105, "width": 375, "height": 1088 }
+		},
+		"RL_4": {
+			"RL_4": { "x": 907, "y": -907, "width": 776, "height": 926 }
+		},
+		"RL_3": {
+			"RL_3": { "x": 1019, "y": -781.5, "width": 554, "height": 499 }
+		},
+		"RL_2": {
+			"RL_2": { "x": 1032, "y": -978, "width": 402, "height": 212 }
+		},
+		"RL_1": {
+			"RL_1": { "x": 719.5, "y": -1066, "width": 249, "height": 282 }
+		},
+		"RL_0": {
+			"RL_0": { "x": 672, "y": -1197, "width": 232, "height": 332 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

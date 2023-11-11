@@ -1,0 +1,44 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/灾祸巫师/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "ZW_7", "bone": "root", "attachment": "ZW_7" },
+	{ "name": "ZW_6", "bone": "root", "attachment": "ZW_6" },
+	{ "name": "ZW_5", "bone": "root", "attachment": "ZW_5" },
+	{ "name": "ZW_4", "bone": "root", "attachment": "ZW_4" },
+	{ "name": "ZW_3", "bone": "root", "attachment": "ZW_3" },
+	{ "name": "ZW_2", "bone": "root", "attachment": "ZW_2" },
+	{ "name": "ZW_1", "bone": "root", "attachment": "ZW_1" },
+	{ "name": "ZW_0", "bone": "root", "attachment": "ZW_0" }
+],
+"skins": {
+	"default": {
+		"ZW_7": {
+			"ZW_7": { "x": 1225, "y": -884.5, "width": 202, "height": 289 }
+		},
+		"ZW_6": {
+			"ZW_6": { "x": 1371, "y": -1002, "width": 284, "height": 152 }
+		},
+		"ZW_5": {
+			"ZW_5": { "x": 1495, "y": -942.5, "width": 564, "height": 1479 }
+		},
+		"ZW_4": {
+			"ZW_4": { "x": 911.5, "y": -1336, "width": 571, "height": 608 }
+		},
+		"ZW_3": {
+			"ZW_3": { "x": 558.5, "y": -1091, "width": 375, "height": 696 }
+		},
+		"ZW_2": {
+			"ZW_2": { "x": 942, "y": -887, "width": 804, "height": 498 }
+		},
+		"ZW_1": {
+			"ZW_1": { "x": 950.5, "y": -586, "width": 523, "height": 672 }
+		},
+		"ZW_0": {
+			"ZW_0": { "x": 950.5, "y": -601.5, "width": 523, "height": 703 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

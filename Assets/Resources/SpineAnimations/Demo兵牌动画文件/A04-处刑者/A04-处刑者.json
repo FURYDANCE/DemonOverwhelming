@@ -1,0 +1,64 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/A04-处刑者/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "CXR_12", "bone": "root", "attachment": "CXR_12" },
+	{ "name": "CXR_11", "bone": "root", "attachment": "CXR_11" },
+	{ "name": "CXR_10", "bone": "root", "attachment": "CXR_10" },
+	{ "name": "CXR_9", "bone": "root", "attachment": "CXR_9" },
+	{ "name": "CXR_8", "bone": "root", "attachment": "CXR_8" },
+	{ "name": "CXR_7", "bone": "root", "attachment": "CXR_7" },
+	{ "name": "CXR_6", "bone": "root", "attachment": "CXR_6" },
+	{ "name": "CXR_5", "bone": "root", "attachment": "CXR_5" },
+	{ "name": "CXR_4", "bone": "root", "attachment": "CXR_4" },
+	{ "name": "CXR_3", "bone": "root", "attachment": "CXR_3" },
+	{ "name": "CXR_2", "bone": "root", "attachment": "CXR_2" },
+	{ "name": "CXR_1", "bone": "root", "attachment": "CXR_1" },
+	{ "name": "CXR_0", "bone": "root", "attachment": "CXR_0" }
+],
+"skins": {
+	"default": {
+		"CXR_12": {
+			"CXR_12": { "x": 811.5, "y": -1238.5, "width": 205, "height": 321 }
+		},
+		"CXR_11": {
+			"CXR_11": { "x": 814.5, "y": -1419, "width": 223, "height": 344 }
+		},
+		"CXR_10": {
+			"CXR_10": { "x": 598.5, "y": -1238.5, "width": 205, "height": 321 }
+		},
+		"CXR_9": {
+			"CXR_9": { "x": 601.5, "y": -1419, "width": 223, "height": 344 }
+		},
+		"CXR_8": {
+			"CXR_8": { "x": 914, "y": -907.5, "width": 204, "height": 291 }
+		},
+		"CXR_7": {
+			"CXR_7": { "x": 992, "y": -1062.5, "width": 248, "height": 227 }
+		},
+		"CXR_6": {
+			"CXR_6": { "x": 647.5, "y": -1007.5, "width": 605, "height": 553 }
+		},
+		"CXR_5": {
+			"CXR_5": { "x": 470.5, "y": -933, "width": 273, "height": 364 }
+		},
+		"CXR_4": {
+			"CXR_4": { "x": 967.5, "y": -914.5, "width": 1803, "height": 889 }
+		},
+		"CXR_3": {
+			"CXR_3": { "x": 455.5, "y": -1134, "width": 275, "height": 334 }
+		},
+		"CXR_2": {
+			"CXR_2": { "x": 1024, "y": -1030.5, "width": 200, "height": 173 }
+		},
+		"CXR_1": {
+			"CXR_1": { "x": 712.5, "y": -851, "width": 669, "height": 338 }
+		},
+		"CXR_0": {
+			"CXR_0": { "x": 740, "y": -563.5, "width": 368, "height": 397 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

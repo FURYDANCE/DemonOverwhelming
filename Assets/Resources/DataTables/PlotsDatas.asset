@@ -116,15 +116,15 @@ MonoBehaviour:
     type: 0
     name: "\u6076\u9B54\u5C0F\u5175"
     sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
-    Hp: 23
+    Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.6
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6076\u9B54\u5C0F\u5175\n\u4E00\u53EA\u6742\u9C7C"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -170,12 +170,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9\u6B65\u5175\n\u4E5F\u662F\u6742\u9C7C"
     modleSize: 1.5
-    shadowSize: {x: 1, y: 0.3333, z: 0}
-    shadowOffset: 0.03
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -222,12 +222,12 @@ MonoBehaviour:
     Hp: 5
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5F13\u7BAD\u624B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -273,12 +273,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "aoe\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -324,12 +324,12 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: -6.4, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9aoe\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -375,12 +375,12 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: -6.4, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9\u7CBE\u82F1aoe\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -423,15 +423,15 @@ MonoBehaviour:
     type: 0
     name: "\u98CE\u8F66\u5DE8\u4EBA"
     sprite: {fileID: 21300000, guid: d8369191b0324034cbbad23b2b02ca62, type: 3}
-    Hp: 250
+    Hp: 120
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 1
-    hpBarOffset: {x: 0, y: 15, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9\u7CBE\u82F1aoe\u5DE8\u4EBA"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -477,12 +477,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u70AE\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -528,12 +528,12 @@ MonoBehaviour:
     Hp: 7
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: -5, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u70AE\u7070"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -579,12 +579,12 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: -5, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u540E\u6392debuffer"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -630,12 +630,12 @@ MonoBehaviour:
     Hp: 45
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.13
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u524D\u6392\u5766\u514B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -681,11 +681,11 @@ MonoBehaviour:
     Hp: 7
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u7269\u70AE\u7070"
     modleSize: 1.5
-    shadowSize: {x: 0, y: 0, z: 0}
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
     shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
@@ -732,12 +732,12 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6CBB\u7597\u8005"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -783,11 +783,11 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u57FA\u7840\u9B54\u6CD5\u6B65\u5175"
     modleSize: 1.5
-    shadowSize: {x: 0, y: 0, z: 0}
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
     shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
@@ -834,12 +834,12 @@ MonoBehaviour:
     Hp: 70
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.3
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6DF7\u5408\u4F24\u5BB3\u5DE8\u517D"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -885,12 +885,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8DF3\u8DC3\u523A\u5BA2"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -936,12 +936,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u5E08"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -987,12 +987,12 @@ MonoBehaviour:
     Hp: 10
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u7269\u70AE\u7070"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1038,12 +1038,12 @@ MonoBehaviour:
     Hp: 60
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7CBE\u82F1\u6B65\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1089,12 +1089,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8840\u725B\u6B65\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1140,12 +1140,12 @@ MonoBehaviour:
     Hp: 300
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.8
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "Aoe\u5DE8\u517D"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1191,12 +1191,12 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u5C04\u624B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1242,12 +1242,12 @@ MonoBehaviour:
     Hp: 325
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5DE8\u517D\u70AE\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1293,12 +1293,12 @@ MonoBehaviour:
     Hp: 40
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u4F4E\u7EA7\u5766\u514B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1344,12 +1344,12 @@ MonoBehaviour:
     Hp: 22
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u70AE\u7070"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1395,12 +1395,12 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5C04\u624B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1446,12 +1446,12 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6CBB\u7597\u795D\u798Fbuffer"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1497,12 +1497,12 @@ MonoBehaviour:
     Hp: 40
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u524D\u6392\u5766\u514B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1548,12 +1548,12 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8840\u725B\u53EC\u5524\u7269"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1599,12 +1599,12 @@ MonoBehaviour:
     Hp: 25
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u5E08"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1650,12 +1650,12 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u4E2D\u7EA7\u6B65\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1701,12 +1701,12 @@ MonoBehaviour:
     Hp: 27
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u4E2D\u7EA7\u6B65\u5175+"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1752,12 +1752,12 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6B65\u5175\u4F34\u968F\u5C04\u624B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1803,12 +1803,12 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8FDC\u7A0B\u70AE\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1854,12 +1854,12 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6B65\u5175\u4F34\u968F\u70AE\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1905,12 +1905,12 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6B65\u5175\u4F34\u968Fbuffer"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -1956,12 +1956,12 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u6CD5"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2007,12 +2007,12 @@ MonoBehaviour:
     Hp: 200
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "AoE\u5DE8\u517D"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2058,12 +2058,12 @@ MonoBehaviour:
     Hp: 23
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9AD8\u7EA7\u6B65\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2109,12 +2109,12 @@ MonoBehaviour:
     Hp: 23
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9AD8\u7EA7\u6B65\u5175+"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2160,12 +2160,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u540E\u6392\u5C04\u624B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2211,12 +2211,12 @@ MonoBehaviour:
     Hp: 23
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u540E\u6392\u5C04\u624B"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2262,12 +2262,12 @@ MonoBehaviour:
     Hp: 70
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u6CD5\u7CBE\u82F1"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2313,12 +2313,12 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: healer
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2364,12 +2364,12 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u70AE\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2415,12 +2415,12 @@ MonoBehaviour:
     Hp: 45
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6DF7\u5408\u70AE\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2466,12 +2466,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5E7F\u57DF\u70AE\u5175"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2517,12 +2517,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7075\u4F53\u6218\u58EB"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2568,12 +2568,12 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7075\u4F53\u957F\u624B\u6218\u58EB"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2619,12 +2619,12 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7075\u4F53Aoe\u6218\u58EB"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2670,12 +2670,12 @@ MonoBehaviour:
     Hp: 80
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u8840\u725B\u6218\u58EB"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2721,12 +2721,12 @@ MonoBehaviour:
     Hp: 300
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5168\u80FD\u5766\u514B\u6218\u58EB"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2772,12 +2772,12 @@ MonoBehaviour:
     Hp: 600
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9A71\u9B54\u5149\u73AF"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2823,12 +2823,12 @@ MonoBehaviour:
     Hp: 250
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.1
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5FEB\u901F\u523A\u5BA2"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2874,12 +2874,12 @@ MonoBehaviour:
     Hp: 250
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 18, z: 0}
+    hpBarSize: 0.15
+    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5149\u73AF\u5DE8\u517D"
     modleSize: 1.5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 1.2, y: 1.2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2929,8 +2929,8 @@ MonoBehaviour:
     hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854\n\u653B\u51FB\u8BBE\u65BD"
     modleSize: 1
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 4, y: 2, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -2980,8 +2980,8 @@ MonoBehaviour:
     hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u636E\u70B9"
     modleSize: 0.75
-    shadowSize: {x: 35, y: 10, z: 0}
-    shadowOffset: 4
+    shadowSize: {x: 20, y: 8, z: 0}
+    shadowOffset: 0.7
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -3031,8 +3031,8 @@ MonoBehaviour:
     hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u654C\u65B9\u636E\u70B9"
     modleSize: 1.5
-    shadowSize: {x: 40, y: 15, z: 0}
-    shadowOffset: 6
+    shadowSize: {x: 12, y: 4, z: 0}
+    shadowOffset: 2.4
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -3082,8 +3082,8 @@ MonoBehaviour:
     hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u654C\u65B9\u8981\u585E"
     modleSize: 1.5
-    shadowSize: {x: 40, y: 15, z: 0}
-    shadowOffset: 6
+    shadowSize: {x: 12, y: 4, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -3133,8 +3133,8 @@ MonoBehaviour:
     hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u6211\u65B9\u8981\u585E"
     modleSize: 1.5
-    shadowSize: {x: 40, y: 15, z: 0}
-    shadowOffset: 6
+    shadowSize: {x: 12, y: 4, z: 0}
+    shadowOffset: 0
     aiMode_Move: 0
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -3279,15 +3279,15 @@ MonoBehaviour:
     type: 0
     name: "\u6076\u9B54\u9886\u4E3B"
     sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
-    Hp: 100
+    Hp: 200
     nowHp: 0
     hurtDamage: 0
     hpBarSize: 0.5
     hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u82F1\u96C4"
     modleSize: 1
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
+    shadowSize: {x: 3, y: 3, z: 0}
+    shadowOffset: 0
     aiMode_Move: 1
     aiMode_Check: 0
     aiMode_Chase: 0
@@ -3296,16 +3296,16 @@ MonoBehaviour:
       id: 4000001
       cost: 0
       aiType: 0
-      moveSpeed: 3
-      defence: 0
-      defence_far: 0
-      defence_magic: 0
+      moveSpeed: 8
+      defence: 3
+      defence_far: 3
+      defence_magic: 3
       haveSkill: 1
       skillId: 0
       skillName: 
       EnemyCheckArea: {x: 7, y: 7, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
-      attackDistance: 3
+      EnemyCheckOffset: {x: 4, y: 2, z: 0}
+      attackDistance: 5
       chaseTime: 0
       attackWaitTime: 1.5
       attackTime: 0.5
@@ -3339,7 +3339,7 @@ MonoBehaviour:
     bloodCost: 2
     formationId: 4
     soldierId: 1000001
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 275d7f31c7c4a1e4291e8becdb76d667, type: 3}
   - id: 21000002
     name: Cyclopean Imps*3
     sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
@@ -3379,7 +3379,7 @@ MonoBehaviour:
   - id: 21000006
     name: Demon Lord
     sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
-    flagSprite: {fileID: 21300000, guid: d91704cfda237cd46be9f5e9b2ffb1e0, type: 3}
+    flagSprite: {fileID: 0}
     moneyCost: 0
     bloodCost: 0
     formationId: 1
@@ -3391,9 +3391,9 @@ MonoBehaviour:
     flagSprite: {fileID: 21300000, guid: ca4eca51012f8cb44af5edaa4de19790, type: 3}
     moneyCost: 10
     bloodCost: 12
-    formationId: 5
+    formationId: 8
     soldierId: 1000010
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 4ce8c614ebe643749a9fa0c17e55bd12, type: 3}
   - id: 21000008
     name: Calamity Mage*2
     sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
@@ -3411,7 +3411,7 @@ MonoBehaviour:
     bloodCost: 20
     formationId: 3
     soldierId: 1000012
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 1556620fc91823540872a3a10057e502, type: 3}
   - id: 21000011
     name: Phantom*5
     sprite: {fileID: 21300000, guid: cd1c8d255d508d24295b88073d0d1be4, type: 3}
@@ -3438,7 +3438,7 @@ MonoBehaviour:
     bloodCost: 2
     formationId: 4
     soldierId: 1000015
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 275d7f31c7c4a1e4291e8becdb76d667, type: 3}
   - id: 21000014
     name: Grim Avatar*1
     sprite: {fileID: 21300000, guid: ed2a31a8958d3d746bb9a5f1a5ae1f6a, type: 3}
@@ -3510,7 +3510,7 @@ MonoBehaviour:
     bloodCost: 8
     formationId: 3
     soldierId: 1000023
-    content: {fileID: 0}
+    content: {fileID: 1780575785, guid: 1556620fc91823540872a3a10057e502, type: 3}
   - id: 21000022
     name: Castle Obsidian*1
     sprite: {fileID: 21300000, guid: 57df24887c6026d41be89d8580dc5798, type: 3}
@@ -4394,7 +4394,7 @@ MonoBehaviour:
     startDamageWiatTime: 0
   - id: 41000001
     name: "\u7269\u7406_\u8FD1\u6218_1"
-    physicDamage: 2
+    physicDamage: 1.7
     farDamage: 0
     magicDamage: 0
     buffs:
@@ -4577,6 +4577,18 @@ MonoBehaviour:
     physicDamage: 15
     farDamage: 0
     magicDamage: 10
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: 0
+    vfxSize: 0
+    startDamageWiatTime: 0
+  - id: 42000017
+    name: "\u8FDC\u7A0B_\u666E\u901A\u5F13\u7BAD\u4F24\u5BB3"
+    physicDamage: 0
+    farDamage: 4
+    magicDamage: 0
     buffs:
     - 0
     specialEffects:

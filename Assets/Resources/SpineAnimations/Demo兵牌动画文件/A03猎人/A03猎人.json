@@ -1,0 +1,64 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/A03猎人/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "左大臂", "bone": "root", "attachment": "左大臂" },
+	{ "name": "弓", "bone": "root", "attachment": "弓" },
+	{ "name": "左手掌", "bone": "root", "attachment": "左手掌" },
+	{ "name": "左手臂", "bone": "root", "attachment": "左手臂" },
+	{ "name": "左脚", "bone": "root", "attachment": "左脚" },
+	{ "name": "左腿", "bone": "root", "attachment": "左腿" },
+	{ "name": "右脚", "bone": "root", "attachment": "右脚" },
+	{ "name": "右腿", "bone": "root", "attachment": "右腿" },
+	{ "name": "身体", "bone": "root", "attachment": "身体" },
+	{ "name": "头", "bone": "root", "attachment": "头" },
+	{ "name": "右大臂", "bone": "root", "attachment": "右大臂" },
+	{ "name": "右手掌", "bone": "root", "attachment": "右手掌" },
+	{ "name": "右手臂", "bone": "root", "attachment": "右手臂" }
+],
+"skins": {
+	"default": {
+		"左大臂": {
+			"左大臂": { "x": 1023, "y": -1016, "width": 140, "height": 216 }
+		},
+		"弓": {
+			"弓": { "x": 1043.5, "y": -1113, "width": 393, "height": 550 }
+		},
+		"左手掌": {
+			"左手掌": { "x": 1153, "y": -1204.5, "width": 156, "height": 179 }
+		},
+		"左手臂": {
+			"左手臂": { "x": 1043.5, "y": -1119.5, "width": 209, "height": 173 }
+		},
+		"左脚": {
+			"左脚": { "x": 934.5, "y": -1278.5, "width": 197, "height": 255 }
+		},
+		"左腿": {
+			"左腿": { "x": 925, "y": -1436.5, "width": 216, "height": 259 }
+		},
+		"右脚": {
+			"右脚": { "x": 814.5, "y": -1278.5, "width": 197, "height": 255 }
+		},
+		"右腿": {
+			"右腿": { "x": 805, "y": -1436.5, "width": 216, "height": 259 }
+		},
+		"身体": {
+			"身体": { "x": 878.5, "y": -1070, "width": 427, "height": 426 }
+		},
+		"头": {
+			"头": { "x": 902.5, "y": -716.5, "width": 427, "height": 449 }
+		},
+		"右大臂": {
+			"右大臂": { "x": 687, "y": -1038.5, "width": 170, "height": 245 }
+		},
+		"右手掌": {
+			"右手掌": { "x": 691, "y": -1259.5, "width": 146, "height": 133 }
+		},
+		"右手臂": {
+			"右手臂": { "x": 663, "y": -1172.5, "width": 156, "height": 171 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

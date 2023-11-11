@@ -1,0 +1,72 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/独眼恶魔/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "DYEM_13", "bone": "root", "attachment": "DYEM_13" },
+	{ "name": "DYEM_12", "bone": "root", "attachment": "DYEM_12" },
+	{ "name": "DYEM_11", "bone": "root", "attachment": "DYEM_11" },
+	{ "name": "DYEM_10", "bone": "root", "attachment": "DYEM_10" },
+	{ "name": "DYEM_9", "bone": "root", "attachment": "DYEM_9" },
+	{ "name": "DYEM_8", "bone": "root", "attachment": "DYEM_8" },
+	{ "name": "DYEM_7", "bone": "root", "attachment": "DYEM_7" },
+	{ "name": "DYEM_6", "bone": "root", "attachment": "DYEM_6" },
+	{ "name": "DYEM_5", "bone": "root", "attachment": "DYEM_5" },
+	{ "name": "DYEM_4", "bone": "root", "attachment": "DYEM_4" },
+	{ "name": "DYEM_3", "bone": "root", "attachment": "DYEM_3" },
+	{ "name": "DYEM_2", "bone": "root", "attachment": "DYEM_2" },
+	{ "name": "DYEM_14", "bone": "root", "attachment": "DYEM_14" },
+	{ "name": "DYEM_1", "bone": "root", "attachment": "DYEM_1" },
+	{ "name": "DYEM_0", "bone": "root", "attachment": "DYEM_0" }
+],
+"skins": {
+	"default": {
+		"DYEM_13": {
+			"DYEM_13": { "x": 590, "y": -1353, "width": 542, "height": 248 }
+		},
+		"DYEM_12": {
+			"DYEM_12": { "x": 1115.5, "y": -1437.5, "width": 173, "height": 299 }
+		},
+		"DYEM_11": {
+			"DYEM_11": { "x": 1109, "y": -1303, "width": 220, "height": 242 }
+		},
+		"DYEM_10": {
+			"DYEM_10": { "x": 1228.5, "y": -1110.5, "width": 213, "height": 135 }
+		},
+		"DYEM_9": {
+			"DYEM_9": { "x": 1388, "y": -1098, "width": 400, "height": 1114 }
+		},
+		"DYEM_8": {
+			"DYEM_8": { "x": 1128, "y": -1013.5, "width": 150, "height": 243 }
+		},
+		"DYEM_7": {
+			"DYEM_7": { "x": 971.5, "y": -1179.5, "width": 353, "height": 571 }
+		},
+		"DYEM_6": {
+			"DYEM_6": { "x": 830, "y": -1448.5, "width": 214, "height": 293 }
+		},
+		"DYEM_5": {
+			"DYEM_5": { "x": 847, "y": -1315, "width": 210, "height": 246 }
+		},
+		"DYEM_4": {
+			"DYEM_4": { "x": 1035, "y": -860.5, "width": 772, "height": 551 }
+		},
+		"DYEM_3": {
+			"DYEM_3": { "x": 1101.5, "y": -938.5, "width": 223, "height": 157 }
+		},
+		"DYEM_2": {
+			"DYEM_2": { "x": 1100.5, "y": -936.5, "width": 533, "height": 359 }
+		},
+		"DYEM_14": {
+			"DYEM_14": { "x": 955.5, "y": -1360, "width": 867, "height": 262 }
+		},
+		"DYEM_1": {
+			"DYEM_1": { "x": 789, "y": -1042, "width": 228, "height": 254 }
+		},
+		"DYEM_0": {
+			"DYEM_0": { "x": 743, "y": -1218, "width": 176, "height": 304 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

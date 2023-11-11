@@ -14,7 +14,7 @@ namespace DemonOverwhelming
         public string levelDescription;
         [Multiline(3)]
         public string leveltargetDescription;
-
+        public string _gameScenePath;
         public bool Selecting;
         private void OnMouseEnter()
         {

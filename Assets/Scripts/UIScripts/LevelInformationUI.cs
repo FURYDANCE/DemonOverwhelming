@@ -31,12 +31,13 @@ namespace DemonOverwhelming
         private Button btn_IntoGameScene;
         [SerializeField]
         private Button btn_ReSelect;
-
+        [SerializeField]
+        private string _gameScenePath;
         private void Awake()
         {
             btn_IntoGameScene.onClick.AddListener(delegate
             {
-                mapSceneManager.gameManager.OnClickIntoGameSceneButton();
+                mapSceneManager.gameManager.OnClickIntoGameSceneButton(_gameScenePath);
             });
             btn_ReSelect.onClick.AddListener(delegate
             {
@@ -53,6 +54,7 @@ namespace DemonOverwhelming
             levelSpriteImage.sprite = information.levelSprite;
             levelDescriptionText.text = information.levelDescription;
             levelTargetText.text = information.leveltargetDescription;
+            _gameScenePath = information._gameScenePath;
         }
 
         public void IntoLevel()
