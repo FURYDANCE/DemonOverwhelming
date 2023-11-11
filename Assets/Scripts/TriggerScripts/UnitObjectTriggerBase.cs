@@ -16,6 +16,8 @@ namespace DemonOverwhelming
         public bool triggered;
         [Header("在Hp值地狱一定值时触发")]
         public bool triggerWhenHpLow;
+        [Header("死亡或隐藏时触发")]
+        public bool triggerWhenDestoryOrHide;
         [Header("触发的HP比例")]
         public float triggerHpPercentage;
         float nowHpPercentage;
@@ -46,6 +48,22 @@ namespace DemonOverwhelming
                     OnTrigger();
                     triggered = true;
                 }
+            }
+        }
+        private void OnDestroy()
+        {
+            if (triggerWhenDestoryOrHide && !triggered)
+            {
+                OnTrigger();
+                triggered = true;
+            }
+        }
+        private void OnDisable()
+        {
+            if (triggerWhenDestoryOrHide && !triggered)
+            {
+                OnTrigger();
+                triggered = true;
             }
         }
         public virtual void OnTrigger()

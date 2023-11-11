@@ -65,14 +65,14 @@ namespace DemonOverwhelming
         /// <summary>
         /// 执行进入具体游戏关卡？
         /// </summary>
-        public void OnClickIntoGameSceneButton()
+        public void OnClickIntoGameSceneButton(string path)
         {
             //隐藏当前场景？
             /*UnloadSceneOperation unLoadOperation = */resourceManager.unloadSceneAsync(_mapScenePath,null);
             //显示加载界面
             LoadingPanel loadingUI = uiManager.ShowLoadingUI();
             //加载大地图场景
-            LoadSceneOperationBase loadOperation = resourceManager.loadSceneAsync(_gameScenePath, LoadSceneMode.Additive);
+            LoadSceneOperationBase loadOperation = resourceManager.loadSceneAsync(path, LoadSceneMode.Additive);
             //绑定加载界面
             loadOperation.onComplete += OnGameSceneLoaded;
             

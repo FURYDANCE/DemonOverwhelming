@@ -1,0 +1,60 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/农夫/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "NF_11", "bone": "root", "attachment": "NF_11" },
+	{ "name": "NF_10", "bone": "root", "attachment": "NF_10" },
+	{ "name": "NF_9", "bone": "root", "attachment": "NF_9" },
+	{ "name": "NF_8", "bone": "root", "attachment": "NF_8" },
+	{ "name": "NF_7", "bone": "root", "attachment": "NF_7" },
+	{ "name": "NF_6", "bone": "root", "attachment": "NF_6" },
+	{ "name": "NF_5", "bone": "root", "attachment": "NF_5" },
+	{ "name": "NF_4", "bone": "root", "attachment": "NF_4" },
+	{ "name": "NF_3", "bone": "root", "attachment": "NF_3" },
+	{ "name": "NF_2", "bone": "root", "attachment": "NF_2" },
+	{ "name": "NF_1", "bone": "root", "attachment": "NF_1" },
+	{ "name": "NF_0", "bone": "root", "attachment": "NF_0" }
+],
+"skins": {
+	"default": {
+		"NF_11": {
+			"NF_11": { "x": 1021.5, "y": -1306, "width": 169, "height": 256 }
+		},
+		"NF_10": {
+			"NF_10": { "x": 1031.5, "y": -1479, "width": 147, "height": 188 }
+		},
+		"NF_9": {
+			"NF_9": { "x": 855.5, "y": -1306, "width": 169, "height": 256 }
+		},
+		"NF_8": {
+			"NF_8": { "x": 865.5, "y": -1479, "width": 147, "height": 188 }
+		},
+		"NF_7": {
+			"NF_7": { "x": 1138, "y": -1059.5, "width": 242, "height": 267 }
+		},
+		"NF_6": {
+			"NF_6": { "x": 1156, "y": -1096.5, "width": 206, "height": 193 }
+		},
+		"NF_5": {
+			"NF_5": { "x": 949, "y": -1102.5, "width": 314, "height": 359 }
+		},
+		"NF_4": {
+			"NF_4": { "x": 1185, "y": -1052, "width": 1290, "height": 522 }
+		},
+		"NF_3": {
+			"NF_3": { "x": 1212.5, "y": -1080.5, "width": 157, "height": 143 }
+		},
+		"NF_2": {
+			"NF_2": { "x": 792, "y": -1104, "width": 188, "height": 362 }
+		},
+		"NF_1": {
+			"NF_1": { "x": 780.5, "y": -1154.5, "width": 165, "height": 261 }
+		},
+		"NF_0": {
+			"NF_0": { "x": 997.5, "y": -817.5, "width": 341, "height": 411 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

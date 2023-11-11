@@ -1,0 +1,60 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/小恶魔/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "XEM_11", "bone": "root", "attachment": "XEM_11" },
+	{ "name": "XEM_10", "bone": "root", "attachment": "XEM_10" },
+	{ "name": "XEM_9", "bone": "root", "attachment": "XEM_9" },
+	{ "name": "XEM_8", "bone": "root", "attachment": "XEM_8" },
+	{ "name": "XEM_7", "bone": "root", "attachment": "XEM_7" },
+	{ "name": "XEM_6", "bone": "root", "attachment": "XEM_6" },
+	{ "name": "XEM_5", "bone": "root", "attachment": "XEM_5" },
+	{ "name": "XEM_4", "bone": "root", "attachment": "XEM_4" },
+	{ "name": "XEM_3", "bone": "root", "attachment": "XEM_3" },
+	{ "name": "XEM_2", "bone": "root", "attachment": "XEM_2" },
+	{ "name": "XEM_1", "bone": "root", "attachment": "XEM_1" },
+	{ "name": "XEM_0", "bone": "root", "attachment": "XEM_0" }
+],
+"skins": {
+	"default": {
+		"XEM_11": {
+			"XEM_11": { "x": 626.5, "y": -1366.5, "width": 469, "height": 231 }
+		},
+		"XEM_10": {
+			"XEM_10": { "x": 1111.5, "y": -1442.5, "width": 177, "height": 289 }
+		},
+		"XEM_9": {
+			"XEM_9": { "x": 1109, "y": -1302.5, "width": 220, "height": 241 }
+		},
+		"XEM_8": {
+			"XEM_8": { "x": 1136.5, "y": -1046, "width": 161, "height": 240 }
+		},
+		"XEM_7": {
+			"XEM_7": { "x": 1206, "y": -1193, "width": 206, "height": 400 }
+		},
+		"XEM_6": {
+			"XEM_6": { "x": 971.5, "y": -1179.5, "width": 353, "height": 571 }
+		},
+		"XEM_5": {
+			"XEM_5": { "x": 815.5, "y": -1449, "width": 185, "height": 292 }
+		},
+		"XEM_4": {
+			"XEM_4": { "x": 847, "y": -1313.5, "width": 210, "height": 243 }
+		},
+		"XEM_3": {
+			"XEM_3": { "x": 900.5, "y": -679, "width": 1105, "height": 934 }
+		},
+		"XEM_2": {
+			"XEM_2": { "x": 900.5, "y": -679, "width": 1105, "height": 934 }
+		},
+		"XEM_1": {
+			"XEM_1": { "x": 1087.5, "y": -1258.5, "width": 789, "height": 693 }
+		},
+		"XEM_0": {
+			"XEM_0": { "x": 1021.5, "y": -1290, "width": 1237, "height": 704 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

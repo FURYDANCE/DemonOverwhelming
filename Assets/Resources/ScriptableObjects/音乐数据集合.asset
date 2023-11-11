@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "\u97F3\u4E50\u6570\u636E\u96C6\u5408"
   m_EditorClassIdentifier: 
   music_Chapter_1: {fileID: 8300000, guid: 059080540eae76a4f93fd3bdfe70c42b, type: 3}
+  music_Chapter_2: {fileID: 8300000, guid: 5da3c5df5f3bd5b4bbe5045d4bb7b9ea, type: 3}

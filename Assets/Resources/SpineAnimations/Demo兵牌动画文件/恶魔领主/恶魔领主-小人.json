@@ -1,0 +1,76 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/恶魔领主/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "EMLZ_115", "bone": "root", "attachment": "EMLZ_115" },
+	{ "name": "EMLZ_114", "bone": "root", "attachment": "EMLZ_114" },
+	{ "name": "EMLZ_113", "bone": "root", "attachment": "EMLZ_113" },
+	{ "name": "EMLZ_112", "bone": "root", "attachment": "EMLZ_112" },
+	{ "name": "EMLZ_111", "bone": "root", "attachment": "EMLZ_111" },
+	{ "name": "EMLZ_110", "bone": "root", "attachment": "EMLZ_110" },
+	{ "name": "EMLZ_19", "bone": "root", "attachment": "EMLZ_19" },
+	{ "name": "EMLZ_18", "bone": "root", "attachment": "EMLZ_18" },
+	{ "name": "EMLZ_17", "bone": "root", "attachment": "EMLZ_17" },
+	{ "name": "EMLZ_16", "bone": "root", "attachment": "EMLZ_16" },
+	{ "name": "EMLZ_15", "bone": "root", "attachment": "EMLZ_15" },
+	{ "name": "EMLZ_14", "bone": "root", "attachment": "EMLZ_14" },
+	{ "name": "EMLZ_13", "bone": "root", "attachment": "EMLZ_13" },
+	{ "name": "EMLZ_12", "bone": "root", "attachment": "EMLZ_12" },
+	{ "name": "EMLZ_11", "bone": "root", "attachment": "EMLZ_11" },
+	{ "name": "EMLZ_10", "bone": "root", "attachment": "EMLZ_10" }
+],
+"skins": {
+	"default": {
+		"EMLZ_115": {
+			"EMLZ_115": { "x": 836.5, "y": -1185, "width": 921, "height": 806 }
+		},
+		"EMLZ_114": {
+			"EMLZ_114": { "x": 1151, "y": -932, "width": 188, "height": 250 }
+		},
+		"EMLZ_113": {
+			"EMLZ_113": { "x": 1166.5, "y": -1084.5, "width": 221, "height": 273 }
+		},
+		"EMLZ_112": {
+			"EMLZ_112": { "x": 1391, "y": -1148.5, "width": 850, "height": 653 }
+		},
+		"EMLZ_111": {
+			"EMLZ_111": { "x": 1034, "y": -1202, "width": 202, "height": 336 }
+		},
+		"EMLZ_110": {
+			"EMLZ_110": { "x": 1089, "y": -1385.5, "width": 258, "height": 387 }
+		},
+		"EMLZ_19": {
+			"EMLZ_19": { "x": 810, "y": -1200, "width": 200, "height": 340 }
+		},
+		"EMLZ_18": {
+			"EMLZ_18": { "x": 818, "y": -1385.5, "width": 258, "height": 387 }
+		},
+		"EMLZ_17": {
+			"EMLZ_17": { "x": 906.5, "y": -849.5, "width": 415, "height": 287 }
+		},
+		"EMLZ_16": {
+			"EMLZ_16": { "x": 919, "y": -620, "width": 588, "height": 480 }
+		},
+		"EMLZ_15": {
+			"EMLZ_15": { "x": 919, "y": -620, "width": 588, "height": 480 }
+		},
+		"EMLZ_14": {
+			"EMLZ_14": { "x": 922, "y": -1120.5, "width": 446, "height": 749 }
+		},
+		"EMLZ_13": {
+			"EMLZ_13": { "x": 1158, "y": -821.5, "width": 238, "height": 329 }
+		},
+		"EMLZ_12": {
+			"EMLZ_12": { "x": 674, "y": -943, "width": 214, "height": 282 }
+		},
+		"EMLZ_11": {
+			"EMLZ_11": { "x": 639, "y": -1126, "width": 228, "height": 350 }
+		},
+		"EMLZ_10": {
+			"EMLZ_10": { "x": 700, "y": -819, "width": 346, "height": 342 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

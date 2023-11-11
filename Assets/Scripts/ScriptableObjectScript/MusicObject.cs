@@ -6,4 +6,5 @@ using UnityEngine;
 public class MusicObject : ScriptableObject
 {
     public AudioClip music_Chapter_1;
+    public AudioClip music_Chapter_2;
 }

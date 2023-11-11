@@ -1,0 +1,60 @@
+{ "skeleton": { "images": "D:/画图/GHS游戏制作/外包制作/工作外包/边境外包/风车巨人/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "FCJR_11", "bone": "root", "attachment": "FCJR_11" },
+	{ "name": "FCJR_10", "bone": "root", "attachment": "FCJR_10" },
+	{ "name": "FCJR_9", "bone": "root", "attachment": "FCJR_9" },
+	{ "name": "FCJR_8", "bone": "root", "attachment": "FCJR_8" },
+	{ "name": "FCJR_7", "bone": "root", "attachment": "FCJR_7" },
+	{ "name": "FCJR_6", "bone": "root", "attachment": "FCJR_6" },
+	{ "name": "FCJR_5", "bone": "root", "attachment": "FCJR_5" },
+	{ "name": "FCJR_4", "bone": "root", "attachment": "FCJR_4" },
+	{ "name": "FCJR_3", "bone": "root", "attachment": "FCJR_3" },
+	{ "name": "FCJR_2", "bone": "root", "attachment": "FCJR_2" },
+	{ "name": "FCJR_1", "bone": "root", "attachment": "FCJR_1" },
+	{ "name": "FCJR_0", "bone": "root", "attachment": "FCJR_0" }
+],
+"skins": {
+	"default": {
+		"FCJR_11": {
+			"FCJR_11": { "x": 725, "y": -1568.5, "width": 246, "height": 271 }
+		},
+		"FCJR_10": {
+			"FCJR_10": { "x": 833.5, "y": -1369.5, "width": 273, "height": 407 }
+		},
+		"FCJR_9": {
+			"FCJR_9": { "x": 1251, "y": -1578, "width": 208, "height": 262 }
+		},
+		"FCJR_8": {
+			"FCJR_8": { "x": 1151, "y": -1349, "width": 340, "height": 382 }
+		},
+		"FCJR_7": {
+			"FCJR_7": { "x": 1553.5, "y": -1190.5, "width": 459, "height": 703 }
+		},
+		"FCJR_6": {
+			"FCJR_6": { "x": 1235, "y": -900.5, "width": 338, "height": 233 }
+		},
+		"FCJR_5": {
+			"FCJR_5": { "x": 941, "y": -1271, "width": 680, "height": 312 }
+		},
+		"FCJR_4": {
+			"FCJR_4": { "x": 947.5, "y": -809.5, "width": 661, "height": 1213 }
+		},
+		"FCJR_3": {
+			"FCJR_3": { "x": 700, "y": -868, "width": 372, "height": 192 }
+		},
+		"FCJR_2": {
+			"FCJR_2": { "x": 361, "y": -1127.5, "width": 522, "height": 667 }
+		},
+		"FCJR_1": {
+			"FCJR_1": { "x": 1258.5, "y": -669, "width": 1285, "height": 1292 }
+		},
+		"FCJR_0": {
+			"FCJR_0": { "x": 1257.5, "y": -671.5, "width": 141, "height": 141 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

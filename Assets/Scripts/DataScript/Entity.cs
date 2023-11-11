@@ -170,8 +170,8 @@ namespace DemonOverwhelming
                 go.transform.localPosition = new Vector3(0, parameter.shadowOffset, 0);
                 go.transform.localScale = parameter.shadowSize;
                 SpriteRenderer shadowSprite = go.AddComponent<SpriteRenderer>();
-                shadowSprite.sprite = (Sprite)Resources.Load("Sprites/ModelSprites/Circle", typeof(Sprite)) as Sprite;
-                shadowSprite.color = new Color(0.4f, 0.4f, 0.4f);
+                shadowSprite.sprite = (Sprite)Resources.Load("Sprites/Shadow", typeof(Sprite)) as Sprite;
+                shadowSprite.color = new Color(1, 1, 1, 0.85f);
                 shadowSprite.sortingLayerName = "Layer1";
                 shadowSprite.sortingOrder = -1;
             }
