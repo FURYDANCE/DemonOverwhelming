@@ -114,6 +114,7 @@ namespace DemonOverwhelming
             if (parameter.ID != "")
             {
                 //设置尺寸
+                Debug.Log("SIZE:" + parameter.modleSize);
                 transform.localScale = new Vector3(parameter.modleSize, parameter.modleSize);
                 //设置面向相机
                 gameObject.AddComponent<FaceToCamera>();
@@ -141,7 +142,7 @@ namespace DemonOverwhelming
                     //skAni.GetComponent<MeshRenderer>().sortingLayerName = "Layer1";
                     //skAni.GetComponent<MeshRenderer>().sortingOrder = 0;
                     //skAni.state = new Spine.AnimationState(new Spine.AnimationStateData(skAni.skeletonDataAsset.GetSkeletonData(true)));
-                    skAni.state.SetAnimation(0, "stand", true);
+                    skAni.state.SetAnimation(0, "idle", true);
                     //StartCoroutine(SkAniInstitate());
                     //skAni.state = new Spine.AnimationState(new Spine.AnimationStateData(new Spine.SkeletonData()));
                 }
@@ -219,6 +220,8 @@ namespace DemonOverwhelming
             //设置具体的技能执行脚本和起始事件
             Skill_StartEvent();
             settled = true;
+           
+
         }
 
         #endregion
@@ -543,7 +546,7 @@ namespace DemonOverwhelming
             if (animations != null && animations.animation_Idle != null)
                 animator.Play(animations.animation_Idle.name);
             if (skAni != null)
-                skAni.state.SetAnimation(0, "stand", true);
+                skAni.state.SetAnimation(0, "idle", true);
         }
         public void PlayAniamtion_Attack()
         {
@@ -557,14 +560,14 @@ namespace DemonOverwhelming
             if (animations != null && animations.animation_Walk != null)
                 animator.Play(animations.animation_Walk.name);
             if (skAni != null)
-                skAni.state.SetAnimation(0, "move", true);
+                skAni.state.SetAnimation(0, "run", true);
         }
         public void PlayAniamtion_Die()
         {
             if (animations != null && animations.animation_Die != null)
                 animator.Play(animations.animation_Die.name);
             if (skAni != null)
-                skAni.state.SetAnimation(0, "die", false);
+                skAni.state.SetAnimation(0, "death", false);
         }
         IEnumerator SkAniInstitate()
         {
@@ -650,6 +653,8 @@ namespace DemonOverwhelming
         /// <param name="isTrue"></param>
         public void SetFlipX(bool isTrue)
         {
+            if (spineObject)
+                return;
             sprite.flipX = isTrue;
         }
         /// <summary>
@@ -699,10 +704,21 @@ namespace DemonOverwhelming
         /// <param name="target"></param>
         public void FlipTo(Vector3 target)
         {
-            if (transform.position.x > target.x)
-                SetFlipX(true);
-            if (transform.position.x < target.x)
-                SetFlipX(false);
+            if (!spineObject)
+            {
+                if (transform.position.x > target.x)
+                    SetFlipX(true);
+                if (transform.position.x < target.x)
+                    SetFlipX(false);
+            }
+            if (spineObject)
+            {
+                //如果是spine，设置左右转向
+                if (spineObject && transform.position.x > target.x)
+                    transform.rotation = Quaternion.Euler(45, -180, transform.localRotation.z);
+                if (spineObject && transform.position.x < target.x)
+                    transform.rotation = Quaternion.Euler(-45, 0, transform.localRotation.z);
+            }
         }
 
         #endregion

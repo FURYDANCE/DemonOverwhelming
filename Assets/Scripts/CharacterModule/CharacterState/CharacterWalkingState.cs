@@ -11,11 +11,13 @@ namespace DemonOverwhelming
     {
         public void OnEnter(CharacterStateManager manager)
         {
-            manager.entity.PlayAniamtion_Walk();
             //Debug.Log("进入行动状态");
             manager.isWalking = true;
             manager.intoWalking = true;
             manager.GetInterfaceScript();
+            if (manager.entity.isHero == false)
+                manager.entity.PlayAniamtion_Walk();
+
         }
 
         public void OnExit(CharacterStateManager manager)

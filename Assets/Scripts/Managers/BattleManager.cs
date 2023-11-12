@@ -32,6 +32,8 @@ namespace DemonOverwhelming
         public List<SoldierCard> soldierCards;
         [Header("布阵中的兵种组合s")]
         public List<SoliderGroup> soliderFormatGroups;
+        [Header("为demo临时添加：取消单位选择")]
+        public bool debug_DontChosseEntity;
         /// <summary>
         /// 待定选择的实体（鼠标悬停在了上面，但还没有按下选择键）
         /// </summary>
@@ -117,6 +119,7 @@ namespace DemonOverwhelming
                 CreateOneSoldierCard("21000002");
                 CreateOneSoldierCard("21000007");
                 CreateOneSoldierCard("21000004");
+                CreateOneSoldierCard("21000008");
             }
             if (levelId == 2)
             {
@@ -126,7 +129,7 @@ namespace DemonOverwhelming
                 CreateOneSoldierCard("21000013");
                 CreateOneSoldierCard("21000021");
 
-            
+
             }
             //CreateOneSoldierCard("21000005");
             //CreateOneSoldierCard("21000009");
@@ -152,8 +155,9 @@ namespace DemonOverwhelming
 
 
             //测试：有正在选择的对象时按右键确认选择
-            if (nowChooseingTarget != null && Input.GetKeyDown(KeyCode.Mouse1))
+            if (!debug_DontChosseEntity && nowChooseingTarget != null && Input.GetKeyDown(KeyCode.Mouse1))
             {
+
                 EnshureChooseTarget();
             }
             //按左键释放,如果鼠标在信息ui上则不释放
@@ -348,7 +352,7 @@ namespace DemonOverwhelming
         /// <param name="id"></param>
         /// <param name="camp"></param>
         /// <returns></returns>
-        public Missile GenerateOneMissle(Vector3 pos, string id, Camp camp, Entity creater,Entity entityNotAttack)
+        public Missile GenerateOneMissle(Vector3 pos, string id, Camp camp, Entity creater, Entity entityNotAttack)
         {
             GameObject go = Instantiate(new GameObject(), GameObject.Find("Missiles").transform);
             go.transform.position = pos;

@@ -61,13 +61,13 @@ namespace DemonOverwhelming
                 else
                     spriteRenderer.flipX = true;
             }
-            if (entity.spineObject)
-            {
-                if (entity.camp == Camp.demon)
-                    transform.rotation = Quaternion.Euler(0, 180, 0);
-                else
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
+            //if (entity.spineObject)
+            //{
+            //    if (entity.camp == Camp.demon)
+            //        transform.rotation = Quaternion.Euler(0, 180, 0);
+            //    else
+            //        transform.rotation = Quaternion.Euler(0, 0, 0);
+            //}
             GetInterfaceScript();
         }
         //获取行动模块
