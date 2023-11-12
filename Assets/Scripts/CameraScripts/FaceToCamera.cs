@@ -7,8 +7,12 @@ public class FaceToCamera : MonoBehaviour
 {
     [Header("角度，不填则为45度")]
     public float angle;
-    void Update()
+    private void Start()
     {
         transform.rotation = Quaternion.Euler(angle==0? -45:angle, transform.rotation.y, transform.rotation.z);
+
+    }
+    void Update()
+    {
     }
 }

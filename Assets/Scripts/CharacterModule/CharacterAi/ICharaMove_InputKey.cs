@@ -31,8 +31,8 @@ namespace DemonOverwhelming
             speed = entity.parameter.character.moveSpeed;
             manager.GetInterfaceScript();
         }
-
-
+        //用于判断动画的变量
+        bool moving = false;
         void Update()
         {
             if (m_Left)
@@ -51,6 +51,25 @@ namespace DemonOverwhelming
             //当有输入的时候不能进入追击状态，仅当无输入的时候可以进入
             if (moveDir_X == 0 && moveDir_Y == 0)
                 manager.SetAttackTarget(manager.enemyCheckScript.EnemyCheck());
+
+
+
+
+
+            if (moveDir == transform.position && moving)
+            {
+                moving = false;
+                Debug.Log("不动");
+                entity.PlayAnimation_Idle();
+            }
+            if (moveDir != transform.position && !moving)
+            {
+                moving = true;
+                Debug.Log("动");
+                entity.PlayAniamtion_Walk();
+
+            }
+            entity.FlipTo(transform.position + new Vector3(moveDir_X, moveDir_Y));
         }
         public void OnMoveRight(InputAction.CallbackContext value)
         {
@@ -80,7 +99,6 @@ namespace DemonOverwhelming
         }
         public void OnMoveUp(InputAction.CallbackContext value)
         {
-            Debug.Log("111");
             if (value.phase == InputActionPhase.Performed)
                 m_Up = true;
             if (value.phase == InputActionPhase.Canceled)

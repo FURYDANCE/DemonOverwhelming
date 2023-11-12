@@ -13,9 +13,45 @@ MonoBehaviour:
   m_Name: "Spine\u9884\u5236\u4EF6\u6570\u636E\u96C6\u5408"
   m_EditorClassIdentifier: 
   spinePrefabs:
-  - id: 3000001
-    m_name: "\u8D64\u8272\u6740\u4EBA\u9B54"
-    spinePrefab: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
   - id: 3000002
     m_name: "\u6708\u6218\u8001\u5175"
     spinePrefab: {fileID: 2450271714722331908, guid: a6d119bda7339614ebe224fab32ed9cc, type: 3}
+  - id: 3000001
+    m_name: "\u8D64\u8272\u6740\u4EBA\u9B54"
+    spinePrefab: {fileID: 2450271714722331908, guid: 9351fe383e4158d4db1043e20dbfd61c, type: 3}
+  - id: 1000001
+    m_name: "\u5C0F\u6076\u9B54"
+    spinePrefab: {fileID: 2450271714722331908, guid: ecf726f4fe2e72d4eabc1dfabac5fb5f, type: 3}
+  - id: 1000002
+    m_name: "\u519C\u592B"
+    spinePrefab: {fileID: 2450271714722331908, guid: 9df8fd8d66e7d904a827b33ccedd6e31, type: 3}
+  - id: 1000003
+    m_name: "\u72EC\u773C\u6076\u9B54"
+    spinePrefab: {fileID: 2450271714722331908, guid: cf08e1f1172a18a4e9b2f377289231fd, type: 3}
+  - id: 1000005
+    m_name: "\u7194\u7089\u86DE\u8753"
+    spinePrefab: {fileID: 2450271714722331908, guid: 9311a4c48c4f903408a0f8cbce7e76b8, type: 3}
+  - id: 1000005
+    m_name: "\u7194\u7089\u86DE\u8753"
+    spinePrefab: {fileID: 2450271714722331908, guid: 9311a4c48c4f903408a0f8cbce7e76b8, type: 3}
+  - id: 1000006
+    m_name: "\u5904\u5211\u8005"
+    spinePrefab: {fileID: 2450271714722331908, guid: c8fe286a867e1ec4a8715555697d241a, type: 3}
+  - id: 1000008
+    m_name: "\u98CE\u8F66\u5DE8\u4EBA"
+    spinePrefab: {fileID: 2450271714722331908, guid: 7a0c148deb3876a41bb728a772fd7811, type: 3}
+  - id: 1000010
+    m_name: "\u9AB7\u9AC5\u5175"
+    spinePrefab: {fileID: 2450271714722331908, guid: 8a0690d29beba5b428a263b4addd34ae, type: 3}
+  - id: 1000011
+    m_name: "\u707E\u7978\u5DEB\u5E08"
+    spinePrefab: {fileID: 2450271714722331908, guid: 0c347484e4425dd48b159da1f1017a06, type: 3}
+  - id: 1000026
+    m_name: "\u5C01\u5730\u6B65\u5175"
+    spinePrefab: {fileID: 2450271714722331908, guid: 41ec71419dc57354f91368ef02b0b24c, type: 3}
+  - id: 1000027
+    m_name: "\u730E\u4EBA"
+    spinePrefab: {fileID: 2450271714722331908, guid: 7b4997fdc548d2e40afdc8c3f052bf4e, type: 3}
+  - id: 1000028
+    m_name: "\u89C1\u4E60\u4FEE\u5973"
+    spinePrefab: {fileID: 2450271714722331908, guid: c208ade4b549f334d975497ab0fede2d, type: 3}

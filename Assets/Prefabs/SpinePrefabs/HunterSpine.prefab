@@ -1,0 +1,206 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2450271714722331908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 537074865371710291}
+  - component: {fileID: 3604926180599234587}
+  - component: {fileID: 6042033841964762103}
+  - component: {fileID: 8005068100800150951}
+  - component: {fileID: 5801528139898923228}
+  m_Layer: 0
+  m_Name: HunterSpine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &537074865371710291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450271714722331908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.626536, y: -13.950261, z: 25.053116}
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3604926180599234587
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450271714722331908}
+  m_Mesh: {fileID: 0}
+--- !u!23 &6042033841964762103
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450271714722331908}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -565239623
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8005068100800150951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450271714722331908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonDataAsset: {fileID: 11400000, guid: ac2c30849f3279e47b985bff1715f810, type: 2}
+  initialSkinName: 
+  fixPrefabOverrideViaMeshFilter: 2
+  initialFlipX: 0
+  initialFlipY: 0
+  updateWhenInvisible: 3
+  separatorSlotNames: []
+  zSpacing: 0
+  useClipping: 1
+  immutableTriangles: 0
+  pmaVertexColors: 1
+  clearStateOnDisable: 0
+  tintBlack: 0
+  singleSubmesh: 0
+  fixDrawOrder: 0
+  addNormals: 0
+  calculateTangents: 0
+  maskInteraction: 0
+  maskMaterials:
+    materialsMaskDisabled: []
+    materialsInsideMask: []
+    materialsOutsideMask: []
+  disableRenderingOnOverride: 1
+  _animationName: 
+  loop: 0
+  timeScale: 1
+--- !u!114 &5801528139898923228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450271714722331908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camp: 0
+  isHero: 0
+  spineObject: 0
+  buffs: []
+  skills: []
+  parameter:
+    ID: 
+    type: 0
+    name: 
+    sprite: {fileID: 0}
+    Hp: 0
+    nowHp: 0
+    hurtDamage: 0
+    hpBarSize: 0
+    hpBarOffset: {x: 0, y: 0, z: 0}
+    introduct: 
+    modleSize: 0
+    shadowSize: {x: 0, y: 0, z: 0}
+    shadowOffset: 0
+    aiMode_Move: 0
+    aiMode_Check: 0
+    aiMode_Chase: 0
+    aiMode_Atk: 0
+    character:
+      id: 
+      cost: 0
+      aiType: 0
+      moveSpeed: 0
+      defence: 0
+      defence_far: 0
+      defence_magic: 0
+      haveSkill: 0
+      skillId: 0
+      skillName: 
+      EnemyCheckArea: {x: 0, y: 0, z: 0}
+      EnemyCheckOffset: {x: 0, y: 0, z: 0}
+      attackDistance: 0
+      chaseTime: 0
+      attackWaitTime: 0
+      attackTime: 0
+      missileId: 
+      specialTags: []
+      bloodDrop: 0
+      skillIds: []
+      skills: []
+      skillLevels: []
+      descriptionAndStory: []
+    building:
+      id: 
+      building_canAttack: 0
+    buffParameter:
+      speedBuff: 0
+  hpBar: {fileID: 0}
+  parentSoldierGroup: {fileID: 0}
+  boxCollider: {fileID: 0}
+  hpLock: 0
+  animator: {fileID: 0}
+  animations:
+    id: 
+    animatorController: {fileID: 0}
+    animation_Idle: {fileID: 0}
+    animation_Attack: {fileID: 0}
+    animation_Walk: {fileID: 0}
+    animation_Die: {fileID: 0}
+  skAni: {fileID: 0}
+  OffsetToCaptain: {x: 0, y: 0, z: 0}
+  isBackingRelativePos: 0
+  backingRelativeStartPos: {x: 0, y: 0, z: 0}
+  skillLevels: 
