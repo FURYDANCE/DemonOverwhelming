@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.45140117, g: 0.5008937, b: 0.5723182, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: e1189259013f5be4bab1d1771ac7c9ed, type: 2}
 --- !u!1 &8352990
 GameObject:
   m_ObjectHideFlags: 0
@@ -3775,7 +3775,7 @@ MonoBehaviour:
   canDecrease: 1
   hoverHealthBarData:
     enabled: 1
-    offset: {x: 0, y: -1, z: 0}
+    offset: {x: 0, y: 4, z: 0}
     size: {x: 1, y: 1, z: 1}
   hoverHealthBarY: 4
   hitEffect:
@@ -3854,7 +3854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabID:
     x: 0
-    y: 1
+    y: 0
   _name: new_building
   code: new_building_code
   category: new_building_category
@@ -6340,7 +6340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prevScene: MainMenu
   gameCode: 2023.0.0
-  defeatCondition: 1
+  defeatCondition: 0
   peaceTimeDuration: 10
   winGameAudio:
     fetchType: 0
@@ -8442,14 +8442,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabID:
     x: 0
-    y: 1
+    y: 3
   maxHealth: 100
   initialHealth: 100
   canIncrease: 1
   canDecrease: 1
   hoverHealthBarData:
     enabled: 1
-    offset: {x: 0, y: -1, z: 0}
+    offset: {x: 0, y: 4, z: 0}
     size: {x: 1, y: 1, z: 1}
   hoverHealthBarY: 4
   hitEffect:
@@ -8503,7 +8503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tabID:
     x: 0
-    y: 1
+    y: 0
   _name: new_unit
   code: new_unit_code
   category: new_unit_category
@@ -9355,7 +9355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1066224568
 Transform:
   m_ObjectHideFlags: 0
@@ -10642,14 +10642,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1334451475}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.25000006, y: -0.24999997, z: 0.066987306, w: 0.9330127}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: -30, z: 0}
 --- !u!1 &1335029384
 GameObject:
   m_ObjectHideFlags: 0
@@ -18107,7 +18107,7 @@ MonoBehaviour:
   pivotTargetAngle: 15
   pivotMoveBackwardsDistance: 5
   mouseWheelZoom:
-    enabled: 1
+    enabled: 0
     invert: 0
     name: Mouse ScrollWheel
     sensitivity: 20
@@ -18157,11 +18157,11 @@ MonoBehaviour:
   defaultRotationType: 1
   altRotationControlType: {fileID: 0}
   keyRotation:
-    enabled: 1
+    enabled: 0
     positive: {fileID: 11400000, guid: 8a0838a7179264e48a6a6cb3cefb6585, type: 2}
     negative: {fileID: 11400000, guid: 633677c52ea870b4c84c442764196640, type: 2}
   mouseButtonRotation:
-    buttonType: 1
+    buttonType: -1
     invert: 0
     smoothFactor: 0.1
   rotationSpeedModifier:
