@@ -717,7 +717,7 @@ MonoBehaviour:
     engageOnAssign: 1
     engageWhenAttacked: 1
     engageOnce: 0
-    engageFriendly: 1
+    engageFriendly: 0
     autoIgnoreAngleLOS: 1
     autoIgnoreObstacleLOS: 0
   isAttackReady: 1
@@ -908,6 +908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9033349661025263259}
   - component: {fileID: 6803897870645952254}
+  - component: {fileID: 8838791478196311560}
   m_Layer: 0
   m_Name: unit_components
   m_TagString: Untagged
@@ -1021,6 +1022,28 @@ MonoBehaviour:
     loopProgressAudio: 0
   onTargetResourceFullSearch: 1
   onTargetResourceDepletedSearch: 1
+--- !u!114 &8838791478196311560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9045839872821611087}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0b064f07e49c04d9cc8da8e5332003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  code: new_unit_code_EntitySeller_101
+  isActive: 1
+  taskUI: {fileID: 11400000, guid: f24dcc64db70aec458599bf56ca3bcc5, type: 2}
+  sellResources:
+  - type: {fileID: 11400000, guid: 8552ce5c1496c4a4683e716be18015e6, type: 2}
+    value:
+      amount: 100
+      capacity: 1
+    nonConsumable: 0
+  addTimer: 0.5
 --- !u!1 &9174703432536760168
 GameObject:
   m_ObjectHideFlags: 0
