@@ -793,6 +793,7 @@ GameObject:
   - component: {fileID: 1854114356032425583}
   - component: {fileID: 3652574648794814509}
   - component: {fileID: 1601343446864548476}
+  - component: {fileID: 8071609212919018768}
   m_Layer: 0
   m_Name: building_components
   m_TagString: Untagged
@@ -918,6 +919,20 @@ MonoBehaviour:
   setTargetResourceOfSameTypeOnDead: 1
   setTargetResourceOnDeadRange: 20
   attackMoveEnabled: 1
+--- !u!114 &8071609212919018768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7157558615018857898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe588849675a2e4c82af94726369d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  code: new_building_code_CustomDefaultCondition_118
+  isActive: 1
 --- !u!1 &7588646314251541453
 GameObject:
   m_ObjectHideFlags: 0

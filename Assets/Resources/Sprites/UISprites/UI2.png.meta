@@ -113,7 +113,7 @@ TextureImporter:
         width: 3840
         height: 205
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,7 +134,7 @@ TextureImporter:
         width: 3840
         height: 704
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,6 +142,27 @@ TextureImporter:
       bones: []
       spriteID: 1972baff51d24954dbab30c9d204b87e
       internalID: 1411341628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "UI2_\u8D44\u6E90\u533A\u57DF"
+      rect:
+        serializedVersion: 2
+        x: 3068
+        y: 1958
+        width: 770
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24991ee9c40e8640881f9841778a97c
+      internalID: 274448203
       vertices: []
       indices: 
       edges: []
@@ -159,6 +180,7 @@ TextureImporter:
     nameFileIdTable:
       "UI2_\u4E0A\u5C42": 1953271889
       "UI2_\u4E0B\u5C42": 1411341628
+      "UI2_\u8D44\u6E90\u533A\u57DF": 274448203
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
