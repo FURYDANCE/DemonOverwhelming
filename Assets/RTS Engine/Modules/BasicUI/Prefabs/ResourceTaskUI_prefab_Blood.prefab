@@ -259,7 +259,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 111, y: -21}
+  m_AnchoredPosition: {x: 111, y: -28}
   m_SizeDelta: {x: 56, y: 28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8297576959556384372
@@ -299,8 +299,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278957055
-  m_fontColor: {r: 1, g: 0.7028289, b: 0.04150939, a: 1}
+    rgba: 4278920191
+  m_fontColor: {r: 1, g: 0.13549243, b: 0.043137252, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 7274516978041509712}
   - component: {fileID: 3789830422692541525}
   m_Layer: 5
-  m_Name: ResourceTaskUI_prefab
+  m_Name: ResourceTaskUI_prefab_Blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

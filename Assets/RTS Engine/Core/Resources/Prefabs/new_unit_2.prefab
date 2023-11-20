@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 195046646840617462}
   - component: {fileID: -9093728650113978179}
   m_Layer: 0
-  m_Name: new_unit
+  m_Name: new_unit_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,11 +58,11 @@ MonoBehaviour:
   tabID:
     x: 0
     y: 1
-  _name: new_unit
-  code: new_unit_code
-  category: new_unit_category
-  description: new_unit_description
-  icon: {fileID: 0}
+  _name: new_unit_2
+  code: new_unit_code_2
+  category: new_unit_category_2
+  description: new_unit2
+  icon: {fileID: 21300000, guid: 7578dabf3644ee5428892700f48676bc, type: 3}
   radius: 0.7
   model: {fileID: 1298095389794648}
   isIdle: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   canDecrease: 1
   hoverHealthBarData:
     enabled: 1
-    offset: {x: 0, y: -1, z: 0}
+    offset: {x: 0, y: 4, z: 0}
     size: {x: 1, y: 1, z: 1}
   hoverHealthBarY: 4
   hitEffect:
@@ -675,12 +675,12 @@ MonoBehaviour:
   tabID:
     x: 1
     y: 1
-  priority: 1
+  priority: 0
   requireIdleEntity: 1
   targetFinderData:
     enabled: 1
     reloadTime: 1
-    range: 30
+    range: 20
     idleOnly: 0
   setTargetTaskUI: {fileID: 0}
   orderAudio:
@@ -820,7 +820,7 @@ MonoBehaviour:
     unitEnableDistance: 0.5
     buildingStoppingDistance:
       _min: 0
-      _max: 1.5
+      _max: 1
     noTargetStoppingDistance:
       _min: 0
       _max: 1
@@ -837,7 +837,7 @@ MonoBehaviour:
           value: 0
         intProperties: []
   moveOnAttack: 0
-  followDistance: 30
+  followDistance: 15
   attackMoveEnabled: 1
   attackMoveTaskUI: {fileID: 11400000, guid: 27e72b63eb4b08846ac6f33f33cf9e28, type: 2}
 --- !u!1 &8958527049834644743
