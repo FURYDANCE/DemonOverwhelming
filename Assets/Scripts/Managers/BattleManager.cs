@@ -30,8 +30,7 @@ namespace DemonOverwhelming
         public float nowBloodCost;
         [Header("选择的兵牌组合")]
         public List<SoldierCard> soldierCards;
-        [Header("布阵中的兵种组合s")]
-        public List<SoliderGroup> soliderFormatGroups;
+
         [Header("为demo临时添加：取消单位选择")]
         public bool debug_DontChosseEntity;
         /// <summary>
@@ -100,6 +99,12 @@ namespace DemonOverwhelming
         public List<Vector3> historyCardPos;
         public List<Vector3> historyShadowPos;
         public List<float> historyX, historyY;
+
+        /// <summary>
+        /// 所有选择了的兵牌数据
+        /// </summary>
+        public List<FormatCard> allSelectedCards;
+
         private void Awake()
         {
             if (instance != null)
@@ -109,9 +114,9 @@ namespace DemonOverwhelming
 
         void Start()
         {
-            objectManager = SceneObjectsManager.instance;
-            cameraFollowTarget = SceneObjectsManager.instance.GetCameraFollowTarget();
-            StartAddMoney();
+            //objectManager = SceneObjectsManager.instance;
+            //cameraFollowTarget = SceneObjectsManager.instance.GetCameraFollowTarget();
+            //StartAddMoney();
             //生成右下角的兵种卡
             if (levelId == 1)
             {
@@ -135,7 +140,10 @@ namespace DemonOverwhelming
             //CreateOneSoldierCard("21000009");
             //CreateOneSoldierCard("21000007");
             //CreateOneSoldierCard("21000008");
-            fillStartColor = SceneObjectsManager.instance.costFill.color;
+
+
+
+            //fillStartColor = SceneObjectsManager.instance.costFill.color;
 
             //cardSelectUI = GameObject.Find("CardSelectArea").transform.GetComponent<Image>();
             //formationMakingUI = GameObject.Find("FormationMakingArea").transform.GetComponent<Image>();
@@ -147,41 +155,41 @@ namespace DemonOverwhelming
 
         void Update()
         {
-            Money_BoloodShowing();
+            //Money_BoloodShowing();
 
-            //当有选中的实体时，相机跟随所选择的实体
-            if (nowChoosedTarget != null)
-                CameraFollow_ByChoosedTarget();
+            ////当有选中的实体时，相机跟随所选择的实体
+            //if (nowChoosedTarget != null)
+            //    CameraFollow_ByChoosedTarget();
 
 
-            //测试：有正在选择的对象时按右键确认选择
-            if (!debug_DontChosseEntity && nowChooseingTarget != null && Input.GetKeyDown(KeyCode.Mouse1))
-            {
+            ////测试：有正在选择的对象时按右键确认选择
+            //if (!debug_DontChosseEntity && nowChooseingTarget != null && Input.GetKeyDown(KeyCode.Mouse1))
+            //{
 
-                EnshureChooseTarget();
-            }
-            //按左键释放,如果鼠标在信息ui上则不释放
-            if (Input.GetKeyDown(KeyCode.Mouse0) && !mouseOveringInfoUI)
-            {
-                ReleaseChoosedEntity();
-                DestoryNowUnitInformation();
-            }
-            ////生成实体测试
-            if (Input.GetKeyDown(KeyCode.B))
-                GenerateOneHero(Camp.demon, SoldierIds.hero1, SceneObjectsManager.instance.playerEntityGeneratePoint.position);
+            //    EnshureChooseTarget();
+            //}
+            ////按左键释放,如果鼠标在信息ui上则不释放
+            //if (Input.GetKeyDown(KeyCode.Mouse0) && !mouseOveringInfoUI)
+            //{
+            //    ReleaseChoosedEntity();
+            //    DestoryNowUnitInformation();
+            //}
+            //////生成实体测试
             //if (Input.GetKeyDown(KeyCode.B))
-            //{
-            //    CreateSoldierWithGroup(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers, true);
-            //}
-            ////英雄技能测试
-            //if (hero && Input.GetKeyDown(KeyCode.Alpha1))
-            //{
-            //    hero.UseSkill(0);
-            //}
-            //if (hero && Input.GetKeyDown(KeyCode.Alpha2))
-            //{
-            //    hero.UseSkill(1);
-            //}
+            //    GenerateOneHero(Camp.demon, SoldierIds.hero1, SceneObjectsManager.instance.playerEntityGeneratePoint.position);
+            ////if (Input.GetKeyDown(KeyCode.B))
+            ////{
+            ////    CreateSoldierWithGroup(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers, true);
+            ////}
+            //////英雄技能测试
+            ////if (hero && Input.GetKeyDown(KeyCode.Alpha1))
+            ////{
+            ////    hero.UseSkill(0);
+            ////}
+            ////if (hero && Input.GetKeyDown(KeyCode.Alpha2))
+            ////{
+            ////    hero.UseSkill(1);
+            ////}
         }
 
         #region 英雄相关
@@ -491,64 +499,64 @@ namespace DemonOverwhelming
             cameraFollowTarget.transform.position = new Vector3(nowChoosedTarget.transform.position.x, cameraFollowTarget.transform.position.y, 3);
         }
 
-        /// <summary>
-        /// 以组为单位生成士兵，参数为阵营，士兵ID和阵型ID
-        /// </summary>
-        public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow)
-        {
-            //生成次数++
-            genrateAmount++;
-            //空对象
-            GameObject go;
-            //根据阵营判断生成在哪一边
-            Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
-            //生成阵型和随机位置偏移
-            go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
-            go.transform.position = pos + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0);
-            //获取组件，赋值组件
-            SoliderGroup sg = go.GetComponent<SoliderGroup>();
-            sg.camp = camp;
-            Debug.Log("生成时的士兵ID：" + soldierId);
-            sg.finalSoldierId = soldierId;
-            sg.Initialize();
-            sg.Generate(destoryShadow);
-        }
-        /// <summary>
-        /// 以组为单位生成士兵，参数为阵营，士兵ID,阵型ID,是否摧毁虚影，生成在相应召唤点位的相对偏移位置
-        /// </summary>
-        public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 Offset)
-        {
-            genrateAmount++;
-            GameObject go;
-            Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
-            go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
-            go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
-            SoliderGroup sg = go.GetComponent<SoliderGroup>();
-            sg.camp = camp;
-            Debug.Log("生成时的士兵ID：" + soldierId);
+        ///// <summary>
+        ///// 以组为单位生成士兵，参数为阵营，士兵ID和阵型ID
+        ///// </summary>
+        //public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow)
+        //{
+        //    //生成次数++
+        //    genrateAmount++;
+        //    //空对象
+        //    GameObject go;
+        //    //根据阵营判断生成在哪一边
+        //    Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
+        //    //生成阵型和随机位置偏移
+        //    go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
+        //    go.transform.position = pos + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0);
+        //    //获取组件，赋值组件
+        //    SoliderGroup sg = go.GetComponent<SoliderGroup>();
+        //    sg.camp = camp;
+        //    Debug.Log("生成时的士兵ID：" + soldierId);
+        //    sg.finalSoldierId = soldierId;
+        //    sg.Initialize();
+        //    sg.Generate(destoryShadow);
+        //}
+        ///// <summary>
+        ///// 以组为单位生成士兵，参数为阵营，士兵ID,阵型ID,是否摧毁虚影，生成在相应召唤点位的相对偏移位置
+        ///// </summary>
+        //public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 Offset)
+        //{
+        //    genrateAmount++;
+        //    GameObject go;
+        //    Vector3 pos = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;
+        //    go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
+        //    go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
+        //    SoliderGroup sg = go.GetComponent<SoliderGroup>();
+        //    sg.camp = camp;
+        //    Debug.Log("生成时的士兵ID：" + soldierId);
 
-            sg.finalSoldierId = soldierId;
-            sg.transform.position += Offset;
-            sg.Generate(destoryShadow);
-        }
-        /// <summary>
-        /// 以组为单位生成士兵，参数为阵营，士兵ID,阵型ID,是否摧毁虚影，生成位置，相对偏移位置
-        /// </summary>
-        public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 StartPos, Vector3 Offset)
-        {
-            genrateAmount++;
-            GameObject go;
-            Vector3 pos = StartPos;/* = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;*/
-            go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
-            go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
-            SoliderGroup sg = go.GetComponent<SoliderGroup>();
-            sg.camp = camp;
-            Debug.Log("生成时的士兵ID：" + soldierId);
+        //    sg.finalSoldierId = soldierId;
+        //    sg.transform.position += Offset;
+        //    sg.Generate(destoryShadow);
+        //}
+        ///// <summary>
+        ///// 以组为单位生成士兵，参数为阵营，士兵ID,阵型ID,是否摧毁虚影，生成位置，相对偏移位置
+        ///// </summary>
+        //public void CreateSoldierWithGroup(Camp camp, string soldierId, string formationId, bool destoryShadow, Vector3 StartPos, Vector3 Offset)
+        //{
+        //    genrateAmount++;
+        //    GameObject go;
+        //    Vector3 pos = StartPos;/* = camp == Camp.demon ? SceneObjectsManager.instance.playerEntityGeneratePoint.position : SceneObjectsManager.instance.enemyEntityGeneratePoint.position;*/
+        //    go = Instantiate(GameDataManager.instance.GetFormationById(formationId), SceneObjectsManager.instance.allUnitParent);
+        //    go.transform.position = pos/* + new Vector3(Random.Range(-5f, 5f), Random.Range(-7f, 7f), 0)*/;
+        //    SoliderGroup sg = go.GetComponent<SoliderGroup>();
+        //    sg.camp = camp;
+        //    Debug.Log("生成时的士兵ID：" + soldierId);
 
-            sg.finalSoldierId = soldierId;
-            sg.transform.position += Offset;
-            sg.Generate(destoryShadow);
-        }
+        //    sg.finalSoldierId = soldierId;
+        //    sg.transform.position += Offset;
+        //    sg.Generate(destoryShadow);
+        //}
 
 
         #region 鼠标选择实体的相关方法s
@@ -619,13 +627,36 @@ namespace DemonOverwhelming
         #region 兵种卡生成、选择兵牌、生成士兵
 
         /// <summary>
+        /// 为布阵卡集合添加一个布阵卡
+        /// </summary>
+        public void AddOneFormatCard(FormatCard formatCard)
+        {
+            allSelectedCards.Add(formatCard);
+        }
+        /// <summary>
+        /// 为布阵卡集合移除一个布阵卡
+        /// </summary>
+        public void RemoveOneFormatCard(FormatCard formatCard)
+        {
+            allSelectedCards.Remove(formatCard);
+        }
+        /// <summary>
+        /// 为布阵卡集合移除最后添加的布阵卡
+        /// </summary>
+        public void RemoveLastFormatCard()
+        {
+            allSelectedCards.RemoveAt(allSelectedCards.Count - 1);
+        }
+
+
+        /// <summary>
         /// 在UI右下角创建一个兵种卡，参数为其id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
         public SoldierCard CreateOneSoldierCard(string id)
         {
-            SoldierCard card = Instantiate(GameDataManager.instance.emptySoldierCard, SceneObjectsManager.instance.BattleUI.transform.Find("BattleUI_Down_Image").transform.Find("CardSelectArea").transform).GetComponent<SoldierCard>();
+            SoldierCard card = Instantiate(GameDataManager.instance.emptySoldierCard, SceneObjectsManager.instance.cardSelectUI.transform).GetComponent<SoldierCard>();
 
             card.parameter.id = id;
             card.name = "SoldierCard:" + id;
@@ -669,12 +700,12 @@ namespace DemonOverwhelming
             //添加金钱与cost统计
             nowMoneyCost += card.parameter.moneyCost;
             nowBloodCost += card.parameter.bloodCost;
-            //在布阵区生成旗帜
+            //在布阵区生成布阵卡
             FormatCard formatCard = Instantiate(GameDataManager.instance.emptyFormat, SceneObjectsManager.instance.formationMakingUI.transform).GetComponent<FormatCard>();
-
+            //给予布阵卡需要的数据
             formatCard.SetParentParameter(card.parameter);
             //将兵牌对应的兵组传给旗帜
-            formatCard.connectedSoldierGroup = card.parameter.content;
+            //formatCard.connectedSoldierGroup = card.parameter.content;
             //设置旗帜贴图
             formatCard.SetFlagSprite(card.parameter.flagSprite);
 
@@ -706,7 +737,7 @@ namespace DemonOverwhelming
             }
             //清除布阵卡选择记录和兵牌选择记录
             ClearSelectRecord();
-            soliderFormatGroups.Clear();
+           
 
             //金钱血液计算，计算完成后归零
             //money -= nowMoneyCost;
@@ -723,33 +754,33 @@ namespace DemonOverwhelming
         /// </summary>
         public void GenerateSoldiers()
         {
-            List<SoliderGroup> newGroupList = new List<SoliderGroup>();
-            //计算金钱和cost统计，若超过最大值则不生成
-            if (nowBloodCost > blood || nowMoneyCost > money)
-            {
-                Debug.Log("超过最大值");
-                return;
-            }
-            //生成兵种
-            foreach (SoliderGroup sg in soliderFormatGroups)
-            {
-                //记录当前界面上的兵种位置和信息
-                SoliderGroup NG = Instantiate(sg.gameObject, sg.transform.parent).GetComponent<SoliderGroup>();
-                sg.parentFormatCard.SetConnectGroup(NG);
-                newGroupList.Add(NG);
+            //List<SoliderGroup> newGroupList = new List<SoliderGroup>();
+            ////计算金钱和cost统计，若超过最大值则不生成
+            //if (nowBloodCost > blood || nowMoneyCost > money)
+            //{
+            //    Debug.Log("超过最大值");
+            //    return;
+            //}
+            ////生成兵种
+            //foreach (SoliderGroup sg in soliderFormatGroups)
+            //{
+            //    //记录当前界面上的兵种位置和信息
+            //    SoliderGroup NG = Instantiate(sg.gameObject, sg.transform.parent).GetComponent<SoliderGroup>();
+            //    sg.parentFormatCard.SetConnectGroup(NG);
+            //    newGroupList.Add(NG);
 
 
-                sg.Generate(false);
+            //    sg.Generate(false);
 
-            }
-            money -= nowMoneyCost;
-            blood -= nowBloodCost;
-            //生成兵种之后，场上的残影就会消失，跟随生成了的兵种，需要再原地生成一样的残影，同时设置关联残影的布阵卡
-            soliderFormatGroups.Clear();
-            foreach (SoliderGroup s in newGroupList)
-            {
-                soliderFormatGroups.Add(s);
-            }
+            //}
+            //money -= nowMoneyCost;
+            //blood -= nowBloodCost;
+            ////生成兵种之后，场上的残影就会消失，跟随生成了的兵种，需要再原地生成一样的残影，同时设置关联残影的布阵卡
+            //soliderFormatGroups.Clear();
+            //foreach (SoliderGroup s in newGroupList)
+            //{
+            //    soliderFormatGroups.Add(s);
+            //}
             //Debug.Log("到这里了");
             //ReBuildSoldierGroups();
 

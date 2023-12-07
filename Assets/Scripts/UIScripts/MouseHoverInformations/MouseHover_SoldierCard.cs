@@ -15,6 +15,7 @@ namespace DemonOverwhelming
 
         public void OnPointerEnter(PointerEventData eventData)
         {
+            return;
             Debug.Log("鼠标进入");
             infoUI.DestoryAllText();
             SceneObjectsManager.instance.ShowObjectInfoUI(true);
@@ -26,6 +27,8 @@ namespace DemonOverwhelming
 
         public void OnPointerExit(PointerEventData eventData)
         {
+            return;
+
             Debug.Log("鼠标退出");
 
             SceneObjectsManager.instance.ShowObjectInfoUI(false);

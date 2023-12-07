@@ -34,11 +34,12 @@ namespace DemonOverwhelming
         /// </summary>
         public string soldierId;
 
+        [Header("兵种预制件")]
+        public GameObject soldierPrefab;
         /// <summary>
-        /// 存放兵种内容的预制件，通过id找到
+        /// 具体的阵型，通过id找到
         /// </summary>
-        [JsonIgnore]
-        public SoliderGroup content;
+        public SoldierFormation formation;
 
         public void SetValue(SoldierCardParameter data)
         {

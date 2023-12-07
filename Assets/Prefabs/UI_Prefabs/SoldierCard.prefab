@@ -162,7 +162,7 @@ RectTransform:
   m_GameObject: {fileID: 4629176491522629813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5946535352938134757}
@@ -173,7 +173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 26.95}
+  m_AnchoredPosition: {x: 0, y: 11.99}
   m_SizeDelta: {x: 56.7623, y: 53.900505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5735989660607409243
@@ -244,7 +244,7 @@ RectTransform:
   m_GameObject: {fileID: 7233710488846720462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.85, y: 0.85, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2296108542901701778}
@@ -371,6 +371,7 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 
     soldierId: 
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     content: {fileID: 0}
   image: {fileID: 7300638804833136271}
   costText: {fileID: 3512897180049735032}

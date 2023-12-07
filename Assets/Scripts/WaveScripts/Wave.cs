@@ -18,7 +18,7 @@ namespace DemonOverwhelming
         {
             foreach (OneGroup group in groups)
             {
-                BattleManager.instance.CreateSoldierWithGroup(Camp.human, group.soldierId, group.formationId, true, group.offset);
+                //BattleManager.instance.CreateSoldierWithGroup(Camp.human, group.soldierId, group.formationId, true, group.offset);
             }
         }
 

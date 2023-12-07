@@ -8,21 +8,21 @@ namespace DemonOverwhelming
 
     /// <summary>
     /// 布阵界面上的旗帜对象,有拖拽功能
+    /// 也保存了创建新对象所需的数据，在玩家生成所有单位时，由战斗管理器来遍历所有的兵布阵卡来生成对应的单位
     /// </summary>
     public class FormatCard : MonoBehaviour
     {
+        /// <summary>
+        /// 需要的数据
+        /// </summary>
         public SoldierCardParameter parentParameter;
-        /// <summary>
-        /// 兵组
-        /// </summary>
 
-        public SoliderGroup connectedSoldierGroup;
-        public Shadow connectedShadow;
         /// <summary>
-        /// 兵组（在场景中生成后的）
+        /// 幻影对象
         /// </summary>
+        public GameObject shadowObject;
 
-        public SoliderGroup connectedSoldierGroup_inScene;
+
         /// <summary>
         /// 初始位置
         /// </summary>
@@ -40,38 +40,64 @@ namespace DemonOverwhelming
         {
 
             drag = GetComponent<UiDrag>();
-            //生成残影
-            connectedSoldierGroup_inScene = Instantiate(connectedSoldierGroup, SceneObjectsManager.instance.allUnitParent);
-            connectedSoldierGroup_inScene.transform.position = SceneObjectsManager.instance.playerEntityGeneratePoint.transform.position;
-            //设置变量
-            connectedSoldierGroup_inScene.SetParentFormatCard(this);
-            //设置残影在生成实体士兵时的旗帜贴图
-            connectedSoldierGroup_inScene.SetFlagSprite(flagSprite);
-            //设置残影的具体贴图
-            connectedSoldierGroup_inScene.SetSoldierShadowSprite(parentParameter.sprite);
 
-            //将该旗帜对应的兵组位置传给战斗管理器
-            BattleManager.instance.soliderFormatGroups.Add(connectedSoldierGroup_inScene);
-            startPos = connectedSoldierGroup_inScene.transform.position;
-            if (!noOffset)
-            {
-
-                //设置旗帜的位置偏移
-                x = Random.Range(-80, 80);
-                y = Random.Range(-50, 50);
-
-            }
+            //为避免布阵卡重叠，让自身随机位移
+            x = Random.Range(-80, 80);
+            y = Random.Range(-50, 50);
             transform.position += new Vector3(x, y, 0);
-            drag.startPos = transform.position - new Vector3(x, y, 0);
+            startPos = transform.position;
+
+            //计算幻影的初始位置
+            Vector3 shadowPos = GetShadowPos();
+
+            //生成幻影
+            GameObject go = Instantiate(new GameObject());
+            go.transform.position = shadowPos;
+            shadowObject = go;
+            go.name = "shadow_" + parentParameter.name;
+            //根据数据中的阵型，生成各个具体的幻影对象并设置其相对位置
+            foreach (Vector3 offset in parentParameter.formation.soldierOffsets)
+            {
+                GameObject shadow = Instantiate(new GameObject(), go.transform);
+                shadow.transform.position = shadowObject.transform.position + offset;
+                shadow.AddComponent<SpriteRenderer>().sprite = parentParameter.sprite;
+            }
+
+            //为战斗管理器的布阵卡集合添加自身
+            BattleManager.instance.AddOneFormatCard(this);
+
+
+
         }
         private void Update()
         {
-            //计算ui拖拽的相对位置，改变残影的位置
-            if (connectedSoldierGroup_inScene)
-            {
-                connectedSoldierGroup_inScene.transform.position = startPos + new Vector3(drag.relativeGap.x * 0.15f, drag.relativeGap.y * 0.35f + 4, 0);
-            }
+            shadowObject.transform.position = GetShadowPos();
         }
+
+        /// <summary>
+        /// 获取幻影应该在的位置
+        /// </summary>
+        public Vector3 GetShadowPos()
+        {
+            Vector3 startOffset = GetRelativeOffsetToCenter();
+            //计算幻影的初始位置
+            Vector3 shadowPos = SceneObjectsManager.instance.playerEntityGeneratePoint.position + new Vector3(startOffset.x * 0.1f, 0, startOffset.y * 0.35f);
+            return shadowPos;
+        }
+
+        /// <summary>
+        /// 获取自身到布阵卡中心的相对偏移量
+        /// </summary>
+        public Vector3 GetRelativeOffsetToCenter()
+        {
+            Vector3 v = SceneObjectsManager.instance.formationMakingAreaCenter.position - transform.position;
+            return v;
+        }
+
+        /// <summary>
+        /// 设置所需变量
+        /// </summary>
+        /// <param name="parameter"></param>
         public void SetParentParameter(SoldierCardParameter parameter)
         {
             parentParameter = parameter;
@@ -80,16 +106,12 @@ namespace DemonOverwhelming
         }
         public void ClearThis()
         {
-            BattleManager.instance.soliderFormatGroups.Remove(connectedSoldierGroup_inScene);
-            Destroy(connectedSoldierGroup_inScene.gameObject);
+            //BattleManager.instance.soliderFormatGroups.Remove(connectedSoldierGroup_inScene);
+            //Destroy(connectedSoldierGroup_inScene.gameObject);
         }
         public void SetFlagSprite(Sprite sprite)
         {
             this.flagSprite = sprite;
-        }
-        public void SetConnectGroup(SoliderGroup soliderGroup)
-        {
-            connectedSoldierGroup_inScene = soliderGroup;
         }
     }
 }

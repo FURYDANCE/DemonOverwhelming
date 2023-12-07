@@ -22,7 +22,7 @@ namespace DemonOverwhelming
             //遍历并生成对应的士兵s
             for (int i = 0; i < summonIds.Length; i++)
             {
-                BattleManager.instance.CreateSoldierWithGroup(targetCamp, summonIds[i], summonFormations[i], true, summonTargetTransform.position, summonOffsets[i]);
+                //BattleManager.instance.CreateSoldierWithGroup(targetCamp, summonIds[i], summonFormations[i], true, summonTargetTransform.position, summonOffsets[i]);
             }
         }
 

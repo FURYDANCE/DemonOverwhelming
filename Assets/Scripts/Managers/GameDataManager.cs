@@ -118,9 +118,9 @@ namespace DemonOverwhelming
         public SoldierCardParameter GetSoldierCardById(string id)
         {
             SoldierCardParameter find = excelDatas.cardDatas.Find((SoldierCardParameter p) => { return p.id == id; });
-            find.content = formationObject.formations.Find((Formation p) => { return p.id == find.formationId; }).contentFormation.GetComponent<SoliderGroup>();
-            find.content.finalSoldierId = find.soldierId;
-            Debug.Log("FIND到的ID==" + find.soldierId);
+            find.formation = formationObject.formations.Find((Formation p) => { return p.id == find.formationId; }).formation;
+            //find.content.finalSoldierId = find.soldierId;
+            //Debug.Log("FIND到的ID==" + find.soldierId);
             return find;
         }
         /// <summary>
@@ -174,12 +174,13 @@ namespace DemonOverwhelming
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public GameObject GetFormationById(string id)
+        public SoldierFormation GetFormationById(string id)
         {
-            GameObject go = formationObject.formations.Find((Formation f) => { return f.id == id; }).contentFormation.gameObject;
-            if (!go)
+            SoldierFormation go = formationObject.formations.Find((Formation f) => { return f.id == id; }).formation;
+            if (go == null)
                 return null;
-            return go;
+            else
+                return go;
         }
         /// <summary>
         /// 通过id获取技能信息
