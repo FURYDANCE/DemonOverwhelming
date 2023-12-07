@@ -49,10 +49,10 @@ namespace DemonOverwhelming
                 //当单位处于重整队形状态时候的移动
                 if (entity.isBackingRelativePos)
                 {
-                    Vector3 target = entity.parentSoldierGroup.flagFollowingSoldier.transform.position - entity.OffsetToCaptain;
-                    //Debug.Log("正在回到初始阵型位置");
-                    transform.position = Vector3.MoveTowards(transform.position, target, entity.GetSpeed() * Time.deltaTime);
-                    entity.FlipTo(target);
+                    //Vector3 target = entity.parentSoldierGroup.flagFollowingSoldier.transform.position - entity.OffsetToCaptain;
+                    ////Debug.Log("正在回到初始阵型位置");
+                    //transform.position = Vector3.MoveTowards(transform.position, target, entity.GetSpeed() * Time.deltaTime);
+                    //entity.FlipTo(target);
                 }
             }
             timer -= Time.deltaTime;

@@ -35,10 +35,7 @@ namespace DemonOverwhelming
         SpriteRenderer sprite;
         bool settled;
         Material startMaterial;
-        /// <summary>
-        /// 所在的兵组
-        /// </summary>
-        public SoliderGroup parentSoldierGroup;
+       
         [HideInInspector]
         public BoxCollider boxCollider;
         [Header("(调试)无敌状态")]
@@ -81,10 +78,7 @@ namespace DemonOverwhelming
         {
             parameter.SetValue(GameDataManager.instance.GetEntityDataById(parameter.ID));
         }
-        public void SetParentSoldierGroup(SoliderGroup soliderGroup)
-        {
-            parentSoldierGroup = soliderGroup;
-        }
+       
         /// <summary>
         /// 根据id获取到的变量生成该实体
         /// </summary>
@@ -312,11 +306,11 @@ namespace DemonOverwhelming
             hpBar.Refresh(parameter.nowHp, parameter.Hp);
             if (parameter.nowHp <= 0)
             {
-                //如果存在父兵组，则触发其中的士兵死亡方法
-                if (parentSoldierGroup)
-                {
-                    parentSoldierGroup.OnSoldierDie(this);
-                }
+                ////如果存在父兵组，则触发其中的士兵死亡方法
+                //if (parentSoldierGroup)
+                //{
+                //    parentSoldierGroup.OnSoldierDie(this);
+                //}
                 Die();
             }
         }

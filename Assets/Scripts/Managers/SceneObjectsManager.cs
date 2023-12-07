@@ -53,9 +53,11 @@ namespace DemonOverwhelming
         [Header("UI相关s")]
         public GameObject BattleUI;
         [Header("选卡界面")]
-        public Image cardSelectUI;
+        public GridLayoutGroup cardSelectUI;
         [Header("布阵界面")]
         public Image formationMakingUI;
+        [Header("布阵界面中心位置")]
+        public RectTransform formationMakingAreaCenter;
         [Header("英雄信息界面")]
         public HeroInformationUI heroInfoUI;
         public static SceneObjectsManager instance;
@@ -69,34 +71,34 @@ namespace DemonOverwhelming
         }
         public void Initialize()
         {
-            if (camera == null)
-                camera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
-            if (cameraBound_Left == null)
-                cameraBound_Left = GameObject.Find("LeftCameraBound").transform;
-            if (cameraBound_Right == null)
-                cameraBound_Right = GameObject.Find("RightCameraBound").transform;
-            if (playerEntityGeneratePoint == null)
-                playerEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Left").transform;
-            if (enemyEntityGeneratePoint == null)
-                enemyEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Right").transform;
-            if (moneyFill == null)
-                moneyFill = GameObject.Find("MoneyFill").GetComponent<Image>();
-            if (costFill == null)
-                costFill = GameObject.Find("BolldFill").GetComponent<Image>();
-            if (objectInfoUI == null)
-                objectInfoUI = GameObject.Find("ObjectInfoUI").GetComponent<ObjectInfoUI>();
-            if (playerFinalStrongHold == null)
-                playerFinalStrongHold = GameObject.Find("Player's Stronghold");
-            if (gameOverPanel == null)
-                gameOverPanel = GameObject.Find("GameOverUi").GetComponent<GameOverUI>();
-            if (!BattleUI)
-                BattleUI = GameObject.Find("BattleUI");
-            if (!cardSelectUI)
-                cardSelectUI = GameObject.Find("CardSelectArea").GetComponent<Image>();
-            if (!formationMakingUI)
-                formationMakingUI = GameObject.Find("FormationMakingArea").GetComponent<Image>();
-            if (!heroInfoUI)
-                heroInfoUI = GameObject.Find("HeroInfoArea").GetComponent<HeroInformationUI>();
+            //if (camera == null)
+            //    camera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
+            //if (cameraBound_Left == null)
+            //    cameraBound_Left = GameObject.Find("LeftCameraBound").transform;
+            //if (cameraBound_Right == null)
+            //    cameraBound_Right = GameObject.Find("RightCameraBound").transform;
+            //if (playerEntityGeneratePoint == null)
+            //    playerEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Left").transform;
+            //if (enemyEntityGeneratePoint == null)
+            //    enemyEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Right").transform;
+            //if (moneyFill == null)
+            //    moneyFill = GameObject.Find("MoneyFill").GetComponent<Image>();
+            //if (costFill == null)
+            //    costFill = GameObject.Find("BolldFill").GetComponent<Image>();
+            //if (objectInfoUI == null)
+            //    objectInfoUI = GameObject.Find("ObjectInfoUI").GetComponent<ObjectInfoUI>();
+            //if (playerFinalStrongHold == null)
+            //    playerFinalStrongHold = GameObject.Find("Player's Stronghold");
+            //if (gameOverPanel == null)
+            //    gameOverPanel = GameObject.Find("GameOverUi").GetComponent<GameOverUI>();
+            //if (!BattleUI)
+            //    BattleUI = GameObject.Find("BattleUI");
+            //if (!cardSelectUI)
+            //    cardSelectUI = GameObject.Find("CardSelectArea").GetComponent<Image>();
+            //if (!formationMakingUI)
+            //    formationMakingUI = GameObject.Find("FormationMakingArea").GetComponent<Image>();
+            //if (!heroInfoUI)
+            //    heroInfoUI = GameObject.Find("HeroInfoArea").GetComponent<HeroInformationUI>();
         }
 
         /// <summary>
@@ -128,7 +130,8 @@ namespace DemonOverwhelming
 
         public void ShowObjectInfoUI(bool isTrue)
         {
-            objectInfoUI.gameObject.SetActive(isTrue);
+            if (objectInfoUI)
+                objectInfoUI.gameObject.SetActive(isTrue);
         }
     }
 }

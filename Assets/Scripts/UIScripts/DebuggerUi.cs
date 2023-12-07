@@ -82,10 +82,10 @@ namespace DemonOverwhelming
         }
         public void Debug_CreateGroupSoldier()
         {
-            if (humanToggle.isOn)
-                BattleManager.instance.CreateSoldierWithGroup(Camp.human, soldierIdText.text, formatIdText.text, true);
-            if (demonToggle.isOn)
-                BattleManager.instance.CreateSoldierWithGroup(Camp.demon, soldierIdText.text, formatIdText.text, true);
+            //if (humanToggle.isOn)
+            //    BattleManager.instance.CreateSoldierWithGroup(Camp.human, soldierIdText.text, formatIdText.text, true);
+            //if (demonToggle.isOn)
+            //    BattleManager.instance.CreateSoldierWithGroup(Camp.demon, soldierIdText.text, formatIdText.text, true);
 
         }
 

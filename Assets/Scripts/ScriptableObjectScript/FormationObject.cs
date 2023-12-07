@@ -7,9 +7,12 @@ public class FormationObject : ScriptableObject
 {
     public List<Formation> formations;
 }
+/// <summary>
+/// 阵型的数据类，存放id和阵型类，可以通过id找到对应类中的数据
+/// </summary>
 [System.Serializable]
 public class Formation
 {
     public string id;
-    public SoliderGroup contentFormation;
+    public SoldierFormation formation;
 }

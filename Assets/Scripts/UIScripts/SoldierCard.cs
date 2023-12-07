@@ -24,6 +24,7 @@ namespace DemonOverwhelming
             if (hoverScript)
                 hoverScript.descriptionAndStory = GameDataManager.instance.GetEntityDataById(parameter.soldierId).character.descriptionAndStory;
         }
+
         /// <summary>
         /// 初始化，通过id显示对应的数值
         /// </summary>
