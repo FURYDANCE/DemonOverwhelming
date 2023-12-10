@@ -20,26 +20,38 @@ public class ExcelAccess
     /// </summary>
     public static string EntityExcel = "EntityExcel";
 
-
-    public static Sprite LoadSprite(string path)
+    public enum LoadSpriteType
     {
-        if (path.Contains("A") || path.Contains("B") || path.Contains("C") || path.Contains("D"))
-            return Resources.Load("Sprites/ModelSprites/EnemySoldierSprite/" + path, typeof(Sprite)) as Sprite;
-        else
+        character, missile, flag, stand, icon
+    }
+#if UNITY_EDITOR
+    public static Sprite LoadSprite(string path, LoadSpriteType loadSpriteType)
+    {
+        if (loadSpriteType == LoadSpriteType.character)
         {
-            if (Resources.Load("Sprites/ModelSprites/PlayerSoldierSprite/" + path, typeof(Sprite)) as Sprite != null)
-                return Resources.Load("Sprites/ModelSprites/PlayerSoldierSprite/" + path, typeof(Sprite)) as Sprite;
-            else
-                return Resources.Load("Sprites/ModelSprites/" + path, typeof(Sprite)) as Sprite;
+            return AssetDatabase.LoadAssetAtPath<Sprite>("Assets/AddressableAssetsData/Sprites/ModelSprites/CharacterSprite/" + path + ".png");
         }
-
+        if (loadSpriteType == LoadSpriteType.flag)
+        {
+            return AssetDatabase.LoadAssetAtPath<Sprite>("Assets/AddressableAssetsData/Sprites/ModelSprites/FlagSprite/" + path + ".png");
+        }
+        if (loadSpriteType == LoadSpriteType.missile)
+        {
+            return AssetDatabase.LoadAssetAtPath<Sprite>("Assets/AddressableAssetsData/Sprites/ModelSprites/MissileSprite/" + path + ".png");
+        }
+        if (loadSpriteType == LoadSpriteType.stand)
+        {
+            return AssetDatabase.LoadAssetAtPath<Sprite>("Assets/AddressableAssetsData/Sprites/DialogSprites/" + path + ".png");
+        }
+        if (loadSpriteType == LoadSpriteType.icon)
+        {
+            return AssetDatabase.LoadAssetAtPath<Sprite>("Assets/AddressableAssetsData/Sprites/ModelSprites/Icons/" + path + ".png");
+        }
+        else
+            return null;
 
     }
-    public static Sprite LoadFlagSprite(string path)
-    {
-        Debug.Log(Resources.Load("Sprites/ModelSprites/FlagSprite/" + path, typeof(Sprite)) as Sprite);
-        return Resources.Load("Sprites/ModelSprites/FlagSprite/" + path, typeof(Sprite)) as Sprite;
-    }
+
     /// <summary>
     /// 读表，生成每句对话的对象，通过读表将对应的内容赋值给对象
     /// </summary>
@@ -59,8 +71,10 @@ public class ExcelAccess
                 content_cn = collect[i][1].ToString(),
                 speakerNmae = collect[i][2].ToString(),
                 isLast = collect[i][3].ToString() == "True" ? true : false,
-                left_stand = Resources.Load("Sprites/CharacterSprites/" + collect[i][4].ToString(), typeof(Sprite)) as Sprite,
-                right_stand = Resources.Load("Sprites/CharacterSprites/" + collect[i][5].ToString(), typeof(Sprite)) as Sprite,
+
+                left_stand = LoadSprite(collect[i][4].ToString(), LoadSpriteType.stand),
+                right_stand = LoadSprite(collect[i][5].ToString(), LoadSpriteType.stand),
+
                 events = collect[i][6].ToString().Split("/"),
 
                 haveOption = collect[i][7].ToString() == "True" ? true : false,
@@ -112,10 +126,10 @@ public class ExcelAccess
             {
 
                 ID = collect[i][0].ToString(),
+                unitPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/AddressableAssetsData/Prefabs/Unit/new_unit.prefab"),
                 type = (EntityType)int.Parse(collect[i][1].ToString()),
                 name = collect[i][2].ToString(),
-                sprite = LoadSprite(collect[i][3].ToString()), /*Resources.Load("Sprites/ModelSprites/" + collect[i][3].ToString(), typeof(Sprite)) as Sprite,*/
-                //sprite = AssetDatabase.FindAssets("Sprites/ModelSprites/" + collect[i][3].ToString()) as Sprite,
+                sprite = LoadSprite(collect[i][3].ToString(), LoadSpriteType.character),
                 hpBarSize = float.Parse(collect[i][4].ToString()),
                 hpBarOffset = new Vector3(float.Parse(collect[i][5].ToString().Split(",")[0]), float.Parse(collect[i][5].ToString().Split(",")[1])),
                 introduct = collect[i][6].ToString(),
@@ -164,12 +178,13 @@ public class ExcelAccess
             {
                 id = collect_4[i][0].ToString(),
                 name = collect_4[i][1].ToString(),
-                sprite = LoadSprite(collect_4[i][2].ToString()),/* Resources.Load("Sprites/ModelSprites/" + collect_4[i][2].ToString(), typeof(Sprite)) as Sprite*/
-                flagSprite = LoadFlagSprite(collect_4[i][3].ToString()),
+                sprite = LoadSprite(collect_4[i][2].ToString(), LoadSpriteType.character),
+                flagSprite = LoadSprite(collect_4[i][3].ToString(), LoadSpriteType.flag),
                 moneyCost = float.Parse(collect_4[i][4].ToString()),
                 bloodCost = float.Parse(collect_4[i][5].ToString()),
                 formationId = collect_4[i][6].ToString(),
                 soldierId = collect_4[i][7].ToString(),
+                soldierPrefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/AddressableAssetsData/Prefabs/Unit/new_unit.prefab")
             };
             dataArray_soldierCard.Add(psc);
         }
@@ -184,7 +199,7 @@ public class ExcelAccess
                 damageDataId = collect_5[i][2].ToString(),
                 speed = float.Parse(collect_5[i][3].ToString()),
                 moveType = (MissileMoveType)int.Parse(collect_5[i][4].ToString()),
-                sprite = Resources.Load("Sprites/ModelSprites/" + collect_5[i][5].ToString(), typeof(Sprite)) as Sprite,
+                sprite = LoadSprite(collect_5[i][5].ToString(), LoadSpriteType.missile),
                 useLifeTime = collect_5[i][6].ToString() == "True" ? true : false,
                 lifeTime = float.Parse(collect_5[i][7].ToString()),
                 useAoe = collect_5[i][8].ToString() == "True" ? true : false,
@@ -233,7 +248,7 @@ public class ExcelAccess
                 waitTime = float.Parse(collect_7[i][3].ToString()),
                 bloodCost = float.Parse(collect_7[i][4].ToString()),
                 moneyCost = float.Parse(collect_7[i][5].ToString()),
-                skillIcon = Resources.Load("Sprites/SkillIcons/" + collect_7[i][6].ToString(), typeof(Sprite)) as Sprite,
+                skillIcon = LoadSprite(collect_7[i][6].ToString(), LoadSpriteType.icon),
                 eachLevelDescriptions = collect_7[i][7].ToString().Split("|"),
             };
             dataArray_skill.Add(sl);
@@ -273,5 +288,5 @@ public class ExcelAccess
         return result.Tables[sheetName].Rows;
 
     }
-
+#endif
 }

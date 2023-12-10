@@ -12,6 +12,8 @@ namespace DemonOverwhelming
     public class UnitData
     {
         public string ID;
+        [Header("根据使用RtsEngine新改的，在单位数据里面可以获取到单位预制件")]
+        public GameObject unitPrefab;
         /// <summary>
         /// 实体类型
         /// </summary>

@@ -59,6 +59,7 @@ namespace DemonOverwhelming
             foreach (Vector3 offset in parentParameter.formation.soldierOffsets)
             {
                 GameObject shadow = Instantiate(new GameObject(), go.transform);
+                shadow.name = "shadow_" + offset;
                 shadow.transform.position = shadowObject.transform.position + offset;
                 shadow.AddComponent<SpriteRenderer>().sprite = parentParameter.sprite;
             }
@@ -106,6 +107,9 @@ namespace DemonOverwhelming
         }
         public void ClearThis()
         {
+            BattleManager.instance.allSelectedCards.Remove(this);
+            Destroy(shadowObject.gameObject);
+            Destroy(gameObject);
             //BattleManager.instance.soliderFormatGroups.Remove(connectedSoldierGroup_inScene);
             //Destroy(connectedSoldierGroup_inScene.gameObject);
         }
