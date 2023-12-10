@@ -17,8 +17,11 @@ namespace DemonOverwhelming
 
         [Header("金钱text")]
         public TextMeshProUGUI moneyText;
+        public Image moneyOverImage;
         [Header("costText")]
         public TextMeshProUGUI bloodText;
+        public Image bloodOverImage;
+
         [Header("所有实体的父对象")]
         public Transform allUnitParent;
         [Header("实体生成点位")]
@@ -60,45 +63,29 @@ namespace DemonOverwhelming
         public RectTransform formationMakingAreaCenter;
         [Header("英雄信息界面")]
         public HeroInformationUI heroInfoUI;
+        [Header("按钮：创造波次，撤销，重选（用于添加点击事件）")]
+        public Button btn_CreateSolider;
+        public Button btn_Revoke;
+        public Button btn_RevokeAll;
+
         public static SceneObjectsManager instance;
         private void Awake()
         {
             if (instance != null)
                 Destroy(instance);
             instance = this;
+
+        }
+        private void Start()
+        {
             Initialize();
 
         }
         public void Initialize()
         {
-            //if (camera == null)
-            //    camera = GameObject.Find("CM vcam1").GetComponent<CinemachineVirtualCamera>();
-            //if (cameraBound_Left == null)
-            //    cameraBound_Left = GameObject.Find("LeftCameraBound").transform;
-            //if (cameraBound_Right == null)
-            //    cameraBound_Right = GameObject.Find("RightCameraBound").transform;
-            //if (playerEntityGeneratePoint == null)
-            //    playerEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Left").transform;
-            //if (enemyEntityGeneratePoint == null)
-            //    enemyEntityGeneratePoint = GameObject.Find("EntityGenerateArea_Right").transform;
-            //if (moneyFill == null)
-            //    moneyFill = GameObject.Find("MoneyFill").GetComponent<Image>();
-            //if (costFill == null)
-            //    costFill = GameObject.Find("BolldFill").GetComponent<Image>();
-            //if (objectInfoUI == null)
-            //    objectInfoUI = GameObject.Find("ObjectInfoUI").GetComponent<ObjectInfoUI>();
-            //if (playerFinalStrongHold == null)
-            //    playerFinalStrongHold = GameObject.Find("Player's Stronghold");
-            //if (gameOverPanel == null)
-            //    gameOverPanel = GameObject.Find("GameOverUi").GetComponent<GameOverUI>();
-            //if (!BattleUI)
-            //    BattleUI = GameObject.Find("BattleUI");
-            //if (!cardSelectUI)
-            //    cardSelectUI = GameObject.Find("CardSelectArea").GetComponent<Image>();
-            //if (!formationMakingUI)
-            //    formationMakingUI = GameObject.Find("FormationMakingArea").GetComponent<Image>();
-            //if (!heroInfoUI)
-            //    heroInfoUI = GameObject.Find("HeroInfoArea").GetComponent<HeroInformationUI>();
+            btn_CreateSolider.onClick.AddListener(BattleManager.instance.GenerateSoldiers);
+            btn_Revoke.onClick.AddListener(BattleManager.instance.RevokeCardSelect);
+            btn_RevokeAll.onClick.AddListener(BattleManager.instance.RevokeAllCardSelect);
         }
 
         /// <summary>

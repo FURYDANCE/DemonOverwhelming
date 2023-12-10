@@ -718,7 +718,6 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 610548750568959432}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 610548751953611333}
   hpLock: 0
   animator: {fileID: 610548751953611332}

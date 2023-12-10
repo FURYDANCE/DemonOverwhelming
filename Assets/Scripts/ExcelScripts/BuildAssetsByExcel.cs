@@ -16,13 +16,13 @@ public class BuildAssetsByExcel : Editor
         excel_manager.plotsData = ExcelAccess.SelectMenuTable();
         ExcelAccess.SelectEntityTable(out excel_manager.unitDatas, out excel_manager.characterDatas, out excel_manager.buildingDatas,
             out excel_manager.cardDatas, out excel_manager.missileDatas, out excel_manager.damageDatas,out excel_manager.skillDatas);
-        string Path = "Assets/Resources/DataTables/PlotsDatas.asset";
+        string Path = "Assets/AddressableAssetsData/Data/PlotsDatas.asset";
         AssetDatabase.CreateAsset(excel_manager, Path);
         AssetDatabase.Refresh();
 
-        JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.unitFileName, excel_manager.unitDatas);
-        JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.cardFileName, excel_manager.cardDatas);
-        JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.missileFileName, excel_manager.missileDatas);
+        //JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.unitFileName, excel_manager.unitDatas);
+        //JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.cardFileName, excel_manager.cardDatas);
+        //JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.missileFileName, excel_manager.missileDatas);
         Debug.Log("配置表文件制作成功");
     }
     [MenuItem("创建Asset/保存数据表文件到json")]
@@ -30,12 +30,12 @@ public class BuildAssetsByExcel : Editor
     {
 
 
-        ExcelDataManager excel_manager = Resources.Load<ExcelDataManager>("DataTables/PlotsDatas") as ExcelDataManager;
-        JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.unitFileName, excel_manager.unitDatas);
-        JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.cardFileName, excel_manager.cardDatas);
-        JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.missileFileName, excel_manager.missileDatas);
+        //ExcelDataManager excel_manager = Resources.Load<ExcelDataManager>("DataTables/PlotsDatas") as ExcelDataManager;
+        //JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.unitFileName, excel_manager.unitDatas);
+        //JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.cardFileName, excel_manager.cardDatas);
+        //JsonEditor.WritingJson(Application.persistentDataPath, JsonEditor.missileFileName, excel_manager.missileDatas);
 
-        Debug.Log("配置表文件制作成功");
+        //Debug.Log("配置表文件制作成功");
     }
 
 }

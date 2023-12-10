@@ -10,6 +10,8 @@ namespace DemonOverwhelming
     /// </summary>
     public class BattleManager : MonoBehaviour
     {
+        [Header("单位生成管理器")]
+
         [Header("为demo临时添加的：关卡编号")]
         public int levelId;
         [Header("英雄")]
@@ -43,26 +45,13 @@ namespace DemonOverwhelming
         /// </summary>
         [Header("现在选中的实体")]
         public GameObject nowChoosedTarget;
-        /// <summary>
-        /// 战斗界面UI
-        /// </summary>
-        //[Header("战斗界面UI")]
-        //public GameObject BattleUI;
+
         [Header("对象信息提示框(预制件）")]
         public UnitInformationUi unitInformationUI;
-        //[Header("选卡界面")]
-        //public Image cardSelectUI;
-        //[Header("布阵界面")]
-        //public Image formationMakingUI;
-        //[Header("英雄信息界面")]
-        //public HeroInformationUI heroInfoUI;
         /// <summary>
-        /// 当前布阵界面上的所有旗帜
+        /// 最后选择的布阵卡
         /// </summary>
-        [Header("当前布阵界面上的所有旗帜")]
-        public List<FormatCard> formatCards;
         FormatCard lastSelectCard;
-        //public SoldierCard lastSelectCard_card;
         [Header("被创造出的所有士兵")]
         public List<Entity> allSoldiers;
         UnitInformationUi nowUnitInformationUI;
@@ -114,9 +103,9 @@ namespace DemonOverwhelming
 
         void Start()
         {
-            //objectManager = SceneObjectsManager.instance;
+            objectManager = SceneObjectsManager.instance;
             //cameraFollowTarget = SceneObjectsManager.instance.GetCameraFollowTarget();
-            //StartAddMoney();
+            StartAddMoney();
             //生成右下角的兵种卡
             if (levelId == 1)
             {
@@ -155,41 +144,26 @@ namespace DemonOverwhelming
 
         void Update()
         {
-            //Money_BoloodShowing();
+            Money_BoloodShowing();
 
-            ////当有选中的实体时，相机跟随所选择的实体
-            //if (nowChoosedTarget != null)
-            //    CameraFollow_ByChoosedTarget();
+            //生成实体测试
+            if (Input.GetKeyDown(KeyCode.B))
+                UnitCreateManager.instance.CreateOneUnit(Camp.demon, SoldierIds.lmp);
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                UnitCreateManager.instance.CreateOneTeamUnit(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers, Vector3.zero);
+            }
 
 
-            ////测试：有正在选择的对象时按右键确认选择
-            //if (!debug_DontChosseEntity && nowChooseingTarget != null && Input.GetKeyDown(KeyCode.Mouse1))
+            ////英雄技能测试
+            //if (hero && Input.GetKeyDown(KeyCode.Alpha1))
             //{
-
-            //    EnshureChooseTarget();
+            //    hero.UseSkill(0);
             //}
-            ////按左键释放,如果鼠标在信息ui上则不释放
-            //if (Input.GetKeyDown(KeyCode.Mouse0) && !mouseOveringInfoUI)
+            //if (hero && Input.GetKeyDown(KeyCode.Alpha2))
             //{
-            //    ReleaseChoosedEntity();
-            //    DestoryNowUnitInformation();
+            //    hero.UseSkill(1);
             //}
-            //////生成实体测试
-            //if (Input.GetKeyDown(KeyCode.B))
-            //    GenerateOneHero(Camp.demon, SoldierIds.hero1, SceneObjectsManager.instance.playerEntityGeneratePoint.position);
-            ////if (Input.GetKeyDown(KeyCode.B))
-            ////{
-            ////    CreateSoldierWithGroup(Camp.demon, SoldierIds.lmp, FormationIds.Formation_4Soldiers, true);
-            ////}
-            //////英雄技能测试
-            ////if (hero && Input.GetKeyDown(KeyCode.Alpha1))
-            ////{
-            ////    hero.UseSkill(0);
-            ////}
-            ////if (hero && Input.GetKeyDown(KeyCode.Alpha2))
-            ////{
-            ////    hero.UseSkill(1);
-            ////}
         }
 
         #region 英雄相关
@@ -212,6 +186,12 @@ namespace DemonOverwhelming
         /// </summary>
         public void Money_BoloodShowing()
         {
+            if (objectManager == null)
+            {
+                Debug.LogWarning("没有对象管理器");
+                return;
+            }
+
             //显示金钱UI
             objectManager.moneyText.text = nowMoneyCost + "/" + money;
             //显示血液UI
@@ -219,15 +199,21 @@ namespace DemonOverwhelming
             //显示金钱和UI的填充
             objectManager.costFill.fillAmount = Mathf.SmoothDamp(objectManager.costFill.fillAmount, nowBloodCost / blood, ref v1, 0.25f);
             objectManager.moneyFill.fillAmount = Mathf.SmoothDamp(objectManager.moneyFill.fillAmount, nowMoneyCost / money, ref v2, 0.25f);
-            //超过最大值时将填充条的颜色变为红色
+
+            //检测所需资源超过最大资源
             if (nowBloodCost > blood)
-                objectManager.costFill.color = Color.red;
+            {
+                objectManager.bloodOverImage.gameObject.SetActive(true);
+            }
             else
-                objectManager.costFill.color = fillStartColor;
+                objectManager.bloodOverImage.gameObject.SetActive(false);
+
             if (nowMoneyCost > money)
-                objectManager.moneyFill.color = Color.red;
+            {
+                objectManager.moneyOverImage.gameObject.SetActive(true);
+            }
             else
-                objectManager.moneyFill.color = fillStartColor;
+                objectManager.moneyOverImage.gameObject.SetActive(false);
 
 
         }
@@ -711,8 +697,7 @@ namespace DemonOverwhelming
 
             //设置旗帜的拖拽范围
             formatCard.GetComponent<UiDrag>().container = formatCard.transform.parent.gameObject.GetComponent<RectTransform>();
-            //将旗帜加入统计
-            formatCards.Add(formatCard);
+
             //设置点击生成的卡为最后点击的卡
             SetLastSelectCard(formatCard);
 
@@ -727,17 +712,17 @@ namespace DemonOverwhelming
         public void ClearCardSelect()
         {
             //选择记录为零直接返回
-            if (formatCards.Count == 0)
+            if (allSelectedCards.Count == 0)
                 return;
             //遍历所有的选择的布阵卡，清除显示
-            foreach (FormatCard c in formatCards)
+            foreach (FormatCard c in allSelectedCards)
             {
                 c.ClearThis();
                 Destroy(c.gameObject);
             }
             //清除布阵卡选择记录和兵牌选择记录
             ClearSelectRecord();
-           
+
 
             //金钱血液计算，计算完成后归零
             //money -= nowMoneyCost;
@@ -754,27 +739,22 @@ namespace DemonOverwhelming
         /// </summary>
         public void GenerateSoldiers()
         {
-            //List<SoliderGroup> newGroupList = new List<SoliderGroup>();
-            ////计算金钱和cost统计，若超过最大值则不生成
-            //if (nowBloodCost > blood || nowMoneyCost > money)
-            //{
-            //    Debug.Log("超过最大值");
-            //    return;
-            //}
-            ////生成兵种
-            //foreach (SoliderGroup sg in soliderFormatGroups)
-            //{
-            //    //记录当前界面上的兵种位置和信息
-            //    SoliderGroup NG = Instantiate(sg.gameObject, sg.transform.parent).GetComponent<SoliderGroup>();
-            //    sg.parentFormatCard.SetConnectGroup(NG);
-            //    newGroupList.Add(NG);
+            //计算金钱和cost统计，若超过最大值则不生成
+            if (nowBloodCost > blood || nowMoneyCost > money)
+            {
+                Debug.Log("超过最大值");
+                return;
+            }
+
+            //具体生成方法
+            UnitCreateManager.instance.CreatePlayerSoliders();
 
 
-            //    sg.Generate(false);
 
-            //}
-            //money -= nowMoneyCost;
-            //blood -= nowBloodCost;
+            money -= nowMoneyCost;
+            blood -= nowBloodCost;
+
+
             ////生成兵种之后，场上的残影就会消失，跟随生成了的兵种，需要再原地生成一样的残影，同时设置关联残影的布阵卡
             //soliderFormatGroups.Clear();
             //foreach (SoliderGroup s in newGroupList)
@@ -837,16 +817,13 @@ namespace DemonOverwhelming
         public void RevokeCardSelect()
         {
             //选择记录为零直接返回
-            if (formatCards.Count == 0)
+            if (allSelectedCards.Count == 0)
                 return;
 
             //金钱血液计算统计减去上次点击的卡的数值
             nowMoneyCost -= lastSelectCard.parentParameter.moneyCost;
             nowBloodCost -= lastSelectCard.parentParameter.bloodCost;
 
-
-            //布阵卡统计中移除上一次点击兵牌出现的布阵卡
-            formatCards.Remove(lastSelectCard);
 
 
             //取消该布阵卡在场景中代表的对象的显示
@@ -859,8 +836,8 @@ namespace DemonOverwhelming
 
 
             //当count大于零时，继续将集合中下标最高的对象作为上次点击的对象
-            if (formatCards.Count > 0)
-                SetLastSelectCard(formatCards[formatCards.Count - 1]);
+            if (allSelectedCards.Count > 0)
+                SetLastSelectCard(allSelectedCards[allSelectedCards.Count - 1]);
         }
 
 
@@ -869,7 +846,7 @@ namespace DemonOverwhelming
         /// </summary>
         public void RevokeAllCardSelect()
         {
-            while (formatCards.Count > 0)
+            while (allSelectedCards.Count > 0)
             {
                 RevokeCardSelect();
             }
@@ -881,7 +858,7 @@ namespace DemonOverwhelming
         /// </summary>
         void ClearSelectRecord()
         {
-            formatCards.Clear();
+            allSelectedCards.Clear();
         }
 
         #endregion

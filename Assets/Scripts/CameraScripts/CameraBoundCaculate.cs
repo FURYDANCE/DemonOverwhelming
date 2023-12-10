@@ -12,10 +12,10 @@ using DemonOverwhelming;
 /// </summary>
 public class CameraBoundCaculate : MonoBehaviour
 {
-  
-     Transform bound_Left;
-     Transform bound_Right;
-     Transform cameraTransform;
+    public Transform cameraTransform;
+    public float bound_Left;
+    public float bound_Right;
+
     [Header("需要显示的sliderUI")]
     public Slider slider;
     /// <summary>
@@ -31,22 +31,19 @@ public class CameraBoundCaculate : MonoBehaviour
     /// </summary>
     float cameraPersentage;
 
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        //从管理器中获取计算所需的对象
-       
-        SceneObjectsManager.instance.GetCameraBound(out bound_Left,out bound_Right);
-        cameraTransform = SceneObjectsManager.instance.GetCameraFollowTarget();
+
         //第一帧计算并给UI赋值
         SetSliderVaule();
 
-      
+
     }
     private void Update()
     {
-        
+
     }
 
 
@@ -55,12 +52,12 @@ public class CameraBoundCaculate : MonoBehaviour
     /// </summary>
     public void SetSliderVaule()
     {
-        boundDistance = Mathf.Abs(bound_Left.position.x - bound_Right.position.x);
-        cameraDistance = Mathf.Abs(bound_Left.position.x - cameraTransform.position.x);
+        boundDistance = Mathf.Abs(bound_Left - bound_Right);
+        cameraDistance = Mathf.Abs(bound_Right - cameraTransform.position.x);
         cameraPersentage = cameraDistance / boundDistance;
-        slider.value = cameraPersentage;
+        slider.value =  cameraPersentage;
     }
-   
+
 
     /// <summary>
     /// 根据slider的值改变相机的X轴位置
@@ -68,7 +65,7 @@ public class CameraBoundCaculate : MonoBehaviour
     public void ChangeCameraPostion()
     {
         float nowPersentage = slider.value;
-        float newPos_X = bound_Left.position.x + boundDistance * nowPersentage;
+        float newPos_X = bound_Right - boundDistance * nowPersentage;
         cameraTransform.position = new Vector3(newPos_X, cameraTransform.position.y, cameraTransform.position.z);
     }
 }

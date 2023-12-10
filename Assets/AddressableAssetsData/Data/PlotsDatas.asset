@@ -113,6 +113,7 @@ MonoBehaviour:
     optionTargetIds: 00000000
   unitDatas:
   - ID: 1000001
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6076\u9B54\u5C0F\u5175/spine"
     sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
@@ -164,6 +165,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000002
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6B65\u5175/spine"
     sprite: {fileID: 21300000, guid: 7578dabf3644ee5428892700f48676bc, type: 3}
@@ -215,6 +217,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000003
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u72EC\u773C\u6076\u9B54/spine"
     sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
@@ -266,6 +269,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000005
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u7194\u7089\u86DE\u8753/spine"
     sprite: {fileID: 21300000, guid: 8228375f9698f8a419e415c918753dd2, type: 3}
@@ -317,6 +321,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000006
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5904\u5211\u8005/spine"
     sprite: {fileID: 21300000, guid: 0ce94e54587e35c4da44f1404256a36c, type: 3}
@@ -368,6 +373,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000007
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6559\u4F1A\u5904\u5211\u8005"
     sprite: {fileID: 21300000, guid: 11275c3fa989978498cf8f551334dee7, type: 3}
@@ -419,6 +425,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000008
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u98CE\u8F66\u5DE8\u4EBA/spine"
     sprite: {fileID: 21300000, guid: d8369191b0324034cbbad23b2b02ca62, type: 3}
@@ -470,6 +477,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000009
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u70AE\u5175"
     sprite: {fileID: 21300000, guid: 327eca966f1b04549b356b0d12c012f6, type: 3}
@@ -521,6 +529,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000010
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u9AB7\u9AC5\u5175/spine"
     sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
@@ -572,6 +581,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000011
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u707E\u7978\u5DEB\u5E08/spine"
     sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
@@ -623,6 +633,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000012
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5730\u72F1\u519B\u56E2"
     sprite: {fileID: 21300000, guid: 2614ff22f50acf94e8638827f32883b4, type: 3}
@@ -674,6 +685,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000013
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u9B3C\u9B42"
     sprite: {fileID: 21300000, guid: cd1c8d255d508d24295b88073d0d1be4, type: 3}
@@ -725,6 +737,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000014
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "[WIP]\u9C9C\u8840\u795E\u50CF"
     sprite: {fileID: 21300000, guid: d8b8c19fd8e953c4f8eb92f30eae7cac, type: 3}
@@ -776,6 +789,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000015
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u77F3\u50CF\u9B3C"
     sprite: {fileID: 21300000, guid: dca3dc6b91c9e544783ad1fe06bc0e29, type: 3}
@@ -827,6 +841,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000016
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6B7B\u795E\u5316\u8EAB"
     sprite: {fileID: 21300000, guid: ed2a31a8958d3d746bb9a5f1a5ae1f6a, type: 3}
@@ -878,6 +893,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000017
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "[WIP]\u68A6\u9B47"
     sprite: {fileID: 21300000, guid: 1a6b7345947709a4fab8236c6f78864a, type: 3}
@@ -929,6 +945,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000018
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6B7B\u7075\u6CD5\u5E08"
     sprite: {fileID: 21300000, guid: 093172b4730ed194f81352eb87cfd42f, type: 3}
@@ -980,6 +997,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000019
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u65E0\u5934\u9A91\u58EB"
     sprite: {fileID: 21300000, guid: 0d241ac15d47e384998d6308ab0dca15, type: 3}
@@ -1031,6 +1049,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000020
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5730\u72F1\u9A91\u58EB"
     sprite: {fileID: 21300000, guid: 6defde429a0d2fd4bb09866c4147545d, type: 3}
@@ -1082,6 +1101,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000021
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5438\u8840\u9B3C"
     sprite: {fileID: 21300000, guid: 3b2909ee9afc8664d916bf196afd34b1, type: 3}
@@ -1133,6 +1153,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000022
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u706B\u5C71\u5DE8\u4EBA"
     sprite: {fileID: 21300000, guid: 1114fe5963167a24583b5686d7ee7c9a, type: 3}
@@ -1184,6 +1205,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000023
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5730\u72F1\u519B\u56E2\u94F3\u67AA\u624B"
     sprite: {fileID: 21300000, guid: 7070b1ccc5a0d144e9b42e3773d55555, type: 3}
@@ -1235,6 +1257,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000024
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u9ED1\u66DC\u57CE\u5821"
     sprite: {fileID: 21300000, guid: 57df24887c6026d41be89d8580dc5798, type: 3}
@@ -1286,6 +1309,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000025
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6076\u9B54\u5C60\u592B"
     sprite: {fileID: 21300000, guid: f1166286c2139d846b9362f01585c10e, type: 3}
@@ -1337,6 +1361,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000026
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5C01\u5730\u6B65\u5175/spine"
     sprite: {fileID: 21300000, guid: 4f6db7a951b4f4648b8b201b303fbd67, type: 3}
@@ -1388,6 +1413,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000027
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u730E\u4EBA/spine"
     sprite: {fileID: 21300000, guid: da881e0a7a9624e4184556544f6e9289, type: 3}
@@ -1439,6 +1465,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000028
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u89C1\u4E60\u4FEE\u5973/spine"
     sprite: {fileID: 21300000, guid: 7bf3ff54d84cfe844bc3fc379861c31b, type: 3}
@@ -1490,6 +1517,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000029
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6E38\u4FA0\u9A91\u58EB"
     sprite: {fileID: 21300000, guid: 0144dfc494720fa4485fa6f1925671f2, type: 3}
@@ -1541,6 +1569,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000030
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6811\u4EBA"
     sprite: {fileID: 21300000, guid: 4f2706ab6701c5743baec43de0fef327, type: 3}
@@ -1592,6 +1621,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000031
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u8352\u91CE\u6CD5\u5E08"
     sprite: {fileID: 21300000, guid: 2ae14a9e79ce494469990b83d64a27e9, type: 3}
@@ -1643,6 +1673,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000032
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u77EE\u4EBA\u96A7\u9053\u5DE5"
     sprite: {fileID: 21300000, guid: 0232ccea44bdabe409ca649347283192, type: 3}
@@ -1694,6 +1725,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000033
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u77EE\u4EBA\u6218\u58EB"
     sprite: {fileID: 21300000, guid: 54955276e2a3e0049a4e440b6cdc0f34, type: 3}
@@ -1745,6 +1777,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000034
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u77EE\u4EBA\u98DE\u65A7\u624B"
     sprite: {fileID: 21300000, guid: 377d8652c9744c34ea81e2fd08467a5b, type: 3}
@@ -1796,6 +1829,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000035
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u987D\u56FA\u6295\u77F3\u673A"
     sprite: {fileID: 21300000, guid: 774874d80ed3ebd469451d624701eb72, type: 3}
@@ -1847,6 +1881,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000036
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u77EE\u4EBA\u63B7\u5F39\u5175"
     sprite: {fileID: 21300000, guid: 65ea9e282ec9226478c676ef3856fb5a, type: 3}
@@ -1898,6 +1933,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000037
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "[WIP]\u917F\u9152\u5927\u5E08"
     sprite: {fileID: 21300000, guid: 491fb94bf04d742439bfae1bfe70c126, type: 3}
@@ -1949,6 +1985,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000038
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u730E\u5DEB\u4EBA"
     sprite: {fileID: 21300000, guid: c0c2f87be4a88ac459511d8cbbf18dd7, type: 3}
@@ -2000,6 +2037,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000039
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u7B26\u6587\u9B54\u50CF"
     sprite: {fileID: 21300000, guid: 77a727e0f941e51428f7913ee5f0e6f4, type: 3}
@@ -2051,6 +2089,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000040
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u738B\u56FD\u536B\u961F"
     sprite: {fileID: 21300000, guid: cfbb4c6c192adb2469080bb8b5a9b595, type: 3}
@@ -2102,6 +2141,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000041
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u7687\u5BB6\u9A91\u58EB"
     sprite: {fileID: 21300000, guid: d2694fdbdaae9b240ae2b602b84c3767, type: 3}
@@ -2153,6 +2193,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000042
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u94C1\u7532\u706B\u67AA\u624B"
     sprite: {fileID: 21300000, guid: 68ae88e801073044b9d31274d87b0fe7, type: 3}
@@ -2204,6 +2245,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000043
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u7CBE\u7075\u795E\u5C04\u624B"
     sprite: {fileID: 21300000, guid: 43ba0822667e95649a2569eeb82e38b7, type: 3}
@@ -2255,6 +2297,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000044
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5723\u5802\u4F20\u6559\u58EB"
     sprite: {fileID: 21300000, guid: c43e64a2644513647bc5f7763169d375, type: 3}
@@ -2306,6 +2349,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000045
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "[WIP]\u767D\u8863\u4E3B\u6559"
     sprite: {fileID: 21300000, guid: c7202f26681582d4da76133509b3f552, type: 3}
@@ -2357,6 +2401,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000046
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5B66\u9662\u6CD5\u5E08"
     sprite: {fileID: 21300000, guid: cad1a34c1100a9545b894f892674c33e, type: 3}
@@ -2408,6 +2453,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000047
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u88C5\u7532\u5217\u8F66"
     sprite: {fileID: 21300000, guid: 4607df583aed20b45a2cea46bce260b1, type: 3}
@@ -2459,6 +2505,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000048
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u94A2\u96E8\u8FEB\u51FB\u70AE"
     sprite: {fileID: 21300000, guid: 894db781610b0804f9b5c38ab6cc33c0, type: 3}
@@ -2510,6 +2557,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000049
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u82F1\u7075\u6218\u58EB"
     sprite: {fileID: 21300000, guid: d9eb92afc55ff08459f4c35852c83639, type: 3}
@@ -2561,6 +2609,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000050
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u82F1\u7075\u6807\u67AA\u624B"
     sprite: {fileID: 21300000, guid: 55c4c66b5a4e1e14b80f4c90532d2c2a, type: 3}
@@ -2612,6 +2661,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000051
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u82F1\u7075\u55B7\u706B\u8005"
     sprite: {fileID: 21300000, guid: c0de7d7d4bc84ea4faddca84b9e1e10f, type: 3}
@@ -2663,6 +2713,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000052
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5F81\u6218\u5929\u4F7F"
     sprite: {fileID: 21300000, guid: 7718df4c28c419047948118af778b362, type: 3}
@@ -2714,6 +2765,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000053
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u548F\u5531\u5929\u4F7F"
     sprite: {fileID: 21300000, guid: 57292ad43deb40d489e13b645d434990, type: 3}
@@ -2765,6 +2817,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000054
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u51C0\u5316\u5F15\u64CE"
     sprite: {fileID: 21300000, guid: ed01157b3e6f6b84a993ededfb244837, type: 3}
@@ -2816,6 +2869,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000055
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5973\u6B66\u795E"
     sprite: {fileID: 21300000, guid: a91da052498405a4f9189224397b37dc, type: 3}
@@ -2867,6 +2921,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 1000056
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u5927\u5929\u4F7F"
     sprite: {fileID: 21300000, guid: 8cc9a4339ac249d4d8c63a6d6281d074, type: 3}
@@ -2918,9 +2973,10 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 2000001
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 1
     name: "\u7BAD\u5854"
-    sprite: {fileID: 470249903, guid: 3d2dc2a49b8eff14d8eb2f17f1a05009, type: 3}
+    sprite: {fileID: 0}
     Hp: 20
     nowHp: 0
     hurtDamage: 0
@@ -2969,9 +3025,10 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 2000002
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 1
     name: "\u9ED1\u6697\u5821\u5792"
-    sprite: {fileID: 1258104761, guid: 8b9ac2e8ac412cf408b9c0540812f4de, type: 3}
+    sprite: {fileID: 0}
     Hp: 30
     nowHp: 0
     hurtDamage: 0
@@ -3020,9 +3077,10 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 2000003
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 1
     name: "\u4EBA\u7C7B\u57CE\u5821"
-    sprite: {fileID: -1680745063, guid: 27f152a7f5dc03d4f88a51649d3fc203, type: 3}
+    sprite: {fileID: 0}
     Hp: 30
     nowHp: 0
     hurtDamage: 0
@@ -3071,6 +3129,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 2000004
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 1
     name: "\u8981\u585E-\u4EBA\u7C7B"
     sprite: {fileID: 0}
@@ -3122,6 +3181,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 2000005
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 1
     name: "\u8981\u585E-\u6076\u9B54"
     sprite: {fileID: 0}
@@ -3173,6 +3233,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 3000001
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: reimu/spine
     sprite: {fileID: 0}
@@ -3224,6 +3285,7 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 3000002
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: reisen/spine
     sprite: {fileID: 0}
@@ -3275,9 +3337,10 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 4000001
+    unitPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     type: 0
     name: "\u6076\u9B54\u9886\u4E3B"
-    sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
+    sprite: {fileID: 0}
     Hp: 200
     nowHp: 0
     hurtDamage: 0
@@ -3338,7 +3401,9 @@ MonoBehaviour:
     bloodCost: 2
     formationId: 4
     soldierId: 1000001
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000002
     name: Cyclopean Imps*3
     sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
@@ -3347,7 +3412,9 @@ MonoBehaviour:
     bloodCost: 4
     formationId: 3
     soldierId: 1000003
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000003
     name: Hellfire Mortar*2
     sprite: {fileID: 21300000, guid: 327eca966f1b04549b356b0d12c012f6, type: 3}
@@ -3356,7 +3423,9 @@ MonoBehaviour:
     bloodCost: 10
     formationId: 2
     soldierId: 1000009
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000004
     name: Furnance Slugs*3
     sprite: {fileID: 21300000, guid: 8228375f9698f8a419e415c918753dd2, type: 3}
@@ -3365,7 +3434,9 @@ MonoBehaviour:
     bloodCost: 4
     formationId: 3
     soldierId: 1000005
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000005
     name: Executioner*2
     sprite: {fileID: 21300000, guid: 0ce94e54587e35c4da44f1404256a36c, type: 3}
@@ -3374,16 +3445,20 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 2
     soldierId: 1000006
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000006
     name: Demon Lord
-    sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
+    sprite: {fileID: 0}
     flagSprite: {fileID: 0}
     moneyCost: 0
     bloodCost: 0
     formationId: 1
     soldierId: 4000001
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000007
     name: Skeleton*5
     sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
@@ -3392,7 +3467,9 @@ MonoBehaviour:
     bloodCost: 12
     formationId: 8
     soldierId: 1000010
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000008
     name: Calamity Mage*2
     sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
@@ -3401,7 +3478,9 @@ MonoBehaviour:
     bloodCost: 5
     formationId: 2
     soldierId: 1000011
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000009
     name: Hell Ligeionnare*3
     sprite: {fileID: 21300000, guid: 2614ff22f50acf94e8638827f32883b4, type: 3}
@@ -3410,7 +3489,9 @@ MonoBehaviour:
     bloodCost: 20
     formationId: 3
     soldierId: 1000012
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000011
     name: Phantom*5
     sprite: {fileID: 21300000, guid: cd1c8d255d508d24295b88073d0d1be4, type: 3}
@@ -3419,7 +3500,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 5
     soldierId: 1000013
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000012
     name: Blood Efigy*1
     sprite: {fileID: 21300000, guid: d8b8c19fd8e953c4f8eb92f30eae7cac, type: 3}
@@ -3428,7 +3511,9 @@ MonoBehaviour:
     bloodCost: 30
     formationId: 1
     soldierId: 1000014
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000013
     name: Gargoyle+4
     sprite: {fileID: 21300000, guid: dca3dc6b91c9e544783ad1fe06bc0e29, type: 3}
@@ -3437,7 +3522,9 @@ MonoBehaviour:
     bloodCost: 2
     formationId: 4
     soldierId: 1000015
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000014
     name: Grim Avatar*1
     sprite: {fileID: 21300000, guid: ed2a31a8958d3d746bb9a5f1a5ae1f6a, type: 3}
@@ -3446,7 +3533,9 @@ MonoBehaviour:
     bloodCost: 12
     formationId: 1
     soldierId: 1000016
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000015
     name: Nightmare*5
     sprite: {fileID: 21300000, guid: 1a6b7345947709a4fab8236c6f78864a, type: 3}
@@ -3455,7 +3544,9 @@ MonoBehaviour:
     bloodCost: 2
     formationId: 5
     soldierId: 1000017
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000016
     name: Necromancer*1
     sprite: {fileID: 21300000, guid: 093172b4730ed194f81352eb87cfd42f, type: 3}
@@ -3464,7 +3555,9 @@ MonoBehaviour:
     bloodCost: 12
     formationId: 1
     soldierId: 1000018
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000017
     name: Headless Knight*3
     sprite: {fileID: 21300000, guid: 0d241ac15d47e384998d6308ab0dca15, type: 3}
@@ -3473,7 +3566,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000019
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000018
     name: Hell Knight*3
     sprite: {fileID: 21300000, guid: 6defde429a0d2fd4bb09866c4147545d, type: 3}
@@ -3482,7 +3577,9 @@ MonoBehaviour:
     bloodCost: 30
     formationId: 3
     soldierId: 1000020
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000019
     name: Vampire*3
     sprite: {fileID: 21300000, guid: 3b2909ee9afc8664d916bf196afd34b1, type: 3}
@@ -3491,7 +3588,9 @@ MonoBehaviour:
     bloodCost: 8
     formationId: 3
     soldierId: 1000021
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000020
     name: Volcanic Giant*1
     sprite: {fileID: 21300000, guid: 1114fe5963167a24583b5686d7ee7c9a, type: 3}
@@ -3500,7 +3599,9 @@ MonoBehaviour:
     bloodCost: 20
     formationId: 1
     soldierId: 1000022
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000021
     name: Ligeionnare Musketeers*3
     sprite: {fileID: 21300000, guid: 7070b1ccc5a0d144e9b42e3773d55555, type: 3}
@@ -3509,7 +3610,9 @@ MonoBehaviour:
     bloodCost: 8
     formationId: 3
     soldierId: 1000023
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000022
     name: Castle Obsidian*1
     sprite: {fileID: 21300000, guid: 57df24887c6026d41be89d8580dc5798, type: 3}
@@ -3518,7 +3621,9 @@ MonoBehaviour:
     bloodCost: 20
     formationId: 1
     soldierId: 1000024
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000023
     name: Devil Butcher*2
     sprite: {fileID: 21300000, guid: f1166286c2139d846b9362f01585c10e, type: 3}
@@ -3527,7 +3632,9 @@ MonoBehaviour:
     bloodCost: 2
     formationId: 2
     soldierId: 1000025
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000024
     name: PH
     sprite: {fileID: 21300000, guid: 4f6db7a951b4f4648b8b201b303fbd67, type: 3}
@@ -3536,7 +3643,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 4
     soldierId: 1000026
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000025
     name: PH
     sprite: {fileID: 21300000, guid: da881e0a7a9624e4184556544f6e9289, type: 3}
@@ -3545,7 +3654,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000027
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000026
     name: PH
     sprite: {fileID: 21300000, guid: 7bf3ff54d84cfe844bc3fc379861c31b, type: 3}
@@ -3554,7 +3665,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 2
     soldierId: 1000028
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000027
     name: PH
     sprite: {fileID: 21300000, guid: 0144dfc494720fa4485fa6f1925671f2, type: 3}
@@ -3563,7 +3676,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000029
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000028
     name: PH
     sprite: {fileID: 21300000, guid: 4f2706ab6701c5743baec43de0fef327, type: 3}
@@ -3572,7 +3687,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000030
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000029
     name: PH
     sprite: {fileID: 21300000, guid: 2ae14a9e79ce494469990b83d64a27e9, type: 3}
@@ -3581,7 +3698,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000031
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000030
     name: PH
     sprite: {fileID: 21300000, guid: 0232ccea44bdabe409ca649347283192, type: 3}
@@ -3590,7 +3709,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000032
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000031
     name: PH
     sprite: {fileID: 21300000, guid: 54955276e2a3e0049a4e440b6cdc0f34, type: 3}
@@ -3599,7 +3720,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 4
     soldierId: 1000033
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000032
     name: PH
     sprite: {fileID: 21300000, guid: 377d8652c9744c34ea81e2fd08467a5b, type: 3}
@@ -3608,7 +3731,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000034
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000033
     name: PH
     sprite: {fileID: 21300000, guid: 774874d80ed3ebd469451d624701eb72, type: 3}
@@ -3617,7 +3742,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000035
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000034
     name: PH
     sprite: {fileID: 21300000, guid: 65ea9e282ec9226478c676ef3856fb5a, type: 3}
@@ -3626,7 +3753,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000036
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000035
     name: PH
     sprite: {fileID: 21300000, guid: 491fb94bf04d742439bfae1bfe70c126, type: 3}
@@ -3635,7 +3764,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 2
     soldierId: 1000037
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000036
     name: PH
     sprite: {fileID: 21300000, guid: c0c2f87be4a88ac459511d8cbbf18dd7, type: 3}
@@ -3644,7 +3775,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 2
     soldierId: 1000038
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000037
     name: PH
     sprite: {fileID: 21300000, guid: 77a727e0f941e51428f7913ee5f0e6f4, type: 3}
@@ -3653,7 +3786,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000039
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000038
     name: PH
     sprite: {fileID: 21300000, guid: cfbb4c6c192adb2469080bb8b5a9b595, type: 3}
@@ -3662,7 +3797,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 4
     soldierId: 1000040
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000039
     name: PH
     sprite: {fileID: 21300000, guid: d2694fdbdaae9b240ae2b602b84c3767, type: 3}
@@ -3671,7 +3808,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 4
     soldierId: 1000041
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000040
     name: PH
     sprite: {fileID: 21300000, guid: 68ae88e801073044b9d31274d87b0fe7, type: 3}
@@ -3680,7 +3819,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000042
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000041
     name: PH
     sprite: {fileID: 21300000, guid: 43ba0822667e95649a2569eeb82e38b7, type: 3}
@@ -3689,7 +3830,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000043
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000042
     name: PH
     sprite: {fileID: 21300000, guid: c43e64a2644513647bc5f7763169d375, type: 3}
@@ -3698,7 +3841,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 2
     soldierId: 1000044
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000043
     name: PH
     sprite: {fileID: 21300000, guid: c7202f26681582d4da76133509b3f552, type: 3}
@@ -3707,7 +3852,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000045
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000044
     name: PH
     sprite: {fileID: 21300000, guid: cad1a34c1100a9545b894f892674c33e, type: 3}
@@ -3716,7 +3863,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000046
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000045
     name: PH
     sprite: {fileID: 21300000, guid: 4607df583aed20b45a2cea46bce260b1, type: 3}
@@ -3725,7 +3874,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000047
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000046
     name: PH
     sprite: {fileID: 21300000, guid: 894db781610b0804f9b5c38ab6cc33c0, type: 3}
@@ -3734,7 +3885,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000048
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000047
     name: PH
     sprite: {fileID: 21300000, guid: d9eb92afc55ff08459f4c35852c83639, type: 3}
@@ -3743,7 +3896,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 4
     soldierId: 1000049
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000048
     name: PH
     sprite: {fileID: 21300000, guid: 55c4c66b5a4e1e14b80f4c90532d2c2a, type: 3}
@@ -3752,7 +3907,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000050
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000049
     name: PH
     sprite: {fileID: 21300000, guid: c0de7d7d4bc84ea4faddca84b9e1e10f, type: 3}
@@ -3761,7 +3918,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 3
     soldierId: 1000051
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000050
     name: PH
     sprite: {fileID: 21300000, guid: 7718df4c28c419047948118af778b362, type: 3}
@@ -3770,7 +3929,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 2
     soldierId: 1000052
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000051
     name: PH
     sprite: {fileID: 21300000, guid: 57292ad43deb40d489e13b645d434990, type: 3}
@@ -3779,7 +3940,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000053
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000052
     name: PH
     sprite: {fileID: 21300000, guid: ed01157b3e6f6b84a993ededfb244837, type: 3}
@@ -3788,7 +3951,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000054
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000053
     name: PH
     sprite: {fileID: 21300000, guid: a91da052498405a4f9189224397b37dc, type: 3}
@@ -3797,7 +3962,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000055
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   - id: 21000054
     name: PH
     sprite: {fileID: 21300000, guid: 8cc9a4339ac249d4d8c63a6d6281d074, type: 3}
@@ -3806,7 +3973,9 @@ MonoBehaviour:
     bloodCost: 0
     formationId: 1
     soldierId: 1000056
-    content: {fileID: 0}
+    soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
+    formation:
+      soldierOffsets: []
   missileDatas:
   - id: 31000001
     name: "\u7BAD"
@@ -3824,7 +3993,7 @@ MonoBehaviour:
       startDamageWiatTime: 0
     speed: 20
     moveType: 0
-    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    sprite: {fileID: 0}
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
@@ -3854,7 +4023,7 @@ MonoBehaviour:
       startDamageWiatTime: 0
     speed: 40
     moveType: 0
-    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    sprite: {fileID: 0}
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
@@ -3884,7 +4053,7 @@ MonoBehaviour:
       startDamageWiatTime: 0
     speed: 20
     moveType: 0
-    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    sprite: {fileID: 0}
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
@@ -3914,7 +4083,7 @@ MonoBehaviour:
       startDamageWiatTime: 0
     speed: 0
     moveType: 1
-    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    sprite: {fileID: 0}
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0
@@ -4184,7 +4353,7 @@ MonoBehaviour:
       startDamageWiatTime: 0
     speed: 18
     moveType: 2
-    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
+    sprite: {fileID: 0}
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0

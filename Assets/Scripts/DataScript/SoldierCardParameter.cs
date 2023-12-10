@@ -49,6 +49,7 @@ namespace DemonOverwhelming
             bloodCost = data.bloodCost;
             formationId = data.formationId;
             soldierId = data.soldierId;
+            soldierPrefab = data.soldierPrefab;
         }
     }
 }

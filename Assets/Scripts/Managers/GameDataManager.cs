@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEditor;
 namespace DemonOverwhelming
 {
     /// <summary>
@@ -49,15 +50,18 @@ namespace DemonOverwhelming
             if (instance != null)
                 Destroy(instance);
             instance = this;
-            if (excelDatas == null)
-                excelDatas = (ExcelDataManager)Resources.Load("DataTables/PlotsDatas");
+           
         }
 
         private void Start()
         {
             Initialization();
+#if UNITY_EDITOR
             if (excelDatas == null)
-                excelDatas = (ExcelDataManager)Resources.Load("DataTables/PlotsDatas");
+                excelDatas = AssetDatabase.LoadAssetAtPath<ExcelDataManager>("Assets/AddressableAssetsData/Data/PlotsDatas.asset");
+#endif
+            //if (excelDatas == null)
+            //    excelDatas = (ExcelDataManager)Resources.Load("DataTables/PlotsDatas");
         }
         /// <summary>
         /// 初始化
@@ -119,8 +123,6 @@ namespace DemonOverwhelming
         {
             SoldierCardParameter find = excelDatas.cardDatas.Find((SoldierCardParameter p) => { return p.id == id; });
             find.formation = formationObject.formations.Find((Formation p) => { return p.id == find.formationId; }).formation;
-            //find.content.finalSoldierId = find.soldierId;
-            //Debug.Log("FIND到的ID==" + find.soldierId);
             return find;
         }
         /// <summary>
