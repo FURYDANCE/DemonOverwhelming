@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 namespace DemonOverwhelming
 {
 
@@ -14,28 +16,29 @@ namespace DemonOverwhelming
         Vector3 moveDir;
         CharacterStateManager manager;
         float timer;
+
         void Start()
         {
             entity = GetComponent<Entity>();
-
             manager = GetComponent<CharacterStateManager>();
             timer = 0.1f;
+
+            _agent = entity.AddComponent<NavMeshAgent>();
+            _agent.speed = entity.GetSpeed();
         }
 
 
         public void Moving()
         {
-
-
             //在直线移动的同时，检测周围的敌人，是否进入追击敌人的状态
             //在这里执行的原因：当玩家操控输入时，当范围内有敌人也不应该进入追击状态，而是在不按下任何行动按钮的时候并且范围内有敌人才进入追击状态，所以应该在具体的脚本中执行
             manager.CheckEnemy();
             manager.SetAttackTarget(manager.enemyCheckScript.EnemyCheck());
 
             if (entity.camp == Camp.demon)
-                moveDir = Vector3.right.normalized;
+                moveDir = Vector3.right;
             else
-                moveDir = Vector3.left.normalized;
+                moveDir = Vector3.left;
             entity.FlipTo(entity.transform.position + moveDir);
             if (timer < 0)
             {
@@ -43,7 +46,11 @@ namespace DemonOverwhelming
                 if (!entity.isBackingRelativePos)
                 {
                     Vector3 target = new Vector3(transform.position.x + moveDir.x, manager.start_Y, transform.position.z);
-                    transform.position = Vector3.MoveTowards(transform.position, target, entity.GetSpeed() * Time.deltaTime);
+                    //transform.position = Vector3.MoveTowards(transform.position, target, entity.GetSpeed() * Time.deltaTime);
+                    if (_agent != null && (_agent.destination == Vector3.zero || Vector3.Distance(transform.position, _agent.destination) < _resetDestThreshold))
+                    {
+                        _agent.SetDestination(target);
+                    }
                     entity.FlipTo(target);
                 }
                 //当单位处于重整队形状态时候的移动
@@ -58,5 +65,8 @@ namespace DemonOverwhelming
             timer -= Time.deltaTime;
         }
 
+        NavMeshAgent _agent;
+        [SerializeField]
+        private float _resetDestThreshold = 1f;
     }
 }
