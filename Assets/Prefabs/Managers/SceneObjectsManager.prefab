@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 0}
+  moneyOverImage: {fileID: 0}
   bloodText: {fileID: 0}
+  bloodOverImage: {fileID: 0}
   allUnitParent: {fileID: 0}
   playerEntityGeneratePoint: {fileID: 0}
   enemyEntityGeneratePoint: {fileID: 0}
@@ -62,4 +64,8 @@ MonoBehaviour:
   BattleUI: {fileID: 0}
   cardSelectUI: {fileID: 0}
   formationMakingUI: {fileID: 0}
+  formationMakingAreaCenter: {fileID: 0}
   heroInfoUI: {fileID: 0}
+  btn_CreateSolider: {fileID: 0}
+  btn_Revoke: {fileID: 0}
+  btn_RevokeAll: {fileID: 0}

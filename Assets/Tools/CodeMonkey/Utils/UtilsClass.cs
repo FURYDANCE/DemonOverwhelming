@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
+using DemonOverwhelming;
 namespace CodeMonkey.Utils {
 
     /*
@@ -1556,8 +1556,13 @@ namespace CodeMonkey.Utils {
             }
             return list;
         }
-
-
+      
+        public static UnitData SetUnitParameterBydata(UnitData data)
+        {
+            UnitData d = new UnitData();
+            d.SetValue(data);
+            return d;
+        }
     }
 
 }

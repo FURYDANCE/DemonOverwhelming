@@ -96,7 +96,7 @@ namespace DemonOverwhelming
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public UnitData GetEntityDataById(string id)
+        public  UnitData GetEntityDataById(string id)
         {
             Debug.Log("传入的id：" + id);
             UnitData find = excelDatas.unitDatas.Find((UnitData p) => { return p.ID == id; });
@@ -221,7 +221,7 @@ namespace DemonOverwhelming
             for (int i = 0; i < readData.Count; i++)
             {
                 //Debug.Log(readData[i].ID);
-                excelDatas.unitDatas[i].SetValue_noSprite(readData[i]);
+                //excelDatas.unitDatas[i].SetValue_noSprite(readData[i]);
             }
             Debug.Log("从json读取文件完成");
         }

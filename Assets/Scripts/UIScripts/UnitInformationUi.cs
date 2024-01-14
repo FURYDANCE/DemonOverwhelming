@@ -76,16 +76,7 @@ namespace DemonOverwhelming
                 skillText.text = "技能:" + parameter.character.skillName;
                 info4Text.text = "状态：" + infoGameObject.GetComponent<CharacterStateManager>().currentState.ToString();
             }
-            if (parameter.type == EntityType.building)
-            {
-                characterInformation.SetActive(false);
-                buildingInformation.SetActive(true);
-                basicInfoText.text = parameter.building.building_canAttack ? "防御性建筑" + "\n" + "maxHp:" + parameter.Hp : "据点" + "\n" + "maxHp:" + parameter.Hp;
-                damageText.gameObject.SetActive(false);
-                skillText.gameObject.SetActive(false);
-                defenceText_Building.gameObject.SetActive(true);
-                defenceText_Building.text = "防御：" + parameter.character.defence;
-            }
+           
             hpInformation.bufferBar.fillAmount = parameter.nowHp / parameter.Hp;
             startSpeed = parameter.character.moveSpeed;
             Debug_ShowLock();

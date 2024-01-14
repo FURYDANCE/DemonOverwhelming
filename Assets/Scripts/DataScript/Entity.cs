@@ -11,7 +11,7 @@ namespace DemonOverwhelming
     /// </summary>
     public class Entity : MonoBehaviour
     {
-
+        public string id;
         /// <summary>
         /// 阵营
         /// </summary>
@@ -35,7 +35,7 @@ namespace DemonOverwhelming
         SpriteRenderer sprite;
         bool settled;
         Material startMaterial;
-       
+
         [HideInInspector]
         public BoxCollider boxCollider;
         [Header("(调试)无敌状态")]
@@ -61,9 +61,10 @@ namespace DemonOverwhelming
         private void Start()
         {
             buffs = new List<BuffInformation>();
-            if (parameter.type == EntityType.building && parameter.ID != "")
-                SetEntityParameter();
+            //if (parameter.type == EntityType.building && parameter.ID != "")
+            //    SetEntityParameter();
             GenerateEntity();
+
         }
 
         private void FixedUpdate()
@@ -74,11 +75,14 @@ namespace DemonOverwhelming
 
         #region 初始化相关
 
+        /// <summary>
+        /// 通过自身id读取各个变量并赋值
+        /// </summary>
         public void SetEntityParameter()
         {
-            parameter.SetValue(GameDataManager.instance.GetEntityDataById(parameter.ID));
+            parameter.SetValue(GameDataManager.instance.GetEntityDataById(id));
         }
-       
+
         /// <summary>
         /// 根据id获取到的变量生成该实体
         /// </summary>
@@ -107,76 +111,74 @@ namespace DemonOverwhelming
             //当id不为空时根据id生成目标
             if (parameter.ID != "")
             {
-                //设置尺寸
-                Debug.Log("SIZE:" + parameter.modleSize);
-                transform.localScale = new Vector3(parameter.modleSize, parameter.modleSize);
-                //设置面向相机
-                gameObject.AddComponent<FaceToCamera>();
+                ////设置尺寸
+                //Debug.Log("SIZE:" + parameter.modleSize);
+                //transform.localScale = new Vector3(parameter.modleSize, parameter.modleSize);
+                ////设置面向相机
+                //gameObject.AddComponent<FaceToCamera>();
                 //设置贴图或者spine动画
                 //没有spine动画时设置贴图
-                if (!spineObject && sprite == null)
-                {
-                    sprite = gameObject.AddComponent<SpriteRenderer>();
-                    Debug.Log(parameter.sprite.name);
-                    sprite.sprite = parameter.sprite;
-                    sprite.sortingLayerName = "Layer1";
-                    //设置材质
-                    sprite.material = /*new Material(*/GameDataManager.instance.materialObject.soldierMaterial/*)*/;
-                    //if (camp == Camp.demon)
-                    //    sprite.flipX = false;
-                    //else
-                    //    sprite.flipX = true;
-                }
-                //有spine动画时设置spine动画
-                if (spineObject && skAni == null)
-                {
-                    //string m_name = parameter.name.Split("/")[0];
-                    skAni = gameObject.GetComponent<SkeletonAnimation>();
-                    //skAni.skeletonDataAsset = Resources.Load<SkeletonDataAsset>("SpineAnimations/" + m_name + "/" + m_name + "_SkeletonData");
-                    //skAni.GetComponent<MeshRenderer>().sortingLayerName = "Layer1";
-                    //skAni.GetComponent<MeshRenderer>().sortingOrder = 0;
-                    //skAni.state = new Spine.AnimationState(new Spine.AnimationStateData(skAni.skeletonDataAsset.GetSkeletonData(true)));
-                    skAni.state.SetAnimation(0, "idle", true);
-                    //StartCoroutine(SkAniInstitate());
-                    //skAni.state = new Spine.AnimationState(new Spine.AnimationStateData(new Spine.SkeletonData()));
-                }
+                //if (!spineObject && sprite == null)
+                //{
+                //    sprite = gameObject.AddComponent<SpriteRenderer>();
+                //    Debug.Log(parameter.sprite.name);
+                //    sprite.sprite = parameter.sprite;
+                //    sprite.sortingLayerName = "Layer1";
+                //    //设置材质
+                //    sprite.material = /*new Material(*/GameDataManager.instance.materialObject.soldierMaterial/*)*/;
+                //    //if (camp == Camp.demon)
+                //    //    sprite.flipX = false;
+                //    //else
+                //    //    sprite.flipX = true;
+                //}
+                ////有spine动画时设置spine动画
+                //if (spineObject && skAni == null)
+                //{
+                //    //string m_name = parameter.name.Split("/")[0];
+                //    skAni = gameObject.GetComponent<SkeletonAnimation>();
+                //    skAni.state.SetAnimation(0, "idle", true);
+                //}
                 //设置状态管理器
-                gameObject.AddComponent<CharacterStateManager>();
+                //【后面改成行为树】
+                if (!gameObject.GetComponent<CharacterStateManager>())
+                    gameObject.AddComponent<CharacterStateManager>();
 
 
-                //设置碰撞体(用于处理未旋转碰撞体的数值）
-                if (!gameObject.GetComponent<BoxCollider>())
-                    boxCollider = gameObject.AddComponent<BoxCollider>();
-                else
-                    boxCollider = gameObject.GetComponent<BoxCollider>();
-                if (sprite && sprite.material.name != "Sprites-Default")
-                    startMaterial = sprite.material;
+                ////设置碰撞体(用于处理未旋转碰撞体的数值）
+                //if (!gameObject.GetComponent<BoxCollider>())
+                //    boxCollider = gameObject.AddComponent<BoxCollider>();
+                //else
+                //    boxCollider = gameObject.GetComponent<BoxCollider>();
+                //if (sprite && sprite.material.name != "Sprites-Default")
+                //    startMaterial = sprite.material;
                 character_SpecialTagBases = new List<Character_SpecialTagBase>();
                 //设置特殊词条
                 SetTagEventScript();
                 //测试中：设置行为脚本
 
             }
+            //【影子应该作为预制件提前设置好的子对象存在，不用在脚本中设置】
             //当子物体没有名为shadow的对象时，创建shadow影子对象
-            if (!transform.Find("shadow"))
-            {
-                GameObject go = Instantiate(new GameObject(), transform);
-                go.name = "shadow";
-                go.transform.localPosition = new Vector3(0, parameter.shadowOffset, 0);
-                go.transform.localScale = parameter.shadowSize;
-                SpriteRenderer shadowSprite = go.AddComponent<SpriteRenderer>();
-                shadowSprite.sprite = (Sprite)Resources.Load("Sprites/Shadow", typeof(Sprite)) as Sprite;
-                shadowSprite.color = new Color(1, 1, 1, 0.85f);
-                shadowSprite.sortingLayerName = "Layer1";
-                shadowSprite.sortingOrder = -1;
-            }
+            //if (!transform.Find("shadow"))
+            //{
+            //    GameObject go = Instantiate(new GameObject(), transform);
+            //    go.name = "shadow";
+            //    go.transform.localPosition = new Vector3(0, parameter.shadowOffset, 0);
+            //    go.transform.localScale = parameter.shadowSize;
+            //    SpriteRenderer shadowSprite = go.AddComponent<SpriteRenderer>();
+            //    shadowSprite.sprite = (Sprite)Resources.Load("Sprites/Shadow", typeof(Sprite)) as Sprite;
+            //    shadowSprite.color = new Color(1, 1, 1, 0.85f);
+            //    shadowSprite.sortingLayerName = "Layer1";
+            //    shadowSprite.sortingOrder = -1;
+            //}
+            //【用spine动画的话，也不需要动画机】
             //创建动画脚本和获取动画
-            animator = gameObject.AddComponent<Animator>();
-            animations = GameDataManager.instance.GetAnimatinosDataById(parameter.ID);
-            if (animations != null)
-            {
-                animator.runtimeAnimatorController = animations.animatorController;
-            }
+            //animator = gameObject.AddComponent<Animator>();
+            //animations = GameDataManager.instance.GetAnimatinosDataById(parameter.ID);
+            //if (animations != null)
+            //{
+            //    animator.runtimeAnimatorController = animations.animatorController;
+            //}
             //设置技能和技能等级
             parameter.character.skills = new List<Skill>();
             for (int i = 0; i < parameter.character.skillIds.Length; i++)
@@ -197,7 +199,9 @@ namespace DemonOverwhelming
             {
                 skills[i].skillLevel = skillLevels[i];
             }
+            //【之后改成行为树】
             //设置行动ai
+            Debug.Log("行动模式：" + parameter.aiMode_Move);
             if (parameter.aiMode_Move == Ai_MoveType.directMove)
                 gameObject.AddComponent<ICharaMove_Direct>();
             if (parameter.aiMode_Move == Ai_MoveType.playerInputMove)
@@ -214,7 +218,6 @@ namespace DemonOverwhelming
             //设置具体的技能执行脚本和起始事件
             Skill_StartEvent();
             settled = true;
-           
 
         }
 
@@ -270,9 +273,9 @@ namespace DemonOverwhelming
         /// <summary>
         /// 实体受伤时调用的方法，传入伤害信息，伤害者，输出最终伤害
         /// </summary>
-        /// <param name="伤害信息"></param>
-        /// <param name="攻击者"></param>
-        /// <param name="最终伤害"></param>
+        /// <param name="伤害信息">伤害信息</param>
+        /// <param name="攻击者">攻击者</param>
+        /// <param name="最终伤害">最终伤害</param>
         public void TakeDamage(DamageData damageData, Entity attacker, out float finalDamage)
         {
             if (hpLock)
@@ -698,21 +701,21 @@ namespace DemonOverwhelming
         /// <param name="target"></param>
         public void FlipTo(Vector3 target)
         {
-            if (!spineObject)
-            {
-                if (transform.position.x > target.x)
-                    SetFlipX(true);
-                if (transform.position.x < target.x)
-                    SetFlipX(false);
-            }
-            if (spineObject)
-            {
-                //如果是spine，设置左右转向
-                if (spineObject && transform.position.x > target.x)
-                    transform.rotation = Quaternion.Euler(45, -180, transform.localRotation.z);
-                if (spineObject && transform.position.x < target.x)
-                    transform.rotation = Quaternion.Euler(-45, 0, transform.localRotation.z);
-            }
+            //if (!spineObject)
+            //{
+            //    if (transform.position.x > target.x)
+            //        SetFlipX(true);
+            //    if (transform.position.x < target.x)
+            //        SetFlipX(false);
+            //}
+            //if (spineObject)
+            //{
+            //    //如果是spine，设置左右转向
+            //    if (spineObject && transform.position.x < target.x)
+            //        transform.rotation = Quaternion.Euler(45, 0, 0);
+            //    if (spineObject && transform.position.x > target.x)
+            //        transform.rotation = Quaternion.Euler(-45, 180, 0);
+            //}
         }
 
         #endregion

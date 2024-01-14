@@ -43,8 +43,6 @@ namespace DemonOverwhelming
         public Ai_AttackType aiMode_Atk;
         [Header("角色变量")]
         public UnitParameter_Character character;
-        [Header("建筑变量")]
-        public UnitParameter_Building building;
         [Header("增益变量（全部为百分比）")]
         public UnitParameter_Buff buffParameter;
 
@@ -82,7 +80,7 @@ namespace DemonOverwhelming
             character.specialTags = data.character.specialTags;
             character.bloodDrop = data.character.bloodDrop;
             modleSize = data.modleSize;
-            building = data.building;
+       
             //if (data.character.missileId != "")
             //{
             //    //missile = data.missile;
@@ -92,60 +90,13 @@ namespace DemonOverwhelming
             character.defence_far = data.character.defence_far;
             character.defence_magic = data.character.defence_magic;
             character.missileId = data.character.missileId;
-            building.building_canAttack = data.building.building_canAttack;
+            //building.building_canAttack = data.building.building_canAttack;
             character.skillIds = data.character.skillIds;
             character.skillLevels = data.character.skillLevels;
             character.descriptionAndStory = data.character.descriptionAndStory;
             buffParameter = new UnitParameter_Buff();
         }
-        public void SetValue_noSprite(UnitData data)
-        {
-            ID = data.ID;
-            type = data.type;
-            name = data.name;
-            Hp = data.Hp;
-            nowHp = data.nowHp;
-            hurtDamage = data.hurtDamage;
-            hpBarSize = data.hpBarSize;
-            hpBarOffset = data.hpBarOffset;
-            introduct = data.introduct;
-            shadowSize = data.shadowSize;
-            shadowOffset = data.shadowOffset;
-            aiMode_Move = data.aiMode_Move;
-            aiMode_Check = data.aiMode_Check;
-            aiMode_Chase = data.aiMode_Chase;
-            aiMode_Atk = data.aiMode_Atk;
-            character = new UnitParameter_Character();
-            character.aiType = data.character.aiType;
-            character.attackDistance = data.character.attackDistance;
-            character.attackTime = data.character.attackTime;
-            character.attackWaitTime = data.character.attackWaitTime;
-            character.chaseTime = data.character.chaseTime;
-            character.cost = data.character.cost;
-            character.defence = data.character.defence;
-            character.EnemyCheckArea = new Vector3(data.character.EnemyCheckArea.x, data.character.EnemyCheckArea.y, 100);
-            character.EnemyCheckOffset = data.character.EnemyCheckOffset;
-            character.haveSkill = data.character.haveSkill;
-            character.moveSpeed = data.character.moveSpeed;
-            character.id = data.character.id;
-            character.specialTags = data.character.specialTags;
-            character.bloodDrop = data.character.bloodDrop;
-            modleSize = data.modleSize;
-            building = data.building;
-            //if (data.character.missileId != "0")
-            //{
-            //    //missile = data.missile;
-            //    missile = data.missile.SetValue(data.missile, false);
-            //    //missile = data.missile.SetValue(data.missile, false);
-            //}
-            character.missileId = data.character.missileId;
-            character.defence_far = data.character.defence_far;
-            character.defence_magic = data.character.defence_magic;
-            building.building_canAttack = data.building.building_canAttack;
-            character.skillIds = data.character.skillIds;
-            character.skillLevels = data.character.skillLevels;
-            character.descriptionAndStory = data.character.descriptionAndStory;
-        }
+        
     }
     [System.Serializable]
     public class UnitParameter_Character
@@ -179,13 +130,7 @@ namespace DemonOverwhelming
         public string[] skillLevels;
         public string[] descriptionAndStory;
     }
-    [System.Serializable]
-    public class UnitParameter_Building
-    {
-        public string id;
-        public bool building_canAttack;
-
-    }
+  
     [System.Serializable]
     public class UnitParameter_Missile
     {

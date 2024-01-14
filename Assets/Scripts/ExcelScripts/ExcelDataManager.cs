@@ -9,7 +9,6 @@ public class ExcelDataManager : ScriptableObject
 
     public List<UnitData> unitDatas;
     public List<UnitParameter_Character> characterDatas;
-    public List<UnitParameter_Building> buildingDatas;
     public List<SoldierCardParameter> cardDatas;
     public List<UnitParameter_Missile> missileDatas;
     public List<DamageData> damageDatas;

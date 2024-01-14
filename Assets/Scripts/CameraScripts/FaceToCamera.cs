@@ -9,10 +9,7 @@ public class FaceToCamera : MonoBehaviour
     public float angle;
     private void Start()
     {
-        transform.rotation = Quaternion.Euler(angle==0? -45:angle, transform.rotation.y, transform.rotation.z);
-
+        transform.rotation = Quaternion.Euler(angle==0? 45:angle, transform.rotation.y, transform.rotation.z);
     }
-    void Update()
-    {
-    }
+    
 }
