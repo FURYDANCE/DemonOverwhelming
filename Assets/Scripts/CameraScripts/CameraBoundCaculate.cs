@@ -38,7 +38,10 @@ public class CameraBoundCaculate : MonoBehaviour
 
         //第一帧计算并给UI赋值
         SetSliderVaule();
-
+        slider.onValueChanged.AddListener(delegate
+        {
+            ChangeCameraPostion();
+        });
 
     }
     private void Update()
@@ -52,10 +55,10 @@ public class CameraBoundCaculate : MonoBehaviour
     /// </summary>
     public void SetSliderVaule()
     {
-        boundDistance = Mathf.Abs(bound_Left - bound_Right);
-        cameraDistance = Mathf.Abs(bound_Right - cameraTransform.position.x);
+        boundDistance = Mathf.Abs(bound_Right - bound_Left);
+        cameraDistance = Mathf.Abs(bound_Left - cameraTransform.position.x);
         cameraPersentage = cameraDistance / boundDistance;
-        slider.value =  cameraPersentage;
+        slider.value = cameraPersentage;
     }
 
 
@@ -65,7 +68,7 @@ public class CameraBoundCaculate : MonoBehaviour
     public void ChangeCameraPostion()
     {
         float nowPersentage = slider.value;
-        float newPos_X = bound_Right - boundDistance * nowPersentage;
-        cameraTransform.position = new Vector3(newPos_X, cameraTransform.position.y, cameraTransform.position.z);
+        float newPos_X = /*bound_Right -*/ boundDistance * nowPersentage;
+        cameraTransform.position = new Vector3(newPos_X + bound_Left, cameraTransform.position.y, cameraTransform.position.z);
     }
 }

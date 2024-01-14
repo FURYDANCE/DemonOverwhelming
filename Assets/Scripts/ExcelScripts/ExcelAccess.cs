@@ -7,6 +7,7 @@ using System.IO;
 using System.Data;
 using DemonOverwhelming;
 using System;
+using CodeMonkey.Utils;
 
 public class ExcelAccess
 {
@@ -94,7 +95,7 @@ public class ExcelAccess
     /// <param name="buildingData"></param>
     /// <param name="cardDara"></param>
     /// <param name="missileData"></param>
-    public static void SelectEntityTable(out List<UnitData> entityData, out List<UnitParameter_Character> characterData, out List<UnitParameter_Building> buildingData,
+    public static void SelectEntityTable(out List<UnitData> entityData, out List<UnitParameter_Character> characterData,
         out List<SoldierCardParameter> cardDara, out List<UnitParameter_Missile> missileData, out List<DamageData> damageData, out List<Skill> skillData)
     {
         string excelName = EntityExcel + ".xlsx";
@@ -113,7 +114,7 @@ public class ExcelAccess
 
         List<UnitData> dataArray = new List<UnitData>();
         List<UnitParameter_Character> dataArray_character = new List<UnitParameter_Character>();
-        List<UnitParameter_Building> dataArray_building = new List<UnitParameter_Building>();
+
         List<SoldierCardParameter> dataArray_soldierCard = new List<SoldierCardParameter>();
         List<UnitParameter_Missile> dataArray_missile = new List<UnitParameter_Missile>();
         List<DamageData> dataArray_damage = new List<DamageData>();
@@ -166,6 +167,34 @@ public class ExcelAccess
             up.character.skillIds = collect[i][25].ToString().Split("/");
             up.character.skillLevels = collect[i][26].ToString().Split("/");
             up.character.descriptionAndStory = collect[i][27].ToString().Split("|");
+
+
+            //读取兵种预制件
+            Debug.Log(up.name + "   " + AssetDatabase.LoadAssetAtPath<GameObject>("Assets/AddressableAssetsData/Prefabs/Unit/ " + up.name + ".prefab"));
+            if (up.name.Split("/").Length != 0)
+            {
+                GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/AddressableAssetsData/Prefabs/Unit/" + up.name.Split("/")[0] + ".prefab");
+                //对该对象的预制件做出修改
+                if (prefab)
+                {
+                    up.unitPrefab = prefab;
+                    string path = "Assets/AddressableAssetsData/Prefabs/Unit/" + up.name.Split("/")[0] + ".prefab";
+
+                    prefab = PrefabUtility.LoadPrefabContents(path);
+                    prefab.GetComponent<Entity>().id = up.ID;
+                    prefab.GetComponent<Entity>().parameter = UtilsClass.SetUnitParameterBydata(up);
+                    Debug.Log(path);
+                    PrefabUtility.SaveAsPrefabAsset(prefab, path);
+                    AssetDatabase.SaveAssets();
+                    AssetDatabase.Refresh();
+
+                }
+
+                //PrefabUtility.SaveAsPrefabAsset(prefab, "Assets/AddressableAssetsData/Prefabs/Unit/" + up.name.Split("/")[0] + ".prefab");
+              
+
+            }
+
             dataArray.Add(up);
         }
 
@@ -270,7 +299,7 @@ public class ExcelAccess
         //}
         entityData = dataArray;
         characterData = dataArray_character;
-        buildingData = dataArray_building;
+
         cardDara = dataArray_soldierCard;
         missileData = dataArray_missile;
         damageData = dataArray_damage;

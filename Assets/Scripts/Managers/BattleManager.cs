@@ -231,9 +231,7 @@ namespace DemonOverwhelming
         /// <param name="其buff的id"></param>
         public void CreateAoeHurtArea(Vector3 center, Vector2 checkArea, Entity creater, Camp camp, DamageData damageData)
         {
-            //生成特效
-            //GameObject vfx = VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Aoe_2, center, new Vector3(5, 5, 5), 5); //特效大小等有了更多数据后再跟着修改
-            //vfx.transform.rotation = Quaternion.Euler(0, 0, 0);
+     
             Collider[] colliders = Physics.OverlapBox(center, new Vector3(checkArea.x, checkArea.y, 50));
             foreach (Collider c in colliders)
             {

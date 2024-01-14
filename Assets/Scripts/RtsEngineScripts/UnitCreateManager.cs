@@ -12,7 +12,7 @@ namespace DemonOverwhelming
     /// <summary>
     /// 玩家波次生成器，遍历战斗管理器中统计的布阵卡并逐一生成所需的单位
     /// </summary>
-    public class UnitCreateManager : MonoBehaviour, IPostRunGameService
+    public class UnitCreateManager : MonoBehaviour
     {
         protected IUnitManager unitMgr { private set; get; }
 
@@ -37,7 +37,7 @@ namespace DemonOverwhelming
             foreach (FormatCard formatCard in BattleManager.instance.allSelectedCards)
             {
                 //获取要生成的单位
-                IUnit unitPrefab = formatCard.parentParameter.soldierPrefab.GetComponent<IUnit>();
+                string id = formatCard.parentParameter.soldierId;
                 //获取幻影位置
                 List<Vector3> shadowPositions = new List<Vector3>();
                 //遍历布阵卡的幻影的子对象得到布阵卡每个幻影的位置
@@ -46,13 +46,14 @@ namespace DemonOverwhelming
                 //遍历得到的所有位置，在其坐标生成新单位
                 foreach (Vector3 v in shadowPositions)
                 {
-                    unitMgr.CreateUnit(unitPrefab, v, Quaternion.identity, new InitUnitParameters
-                    {
-                        free = true,
+                    CreateOneUnit(Camp.demon, id, v);
+                    //unitMgr.CreateUnit(unitPrefab, v, Quaternion.identity, new InitUnitParameters
+                    //{
+                    //    free = true,
 
-                        useGotoPosition = true,
-                        gotoPosition = v + Vector3.right * 500,
-                    });
+                    //    useGotoPosition = true,
+                    //    gotoPosition = v + Vector3.right * 500,
+                    //});
                 }
             }
         }
@@ -66,13 +67,19 @@ namespace DemonOverwhelming
         {
             SceneObjectsManager objectsManager = SceneObjectsManager.instance;
             GameObject findedPrefab = GameDataManager.instance.GetEntityDataById(id).unitPrefab;
-            unitMgr.CreateUnit(findedPrefab.GetComponent<IUnit>(), (camp == Camp.demon ? objectsManager.playerEntityGeneratePoint.position : objectsManager.enemyEntityGeneratePoint.position), Quaternion.identity, new InitUnitParameters
-            {
-                free = true,
 
-                useGotoPosition = true,
-                gotoPosition = camp == Camp.demon ? (objectsManager.playerEntityGeneratePoint.position + Vector3.right * 500) : (objectsManager.enemyEntityGeneratePoint.position - Vector3.right * 500),
-            });
+            //不用rtsEngine的话，把找到的预制件生成在对应的位置就可以？
+            GameObject createdUnit = Instantiate(findedPrefab, objectsManager.allUnitParent);
+            createdUnit.GetComponent<Entity>().camp = camp;
+            createdUnit.transform.position = camp == Camp.demon ? objectsManager.playerEntityGeneratePoint.position : objectsManager.enemyEntityGeneratePoint.position;
+
+            //unitMgr.CreateUnit(findedPrefab.GetComponent<IUnit>(), (camp == Camp.demon ? objectsManager.playerEntityGeneratePoint.position : objectsManager.enemyEntityGeneratePoint.position), Quaternion.identity, new InitUnitParameters
+            //{
+            //    free = true,
+
+            //    useGotoPosition = true,
+            //    gotoPosition = camp == Camp.demon ? (objectsManager.playerEntityGeneratePoint.position + Vector3.right * 500) : (objectsManager.enemyEntityGeneratePoint.position - Vector3.right * 500),
+            //});
         }
 
 
@@ -86,13 +93,17 @@ namespace DemonOverwhelming
         {
             SceneObjectsManager objectsManager = SceneObjectsManager.instance;
             GameObject findedPrefab = GameDataManager.instance.GetEntityDataById(id).unitPrefab;
-            unitMgr.CreateUnit(findedPrefab.GetComponent<IUnit>(), generatePos, Quaternion.identity, new InitUnitParameters
-            {
-                free = true,
+            GameObject createdUnit = Instantiate(findedPrefab, objectsManager.allUnitParent);
+            createdUnit.GetComponent<Entity>().camp = camp;
+            createdUnit.transform.position = generatePos;
+       
+            //unitMgr.CreateUnit(findedPrefab.GetComponent<IUnit>(), generatePos, Quaternion.identity, new InitUnitParameters
+            //{
+            //    free = true,
 
-                useGotoPosition = true,
-                gotoPosition = camp == Camp.demon ? (generatePos + Vector3.right * 500) : (generatePos - Vector3.right * 500),
-            });
+            //    useGotoPosition = true,
+            //    gotoPosition = camp == Camp.demon ? (generatePos + Vector3.right * 500) : (generatePos - Vector3.right * 500),
+            //});
         }
 
 
@@ -111,7 +122,7 @@ namespace DemonOverwhelming
             //获取阵型数据
             SoldierFormation formation = GameDataManager.instance.GetFormationById(formationId);
             //遍历阵型中的各个偏移位置，生成具体的单位对象
-            foreach(Vector3 v in formation.soldierOffsets)
+            foreach (Vector3 v in formation.soldierOffsets)
             {
                 CreateOneUnit(camp, soldierId, generateCenrerPos + v);
             }

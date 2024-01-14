@@ -44,20 +44,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a36ccf7472f3fb24484491d95b8d73a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelId: 1
   hero: {fileID: 0}
-  money: 900
+  money: 0
   moneyPerSecond: 1
   moneyAddAmount: 1
   nowMoneyCost: 0
-  blood: 900
+  blood: 20
   nowBloodCost: 0
   soldierCards: []
-  soliderFormatGroups: []
+  debug_DontChosseEntity: 1
   nowChooseingTarget: {fileID: 0}
   nowChoosedTarget: {fileID: 0}
   unitInformationUI: {fileID: 8622467214577021552, guid: e708a9fe6604b1e43a21bddb2b703e6e, type: 3}
-  formatCards: []
-  allSoldiers: []
+  allSoldiers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   cameraControlMode: 0
   mouseOveringInfoUI: 0
   historySelectedCard: []
@@ -65,3 +79,4 @@ MonoBehaviour:
   historyShadowPos: []
   historyX: []
   historyY: []
+  allSelectedCards: []

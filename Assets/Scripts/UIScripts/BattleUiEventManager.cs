@@ -24,10 +24,10 @@ namespace DemonOverwhelming
         private void Update()
         {
 
-            if (BattleManager.instance.cameraControlMode == CameraControlMode.followUi)
-                cameraBoundCaculate.ChangeCameraPostion();
-            else
-                cameraBoundCaculate.SetSliderVaule();
+            //if (BattleManager.instance.cameraControlMode == CameraControlMode.followUi)
+            //    cameraBoundCaculate.ChangeCameraPostion();
+            //else
+            //    cameraBoundCaculate.SetSliderVaule();
         }
         /// <summary>
         /// 根据滑条进度改变相机位置的方法
@@ -43,15 +43,15 @@ namespace DemonOverwhelming
         /// </summary>
         public void GenerateSoldiers(object o)
         {
-            BattleManager.instance.GenerateSoldiers();
+            //BattleManager.instance.GenerateSoldiers();
         }
         public void RevokeCardSelect(object o)
         {
-            BattleManager.instance.RevokeCardSelect();
+            //BattleManager.instance.RevokeCardSelect();
         }
         public void RevokeAllCardSelect(object o)
         {
-            BattleManager.instance.RevokeAllCardSelect();
+            //BattleManager.instance.RevokeAllCardSelect();
         }
     }
 

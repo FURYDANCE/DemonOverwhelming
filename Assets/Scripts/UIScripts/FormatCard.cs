@@ -91,7 +91,7 @@ namespace DemonOverwhelming
         /// </summary>
         public Vector3 GetRelativeOffsetToCenter()
         {
-            Vector3 v = SceneObjectsManager.instance.formationMakingAreaCenter.position - transform.position;
+            Vector3 v =  transform.position- SceneObjectsManager.instance.formationMakingAreaCenter.position ;
             return v;
         }
 
