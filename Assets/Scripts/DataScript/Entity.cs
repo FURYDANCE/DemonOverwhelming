@@ -1,7 +1,10 @@
+using BehaviorDesigner.Runtime;
 using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
 //using UnityEditor.Animations
 namespace DemonOverwhelming
 {
@@ -57,7 +60,9 @@ namespace DemonOverwhelming
         [SerializeField]
         int[] skillLevels;
 
-
+        [Header("索敌范围内的所有敌人")]
+        public List<Entity> enemiesInCheckArea; 
+        public NavMeshAgent angent;
         private void Start()
         {
             buffs = new List<BuffInformation>();
@@ -140,8 +145,8 @@ namespace DemonOverwhelming
                 //}
                 //设置状态管理器
                 //【后面改成行为树】
-                if (!gameObject.GetComponent<CharacterStateManager>())
-                    gameObject.AddComponent<CharacterStateManager>();
+                //if (!gameObject.GetComponent<CharacterStateManager>())
+                //    gameObject.AddComponent<CharacterStateManager>();
 
 
                 ////设置碰撞体(用于处理未旋转碰撞体的数值）
@@ -201,24 +206,37 @@ namespace DemonOverwhelming
             }
             //【之后改成行为树】
             //设置行动ai
-            Debug.Log("行动模式：" + parameter.aiMode_Move);
-            if (parameter.aiMode_Move == Ai_MoveType.directMove)
-                gameObject.AddComponent<ICharaMove_Direct>();
-            if (parameter.aiMode_Move == Ai_MoveType.playerInputMove)
-            {
-                gameObject.AddComponent<ICharaMove_InputKey>();
-                //玩家操控的单位会加上钱包的检测
-                gameObject.AddComponent<MoneyBagCheck>();
-                //玩家操控的单位也会在UI上显示技能样式，在战斗管理器中设置英雄
-                BattleManager.instance.SetHero(this);
-            }
-            gameObject.AddComponent<ICharaEnemyCheck_Nearest>();
-            gameObject.AddComponent<ICharaChase_TryCloser>();
-            gameObject.AddComponent<ICharaAttack_Normal>();
+            //Debug.Log("行动模式：" + parameter.aiMode_Move);
+            //if (parameter.aiMode_Move == Ai_MoveType.directMove)
+            //    gameObject.AddComponent<ICharaMove_Direct>();
+            //if (parameter.aiMode_Move == Ai_MoveType.playerInputMove)
+            //{
+            //    gameObject.AddComponent<ICharaMove_InputKey>();
+            //    //玩家操控的单位会加上钱包的检测
+            //    gameObject.AddComponent<MoneyBagCheck>();
+            //    //玩家操控的单位也会在UI上显示技能样式，在战斗管理器中设置英雄
+            //    BattleManager.instance.SetHero(this);
+            //}
+            //gameObject.AddComponent<ICharaEnemyCheck_Nearest>();
+            //gameObject.AddComponent<ICharaChase_TryCloser>();
+            //gameObject.AddComponent<ICharaAttack_Normal>();
             //设置具体的技能执行脚本和起始事件
             Skill_StartEvent();
             settled = true;
 
+        }
+
+        #endregion
+
+        #region 移动设置相关
+
+        public void SetMoveTarget(Vector3 target)
+        {
+            angent.SetDestination(target);
+        }
+        public void SetMoveTarget(Transform target)
+        {
+            angent.SetDestination(target.position);
         }
 
         #endregion
@@ -538,6 +556,15 @@ namespace DemonOverwhelming
         #endregion
 
         #region 动画相关
+        /// <summary>
+        /// 播放动画，传入动画名字，是否循环播放
+        /// </summary>
+        /// <param name="animationName">动画名称</param>
+        /// <param name="loop">是否循环播放</param>
+        public void PlayAnimation(string animationName,bool loop)
+        {
+            skAni.state.SetAnimation(0, animationName, loop);
+        }
         public void PlayAnimation_Idle()
         {
             if (animations != null && animations.animation_Idle != null)
@@ -708,16 +735,26 @@ namespace DemonOverwhelming
             //    if (transform.position.x < target.x)
             //        SetFlipX(false);
             //}
-            //if (spineObject)
-            //{
-            //    //如果是spine，设置左右转向
-            //    if (spineObject && transform.position.x < target.x)
-            //        transform.rotation = Quaternion.Euler(45, 0, 0);
-            //    if (spineObject && transform.position.x > target.x)
-            //        transform.rotation = Quaternion.Euler(-45, 180, 0);
-            //}
+            if (spineObject)
+            {
+                //如果是spine，设置左右转向
+                if (spineObject && transform.position.x < target.x)
+                    transform.rotation = Quaternion.Euler(45, 0, 0);
+                if (spineObject && transform.position.x > target.x)
+                    transform.rotation = Quaternion.Euler(-45, 180, 0);
+            }
         }
 
         #endregion
+    }
+    /// <summary>
+    /// 让Entity类可以作为BehaviourDesigner的全局变量存在
+    /// </summary>
+    [System.Serializable]
+    public class SharedEntity :SharedVariable<Entity>
+    {
+        public static implicit operator SharedEntity(Entity
+value)
+        { return new SharedEntity { Value = value }; }
     }
 }
