@@ -49,7 +49,7 @@ namespace DemonOverwhelming
             entity.PlayAniamtion_Attack();
             yield return new WaitForSeconds(entity.parameter.character.attackTime);
             if (e)
-                BattleManager.instance.GenerateOneMissle(entity, transform.position, entity.parameter.character.missileId, e);
+                BattleManager.instance.GenerateOneMissle(entity, transform.position, entity.parameter.character.attackIds[0], e);
             yield return new WaitForSeconds(entity.parameter.character.attackWaitTime);
             manager.canAttack = true;
         }

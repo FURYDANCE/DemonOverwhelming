@@ -17,6 +17,7 @@ namespace DemonOverwhelming
     {
         public SharedEntity thisEntity;
         public SharedTransform moveTarget;
+        public SharedVector3 moveTargetVector;
         Entity entity;
         public override void OnStart()
         {
@@ -54,7 +55,10 @@ namespace DemonOverwhelming
                     return TaskStatus.Success;
                 }
                 if (nearestTransform != null)
+                {
                     entity.SetMoveTarget(nearestTransform.position);
+                    moveTargetVector.SetValue(nearestTransform.position);
+                }
                 //其他的情况，视为正在追逐目标，返回running
                 return TaskStatus.Running;
             }

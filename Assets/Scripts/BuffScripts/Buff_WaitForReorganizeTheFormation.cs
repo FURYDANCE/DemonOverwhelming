@@ -14,7 +14,7 @@ namespace DemonOverwhelming
             e.SetSpeedBuff(-100);
         }
 
-        public void OnAddbuff_Missile(Missile m, float buffLevel)
+        public void OnAddbuff_Missile(UnitMissile m, float buffLevel)
         {
 
         }

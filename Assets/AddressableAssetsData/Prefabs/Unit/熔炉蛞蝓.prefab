@@ -416,7 +416,6 @@ GameObject:
   m_Component:
   - component: {fileID: 610548751953611390}
   - component: {fileID: 610548751953611329}
-  - component: {fileID: 610548751953611334}
   - component: {fileID: 610548751953611333}
   - component: {fileID: 6636537242794731919}
   - component: {fileID: 6777583542056303331}
@@ -472,20 +471,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "aoe\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000005
       cost: 0
-      aiType: 0
       moveSpeed: 4
       defence: 0
       defence_far: 0
@@ -493,13 +483,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 100}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 6
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 32000003
+      attackIds:
+      - 32000003
       specialTags:
       - 0
       bloodDrop: 2
@@ -516,7 +505,6 @@ MonoBehaviour:
   hpBar: {fileID: 610548750568959432}
   boxCollider: {fileID: 610548751953611333}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -529,34 +517,10 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 0100000002000000
---- !u!114 &610548751953611334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610548751953611389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae0fb7891eec46e478284c77040970ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entity: {fileID: 610548751953611329}
-  moveTarget: {fileID: 0}
-  attackTarget: {fileID: 0}
-  enemyChecked:
-  - {fileID: 610548751953611333}
-  - {fileID: 0}
-  enemySelected: []
-  canAttack: 1
-  isGenerating: 0
-  isWalking: 1
-  isChaseing: 0
-  isAttacking: 0
-  isSkilling: 0
-  isDying: 0
-  intoWalking: 1
-  start_Y: -20.7421
+  enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  angent: {fileID: 0}
 --- !u!65 &610548751953611333
 BoxCollider:
   m_ObjectHideFlags: 0

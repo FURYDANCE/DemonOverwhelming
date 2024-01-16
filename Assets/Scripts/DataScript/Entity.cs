@@ -43,7 +43,7 @@ namespace DemonOverwhelming
         public BoxCollider boxCollider;
         [Header("(调试)无敌状态")]
         public bool hpLock;
-        public Animator animator;
+        Animator animator;
         public AnimationsList animations;
         public SkeletonAnimation skAni;
         /// <summary>
@@ -61,7 +61,13 @@ namespace DemonOverwhelming
         int[] skillLevels;
 
         [Header("索敌范围内的所有敌人")]
-        public List<Entity> enemiesInCheckArea; 
+        public List<Entity> enemiesInCheckArea;
+
+        [Header("投射物发射位置")]
+        public Transform missileGeneratePos;
+        [Header("单位中心位置（用于被投射物选取")]
+        public Transform unitCenter;
+        public Transform unitGraphic;
         public NavMeshAgent angent;
         private void Start()
         {
@@ -76,6 +82,11 @@ namespace DemonOverwhelming
         {
             UpdateBuff();
             SkillWaitTimeCaculate();
+            foreach (Entity e in enemiesInCheckArea)
+            {
+                if (e == null)
+                    enemiesInCheckArea.Remove(e);
+            }
         }
 
         #region 初始化相关
@@ -101,21 +112,22 @@ namespace DemonOverwhelming
             {
                 spineObject = parameter.name.Split("/")[1].Contains("spine") ? true : false;
             }
-            if (parameter.hpBarSize == 0) parameter.hpBarSize = 1;
-            //生成血条
-            if (!hpBar)
-            {
-                hpBar = Instantiate(SceneObjectsManager.instance.hpBarObject, transform).GetComponent<HpShowUi>();
-                //设置血条的尺寸和偏移
-                hpBar.barParent.transform.position += parameter.hpBarOffset;
-                hpBar.transform.localScale = new Vector3(parameter.hpBarSize, parameter.hpBarSize);
-                //刷新血量和血条显示
-                parameter.nowHp = parameter.Hp;
-                hpBar.Refresh(parameter.nowHp, parameter.Hp);
-            }
+
+            ////生成血条
+            //if (!hpBar)
+            //{
+            //    hpBar = Instantiate(SceneObjectsManager.instance.hpBarObject, transform).GetComponent<HpShowUi>();
+            //    //设置血条的尺寸和偏移
+            //    hpBar.barParent.transform.position += parameter.hpBarOffset;
+            //    hpBar.transform.localScale = new Vector3(parameter.hpBarSize, parameter.hpBarSize);
+            //    //刷新血量和血条显示
+            //    parameter.nowHp = parameter.Hp;
+            //    hpBar.Refresh(parameter.nowHp, parameter.Hp);
+            //}
             //当id不为空时根据id生成目标
             if (parameter.ID != "")
             {
+                parameter.nowHp = parameter.Hp;
                 ////设置尺寸
                 //Debug.Log("SIZE:" + parameter.modleSize);
                 //transform.localScale = new Vector3(parameter.modleSize, parameter.modleSize);
@@ -301,7 +313,7 @@ namespace DemonOverwhelming
                 finalDamage = 0;
                 return;
             }
-
+            Debug.Log("当前生命" + parameter.nowHp);
             //根据防御计算伤害
             float realDamage_physic = Mathf.Clamp(damageData.physicDamage - parameter.character.defence, 0, 999999999);
             float realDamage_far = Mathf.Clamp(damageData.farDamage - parameter.character.defence_far, 0, 999999999);
@@ -367,7 +379,9 @@ namespace DemonOverwhelming
                 return;
             }
             if (!spineObject)
+            {
                 Destroy(gameObject);
+            }
         }
         /// <summary>
         /// 实体受伤闪烁红色
@@ -561,7 +575,7 @@ namespace DemonOverwhelming
         /// </summary>
         /// <param name="animationName">动画名称</param>
         /// <param name="loop">是否循环播放</param>
-        public void PlayAnimation(string animationName,bool loop)
+        public void PlayAnimation(string animationName, bool loop)
         {
             skAni.state.SetAnimation(0, animationName, loop);
         }
@@ -656,6 +670,10 @@ namespace DemonOverwhelming
 
         #region 变量存取相关
 
+        public Transform GetMissileGeneratePos() => missileGeneratePos;
+
+        public Transform GetUnitCenter() => unitCenter;
+
         /// <summary>
         /// 获取是否处于重整阵型状态
         /// </summary>
@@ -739,19 +757,24 @@ namespace DemonOverwhelming
             {
                 //如果是spine，设置左右转向
                 if (spineObject && transform.position.x < target.x)
-                    transform.rotation = Quaternion.Euler(45, 0, 0);
+                    unitGraphic.transform.rotation = Quaternion.Euler(45, 0, 0);
                 if (spineObject && transform.position.x > target.x)
-                    transform.rotation = Quaternion.Euler(-45, 180, 0);
+                    unitGraphic.transform.rotation = Quaternion.Euler(-45, 180, 0);
             }
         }
 
         #endregion
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawWireSphere(transform.position, parameter.character.attackDistance);
+        }
     }
     /// <summary>
     /// 让Entity类可以作为BehaviourDesigner的全局变量存在
     /// </summary>
     [System.Serializable]
-    public class SharedEntity :SharedVariable<Entity>
+    public class SharedEntity : SharedVariable<Entity>
     {
         public static implicit operator SharedEntity(Entity
 value)

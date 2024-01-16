@@ -155,23 +155,17 @@ namespace DemonOverwhelming
             hpField.text = searchedEntity.Hp.ToString();
             damageField.text = searchedEntity.hurtDamage.ToString();
             sizeField.text = searchedEntity.modleSize.ToString();
-            hpSizeField.text = searchedEntity.hpBarSize.ToString();
-            hpOffsetField.text = searchedEntity.hpBarOffset.ToString().Replace(")", "").Replace("(", "");
+
             defenceField.text = searchedEntity.character.defence.ToString();
             speedField.text = searchedEntity.character.moveSpeed.ToString();
             atkTimeField.text = searchedEntity.character.attackTime.ToString();
             atkWaitTimeField.text = searchedEntity.character.attackWaitTime.ToString();
             atkDistanceField.text = searchedEntity.character.attackDistance.ToString();
-            checkAreaField.text = searchedEntity.character.EnemyCheckArea.ToString().Replace(")", "").Replace("(", "");
-            checkAreaOffsetField.text = searchedEntity.character.EnemyCheckOffset.ToString().Replace(")", "").Replace("(", "");
-            aiTypeField.text = searchedEntity.character.aiType.ToString();
-            missileIdField.text = searchedEntity.character.missileId.ToString();
+
+         
+            missileIdField.text = searchedEntity.character.attackIds.ToString();
             entitySprite.sprite = searchedEntity.sprite;
-            //去掉影子大小v3第三位后的vector2
-            string newText = searchedEntity.shadowSize.ToString().Replace(searchedEntity.shadowSize.ToString().Split(",")[2], "");
-            //再去掉最后的逗号，之后加上y轴偏移，得到应有的结果
-            ShadowField.text = (newText.Remove(newText.Length - 1)
-                + "," + searchedEntity.shadowOffset.ToString()).Replace(")", "").Replace("(", "");
+ 
         }
         public void SaveEntityParameter()
         {
@@ -184,19 +178,16 @@ namespace DemonOverwhelming
             searchedEntity.Hp = float.Parse(hpField.text);
             searchedEntity.hurtDamage = float.Parse(damageField.text);
             searchedEntity.modleSize = float.Parse(sizeField.text);
-            searchedEntity.hpBarSize = float.Parse(hpSizeField.text);
-            searchedEntity.hpBarOffset = new Vector3(float.Parse(hpOffsetField.text.Split(",")[0]), float.Parse(hpOffsetField.text.Split(",")[1]), 0);
+
             searchedEntity.character.defence = float.Parse(defenceField.text);
             searchedEntity.character.moveSpeed = float.Parse(speedField.text);
             searchedEntity.character.attackTime = float.Parse(atkTimeField.text);
             searchedEntity.character.attackWaitTime = float.Parse(atkWaitTimeField.text);
             searchedEntity.character.attackDistance = float.Parse(atkDistanceField.text);
-            searchedEntity.character.EnemyCheckArea = new Vector3(float.Parse(checkAreaField.text.Split(",")[0]), float.Parse(checkAreaField.text.Split(",")[1]));
-            searchedEntity.character.EnemyCheckOffset = new Vector3(float.Parse(checkAreaOffsetField.text.Split(",")[0]), float.Parse(checkAreaOffsetField.text.Split(",")[1]));
-            searchedEntity.character.aiType = (AiType)System.Enum.Parse(typeof(AiType), aiTypeField.text);
-            searchedEntity.character.missileId = missileIdField.text;
-            searchedEntity.shadowSize = new Vector3(float.Parse(ShadowField.text.Split(",")[0]), float.Parse(ShadowField.text.Split(",")[1]), 0);
-            searchedEntity.shadowOffset = float.Parse(ShadowField.text.Split(",")[2]);
+
+
+         
+     
             ////修改完数据之后，遍历场景上的士兵，修改其数据
             //foreach(Entity e in BattleManager.instance.allSoldiers)
             //{

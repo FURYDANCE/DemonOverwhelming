@@ -33,6 +33,6 @@ namespace DemonOverwhelming
         /// </summary>
         /// <param name="m"></param>
         /// <param name="buffLevel"></param>
-        public void OnAddbuff_Missile(Missile m, float buffLevel);
+        public void OnAddbuff_Missile(UnitMissile m, float buffLevel);
     }
 }

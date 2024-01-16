@@ -39,6 +39,8 @@ namespace DemonOverwhelming
         public GameObject emptyFormat;
         [Header("钱包")]
         public GameObject moneyBag;
+        [Header("默认的投射物")]
+        public GameObject defaultMissile;
         [Header("场景内的提示信息")]
         public GameObject sceneInformation;
         public GameObject a;

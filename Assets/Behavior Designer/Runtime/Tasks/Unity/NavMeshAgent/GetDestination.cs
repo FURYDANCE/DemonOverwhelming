@@ -13,6 +13,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent
         [Tooltip("The NavMeshAgent destination")]
         public SharedVector3 storeValue;
 
+
         // cache the navmeshagent component
         private NavMeshAgent navMeshAgent;
         private GameObject prevGameObject;
@@ -20,7 +21,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent
         public override void OnStart()
         {
             var currentGameObject = GetDefaultGameObject(targetGameObject.Value);
-            if (currentGameObject != prevGameObject) {
+            if (currentGameObject != prevGameObject)
+            {
                 navMeshAgent = currentGameObject.GetComponent<NavMeshAgent>();
                 prevGameObject = currentGameObject;
             }
@@ -28,12 +30,16 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent
 
         public override TaskStatus OnUpdate()
         {
-            if (navMeshAgent == null) {
+            if (navMeshAgent == null)
+            {
                 Debug.LogWarning("NavMeshAgent is null");
                 return TaskStatus.Failure;
             }
 
-            storeValue.Value = navMeshAgent.destination;
+                storeValue.Value = navMeshAgent.destination;
+
+
+
 
             return TaskStatus.Success;
         }

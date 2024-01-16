@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace DemonOverwhelming
 {
+    /// <summary>
+    /// 状态管理器脚本，用行为树的话，之后这个脚本要弃用了
+    /// </summary>
     public class CharacterStateManager : MonoBehaviour
     {
         /// <summary>
@@ -106,21 +109,21 @@ namespace DemonOverwhelming
         /// </summary>
         public void CheckEnemy()
         {
-            enemySelected.Clear();
+            //enemySelected.Clear();
 
-            enemyChecked = Physics.OverlapBox(entity.camp == Camp.demon ? new Vector3(transform.position.x + parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
-                : new Vector3(transform.position.x - parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
-                , parameter.character.EnemyCheckArea);
-            foreach (Collider c in enemyChecked)
-            {
-                if (!c)
-                    continue;
-                Entity e = c.GetComponent<Entity>();
-                if (e && c && e.camp != entity.camp)
-                {
-                    enemySelected.Add(c);
-                }
-            }
+            //enemyChecked = Physics.OverlapBox(entity.camp == Camp.demon ? new Vector3(transform.position.x + parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
+            //    : new Vector3(transform.position.x - parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
+            //    , parameter.character.EnemyCheckArea);
+            //foreach (Collider c in enemyChecked)
+            //{
+            //    if (!c)
+            //        continue;
+            //    Entity e = c.GetComponent<Entity>();
+            //    if (e && c && e.camp != entity.camp)
+            //    {
+            //        enemySelected.Add(c);
+            //    }
+            //}
         }
         /// <summary>
         /// 检查是否进入攻击状态
@@ -139,11 +142,11 @@ namespace DemonOverwhelming
         }
         private void OnDrawGizmos()
         {
-            if (entity != null && parameter != null)
-                //Gizmos.DrawWireCube(entity.camp == Camp.demon ? transform.position + parameter.character.EnemyCheckOffset : transform.position - parameter.character.EnemyCheckOffset, parameter.character.EnemyCheckArea);
-                Gizmos.DrawWireCube(entity.camp == Camp.demon ? new Vector3(transform.position.x + parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
-                : new Vector3(transform.position.x - parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
-                , parameter.character.EnemyCheckArea);
+            //if (entity != null && parameter != null)
+            //    //Gizmos.DrawWireCube(entity.camp == Camp.demon ? transform.position + parameter.character.EnemyCheckOffset : transform.position - parameter.character.EnemyCheckOffset, parameter.character.EnemyCheckArea);
+            //    Gizmos.DrawWireCube(entity.camp == Camp.demon ? new Vector3(transform.position.x + parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
+            //    : new Vector3(transform.position.x - parameter.character.EnemyCheckOffset.x, transform.position.y + parameter.character.EnemyCheckOffset.y, transform.position.z)
+            //    , parameter.character.EnemyCheckArea);
         }
 
     }
