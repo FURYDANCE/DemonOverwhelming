@@ -22,7 +22,7 @@ namespace DemonOverwhelming
         {
 
         }
-        public void OnAddbuff_Missile(Missile m, float buffLevel)
+        public void OnAddbuff_Missile(UnitMissile m, float buffLevel)
         {
             float newDamage = m.parameter.damageData.physicDamage * buffLevel;
             m.parameter.damageData.physicDamage = newDamage;

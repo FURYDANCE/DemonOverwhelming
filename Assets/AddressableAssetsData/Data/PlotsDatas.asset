@@ -120,20 +120,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6076\u9B54\u5C0F\u5175\n\u4E00\u53EA\u6742\u9C7C"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000001
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -141,13 +132,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.5
-      attackTime: 0.5
-      missileId: 33000001
+      attackTime: 0.35
+      attackIds:
+      - 41000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -169,20 +159,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9\u6B65\u5175\n\u4E5F\u662F\u6742\u9C7C"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000002
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -190,13 +171,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -218,20 +198,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5F13\u7BAD\u624B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000003
       cost: 0
-      aiType: 1
       moveSpeed: 4
       defence: 0
       defence_far: 0
@@ -239,13 +210,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 25
       chaseTime: 0
       attackWaitTime: 0.75
-      attackTime: 1
-      missileId: 31000001
+      attackTime: 0.5
+      attackIds:
+      - 31000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -267,20 +237,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "aoe\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000005
       cost: 0
-      aiType: 0
       moveSpeed: 4
       defence: 0
       defence_far: 0
@@ -288,13 +249,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 6
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 32000003
+      attackIds:
+      - 32000003
       specialTags:
       - 0
       bloodDrop: 2
@@ -316,20 +276,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9aoe\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000006
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -337,13 +288,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
       attackWaitTime: 2
       attackTime: 0.5
-      missileId: 32000004
+      attackIds:
+      - 32000004
       specialTags:
       - "\u94B1\u888B10"
       bloodDrop: 1
@@ -365,20 +315,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9\u7CBE\u82F1aoe\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000007
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -386,13 +327,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 32000004
+      attackIds:
+      - 32000004
       specialTags:
       - "\u94B1\u888B10"
       bloodDrop: 1
@@ -414,20 +354,11 @@ MonoBehaviour:
     Hp: 120
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u65B9\u7CBE\u82F1aoe\u5DE8\u4EBA"
-    modleSize: 6
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000008
       cost: 0
-      aiType: 0
       moveSpeed: 3.5
       defence: 0
       defence_far: 0
@@ -435,13 +366,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 18, y: 18, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 10
       chaseTime: 0
       attackWaitTime: 3.5
       attackTime: 0.75
-      missileId: 32000005
+      attackIds:
+      - 32000005
       specialTags:
       - "\u65E0\u8840\u8005/\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -463,20 +393,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u70AE\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000009
       cost: 0
-      aiType: 1
       moveSpeed: 3.5
       defence: 0
       defence_far: 0
@@ -484,13 +405,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 38
       chaseTime: 0
       attackWaitTime: 2
       attackTime: 0.5
-      missileId: 31000004
+      attackIds:
+      - 31000004
       specialTags:
       - "\u65E0\u8840\u8005/\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -512,20 +432,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u70AE\u7070"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000010
       cost: 0
-      aiType: 0
       moveSpeed: 5.5
       defence: 0
       defence_far: 0
@@ -533,13 +444,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 2
       chaseTime: 0
       attackWaitTime: 0.3
       attackTime: 0.5
-      missileId: 33000006
+      attackIds:
+      - 33000006
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -561,20 +471,11 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u540E\u6392debuffer"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000011
       cost: 0
-      aiType: 1
       moveSpeed: 4.8
       defence: 0
       defence_far: 0
@@ -582,13 +483,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 25, y: 15, z: 0}
-      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 30
       chaseTime: 0
       attackWaitTime: 1.5
       attackTime: 0.5
-      missileId: 33000004
+      attackIds:
+      - 33000004
       specialTags:
       - 0
       bloodDrop: 1
@@ -610,20 +510,11 @@ MonoBehaviour:
     Hp: 45
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u524D\u6392\u5766\u514B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000012
       cost: 0
-      aiType: 0
       moveSpeed: 4.9
       defence: 0
       defence_far: 10
@@ -631,13 +522,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 2
       attackTime: 0.8
-      missileId: 33000005
+      attackIds:
+      - 33000005
       specialTags:
       - 0
       bloodDrop: 1
@@ -659,20 +549,11 @@ MonoBehaviour:
     Hp: 7
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u7269\u70AE\u7070"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000013
       cost: 0
-      aiType: 0
       moveSpeed: 5.7
       defence: 0
       defence_far: 0
@@ -680,13 +561,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 2
       chaseTime: 0
       attackWaitTime: 0.4
       attackTime: 0.5
-      missileId: 33000006
+      attackIds:
+      - 33000006
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -708,20 +588,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6CBB\u7597\u8005"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000014
       cost: 0
-      aiType: 1
       moveSpeed: 4.8
       defence: 0
       defence_far: 0
@@ -729,13 +600,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 20
       chaseTime: 0
       attackWaitTime: 1.5
       attackTime: 0.5
-      missileId: 33000004
+      attackIds:
+      - 33000004
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -757,20 +627,11 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u57FA\u7840\u9B54\u6CD5\u6B65\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000015
       cost: 0
-      aiType: 0
       moveSpeed: 5.7
       defence: 10
       defence_far: 0
@@ -778,13 +639,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 2
       chaseTime: 0
       attackWaitTime: 0.4
       attackTime: 0.5
-      missileId: 33000007
+      attackIds:
+      - 33000007
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -806,20 +666,11 @@ MonoBehaviour:
     Hp: 70
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6DF7\u5408\u4F24\u5BB3\u5DE8\u517D"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000016
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 10
       defence_far: 0
@@ -827,13 +678,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 32000005
+      attackIds:
+      - 32000005
       specialTags:
       - 0
       bloodDrop: 1
@@ -855,20 +705,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8DF3\u8DC3\u523A\u5BA2"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000017
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -876,13 +717,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 2
       chaseTime: 0
       attackWaitTime: 0.4
       attackTime: 0.5
-      missileId: 31000004
+      attackIds:
+      - 31000004
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -904,20 +744,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u5E08"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000018
       cost: 0
-      aiType: 1
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -925,13 +756,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 25
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -953,20 +783,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u7269\u70AE\u7070"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000019
       cost: 0
-      aiType: 0
       moveSpeed: 5.5
       defence: 0
       defence_far: 0
@@ -974,13 +795,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.4
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -1002,20 +822,11 @@ MonoBehaviour:
     Hp: 60
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7CBE\u82F1\u6B65\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000020
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1023,13 +834,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 2
@@ -1051,20 +861,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8840\u725B\u6B65\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000021
       cost: 0
-      aiType: 0
       moveSpeed: 5.5
       defence: 0
       defence_far: 0
@@ -1072,13 +873,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 2
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1100,20 +900,11 @@ MonoBehaviour:
     Hp: 300
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "Aoe\u5DE8\u517D"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000022
       cost: 0
-      aiType: 0
       moveSpeed: 4
       defence: 0
       defence_far: 0
@@ -1121,13 +912,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 10
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -1149,20 +939,11 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u5C04\u624B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000023
       cost: 0
-      aiType: 1
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -1170,13 +951,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 27
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1198,20 +978,11 @@ MonoBehaviour:
     Hp: 325
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5DE8\u517D\u70AE\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000024
       cost: 0
-      aiType: 1
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -1219,13 +990,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 33
       chaseTime: 0
       attackWaitTime: 3
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005/\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -1247,20 +1017,11 @@ MonoBehaviour:
     Hp: 40
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u4F4E\u7EA7\u5766\u514B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000025
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -1268,13 +1029,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 2
@@ -1296,20 +1056,11 @@ MonoBehaviour:
     Hp: 22
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u70AE\u7070"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000026
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -1317,13 +1068,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1345,20 +1095,11 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5C04\u624B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000027
       cost: 0
-      aiType: 1
       moveSpeed: 5.5
       defence: 0
       defence_far: 0
@@ -1366,13 +1107,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 27
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 1
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u94B1\u888B5"
       bloodDrop: 1
@@ -1394,20 +1134,11 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6CBB\u7597\u795D\u798Fbuffer"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000028
       cost: 0
-      aiType: 1
       moveSpeed: 5.2
       defence: 0
       defence_far: 0
@@ -1415,13 +1146,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 25
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1443,20 +1173,11 @@ MonoBehaviour:
     Hp: 40
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u524D\u6392\u5766\u514B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000029
       cost: 0
-      aiType: 0
       moveSpeed: 5.3
       defence: 0
       defence_far: 0
@@ -1464,13 +1185,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
       attackWaitTime: 0.6
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 2
@@ -1492,20 +1212,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8840\u725B\u53EC\u5524\u7269"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000030
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1513,13 +1224,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 2
       chaseTime: 0
       attackWaitTime: 0.8
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -1541,20 +1251,11 @@ MonoBehaviour:
     Hp: 25
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u53EC\u5524\u5E08"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000031
       cost: 0
-      aiType: 1
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1562,13 +1263,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 26
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1590,20 +1290,11 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u4E2D\u7EA7\u6B65\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000032
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1611,13 +1302,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1639,20 +1329,11 @@ MonoBehaviour:
     Hp: 27
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u4E2D\u7EA7\u6B65\u5175+"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000033
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1660,13 +1341,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.7
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1688,20 +1368,11 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6B65\u5175\u4F34\u968F\u5C04\u624B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000034
       cost: 0
-      aiType: 1
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1709,13 +1380,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 9
       chaseTime: 0
       attackWaitTime: 0.8
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1737,20 +1407,11 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u8FDC\u7A0B\u70AE\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000035
       cost: 0
-      aiType: 1
       moveSpeed: 4
       defence: 10
       defence_far: 0
@@ -1758,13 +1419,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 28
       chaseTime: 0
       attackWaitTime: 2
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -1786,20 +1446,11 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6B65\u5175\u4F34\u968F\u70AE\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000036
       cost: 0
-      aiType: 1
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1807,13 +1458,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 12
       chaseTime: 0
       attackWaitTime: 1.8
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -1835,20 +1485,11 @@ MonoBehaviour:
     Hp: 24
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6B65\u5175\u4F34\u968Fbuffer"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000037
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -1856,13 +1497,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 9
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 2
@@ -1884,20 +1524,11 @@ MonoBehaviour:
     Hp: 15
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u6CD5"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000038
       cost: 0
-      aiType: 0
       moveSpeed: 6
       defence: 0
       defence_far: 0
@@ -1905,13 +1536,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 5
       chaseTime: 0
       attackWaitTime: 3
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u653E\u9010/\u94B1\u888B30"
       bloodDrop: 1
@@ -1933,20 +1563,11 @@ MonoBehaviour:
     Hp: 200
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "AoE\u5DE8\u517D"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000039
       cost: 0
-      aiType: 0
       moveSpeed: 4
       defence: 0
       defence_far: 0
@@ -1954,13 +1575,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 10
       chaseTime: 0
       attackWaitTime: 2
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -1982,20 +1602,11 @@ MonoBehaviour:
     Hp: 23
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9AD8\u7EA7\u6B65\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000040
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -2003,13 +1614,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.6
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -2031,20 +1641,11 @@ MonoBehaviour:
     Hp: 23
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9AD8\u7EA7\u6B65\u5175+"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000041
       cost: 0
-      aiType: 0
       moveSpeed: 5.3
       defence: 0
       defence_far: 0
@@ -2052,13 +1653,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.6
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -2080,20 +1680,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u540E\u6392\u5C04\u624B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000042
       cost: 0
-      aiType: 1
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -2101,13 +1692,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 18
       chaseTime: 0
       attackWaitTime: 3
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -2129,20 +1719,11 @@ MonoBehaviour:
     Hp: 23
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u540E\u6392\u5C04\u624B"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000043
       cost: 0
-      aiType: 1
       moveSpeed: 5.5
       defence: 0
       defence_far: 0
@@ -2150,13 +1731,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 33
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -2178,20 +1758,11 @@ MonoBehaviour:
     Hp: 70
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u654C\u6CD5\u7CBE\u82F1"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000044
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -2199,13 +1770,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71/\u653E\u9010/\u94B1\u888B30"
       bloodDrop: 15
@@ -2227,20 +1797,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: healer
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000045
       cost: 0
-      aiType: 1
       moveSpeed: 4.3
       defence: 0
       defence_far: 0
@@ -2248,13 +1809,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 8
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -2276,20 +1836,11 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u70AE\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000046
       cost: 0
-      aiType: 1
       moveSpeed: 4.3
       defence: 0
       defence_far: 0
@@ -2297,13 +1848,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 27
       chaseTime: 0
       attackWaitTime: 1.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 2
@@ -2325,20 +1875,11 @@ MonoBehaviour:
     Hp: 45
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6DF7\u5408\u70AE\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000047
       cost: 0
-      aiType: 1
       moveSpeed: 4.1
       defence: 0
       defence_far: 0
@@ -2346,13 +1887,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 35
       chaseTime: 0
       attackWaitTime: 2.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -2374,20 +1914,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5E7F\u57DF\u70AE\u5175"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000048
       cost: 0
-      aiType: 1
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -2395,13 +1926,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 20
       chaseTime: 0
       attackWaitTime: 3
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -2423,20 +1953,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7075\u4F53\u6218\u58EB"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000049
       cost: 0
-      aiType: 0
       moveSpeed: 5.5
       defence: 0
       defence_far: 0
@@ -2444,13 +1965,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 2
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -2472,20 +1992,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7075\u4F53\u957F\u624B\u6218\u58EB"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000050
       cost: 0
-      aiType: 0
       moveSpeed: 5.5
       defence: 0
       defence_far: 0
@@ -2493,13 +2004,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 4
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -2521,20 +2031,11 @@ MonoBehaviour:
     Hp: 18
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u7075\u4F53Aoe\u6218\u58EB"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000051
       cost: 0
-      aiType: 0
       moveSpeed: 4.5
       defence: 0
       defence_far: 0
@@ -2542,13 +2043,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 7
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -2570,20 +2070,11 @@ MonoBehaviour:
     Hp: 80
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9B54\u6CD5\u8840\u725B\u6218\u58EB"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000052
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -2591,13 +2082,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 5
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 10
@@ -2619,20 +2109,11 @@ MonoBehaviour:
     Hp: 300
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5168\u80FD\u5766\u514B\u6218\u58EB"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000053
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -2640,13 +2121,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 5
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 10
@@ -2668,20 +2148,11 @@ MonoBehaviour:
     Hp: 600
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u9A71\u9B54\u5149\u73AF"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000054
       cost: 0
-      aiType: 1
       moveSpeed: 3
       defence: 10
       defence_far: 0
@@ -2689,13 +2160,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 35
       chaseTime: 0
       attackWaitTime: 5
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 20
@@ -2717,20 +2187,11 @@ MonoBehaviour:
     Hp: 250
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5FEB\u901F\u523A\u5BA2"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000055
       cost: 0
-      aiType: 0
       moveSpeed: 3
       defence: 10
       defence_far: 0
@@ -2738,13 +2199,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 5
       chaseTime: 0
       attackWaitTime: 2
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71/\u653E\u9010"
       bloodDrop: 10
@@ -2766,20 +2226,11 @@ MonoBehaviour:
     Hp: 250
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u5149\u73AF\u5DE8\u517D"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000056
       cost: 0
-      aiType: 0
       moveSpeed: 3
       defence: 10
       defence_far: 10
@@ -2787,13 +2238,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 6
       chaseTime: 0
       attackWaitTime: 3
       attackTime: 0.5
-      missileId: 33000001
+      attackIds:
+      - 33000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71/\u653E\u9010"
       bloodDrop: 10
@@ -2815,20 +2265,11 @@ MonoBehaviour:
     Hp: 20
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854\n\u653B\u51FB\u8BBE\u65BD"
-    modleSize: 1
-    shadowSize: {x: 4, y: 2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 2000001
       cost: 0
-      aiType: 1
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2836,13 +2277,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 16.5, y: 2.5, z: 0}
       attackDistance: 35
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 31000001
+      attackIds:
+      - 31000001
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -2864,20 +2304,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 1
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u636E\u70B9"
-    modleSize: 0.75
-    shadowSize: {x: 20, y: 8, z: 0}
-    shadowOffset: 0.7
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 2000002
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2885,13 +2316,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 0
+      attackIds:
+      - 0
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -2913,20 +2343,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 1
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u654C\u65B9\u636E\u70B9"
-    modleSize: 1.5
-    shadowSize: {x: 12, y: 4, z: 0}
-    shadowOffset: 2.4
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 2000003
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2934,13 +2355,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 0
+      attackIds:
+      - 0
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -2962,20 +2382,11 @@ MonoBehaviour:
     Hp: 50
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 1
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u654C\u65B9\u8981\u585E"
-    modleSize: 1.5
-    shadowSize: {x: 12, y: 4, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 2000004
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2983,13 +2394,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 0
+      attackIds:
+      - 0
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -3011,20 +2421,11 @@ MonoBehaviour:
     Hp: 50
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 1
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u6211\u65B9\u8981\u585E"
-    modleSize: 1.5
-    shadowSize: {x: 12, y: 4, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 2000005
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -3032,13 +2433,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 0
+      attackIds:
+      - 0
       specialTags:
       - "\u4E0D\u52A8\u5982\u5C71"
       bloodDrop: 0
@@ -3060,20 +2460,11 @@ MonoBehaviour:
     Hp: 40
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.2
-    hpBarOffset: {x: 0, y: 9, z: 0}
     introduct: "\u8D64\u8272\u6740\u4EBA\u9B54"
-    modleSize: 5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 3000001
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 10
       defence_far: 10
@@ -3081,13 +2472,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 8, y: 8, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.3835
-      missileId: 33000002
+      attackIds:
+      - 33000002
       specialTags:
       - 0
       bloodDrop: 1000
@@ -3109,20 +2499,11 @@ MonoBehaviour:
     Hp: 40
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.2
-    hpBarOffset: {x: 0, y: 9, z: 0}
     introduct: "\u6708\u6218\u8001\u5175"
-    modleSize: 5
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 3000002
       cost: 0
-      aiType: 0
       moveSpeed: 3
       defence: 10
       defence_far: 10
@@ -3130,13 +2511,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 35, y: 25, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 40
       chaseTime: 0
       attackWaitTime: 1
       attackTime: 0.3835
-      missileId: 31000002
+      attackIds:
+      - 31000002
       specialTags:
       - 0
       bloodDrop: 1000
@@ -3158,20 +2538,11 @@ MonoBehaviour:
     Hp: 200
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u82F1\u96C4"
-    modleSize: 2
-    shadowSize: {x: 3, y: 3, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 1
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 4000001
       cost: 0
-      aiType: 0
       moveSpeed: 6
       defence: 0.5
       defence_far: 0.5
@@ -3179,13 +2550,12 @@ MonoBehaviour:
       haveSkill: 1
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 7, y: 7, z: 0}
-      EnemyCheckOffset: {x: 4, y: 2, z: 0}
       attackDistance: 9.5
       chaseTime: 0
       attackWaitTime: 0.6
       attackTime: 0.4
-      missileId: 33000003
+      attackIds:
+      - 33000003
       specialTags:
       - 0
       bloodDrop: 1000
@@ -3213,18 +2583,23 @@ MonoBehaviour:
     soldierId: 1000001
     soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     formation:
-      soldierOffsets: []
+      soldierOffsets:
+      - {x: 2, y: 0, z: 2}
+      - {x: -2, y: 0, z: -2}
+      - {x: -2, y: 0, z: 2}
+      - {x: 2, y: 0, z: -2}
   - id: 21000002
     name: Cyclopean Imps*3
     sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
     flagSprite: {fileID: 21300000, guid: 37854454a721a3f4f87bd5c694f1d697, type: 3}
     moneyCost: 15
     bloodCost: 4
-    formationId: 3
+    formationId: 1
     soldierId: 1000003
     soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     formation:
-      soldierOffsets: []
+      soldierOffsets:
+      - {x: 0, y: 0, z: 0}
   - id: 21000003
     name: Hellfire Mortar*2
     sprite: {fileID: 21300000, guid: 327eca966f1b04549b356b0d12c012f6, type: 3}
@@ -3246,7 +2621,10 @@ MonoBehaviour:
     soldierId: 1000005
     soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     formation:
-      soldierOffsets: []
+      soldierOffsets:
+      - {x: 0, y: 0, z: 0}
+      - {x: -4, y: 0, z: 4}
+      - {x: -4, y: 0, z: -4}
   - id: 21000005
     name: Executioner*2
     sprite: {fileID: 21300000, guid: 0ce94e54587e35c4da44f1404256a36c, type: 3}
@@ -3279,7 +2657,15 @@ MonoBehaviour:
     soldierId: 1000010
     soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     formation:
-      soldierOffsets: []
+      soldierOffsets:
+      - {x: 0, y: 0, z: 0}
+      - {x: 1, y: 0, z: 0}
+      - {x: 0, y: 0, z: 1}
+      - {x: 1, y: 0, z: 1}
+      - {x: 1.5, y: 0, z: 0}
+      - {x: 0, y: 0, z: 1.5}
+      - {x: 1.5, y: 0, z: 1.5}
+      - {x: 0.5, y: 0, z: -0.5}
   - id: 21000008
     name: Calamity Mage*2
     sprite: {fileID: 21300000, guid: ebb3e6b21ad17c245b44fc850510864d, type: 3}
@@ -3290,7 +2676,9 @@ MonoBehaviour:
     soldierId: 1000011
     soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     formation:
-      soldierOffsets: []
+      soldierOffsets:
+      - {x: 0, y: 0, z: 2}
+      - {x: 0, y: 0, z: -2}
   - id: 21000009
     name: Hell Ligeionnare*3
     sprite: {fileID: 21300000, guid: 2614ff22f50acf94e8638827f32883b4, type: 3}
@@ -3791,19 +3179,21 @@ MonoBehaviour:
     name: "\u7BAD"
     damageDataId: 41000001
     damageData:
-      id: 
-      name: 
-      physicDamage: 0
+      id: 41000001
+      name: "\u7269\u7406_\u8FD1\u6218_1"
+      physicDamage: 1.7
       farDamage: 0
       magicDamage: 0
-      buffs: []
-      specialEffects: []
-      vfxId: 
+      buffs:
+      - 0
+      specialEffects:
+      - 0
+      vfxId: 0
       vfxSize: 0
       startDamageWiatTime: 0
     speed: 20
     moveType: 0
-    sprite: {fileID: 0}
+    sprite: {fileID: 1056413790, guid: 084250bcdefb9a54891d81f0a8237b18, type: 3}
     useLifeTime: 0
     lifeTime: 0
     useAoe: 0

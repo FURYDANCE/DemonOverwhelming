@@ -15,6 +15,7 @@ namespace DemonOverwhelming
     {
         public SharedEntity sharedEntity;
         public SharedTransform sharedTransform;
+        public SharedVector3 moveTatgetVector;
         Entity entity;
         public override void OnStart()
         {
@@ -28,11 +29,16 @@ namespace DemonOverwhelming
             {
                 if (entity.camp == Camp.demon)
                 {
-                    entity.SetMoveTarget(new Vector3(SceneObjectsManager.instance.cameraBound_Right.position.x, entity.transform.position.y, entity.transform.position.z));
+                    Vector3 v = new Vector3(SceneObjectsManager.instance.cameraBound_Right.position.x, entity.transform.position.y, entity.transform.position.z);
+                    entity.SetMoveTarget(v);
+                    moveTatgetVector.Value = v;
                 }
                 else
-                    entity.SetMoveTarget(new Vector3(SceneObjectsManager.instance.cameraBound_Left.position.x, entity.transform.position.y, entity.transform.position.z));
-
+                {
+                    Vector3 v = new Vector3(SceneObjectsManager.instance.cameraBound_Left.position.x, entity.transform.position.y, entity.transform.position.z);
+                    entity.SetMoveTarget(v);
+                    moveTatgetVector.Value = v;
+                }
             }
         }
         public override TaskStatus OnUpdate()

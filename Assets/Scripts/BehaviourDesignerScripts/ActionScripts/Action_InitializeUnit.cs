@@ -30,8 +30,10 @@ namespace DemonOverwhelming
             //获取angent组件（若不存在则生成）
             e.angent = e.GetComponent<NavMeshAgent>() ?? e.gameObject.AddComponent<NavMeshAgent>();
             e.angent.updateRotation = false;
+            e.angent.speed = e.GetSpeed();
             attackStartWaitTime.SetValue(e.parameter.character.attackTime);
             attackAfterWaitTime.SetValue(e.parameter.character.attackWaitTime);
+            e.FlipTo(e.camp == Camp.demon ? e.transform.position + Vector3.right : e.transform.position - Vector3.right);
             success = true;
         }
 

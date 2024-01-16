@@ -131,42 +131,41 @@ public class ExcelAccess
                 type = (EntityType)int.Parse(collect[i][1].ToString()),
                 name = collect[i][2].ToString(),
                 sprite = LoadSprite(collect[i][3].ToString(), LoadSpriteType.character),
-                hpBarSize = float.Parse(collect[i][4].ToString()),
-                hpBarOffset = new Vector3(float.Parse(collect[i][5].ToString().Split(",")[0]), float.Parse(collect[i][5].ToString().Split(",")[1])),
-                introduct = collect[i][6].ToString(),
-                Hp = float.Parse(collect[i][7].ToString()),
-                //hurtDamage = float.Parse(collect[i][8].ToString()),
-                modleSize = float.Parse(collect[i][8].ToString()),
-                shadowSize = new Vector3(float.Parse(collect[i][9].ToString().Split(",")[0]), float.Parse(collect[i][9].ToString().Split(",")[1])),
-                shadowOffset = float.Parse(collect[i][9].ToString().Split(",")[2]),
+                //hpBarSize = float.Parse(collect[i][4].ToString()),
+                //hpBarOffset = new Vector3(float.Parse(collect[i][5].ToString().Split(",")[0]), float.Parse(collect[i][5].ToString().Split(",")[1])),
+                introduct = collect[i][4].ToString(),
+                Hp = float.Parse(collect[i][5].ToString()),
+                //modleSize = float.Parse(collect[i][8].ToString()),
+                //shadowSize = new Vector3(float.Parse(collect[i][9].ToString().Split(",")[0]), float.Parse(collect[i][9].ToString().Split(",")[1])),
+                //shadowOffset = float.Parse(collect[i][9].ToString().Split(",")[2]),
 
-                aiMode_Move = (Ai_MoveType)int.Parse(collect[i][10].ToString().Split("/")[0]),
-                aiMode_Check = (Ai_CheckType)int.Parse(collect[i][10].ToString().Split("/")[1]),
-                aiMode_Chase = (Ai_ChaseType)int.Parse(collect[i][10].ToString().Split("/")[2]),
-                aiMode_Atk = (Ai_AttackType)int.Parse(collect[i][10].ToString().Split("/")[3]),
+                //aiMode_Move = (Ai_MoveType)int.Parse(collect[i][10].ToString().Split("/")[0]),
+                //aiMode_Check = (Ai_CheckType)int.Parse(collect[i][10].ToString().Split("/")[1]),
+                //aiMode_Chase = (Ai_ChaseType)int.Parse(collect[i][10].ToString().Split("/")[2]),
+                //aiMode_Atk = (Ai_AttackType)int.Parse(collect[i][10].ToString().Split("/")[3]),
 
 
             };
             up.character = new UnitParameter_Character();
             up.character.id = up.ID;
-            up.character.defence = float.Parse(collect[i][11].ToString());
-            up.character.defence_far = float.Parse(collect[i][12].ToString());
-            up.character.defence_magic = float.Parse(collect[i][13].ToString());
-            up.character.attackTime = float.Parse(collect[i][14].ToString());
-            up.character.attackWaitTime = float.Parse(collect[i][15].ToString());
-            up.character.EnemyCheckArea = new Vector3(float.Parse(collect[i][16].ToString().Split(",")[0]), float.Parse(collect[i][16].ToString().Split(",")[1]));
-            up.character.EnemyCheckOffset = new Vector3(float.Parse(collect[i][17].ToString().Split(",")[0]), float.Parse(collect[i][17].ToString().Split(",")[1]));
-            up.character.attackDistance = float.Parse(collect[i][18].ToString());
-            up.character.haveSkill = collect[i][19].ToString() == "True" ? true : false;
-            up.character.moveSpeed = float.Parse(collect[i][20].ToString());
-            up.character.aiType = (AiType)int.Parse(collect[i][21].ToString());
-            up.character.missileId = collect[i][22].ToString();
-            up.character.specialTags = collect[i][23].ToString().Split(",");
-            up.character.bloodDrop = float.Parse(collect[i][24].ToString());
+            up.character.defence = float.Parse(collect[i][6].ToString());
+            up.character.defence_far = float.Parse(collect[i][7].ToString());
+            up.character.defence_magic = float.Parse(collect[i][8].ToString());
+            up.character.attackTime = float.Parse(collect[i][9].ToString());
+            up.character.attackWaitTime = float.Parse(collect[i][10].ToString());
+            //up.character.EnemyCheckArea = new Vector3(float.Parse(collect[i][16].ToString().Split(",")[0]), float.Parse(collect[i][16].ToString().Split(",")[1]));
+            //up.character.EnemyCheckOffset = new Vector3(float.Parse(collect[i][17].ToString().Split(",")[0]), float.Parse(collect[i][17].ToString().Split(",")[1]));
+            up.character.attackDistance = float.Parse(collect[i][11].ToString());
+            up.character.haveSkill = collect[i][12].ToString() == "True" ? true : false;
+            up.character.moveSpeed = float.Parse(collect[i][13].ToString());
+            //up.character.aiType = (AiType)int.Parse(collect[i][16].ToString());
+            up.character.attackIds = collect[i][14].ToString().Split("/");
+            up.character.specialTags = collect[i][15].ToString().Split(",");
+            up.character.bloodDrop = float.Parse(collect[i][16].ToString());
 
-            up.character.skillIds = collect[i][25].ToString().Split("/");
-            up.character.skillLevels = collect[i][26].ToString().Split("/");
-            up.character.descriptionAndStory = collect[i][27].ToString().Split("|");
+            up.character.skillIds = collect[i][17].ToString().Split("/");
+            up.character.skillLevels = collect[i][18].ToString().Split("/");
+            up.character.descriptionAndStory = collect[i][19].ToString().Split("|");
 
 
             //读取兵种预制件

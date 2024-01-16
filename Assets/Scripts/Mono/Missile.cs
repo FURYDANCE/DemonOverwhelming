@@ -31,7 +31,6 @@ namespace DemonOverwhelming
         {
             Initialization();
 
-            //    StartCoroutine(Parabola());
         }
         void Update()
         {
@@ -39,14 +38,18 @@ namespace DemonOverwhelming
             Translate();
             //检测是否移动到终点
             MoveEndCheck();
+            //Debug.Log(targetTransform + "   " + targetV3);
             //当两种移动方式都为空时，判定目标死亡，摧毁跟随目标的投射物
-            if (targetTransform == null && targetV3 == Vector3.zero)
-                Destroy(gameObject);
+            //if (targetTransform == null && targetV3 == Vector3.zero)
+            //{
+            //    Debug.Log("判定为死亡");
+            //    Destroy(gameObject);
+            //}
             //调整角度
-            if (targetTransform != null)
-            {
-                RotationCaculate(nearPos);
-            }
+            //if (targetTransform != null)
+            //{
+            //    RotationCaculate(nearPos);
+            //}
         }
 
         #region 初始化相关
@@ -56,65 +59,62 @@ namespace DemonOverwhelming
         /// </summary>
         public void Initialization()
         {
-            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y, 0);
             //开始时通过id获取到该投射物应有的变量
             parameter = new UnitParameter_Missile();
             SetParameter(id);
-            //检测是否寻找除当前目标之外最近的敌人作为移动目标(跳弹）
-            if (parameter.moveType == MissileMoveType.ChooseNearTarget_direct || parameter.moveType == MissileMoveType.ChooseNearTarget_parabloa)
-            {
-                Debug.Log("111");
+            ////检测是否寻找除当前目标之外最近的敌人作为移动目标(跳弹）
+            //if (parameter.moveType == MissileMoveType.ChooseNearTarget_direct || parameter.moveType == MissileMoveType.ChooseNearTarget_parabloa)
+            //{
+            //    float minDistance = 50;
+            //    Entity cgeckedEntity = new Entity();
+            //    foreach (Entity e in BattleManager.instance.allSoldiers)
+            //    {
+            //        if (e.camp != creater.camp)
+            //        {
+            //            //Debug.Log("检测到实体：" + e.name);
+            //            //过滤检测范围外的单位
+            //            if (entitiesNotInAttackTarget.Contains(e))
+            //            {
+            //                Debug.Log("检测到不在攻击选取对象范围内的实体");
+            //                continue;
+            //            }
+            //            //距离过小时不算做目标？防止检测到刚刚相撞的对象
+            //            Debug.Log("检测对象：" + e.name + "   ,距离：" + Vector3.Distance(transform.position, e.transform.position));
+            //            if (Vector3.Distance(transform.position, e.transform.position) < 1)
+            //            {
+            //                Debug.Log("检测到距离过小" + e.name);
+            //                continue;
+            //            }
+            //            if (Vector3.Distance(transform.position, e.transform.position) < minDistance)
+            //            {
+            //                Debug.Log("检测完成" + e.name);
 
-                float minDistance = 50;
-                Entity cgeckedEntity = new Entity();
-                foreach (Entity e in BattleManager.instance.allSoldiers)
-                {
-                    if (e.camp != creater.camp)
-                    {
-                        //Debug.Log("检测到实体：" + e.name);
-                        //过滤检测范围外的单位
-                        if (entitiesNotInAttackTarget.Contains(e))
-                        {
-                            Debug.Log("检测到不在攻击选取对象范围内的实体");
-                            continue;
-                        }
-                        //距离过小时不算做目标？防止检测到刚刚相撞的对象
-                        Debug.Log("检测对象：" + e.name + "   ,距离：" + Vector3.Distance(transform.position, e.transform.position));
-                        if (Vector3.Distance(transform.position, e.transform.position) < 1)
-                        {
-                            Debug.Log("检测到距离过小" + e.name);
-                            continue;
-                        }
-                        if (Vector3.Distance(transform.position, e.transform.position) < minDistance)
-                        {
-                            Debug.Log("检测完成" + e.name);
+            //                minDistance = Vector3.Distance(transform.position, e.transform.position);
+            //                cgeckedEntity = e;
+            //                targetEntity = e;
+            //            }
+            //        }
+            //    }
+            //    //附近一段距离没有实体时,摧毁跳弹
+            //    if (cgeckedEntity.parameter == null)
+            //    {
+            //        Destroy(gameObject);
+            //        return;
+            //    }
 
-                            minDistance = Vector3.Distance(transform.position, e.transform.position);
-                            cgeckedEntity = e;
-                            targetEntity = e;
-                        }
-                    }
-                }
-                //附近一段距离没有实体时,摧毁跳弹
-                if (cgeckedEntity.parameter == null)
-                {
-                    Destroy(gameObject);
-                    return;
-                }
-
-                targetTransform = cgeckedEntity.transform;
-                //设置完之后将移动方式转化为对应的移动方式
-                if (parameter.moveType == MissileMoveType.ChooseNearTarget_direct)
-                    parameter.moveType = MissileMoveType.direct;
-                if (parameter.moveType == MissileMoveType.ChooseNearTarget_parabloa)
-                    parameter.moveType = MissileMoveType.parabola;
-            }
-            //如果使用生命周期，则开始计时
-            if (parameter.useLifeTime)
-                StartCoroutine(LifeTimeCaculate());
-            //如果使用aoe攻击，则开始执行aoe攻击
-            if (parameter.useAoe)
-                StartCoroutine(AoeAttack());
+            //    //targetTransform = cgeckedEntity.transform;
+            //    //设置完之后将移动方式转化为对应的移动方式
+            //    if (parameter.moveType == MissileMoveType.ChooseNearTarget_direct)
+            //        parameter.moveType = MissileMoveType.direct;
+            //    if (parameter.moveType == MissileMoveType.ChooseNearTarget_parabloa)
+            //        parameter.moveType = MissileMoveType.parabola;
+            //}
+            ////如果使用生命周期，则开始计时
+            //if (parameter.useLifeTime)
+            //    StartCoroutine(LifeTimeCaculate());
+            ////如果使用aoe攻击，则开始执行aoe攻击
+            //if (parameter.useAoe)
+            //    StartCoroutine(AoeAttack());
             //抛物线位移的开始
             if (parameter.moveType == MissileMoveType.parabola)
             {
@@ -123,11 +123,11 @@ namespace DemonOverwhelming
                 else
                     gameObject.AddComponent<ArcMovement>().SetTarget(targetV3, parameter.arcMoveTime, parameter.arcMoveHeight);
             }
-            //检测开始时生成的对象
-            if (parameter.startObjectId != "0")
-            {
-                VfxManager.instance.CreateVfx(VfxManager.instance.GetVfxByIdOrName(parameter.startObjectId).vfx, transform.position, new Vector3(4, 4, 4), 1.5f);
-            }
+            ////检测开始时生成的对象
+            //if (parameter.startObjectId != "0")
+            //{
+            //    VfxManager.instance.CreateVfx(VfxManager.instance.GetVfxByIdOrName(parameter.startObjectId).vfx, transform.position, new Vector3(4, 4, 4), 1.5f);
+            //}
         }
 
         /// <summary>
@@ -148,7 +148,7 @@ namespace DemonOverwhelming
             this.parameter.speed = parameter.speed;
             this.parameter.name = parameter.name;
             this.parameter.sprite = parameter.sprite;
-            GetComponent<SpriteRenderer>().sprite = this.parameter.sprite;
+            GetComponent<SpriteRenderer>().sprite = parameter.sprite;
             this.parameter.moveType = parameter.moveType;
             this.parameter.useLifeTime = parameter.useLifeTime;
             this.parameter.lifeTime = parameter.lifeTime;
@@ -164,10 +164,10 @@ namespace DemonOverwhelming
             this.parameter.arcMoveTime = parameter.arcMoveTime;
             this.parameter.arcMoveHeight = parameter.arcMoveHeight;
             name = "Missile_" + parameter.name + "_" + id;
-            foreach (BuffInformation buff in creater.buffs)
-            {
-                buff.buff.OnAddbuff_Missile(this, buff.buffLevel);
-            }
+            //foreach (BuffInformation buff in creater.buffs)
+            //{
+            //    buff.buff.OnAddbuff_Missile(this, buff.buffLevel);
+            //}
             this.parameter.damageData = GameDataManager.instance.GetDamageDataById(parameter.damageDataId);
         }
         /// <summary>
@@ -179,6 +179,7 @@ namespace DemonOverwhelming
             targetTransform = e;
             targetCollider = e.GetComponent<BoxCollider>();
             targetEntity = e.GetComponent<Entity>();
+            Debug.Log("设置了目标：" + targetTransform);
         }
         public void SetTarget(Vector3 v)
         {
@@ -196,44 +197,45 @@ namespace DemonOverwhelming
         //位移
         public void Translate()
         {
-            if (targetTransform != null && set)
+            if (parameter.moveType == MissileMoveType.direct)
             {
-                if (!targetCollider)
-                {
-                    Debug.Log("设置目标碰撞盒");
-                    if (targetTransform != null)
-                        targetCollider = targetTransform.GetComponent<BoxCollider>();
-                }
-                //设置判断投射物移动到终点的点（有目标对象的transf时，有碰撞体选择碰撞体最近点，没有时取目标坐标，没有transf时选取目标v3坐标）
-                if (targetCollider)
-                {
-                    nearPos = targetCollider != null ? targetCollider.ClosestPointOnBounds(transform.position) : targetTransform.position;
-                }
-                else
-                {
-                    nearPos = targetV3;
-                }
-                //直线位移
-                if (parameter.moveType == MissileMoveType.direct)
-                {
-                    //目标有碰撞体时，向碰撞体最近位置位移，无碰撞体时，向目标坐标位移
-                    if (targetCollider)
-                    {
-                        transform.position = Vector3.MoveTowards(transform.position, new Vector3(nearPos.x, nearPos.y /*+ targetEntity.GetComponent<BoxCollider>().size.y*/ , transform.position.z), parameter.speed * Time.deltaTime);
-                    }
-                    else
-                    {
-                        transform.position = Vector3.MoveTowards(transform.position, targetTransform != null ? targetTransform.position : targetV3, parameter.speed * Time.deltaTime);
-                    }
-                }
-                //抛物线位移
-                //具体移动在start中
-                //直接瞬移到目标点
-                if (parameter.moveType == MissileMoveType.teleport)
-                {
-                    transform.position = targetTransform != null ? targetTransform.position : targetV3;
-                }
+                transform.position = Vector3.MoveTowards(transform.position, targetEntity.GetUnitCenter().position, parameter.speed * Time.deltaTime);
             }
+
+
+            //if (targetTransform != null && set)
+            //{
+
+            //    //设置判断投射物移动到终点的点（有目标对象的transf时，有碰撞体选择碰撞体最近点，没有时取目标坐标，没有transf时选取目标v3坐标）
+            //    if (targetCollider)
+            //    {
+            //        nearPos = targetCollider != null ? targetCollider.ClosestPointOnBounds(transform.position) : targetTransform.position;
+            //    }
+            //    else
+            //    {
+            //        nearPos = targetV3;
+            //    }
+            //    //直线位移
+            //    if (parameter.moveType == MissileMoveType.direct)
+            //    {
+            //        //目标有碰撞体时，向碰撞体最近位置位移，无碰撞体时，向目标坐标位移
+            //        if (targetCollider)
+            //        {
+            //            transform.position = Vector3.MoveTowards(transform.position, new Vector3(nearPos.x, nearPos.y /*+ targetEntity.GetComponent<BoxCollider>().size.y*/ , transform.position.z), parameter.speed * Time.deltaTime);
+            //        }
+            //        else
+            //        {
+            //            transform.position = Vector3.MoveTowards(transform.position, targetTransform != null ? targetTransform.position : targetV3, parameter.speed * Time.deltaTime);
+            //        }
+            //    }
+            //    //抛物线位移
+            //    //具体移动在start中
+            //    //直接瞬移到目标点
+            //    if (parameter.moveType == MissileMoveType.teleport)
+            //    {
+            //        transform.position = targetTransform != null ? targetTransform.position : targetV3;
+            //    }
+            //}
         }
         /// <summary>
         /// 检测是否移动到终点，以及移动到终点时执行的方法
@@ -241,16 +243,18 @@ namespace DemonOverwhelming
         public void MoveEndCheck()
         {
             //移动到目标位置，若目标为实体，则伤害目标，若没有,当不作用生命周期时消亡,若作用buff，则给目标上buff
-            if (Vector3.Distance(transform.position, nearPos) < 0.25f)
+            if (Vector3.Distance(transform.position, targetEntity.GetUnitCenter().position) < 0.25f)
             {
                 if (targetEntity)
                 {
                     Debug.Log("造成伤害，死亡" + targetEntity.name);
                     BattleManager.instance.CreateDamage(creater, parameter.damageData, targetEntity);
-                }
-                targetTransform = null;
-                if (!parameter.useLifeTime)
                     Die();
+                }
+                //Debug.Log("判定投射物到达终点");
+                //targetTransform = null;
+                //if (!parameter.useLifeTime)
+                //    Die();
             }
         }
         //调整角度
@@ -319,7 +323,10 @@ namespace DemonOverwhelming
             Debug.Log("投射物死亡");
             Destroy(gameObject);
         }
-
+        private void OnDestroy()
+        {
+            Debug.Log("死了");
+        }
         #endregion
 
 

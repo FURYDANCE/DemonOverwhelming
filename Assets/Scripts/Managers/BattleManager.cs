@@ -220,6 +220,34 @@ namespace DemonOverwhelming
         #endregion
 
         #region 伤害相关
+
+        /// <summary>
+        /// 创造一个【攻击】，传入攻击者，攻击id（可以是投射物id或者伤害id），攻击目标
+        /// 根据传入的id决定是执行普通攻击方法还是投射物攻击方法
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="attackId"></param>
+        /// <param name="target"></param>
+        public void CreateAttack(Entity attacker, string attackId, Entity target)
+        {
+            char firstStr = attackId[0];
+            //根据所给出id的第一位判断是投射物攻击还是直接攻击，并调用相应的方法
+            if (firstStr == '4')
+            {
+                Debug.Log("执行普通的近战伤害");
+                CreateDamage(attacker, GameDataManager.instance.GetDamageDataById(attackId), target);
+                return;
+            }
+            if (firstStr == '3')
+            {
+                Debug.Log("执行创造投射物");
+
+                GenerateUnitMissile(attacker, attacker.GetMissileGeneratePos().position, attackId, target.transform);
+                return;
+            }
+
+        }
+
         /// <summary>
         /// 创建一个aoe伤害区域，参数为中心坐标，检测范围，创造者，阵营，伤害，若要传入buff，其buff的id
         /// </summary>
@@ -231,7 +259,7 @@ namespace DemonOverwhelming
         /// <param name="其buff的id"></param>
         public void CreateAoeHurtArea(Vector3 center, Vector2 checkArea, Entity creater, Camp camp, DamageData damageData)
         {
-     
+
             Collider[] colliders = Physics.OverlapBox(center, new Vector3(checkArea.x, checkArea.y, 50));
             foreach (Collider c in colliders)
             {
@@ -265,7 +293,7 @@ namespace DemonOverwhelming
 
                 //造成伤害
                 target.TakeDamage(damageData, creater, out finalDamage);
-
+                Debug.Log("造成的最终伤害：" + finalDamage);
                 //伤害输出者的攻击后词条事件
                 creater.TagEvent_AfterAttack(creater, finalDamage, target, damageData);
                 //伤害承受者的受伤后词条事件
@@ -286,28 +314,34 @@ namespace DemonOverwhelming
         #region 投射物相关
 
         /// <summary>
+        /// （修改过后的）创造投射物方法
+        /// </summary>
+        /// <returns></returns>
+        public UnitMissile GenerateUnitMissile(Entity creater,Vector3 startPos,string missileId,Transform moveTarget)
+        {
+            GameObject go = Instantiate(GameDataManager.instance.defaultMissile, GameObject.Find("Missiles").transform);
+            UnitMissile missile = go.GetComponent<UnitMissile>();
+            missile.creater = creater;
+            missile.attackTarget = moveTarget;
+            missile.missileId = missileId;
+            go.transform.position = startPos;
+            return missile;
+        }
+        /// <summary>
         /// 创建一个投射物，参数为id，坐标,目标
         /// </summary>
         /// <returns></returns>
         public Missile GenerateOneMissle(Entity creater, Vector3 pos, string id, Entity target)
         {
-            GameObject go = Instantiate(new GameObject(), GameObject.Find("Missiles").transform);
+            GameObject go = Instantiate(GameDataManager.instance.defaultMissile, GameObject.Find("Missiles").transform);
+            go.name = "Missile";
+            go.transform.position = pos;
+            SpriteRenderer spriteRenderer = go.GetComponent<SpriteRenderer>();
 
-            if (creater)
-            {
-                go.transform.position = new Vector3(pos.x, pos.y + creater.GetComponent<BoxCollider>().size.y, SceneObjectsManager.instance.playerEntityGeneratePoint.position.z);
-
-            }
-            SpriteRenderer spriteRenderer = go.AddComponent<SpriteRenderer>();
-
-            spriteRenderer.sortingLayerName = "Layer1";
-            //spriteRenderer.sortingLayerID = 1;
-            go.AddComponent<FaceToCamera>();
             Missile m = go.AddComponent<Missile>();
             m.id = id;
             m.camp = creater.camp;
             m.creater = creater;
-            //m.SetParameter(id);
             m.SetTarget(target.transform);
             return m;
         }

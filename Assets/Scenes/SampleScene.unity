@@ -637,20 +637,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -658,13 +649,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -676,7 +665,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -690,6 +678,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &86602231
 SpriteRenderer:
@@ -1293,20 +1283,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 10
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -1314,13 +1295,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -1332,7 +1311,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -1346,6 +1324,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &269656416
 SpriteRenderer:
@@ -1646,20 +1626,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -1667,13 +1638,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -1685,7 +1654,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -1699,6 +1667,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!65 &343375691
 BoxCollider:
@@ -1793,20 +1763,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 10
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -1814,13 +1775,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -1832,7 +1791,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -1846,6 +1804,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &385404996
 SpriteRenderer:
@@ -2033,20 +1993,11 @@ MonoBehaviour:
     Hp: 1e+12
     nowHp: 1e+12
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2054,13 +2005,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -2072,7 +2021,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -2086,6 +2034,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!114 &454947320
 MonoBehaviour:
@@ -2455,20 +2405,11 @@ MonoBehaviour:
     Hp: 500
     nowHp: 500
     hurtDamage: 120
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u636E\u70B9"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2476,13 +2417,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -2494,7 +2433,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -2508,6 +2446,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!114 &491496143
 MonoBehaviour:
@@ -2610,20 +2550,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2631,13 +2562,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -2649,7 +2578,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -2663,6 +2591,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &497275216
 SpriteRenderer:
@@ -3515,7 +3445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7994262099243616688, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
@@ -4554,20 +4484,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -4575,13 +4496,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -4593,7 +4512,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -4607,6 +4525,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1056600350
 SpriteRenderer:
@@ -5136,20 +5056,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 10
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -5157,13 +5068,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -5175,7 +5084,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -5189,6 +5097,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1200354046
 SpriteRenderer:
@@ -5548,20 +5458,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -5569,13 +5470,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -5587,7 +5486,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -5601,6 +5499,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!65 &1235263193
 BoxCollider:
@@ -6354,20 +6254,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 10
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -6375,13 +6266,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -6393,7 +6282,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -6407,6 +6295,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1541459944
 SpriteRenderer:
@@ -6749,20 +6639,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -6770,13 +6651,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -6788,7 +6667,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -6802,6 +6680,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1630747700
 SpriteRenderer:
@@ -6946,20 +6826,11 @@ MonoBehaviour:
     Hp: 10
     nowHp: 10
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -6967,13 +6838,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -6985,7 +6854,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -6999,6 +6867,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1635986278
 SpriteRenderer:
@@ -7481,20 +7351,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -7502,13 +7363,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -7520,7 +7379,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -7534,6 +7392,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1880707960
 SpriteRenderer:
@@ -8133,20 +7993,11 @@ MonoBehaviour:
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -8154,13 +8005,11 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
@@ -8172,7 +8021,6 @@ MonoBehaviour:
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -8186,6 +8034,8 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
   enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &2031585192
 SpriteRenderer:
@@ -9533,6 +9383,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3841705012023242083, guid: 34d0c09274641db4b896b10fd3813c93, type: 3}
+      propertyPath: blood
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841705012023242083, guid: 34d0c09274641db4b896b10fd3813c93, type: 3}
+      propertyPath: money
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3841705012023242083, guid: 34d0c09274641db4b896b10fd3813c93, type: 3}
       propertyPath: allSoldiers.Array.data[0]
       value: 
       objectReference: {fileID: 343375690}
@@ -9837,10 +9695,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1133896458}
     m_Modifications:
-    - target: {fileID: 8191951234441727460, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
-      propertyPath: excelDatas
-      value: 
-      objectReference: {fileID: 11400000, guid: a8a7f34daadb0e0429214850826c76c3, type: 2}
     - target: {fileID: 8191951234441727466, guid: 8a7fc47d1b140ec48b1ae215560a417d, type: 3}
       propertyPath: m_Name
       value: GameDataManager

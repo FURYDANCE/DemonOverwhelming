@@ -11,17 +11,15 @@ namespace DemonOverwhelming
     /// </summary>
     public class Action_UnitAttack : Action
     {
+        public int attackIndex;
         public SharedEntity thisEntity;
         public SharedTransform attackTargetTransform;
         Entity entity;
         public override void OnStart()
         {
             entity = thisEntity.Value;
-            //这里还是先调用了以前写的伤害方法，但是之后或许还会重构一下？
-            Debug.Log(thisEntity.Value + attackTargetTransform.Value.name + entity.parameter.character.missileId);
-            Debug.Log( entity.parameter.character.missileId);
-            Debug.Log(attackTargetTransform.Value.name );
-            BattleManager.instance.GenerateOneMissle(entity, transform.position, entity.parameter.character.missileId, attackTargetTransform.Value.gameObject.GetComponent<Entity>());
+            if (attackTargetTransform.Value != null)
+                BattleManager.instance.CreateAttack(entity, entity.parameter.character.attackIds[attackIndex], attackTargetTransform.Value.GetComponent<Entity>());
             attackTargetTransform.SetValue(null);
         }
         public override TaskStatus OnUpdate()

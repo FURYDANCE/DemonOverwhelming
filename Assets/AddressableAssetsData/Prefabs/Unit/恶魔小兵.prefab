@@ -112,7 +112,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610548750568959437}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0}
   m_ConstrainProportionsScale: 0
@@ -120,7 +120,7 @@ RectTransform:
   - {fileID: 610548750890187150}
   m_Father: {fileID: 610548751953611390}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -443,6 +443,7 @@ Transform:
   - {fileID: 533539918787997607}
   - {fileID: 610548750538305474}
   - {fileID: 4562639085451303623}
+  - {fileID: 1951872418714271964}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -473,7 +474,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &610548751953611329
 MonoBehaviour:
@@ -502,20 +503,11 @@ MonoBehaviour:
     Hp: 30
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0.15
-    hpBarOffset: {x: 0, y: 20, z: 0}
     introduct: "\u6076\u9B54\u5C0F\u5175\n\u4E00\u53EA\u6742\u9C7C"
-    modleSize: 1.5
-    shadowSize: {x: 1.2, y: 1.2, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
+    modleSize: 0
     character:
       id: 1000001
       cost: 0
-      aiType: 0
       moveSpeed: 5
       defence: 0
       defence_far: 0
@@ -523,13 +515,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 15, y: 15, z: 100}
-      EnemyCheckOffset: {x: 7.5, y: 2.5, z: 0}
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.5
-      attackTime: 0.5
-      missileId: 33000001
+      attackTime: 0.35
+      attackIds:
+      - 41000001
       specialTags:
       - 0
       bloodDrop: 1
@@ -546,7 +537,6 @@ MonoBehaviour:
   hpBar: {fileID: 610548750568959432}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -560,7 +550,10 @@ MonoBehaviour:
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 0100000002000000
   enemiesInCheckArea: []
-  angent: {fileID: 0}
+  missileGeneratePos: {fileID: 1951872418714271964}
+  unitCenter: {fileID: 1951872418714271964}
+  unitGraphic: {fileID: 533539918787997607}
+  angent: {fileID: 5122603914408750376}
 --- !u!195 &5122603914408750376
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -668,8 +661,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20.63698, y: 1, z: 20.533709}
-  m_Center: {x: 9.818488, y: 0, z: 2.3156233}
+  m_Size: {x: 17.128586, y: 1, z: 12.733002}
+  m_Center: {x: 8.245804, y: 0, z: 1.0811539}
 --- !u!114 &1196564444362892864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,3 +812,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 45
+--- !u!1 &4488686631570672025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951872418714271964}
+  m_Layer: 0
+  m_Name: UnitCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1951872418714271964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4488686631570672025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.881, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 610548751953611390}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

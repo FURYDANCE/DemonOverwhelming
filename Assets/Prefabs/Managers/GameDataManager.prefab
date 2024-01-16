@@ -56,6 +56,7 @@ MonoBehaviour:
   emptySoldierCard: {fileID: 7233710488846720462, guid: 0b8ccb7ab2b6c004daa197ce233a3d41, type: 3}
   emptyFormat: {fileID: 2845960953593243496, guid: 9351cfd52d115494cba6bfd9ad4d278d, type: 3}
   moneyBag: {fileID: 6031362283204591394, guid: 52ab648c64083b046bfe941ce4b88133, type: 3}
+  defaultMissile: {fileID: 8753391635183234078, guid: 635e471ff06a8914fb36b66931592be4, type: 3}
   sceneInformation: {fileID: 2440288260986152513, guid: b7fdd2e851c3e2142be326bddf431fb4, type: 3}
   a: {fileID: 7673479569266096885, guid: a5e80962b1850fb4983ff0d011b7d5da, type: 3}
   bloodSprite: {fileID: 21300000, guid: 72f08ad45a00d5b40bec7238c07400d3, type: 3}
