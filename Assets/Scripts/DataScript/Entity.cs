@@ -69,6 +69,7 @@ namespace DemonOverwhelming
         public Transform unitCenter;
         public Transform unitGraphic;
         public NavMeshAgent angent;
+        public UnitTrigger_EnemiesCheckArea enemiesCheckArea;
         private void Start()
         {
             buffs = new List<BuffInformation>();
@@ -577,7 +578,8 @@ namespace DemonOverwhelming
         /// <param name="loop">是否循环播放</param>
         public void PlayAnimation(string animationName, bool loop)
         {
-            skAni.state.SetAnimation(0, animationName, loop);
+            if (skAni != null)
+                skAni.state.SetAnimation(0, animationName, loop);
         }
         public void PlayAnimation_Idle()
         {
@@ -760,6 +762,20 @@ namespace DemonOverwhelming
                     unitGraphic.transform.rotation = Quaternion.Euler(45, 0, 0);
                 if (spineObject && transform.position.x > target.x)
                     unitGraphic.transform.rotation = Quaternion.Euler(-45, 180, 0);
+            }
+            if (enemiesCheckArea)
+            {
+                //如果有敌人检测trigger，设置其左右朝向
+                if (transform.position.x < target.x)
+                {
+                    enemiesCheckArea.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                }
+                if (transform.position.x > target.x)
+                {
+                    enemiesCheckArea.transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+               
             }
         }
 

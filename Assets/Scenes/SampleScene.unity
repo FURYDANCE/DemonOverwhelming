@@ -680,6 +680,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &86602231
 SpriteRenderer:
@@ -1326,6 +1327,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &269656416
 SpriteRenderer:
@@ -1669,6 +1671,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!65 &343375691
 BoxCollider:
@@ -1806,6 +1809,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &385404996
 SpriteRenderer:
@@ -2036,6 +2040,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!114 &454947320
 MonoBehaviour:
@@ -2448,6 +2453,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!114 &491496143
 MonoBehaviour:
@@ -2593,6 +2599,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &497275216
 SpriteRenderer:
@@ -2809,6 +2816,79 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8626620565904456999, guid: aa5e1e001ddd87f4abff562575a2947c, type: 3}
   m_PrefabInstance: {fileID: 8626620565333258045}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &573053435
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 610548751953611329, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: camp
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611389, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_Name
+      value: "\u519C\u592B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.129307
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.790001
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 58.579334
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 610548751953611390, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1213345000357438452, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621658141068104288, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.Version
+      value: 1.7.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621658141068104288, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
+      propertyPath: mBehaviorSource.mTaskData.JSONSerialization
+      value: '{"Variables":[{"Type":"DemonOverwhelming.SharedEntity","Name":"ThisEntity","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"MoveTarget","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"MoveTarget_Transform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedTransformList","Name":"CheckedEnemies","IsShared":true,"List`1mValue":[]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"attacStartWaitTime","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"attackAfterWaitTime","IsShared":true,"SinglemValue":0}]}'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b29567d1730f57746b2ef75fd1d3cf2c, type: 3}
 --- !u!1 &614441330
 GameObject:
   m_ObjectHideFlags: 0
@@ -3380,75 +3460,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &777737883
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 610548751953611329, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: camp
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611389, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_Name
-      value: "\u6076\u9B54\u5C0F\u5175"
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 42.074272
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.7900085
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 57
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 610548751953611390, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213345000357438452, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7994262099243616688, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 851dcd155e210634590a8211cf5f8f8b, type: 3}
 --- !u!4 &777891644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3841705012023242082, guid: 34d0c09274641db4b896b10fd3813c93, type: 3}
@@ -4527,6 +4538,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1056600350
 SpriteRenderer:
@@ -5099,6 +5111,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1200354046
 SpriteRenderer:
@@ -5501,6 +5514,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!65 &1235263193
 BoxCollider:
@@ -6297,6 +6311,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1541459944
 SpriteRenderer:
@@ -6682,6 +6697,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1630747700
 SpriteRenderer:
@@ -6869,6 +6885,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1635986278
 SpriteRenderer:
@@ -7394,6 +7411,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &1880707960
 SpriteRenderer:
@@ -8036,6 +8054,7 @@ MonoBehaviour:
   enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!212 &2031585192
 SpriteRenderer:
