@@ -27,13 +27,42 @@ namespace DemonOverwhelming
         {
             Entity e = GetComponent<Entity>();
             thisEntity.SetValue(e);
+            Transform[] allChildren = e.GetComponentsInChildren<Transform>();
+            foreach (Transform child in allChildren)
+            {
+                if (child.name == "UnitCenter")
+                {
+                    if (e.unitCenter == null)
+                    {
+                        e.unitCenter = child;
+                    }
+                }
+                if (child.name == "UnitGraphic")
+                {
+                    if (e.unitGraphic == null)
+                    {
+                        e.unitGraphic = child;
+                    }
+                }
+                if (child.name == "MissileGeneratePoint")
+                {
+                    if (e.missileGeneratePos == null)
+                    {
+                        e.missileGeneratePos = child;
+                    }
+                }
+            }
             //获取angent组件（若不存在则生成）
-            e.angent = e.GetComponent<NavMeshAgent>() ?? e.gameObject.AddComponent<NavMeshAgent>();
+            e.angent = e.GetComponent<NavMeshAgent>() ? e.GetComponent<NavMeshAgent>() : e.gameObject.AddComponent<NavMeshAgent>();
             e.angent.updateRotation = false;
             e.angent.speed = e.GetSpeed();
             attackStartWaitTime.SetValue(e.parameter.character.attackTime);
             attackAfterWaitTime.SetValue(e.parameter.character.attackWaitTime);
             e.FlipTo(e.camp == Camp.demon ? e.transform.position + Vector3.right : e.transform.position - Vector3.right);
+
+
+         
+
             success = true;
         }
 

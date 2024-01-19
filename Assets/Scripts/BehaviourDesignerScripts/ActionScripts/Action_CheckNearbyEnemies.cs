@@ -24,6 +24,7 @@ namespace DemonOverwhelming
 
         public override TaskStatus OnUpdate()
         {
+
             Collider[] colliders = Physics.OverlapSphere(transform.position, 10);
             for (int i = 0; i < colliders.Length; i++)
             {

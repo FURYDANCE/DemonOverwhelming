@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 5739520288837059350}
   - component: {fileID: 2911107684262909261}
   - component: {fileID: 1967229306}
+  - component: {fileID: 2921202980430950971}
   m_Layer: 0
   m_Name: "\u6076\u9B54\u9886\u4E3B_2"
   m_TagString: Untagged
@@ -445,7 +446,7 @@ Transform:
   m_GameObject: {fileID: 610548751953611389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -13.539025, y: -25.5321, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 610548750568959438}
@@ -510,20 +511,11 @@ MonoBehaviour:
     Hp: 200
     nowHp: 200
     hurtDamage: 0
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 18, z: 0}
     introduct: "\u82F1\u96C4"
     modleSize: 2
-    shadowSize: {x: 6, y: 2, z: 0}
-    shadowOffset: 0.5
-    aiMode_Move: 1
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 4000001
       cost: 0
-      aiType: 0
       moveSpeed: 6
       defence: 0.5
       defence_far: 0.5
@@ -531,13 +523,11 @@ MonoBehaviour:
       haveSkill: 1
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 7, y: 7, z: 100}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 9.5
       chaseTime: 0
       attackWaitTime: 0.6
       attackTime: 0.4
-      missileId: 33000003
+      attackIds: []
       specialTags:
       - 0
       bloodDrop: 1000
@@ -585,7 +575,6 @@ MonoBehaviour:
   hpBar: {fileID: 610548750568959432}
   boxCollider: {fileID: 610548751953611333}
   hpLock: 0
-  animator: {fileID: 610548751953611332}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -598,6 +587,10 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 0100000002000000
+  enemiesInCheckArea: []
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
   angent: {fileID: 0}
 --- !u!114 &610548751953611334
 MonoBehaviour:
@@ -913,6 +906,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 0
+--- !u!114 &2921202980430950971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610548751953611389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startWhenEnabled: 1
+  asynchronousLoad: 0
+  pauseWhenDisabled: 0
+  restartWhenComplete: 0
+  logTaskChanges: 0
+  group: 0
+  resetValuesOnRestart: 0
+  externalBehavior: {fileID: 0}
+  mBehaviorSource:
+    behaviorName: Behavior
+    behaviorDescription: 
+    mTaskData:
+      types: []
+      parentIndex: 
+      startIndex: 
+      variableStartIndex: 
+      JSONSerialization: 
+      fieldSerializationData:
+        typeName: []
+        fieldNameHash: 
+        startIndex: 
+        dataPosition: 
+        unityObjects: []
+        byteData: 
+        byteDataArray: 
+      Version: 
+  gizmoViewMode: 2
+  showBehaviorDesignerGizmo: 1
 --- !u!1 &2727140772931721156
 GameObject:
   m_ObjectHideFlags: 0

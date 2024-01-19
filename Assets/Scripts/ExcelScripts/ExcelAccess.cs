@@ -8,6 +8,7 @@ using System.Data;
 using DemonOverwhelming;
 using System;
 using CodeMonkey.Utils;
+using Spine.Unity;
 
 public class ExcelAccess
 {
@@ -135,15 +136,6 @@ public class ExcelAccess
                 //hpBarOffset = new Vector3(float.Parse(collect[i][5].ToString().Split(",")[0]), float.Parse(collect[i][5].ToString().Split(",")[1])),
                 introduct = collect[i][4].ToString(),
                 Hp = float.Parse(collect[i][5].ToString()),
-                //modleSize = float.Parse(collect[i][8].ToString()),
-                //shadowSize = new Vector3(float.Parse(collect[i][9].ToString().Split(",")[0]), float.Parse(collect[i][9].ToString().Split(",")[1])),
-                //shadowOffset = float.Parse(collect[i][9].ToString().Split(",")[2]),
-
-                //aiMode_Move = (Ai_MoveType)int.Parse(collect[i][10].ToString().Split("/")[0]),
-                //aiMode_Check = (Ai_CheckType)int.Parse(collect[i][10].ToString().Split("/")[1]),
-                //aiMode_Chase = (Ai_ChaseType)int.Parse(collect[i][10].ToString().Split("/")[2]),
-                //aiMode_Atk = (Ai_AttackType)int.Parse(collect[i][10].ToString().Split("/")[3]),
-
 
             };
             up.character = new UnitParameter_Character();
@@ -153,12 +145,11 @@ public class ExcelAccess
             up.character.defence_magic = float.Parse(collect[i][8].ToString());
             up.character.attackTime = float.Parse(collect[i][9].ToString());
             up.character.attackWaitTime = float.Parse(collect[i][10].ToString());
-            //up.character.EnemyCheckArea = new Vector3(float.Parse(collect[i][16].ToString().Split(",")[0]), float.Parse(collect[i][16].ToString().Split(",")[1]));
-            //up.character.EnemyCheckOffset = new Vector3(float.Parse(collect[i][17].ToString().Split(",")[0]), float.Parse(collect[i][17].ToString().Split(",")[1]));
+
             up.character.attackDistance = float.Parse(collect[i][11].ToString());
             up.character.haveSkill = collect[i][12].ToString() == "True" ? true : false;
             up.character.moveSpeed = float.Parse(collect[i][13].ToString());
-            //up.character.aiType = (AiType)int.Parse(collect[i][16].ToString());
+
             up.character.attackIds = collect[i][14].ToString().Split("/");
             up.character.specialTags = collect[i][15].ToString().Split(",");
             up.character.bloodDrop = float.Parse(collect[i][16].ToString());
@@ -170,9 +161,25 @@ public class ExcelAccess
 
             //读取兵种预制件
             Debug.Log(up.name + "   " + AssetDatabase.LoadAssetAtPath<GameObject>("Assets/AddressableAssetsData/Prefabs/Unit/ " + up.name + ".prefab"));
+            string loadPath = "Assets/AddressableAssetsData/Prefabs/Unit/" + up.name.Split("/")[0] + ".prefab";
             if (up.name.Split("/").Length != 0)
             {
-                GameObject prefab = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/AddressableAssetsData/Prefabs/Unit/" + up.name.Split("/")[0] + ".prefab");
+                //读取预制件，若没读取到则复制一份小恶魔的预制件并改为正确的名字？
+                GameObject prefab;
+                prefab = AssetDatabase.LoadAssetAtPath<GameObject>(loadPath);
+                if (!prefab)
+                {
+                    Debug.Log("没有读取到相应名称的预制件，尝试创建新的");
+                    //复制一份恶魔小兵的预制件
+                    AssetDatabase.CopyAsset("Assets/AddressableAssetsData/Prefabs/Unit/恶魔小兵.prefab", loadPath);
+                    //接着重新读取
+                    prefab = AssetDatabase.LoadAssetAtPath<GameObject>(loadPath);
+                    if (!prefab)
+                    {
+                        Debug.LogError("还是没有读取到预制件！:" + loadPath);
+
+                    }
+                }
                 //对该对象的预制件做出修改
                 if (prefab)
                 {
@@ -180,8 +187,75 @@ public class ExcelAccess
                     string path = "Assets/AddressableAssetsData/Prefabs/Unit/" + up.name.Split("/")[0] + ".prefab";
 
                     prefab = PrefabUtility.LoadPrefabContents(path);
+                    //对预制件的变量进行处理
                     prefab.GetComponent<Entity>().id = up.ID;
                     prefab.GetComponent<Entity>().parameter = UtilsClass.SetUnitParameterBydata(up);
+                    prefab.GetComponent<BoxCollider>().size = new Vector3(0.5f, 0.5f, 0.5f);
+                    prefab.GetComponent<BoxCollider>().center = Vector3.zero;
+                    ////对预制件的各个对象进行处理
+
+                    bool haveUnitCenter=false;
+                    bool haveMissileSpawnPoint=false;
+                    bool haveEnemyCheckTrigger= false;
+                    Transform[] allChildren = prefab.GetComponentsInChildren<Transform>();
+                    foreach (Transform child in allChildren)
+                    {
+                        if (child.name == "UnitCenter")
+                        {
+                            haveUnitCenter = true;
+                        }
+                        if (child.name == "MissileGeneratePoint")
+                        {
+                            haveMissileSpawnPoint = true;
+                        }
+                        if (child.name == "EnemyCheckTrigger")
+                        {
+                            haveEnemyCheckTrigger = true;
+                        }
+                    }
+                    if(!haveUnitCenter)
+                    {
+                        GameObject unitCenter = GameObject.Instantiate(new GameObject(), prefab.transform);
+                        unitCenter.transform.localPosition = new Vector3(0, 0.8f, 0);
+                        unitCenter.name = "UnitCenter";
+                    }
+                    if (!haveMissileSpawnPoint)
+                    {
+                        GameObject missileSpawnPoint = GameObject.Instantiate(new GameObject(), prefab.transform);
+                        missileSpawnPoint.transform.localPosition = Vector3.zero;
+                        missileSpawnPoint.transform.localPosition = new Vector3(0, 0.8f, 0);
+
+                        missileSpawnPoint.name = "MissileGeneratePoint";
+                    }
+                    if (!haveEnemyCheckTrigger)
+                    {
+                        GameObject EnemyCheckTrigger = GameObject.Instantiate(new GameObject(), prefab.transform);
+                        EnemyCheckTrigger.transform.localPosition = new Vector3(0, 0, 0);
+                        EnemyCheckTrigger.AddComponent<UnitTrigger_EnemiesCheckArea>().thisEntity = prefab.GetComponent<Entity>();
+                        BoxCollider collider = EnemyCheckTrigger.AddComponent<BoxCollider>();
+                        collider.center = new Vector3(8, 0, 0.5f);
+                        collider.size = new Vector3(15, 1, 12);
+                        EnemyCheckTrigger.name = "EnemyCheckTrigger";
+                    }
+                    //对于目前的版本来说，对于没有spine动画的单位，应该让它们先以贴图的状态显示？若对象不是骨骼动画对象，则删除其骨骼动画组件，加上贴图组件
+                    if (up.name.Split("/").Length != 2)
+                    {
+                        Debug.Log("还没有骨骼动画的单位：" + up.name);
+                        if (prefab.GetComponentInChildren<SkeletonAnimation>() != null)
+                        {
+                            GameObject unitGraphic = prefab.GetComponentInChildren<SkeletonAnimation>().gameObject;
+                            Debug.Log(unitGraphic.name);
+                            GameObject.DestroyImmediate(unitGraphic.GetComponent<SkeletonAnimation>());
+                            GameObject.DestroyImmediate(unitGraphic.GetComponent<MeshRenderer>());
+                            GameObject.DestroyImmediate(unitGraphic.GetComponent<MeshFilter>());
+                            //PrefabUtility.ApplyRemovedComponent(prefab, unitGraphic.GetComponent<SkeletonAnimation>(), InteractionMode.AutomatedAction);
+                            //PrefabUtility.ApplyRemovedComponent(prefab, unitGraphic.GetComponent<MeshRenderer>(), InteractionMode.AutomatedAction);
+
+                            unitGraphic.AddComponent<SpriteRenderer>().sprite = up.sprite;
+                        }
+                    }
+
+
                     Debug.Log(path);
                     PrefabUtility.SaveAsPrefabAsset(prefab, path);
                     AssetDatabase.SaveAssets();
@@ -190,7 +264,7 @@ public class ExcelAccess
                 }
 
                 //PrefabUtility.SaveAsPrefabAsset(prefab, "Assets/AddressableAssetsData/Prefabs/Unit/" + up.name.Split("/")[0] + ".prefab");
-              
+
 
             }
 

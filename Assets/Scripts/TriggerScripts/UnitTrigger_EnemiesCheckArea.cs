@@ -13,6 +13,12 @@ namespace DemonOverwhelming
         {
             if (!thisEntity)
                 thisEntity = GetComponentInParent<Entity>();
+            GetComponent<Collider>().isTrigger = true;
+            thisEntity.enemiesCheckArea = this;
+        }
+        private void Update()
+        {
+         
         }
         private void OnTriggerEnter(Collider collision)
         {
