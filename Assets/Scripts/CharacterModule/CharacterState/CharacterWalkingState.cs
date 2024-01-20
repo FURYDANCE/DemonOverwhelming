@@ -14,7 +14,7 @@ namespace DemonOverwhelming
             //Debug.Log("进入行动状态");
             manager.isWalking = true;
             manager.intoWalking = true;
-            manager.GetInterfaceScript();
+
             if (manager.entity.isHero == false)
                 manager.entity.PlayAniamtion_Walk();
 
@@ -33,12 +33,7 @@ namespace DemonOverwhelming
                 manager.ChangeState(new CharacterChasingState());
                 return;
             }
-            //执行行为模块
-            if (manager.moveScript != null)
-            {
-                manager.moveScript.Moving();
-            }
-
+            
         }
 
 

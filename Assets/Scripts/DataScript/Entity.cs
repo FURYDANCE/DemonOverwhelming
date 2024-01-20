@@ -60,8 +60,6 @@ namespace DemonOverwhelming
         [SerializeField]
         int[] skillLevels;
 
-        [Header("索敌范围内的所有敌人")]
-        public List<Entity> enemiesInCheckArea;
 
         [Header("投射物发射位置")]
         public Transform missileGeneratePos;
@@ -70,6 +68,11 @@ namespace DemonOverwhelming
         public Transform unitGraphic;
         public NavMeshAgent angent;
         public UnitTrigger_EnemiesCheckArea enemiesCheckArea;
+
+
+        [Header("索敌范围内的所有敌人")]
+        public Collider[] enemiesInCheckArea;
+        public List<Entity> targetableEntities;
         private void Start()
         {
             buffs = new List<BuffInformation>();
@@ -83,13 +86,29 @@ namespace DemonOverwhelming
         {
             UpdateBuff();
             SkillWaitTimeCaculate();
-            foreach (Entity e in enemiesInCheckArea)
+            UpdateTargetableUnits();
+        }
+        public void UpdateTargetableUnits()
+        {
+            if (!enemiesCheckArea)
             {
-                if (e == null)
-                    enemiesInCheckArea.Remove(e);
+                Debug.Log("缺少单位检测组件");
+                return;
+
+            }
+            //每一帧刷新可选单位
+            targetableEntities.Clear();
+            foreach (Collider c in enemiesInCheckArea)
+            {
+                if (c && c.GetComponent<Entity>())
+                {
+                    Entity checkedEntity = c.GetComponent<Entity>();
+                    //遍历检测区域内的单位，若阵营不同则添加其进入可选单位中
+                    if (checkedEntity.camp != camp)
+                        targetableEntities.Add(checkedEntity);
+                }
             }
         }
-
         #region 初始化相关
 
         /// <summary>
@@ -314,7 +333,7 @@ namespace DemonOverwhelming
                 finalDamage = 0;
                 return;
             }
-            Debug.Log("当前生命" + parameter.nowHp);
+            //Debug.Log("当前生命" + parameter.nowHp);
             //根据防御计算伤害
             float realDamage_physic = Mathf.Clamp(damageData.physicDamage - parameter.character.defence, 0, 999999999);
             float realDamage_far = Mathf.Clamp(damageData.farDamage - parameter.character.defence_far, 0, 999999999);
@@ -329,7 +348,7 @@ namespace DemonOverwhelming
             if (realDamage > 0)
             {
                 StartCoroutine(HitEffect());
-                VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Hit, transform.position + new Vector3(1.5f, 5, 0)/*+ new Vector3(0, boxCollider.size.y, 0)*/, new Vector3(2, 2, 2), 3);
+                VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Hit,unitCenter.position, new Vector3(5, 5, 5), 3);
             }
             //如果实体上有计算dps的组件则进行计算
             if (GetComponent<DpsCaculate>())
@@ -367,7 +386,6 @@ namespace DemonOverwhelming
                 if (t.Contains("钱袋"))
                 {
                     float level = float.Parse(System.Text.RegularExpressions.Regex.Replace(t, @"[^0-9]+", ""));
-                    Debug.Log(level);
                     BattleManager.instance.CreateMoneyBag(transform.position, level);
                 }
             }
@@ -757,25 +775,39 @@ namespace DemonOverwhelming
             //}
             if (spineObject)
             {
+                ////如果是spine，设置左右转向
+                //if (spineObject && transform.position.x < target.x)
+                //    unitGraphic.transform.rotation = Quaternion.Euler(45, 0, 0);
+                //if (spineObject && transform.position.x > target.x)
+                //    unitGraphic.transform.rotation = Quaternion.Euler(-45, 180, 0);
                 //如果是spine，设置左右转向
                 if (spineObject && transform.position.x < target.x)
-                    unitGraphic.transform.rotation = Quaternion.Euler(45, 0, 0);
+                    unitGraphic.transform.localEulerAngles =new Vector3(45, 0, 0);
                 if (spineObject && transform.position.x > target.x)
-                    unitGraphic.transform.rotation = Quaternion.Euler(-45, 180, 0);
+                    unitGraphic.transform.localEulerAngles = new Vector3(-45, 180, 0);
             }
             if (enemiesCheckArea)
             {
                 //如果有敌人检测trigger，设置其左右朝向
-                if (transform.position.x < target.x)
+                if (camp == Camp.demon)
                 {
                     enemiesCheckArea.transform.rotation = Quaternion.Euler(0, 0, 0);
 
                 }
-                if (transform.position.x > target.x)
+                if (camp == Camp.human)
                 {
                     enemiesCheckArea.transform.rotation = Quaternion.Euler(0, 180, 0);
                 }
-               
+                //if (transform.position.x < target.x)
+                //{
+                //    enemiesCheckArea.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+                //}
+                //if (transform.position.x > target.x)
+                //{
+                //    enemiesCheckArea.transform.rotation = Quaternion.Euler(0, 180, 0);
+                //}
+
             }
         }
 

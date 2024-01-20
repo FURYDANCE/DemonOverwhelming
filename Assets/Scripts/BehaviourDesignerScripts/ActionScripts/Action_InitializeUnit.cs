@@ -43,6 +43,7 @@ namespace DemonOverwhelming
                     {
                         e.unitGraphic = child;
                     }
+      
                 }
                 if (child.name == "MissileGeneratePoint")
                 {

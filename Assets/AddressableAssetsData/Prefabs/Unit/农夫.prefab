@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisEntity: {fileID: 610548751953611329}
+  collider: {fileID: 0}
 --- !u!65 &5532324873957063976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -479,7 +480,7 @@ GameObject:
   - component: {fileID: -258860369129286087}
   - component: {fileID: 5718444550230881031}
   - component: {fileID: 8621658141068104288}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u519C\u592B"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +532,7 @@ MonoBehaviour:
     type: 0
     name: "\u519C\u592B/spine"
     sprite: {fileID: 21300000, guid: 7578dabf3644ee5428892700f48676bc, type: 3}
-    Hp: 20
+    Hp: 10
     nowHp: 0
     hurtDamage: 0
     introduct: "\u654C\u65B9\u6B65\u5175\n\u4E5F\u662F\u6742\u9C7C"
@@ -546,12 +547,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      attackDistance: 3
+      attackDistance: 4
       chaseTime: 0
       attackWaitTime: 0.5
-      attackTime: 0.5
+      attackTime: 0.35
       attackIds:
-      - 41000001
+      - 41000020
       specialTags:
       - 0
       bloodDrop: 1
@@ -580,11 +581,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 0100000002000000
-  enemiesInCheckArea: []
   missileGeneratePos: {fileID: 0}
   unitCenter: {fileID: 0}
   unitGraphic: {fileID: 0}
   angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!65 &610548751953611333
 BoxCollider:
   m_ObjectHideFlags: 0

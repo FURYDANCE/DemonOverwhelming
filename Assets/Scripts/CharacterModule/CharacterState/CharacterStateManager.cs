@@ -38,13 +38,6 @@ namespace DemonOverwhelming
         public bool intoWalking;
         public float start_Y;
 
-        /// <summary>
-        /// 实现角色移动接口的脚本
-        /// </summary>
-        public ICharacterMove moveScript;
-        public ICharacterEnemyCheck enemyCheckScript;
-        public ICharacterChase chaseScript;
-        public ICharacterAttack attackScript;
 
 
         SpriteRenderer spriteRenderer;
@@ -65,16 +58,9 @@ namespace DemonOverwhelming
                     spriteRenderer.flipX = true;
             }
       
-            GetInterfaceScript();
+
         }
-        //获取行动模块
-        public void GetInterfaceScript()
-        {
-            moveScript = GetComponent<ICharacterMove>();
-            enemyCheckScript = GetComponent<ICharacterEnemyCheck>();
-            chaseScript = GetComponent<ICharacterChase>();
-            attackScript = GetComponent<ICharacterAttack>();
-        }
+
         void Update()
         {
             currentState.OnUpdate(this);

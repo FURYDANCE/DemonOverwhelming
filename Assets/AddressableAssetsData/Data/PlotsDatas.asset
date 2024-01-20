@@ -117,7 +117,7 @@ MonoBehaviour:
     type: 0
     name: "\u6076\u9B54\u5C0F\u5175/spine"
     sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
-    Hp: 30
+    Hp: 20
     nowHp: 0
     hurtDamage: 0
     introduct: "\u6076\u9B54\u5C0F\u5175\n\u4E00\u53EA\u6742\u9C7C"
@@ -132,12 +132,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      attackDistance: 3
+      attackDistance: 4
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.35
       attackIds:
-      - 41000001
+      - 41000021
       specialTags:
       - 0
       bloodDrop: 1
@@ -156,7 +156,7 @@ MonoBehaviour:
     type: 0
     name: "\u519C\u592B/spine"
     sprite: {fileID: 21300000, guid: 7578dabf3644ee5428892700f48676bc, type: 3}
-    Hp: 20
+    Hp: 10
     nowHp: 0
     hurtDamage: 0
     introduct: "\u654C\u65B9\u6B65\u5175\n\u4E5F\u662F\u6742\u9C7C"
@@ -171,12 +171,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      attackDistance: 3
+      attackDistance: 4
       chaseTime: 0
       attackWaitTime: 0.5
-      attackTime: 0.5
+      attackTime: 0.35
       attackIds:
-      - 41000001
+      - 41000020
       specialTags:
       - 0
       bloodDrop: 1
@@ -205,7 +205,7 @@ MonoBehaviour:
       cost: 0
       moveSpeed: 4
       defence: 0
-      defence_far: 0
+      defence_far: 2
       defence_magic: 0
       haveSkill: 0
       skillId: 0
@@ -281,7 +281,7 @@ MonoBehaviour:
     character:
       id: 1000006
       cost: 0
-      moveSpeed: 4.5
+      moveSpeed: 3
       defence: 0
       defence_far: 0
       defence_magic: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
       attackWaitTime: 2
       attackTime: 0.5
       attackIds:
-      - 32000004
+      - 41000022
       specialTags:
       - "\u94B1\u888B10"
       bloodDrop: 1
@@ -332,7 +332,7 @@ MonoBehaviour:
       attackWaitTime: 1
       attackTime: 0.5
       attackIds:
-      - 32000004
+      - 41000023
       specialTags:
       - "\u94B1\u888B10"
       bloodDrop: 1
@@ -429,7 +429,7 @@ MonoBehaviour:
     type: 0
     name: "\u9AB7\u9AC5\u5175/spine"
     sprite: {fileID: 21300000, guid: 6a27d6c8921643b4a9f8a9b736548499, type: 3}
-    Hp: 10
+    Hp: 15
     nowHp: 0
     hurtDamage: 0
     introduct: "\u70AE\u7070"
@@ -444,12 +444,12 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      attackDistance: 2
+      attackDistance: 4
       chaseTime: 0
       attackWaitTime: 0.3
       attackTime: 0.5
       attackIds:
-      - 41000001
+      - 41000020
       specialTags:
       - "\u65E0\u8840\u8005"
       bloodDrop: 0
@@ -1071,9 +1071,9 @@ MonoBehaviour:
       attackDistance: 3
       chaseTime: 0
       attackWaitTime: 0.5
-      attackTime: 0.5
+      attackTime: 0.35
       attackIds:
-      - 41000001
+      - 41000021
       specialTags:
       - 0
       bloodDrop: 1
@@ -1102,7 +1102,7 @@ MonoBehaviour:
       cost: 0
       moveSpeed: 5.5
       defence: 0
-      defence_far: 0
+      defence_far: 2
       defence_magic: 0
       haveSkill: 0
       skillId: 0
@@ -1110,9 +1110,9 @@ MonoBehaviour:
       attackDistance: 27
       chaseTime: 0
       attackWaitTime: 1
-      attackTime: 1
+      attackTime: 0.5
       attackIds:
-      - 33000001
+      - 31000001
       specialTags:
       - "\u94B1\u888B5"
       bloodDrop: 1
@@ -3159,7 +3159,7 @@ MonoBehaviour:
   missileDatas:
   - id: 31000001
     name: "\u7BAD"
-    damageDataId: 41000001
+    damageDataId: 42000017
     damageData:
       id: 
       name: 
@@ -3362,7 +3362,7 @@ MonoBehaviour:
     createNewObjectWhenDie: 0
     objectCreatedWhenDieId: 0
     startObjectId: 0
-    endObjectId: 4
+    endObjectId: "\u7194\u7089\u706B"
     trailId: 0
     aoeAmount: 1
     arcMoveTime: 0
@@ -3737,20 +3737,20 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000001
     name: "\u7269\u7406_\u8FD1\u6218_1"
-    physicDamage: 1.7
+    physicDamage: 2
     farDamage: 0
     magicDamage: 0
     buffs:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000002
     name: "\u7269\u7406_\u706B\u70AE_1"
@@ -3761,8 +3761,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000003
     name: "\u9B54\u6CD5_\u8FD1\u6218aoe_\u7194\u7089"
@@ -3773,8 +3773,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000004
     name: "\u7269\u7406_\u8FD1\u6218aoe_\u5904\u5211\u8005"
@@ -3785,8 +3785,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000005
     name: "\u7269\u7406_\u8FD1\u6218aoe_\u98CE\u8F66\u5DE8\u4EBA"
@@ -3797,8 +3797,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000006
     name: "\u5168\u5C5E\u6027_\u8FD1\u6218_\u7075\u68A6"
@@ -3809,8 +3809,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000007
     name: "\u7269\u7406_\u8FDC\u7A0B_\u94C3\u4ED9"
@@ -3821,8 +3821,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000008
     name: "\u7269\u7406_\u6076\u9B54\u9886\u4E3B\u666E\u653B"
@@ -3833,20 +3833,20 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000009
     name: "\u7269\u7406_\u8FDC\u7A0B_\u5F13\u7BAD"
     physicDamage: 0
-    farDamage: 3
+    farDamage: 6
     magicDamage: 0
     buffs:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000010
     name: "\u7269\u7406_\u8FDC\u7A0B_\u9AB7\u9AC5\u6295\u5C04\u7269"
@@ -3857,8 +3857,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000011
     name: "\u7269\u7406_\u8FD1\u6218_\u5730\u72F1\u519B\u56E2\u780D\u51FB"
@@ -3869,8 +3869,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000012
     name: "\u70AE\u7070\u8FD1\u6218\u6320\u75D2\u75D2"
@@ -3881,8 +3881,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000013
     name: "\u77F3\u50CF\u9B3C\u653B\u51FB"
@@ -3893,8 +3893,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000014
     name: "\u8FD1\u6218-\u5C0F"
@@ -3905,8 +3905,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000015
     name: "\u8FD1\u6218-\u4E2D"
@@ -3917,8 +3917,8 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 41000016
     name: "\u8FD1\u6218-\u5927"
@@ -3929,20 +3929,68 @@ MonoBehaviour:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   - id: 42000017
     name: "\u8FDC\u7A0B_\u666E\u901A\u5F13\u7BAD\u4F24\u5BB3"
     physicDamage: 0
-    farDamage: 5
+    farDamage: 4
     magicDamage: 0
     buffs:
     - 0
     specialEffects:
     - 0
-    vfxId: 0
-    vfxSize: 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
+    startDamageWiatTime: 0
+  - id: 41000020
+    name: "\u70AE\u7070\u5355\u4F53\u7269\u7406\u5355\u4F4D\u653B\u51FB\uFF08\u9AB7\u9AC5\u5175\uFF0C\u519C\u592B\u7B49\uFF09"
+    physicDamage: 1
+    farDamage: 0
+    magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
+    startDamageWiatTime: 0
+  - id: 41000021
+    name: "\u4F4E\u7EA7\u5355\u4F53\u7269\u7406\u5355\u4F4D\u653B\u51FB\uFF08\u5C0F\u6076\u9B54\uFF0C\u6B65\u5175\u7B49\uFF09"
+    physicDamage: 2.5
+    farDamage: 0
+    magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
+    startDamageWiatTime: 0
+  - id: 41000022
+    name: "\u4F4E\u7EA7aoe\u5355\u4F4D\u7269\u7406\u653B\u51FB\uFF08\u5904\u5211\u8005\uFF09"
+    physicDamage: 4
+    farDamage: 0
+    magicDamage: 0
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
+    startDamageWiatTime: 0
+  - id: 41000023
+    name: "\u4F4E\u7EA7aoe\u5355\u4F4D\u9B54\u6CD5\u653B\u51FB\uFF08\u7194\u7089\u86DE\u8753\uFF09"
+    physicDamage: 0
+    farDamage: 0
+    magicDamage: 3
+    buffs:
+    - 0
+    specialEffects:
+    - 0
+    vfxId: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfxSize: 5
     startDamageWiatTime: 0
   skillDatas:
   - id: 51000001

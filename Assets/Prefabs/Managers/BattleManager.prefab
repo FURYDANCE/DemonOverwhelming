@@ -46,11 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelId: 1
   hero: {fileID: 0}
-  money: 0
+  money: 100
   moneyPerSecond: 1
   moneyAddAmount: 1
   nowMoneyCost: 0
-  blood: 20
+  blood: 100
   nowBloodCost: 0
   soldierCards: []
   debug_DontChosseEntity: 1
@@ -80,3 +80,6 @@ MonoBehaviour:
   historyX: []
   historyY: []
   allSelectedCards: []
+  unitLayer:
+    serializedVersion: 2
+    m_Bits: 1024

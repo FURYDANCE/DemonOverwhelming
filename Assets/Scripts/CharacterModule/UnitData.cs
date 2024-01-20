@@ -151,6 +151,7 @@ namespace DemonOverwhelming
             aoeWaitTime = data.aoeWaitTime;
             arcMoveTime = data.arcMoveTime;
             arcMoveHeight = data.arcMoveHeight;
+            
 
             return this;
         }

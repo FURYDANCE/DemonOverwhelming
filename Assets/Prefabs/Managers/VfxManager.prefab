@@ -48,5 +48,5 @@ MonoBehaviour:
   vfx_Buff: {fileID: 7155335147208632822, guid: 97c43495f80a3244fad1301dfafbe252, type: 3}
   vfx_Aoe: {fileID: 185518, guid: 2ef436b6c6313494daf190cd68ebf636, type: 3}
   vfx_Aoe_2: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
-  vfx_Hit: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  vfx_Hit: {fileID: 1142193931700624, guid: 9d1846a1c8bff7142ab3959923c7d9c2, type: 3}
   vfx_fire_1: {fileID: 1195354096605370, guid: c785625bfa059c34d9ab1cebb0cd955f, type: 3}

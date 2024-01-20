@@ -90,13 +90,40 @@ namespace DemonOverwhelming
             }
             return go;
         }
-
+        /// <summary>
+        /// 创建特效，传入id，位置，缩放和存在时间
+        /// </summary>
+        /// <param name="vfxId"></param>
+        /// <param name="targetPos"></param>
+        /// <param name="scale"></param>
+        /// <param name="lifeTime"></param>
+        /// <returns></returns>
+        public GameObject CreateVfx(string vfxId, Vector3 targetPos, Vector3 scale, float lifeTime)
+        {
+            if (GetVfxByIdOrName(vfxId) == null)
+            {
+                Debug.Log("没有找到对应的id！");
+                return null;
+            }
+            createAmount++;
+            GameObject go = GameObject.Instantiate(GetVfxByIdOrName(vfxId).vfx);
+            go.name = vfxId + "_" + createAmount;
+            go.transform.position = targetPos;
+            //Debug.Log("scale：" + scale);
+            go.transform.localScale = scale;
+            go.transform.rotation = Quaternion.Euler(0, 0, 0);
+            if (lifeTime > 0)
+            {
+                go.AddComponent<LifeTime>().lifeTime = lifeTime;
+            }
+            return go;
+        }
     }
 }
-    [System.Serializable]
-    public class VfxData
-    {
-        public string id;
-        public string name;
-        public GameObject vfx;
-    }
+[System.Serializable]
+public class VfxData
+{
+    public string id;
+    public string name;
+    public GameObject vfx;
+}
