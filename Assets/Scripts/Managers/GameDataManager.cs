@@ -169,6 +169,7 @@ namespace DemonOverwhelming
             d.buffs = find.buffs;
             d.specialEffects = find.specialEffects;
             d.vfxId = find.vfxId;
+            //Debug.Log("ÕÒµ½µÄvfx³ß´ç£º" + find.vfxSize);
             d.vfxSize = find.vfxSize;
             d.startDamageWiatTime = find.startDamageWiatTime;
             return d;

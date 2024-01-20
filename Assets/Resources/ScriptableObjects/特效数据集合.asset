@@ -15,16 +15,16 @@ MonoBehaviour:
   vfxDatas:
   - id: 1
     name: "\u6D41\u8840"
-    vfx: {fileID: 167524, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+    vfx: {fileID: 1142193931700624, guid: 9d1846a1c8bff7142ab3959923c7d9c2, type: 3}
   - id: 2
     name: "\u706B\u70AE"
     vfx: {fileID: 130848, guid: d16221e794fe16e4e8994a7f8c770561, type: 3}
   - id: 3
     name: "\u9B54\u6CD5"
     vfx: {fileID: 185518, guid: 2ef436b6c6313494daf190cd68ebf636, type: 3}
-  - id: 4
+  - id: "\u7194\u7089\u706B"
     name: "\u7194\u7089\u706B"
-    vfx: {fileID: 1195354096605370, guid: c785625bfa059c34d9ab1cebb0cd955f, type: 3}
+    vfx: {fileID: 1636806931387756, guid: 448e8d4f82f29da4298ec7ad31825184, type: 3}
   - id: 5
     name: "\u91D1\u94B1\u62D6\u5C3E"
     vfx: {fileID: 185524, guid: e6177bb1faa07ae4781e14aebfdaebcc, type: 3}
@@ -33,4 +33,7 @@ MonoBehaviour:
     vfx: {fileID: 185524, guid: 9af6272a65890794b8bd9d2d8ff3b661, type: 3}
   - id: 7
     name: "aoe\u6D4B\u8BD5"
-    vfx: {fileID: 1883610838541854, guid: aa72280b4bb67cb468b0ffc37bcfc9c0, type: 3}
+    vfx: {fileID: 1351971699517528, guid: 7e8a0869a599e3b4b80673e467868254, type: 3}
+  - id: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    name: "\u7269\u7406\u51FB\u4E2D\u7279\u6548"
+    vfx: {fileID: 150944, guid: 3b9161edba9968c48bd058067ad18c84, type: 3}

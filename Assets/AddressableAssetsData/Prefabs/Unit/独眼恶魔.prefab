@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 8042768610767491521}
   - component: {fileID: 5874831577102904509}
   - component: {fileID: 2083041851909016999}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u72EC\u773C\u6076\u9B54"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ MonoBehaviour:
       cost: 0
       moveSpeed: 4
       defence: 0
-      defence_far: 0
+      defence_far: 2
       defence_magic: 0
       haveSkill: 0
       skillId: 0
@@ -522,11 +522,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 0100000002000000
-  enemiesInCheckArea: []
   missileGeneratePos: {fileID: 5989603941735916861}
   unitCenter: {fileID: 8891040559567793567}
   unitGraphic: {fileID: 533539918787997607}
   angent: {fileID: 2083041851909016999}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!65 &610548751953611333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -874,3 +876,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisEntity: {fileID: 610548751953611329}
+  collider: {fileID: 0}

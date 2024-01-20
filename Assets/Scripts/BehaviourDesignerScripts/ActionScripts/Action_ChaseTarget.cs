@@ -19,14 +19,16 @@ namespace DemonOverwhelming
         public SharedTransform moveTarget;
         public SharedVector3 moveTargetVector;
         Entity entity;
+
         public override void OnStart()
         {
             entity = thisEntity.Value;
         }
         public override TaskStatus OnUpdate()
         {
+
             //当范围内不再有敌人时，返回failed（不进行接下来的攻击判定而是返回移动行为）
-            if (entity.enemiesInCheckArea.Count == 0)
+            if (entity.targetableEntities.Count == 0)
             {
                 return TaskStatus.Failure;
             }
@@ -35,7 +37,7 @@ namespace DemonOverwhelming
             {
                 Transform nearestTransform = null;
                 float nearestDistance = float.MaxValue;
-                foreach (Entity t in entity.enemiesInCheckArea)
+                foreach (Entity t in entity.targetableEntities)
                 {
                     if (t)
                     {

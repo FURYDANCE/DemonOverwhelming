@@ -10,8 +10,7 @@ namespace DemonOverwhelming
         {
             //Debug.Log("½øÈë¹¥»÷×´Ì¬");
             manager.isAttacking = true;
-            //Ö´ÐÐ¹¥»÷Ä£¿é
-            manager.attackScript.Attack();
+
         }
         public void OnExit(CharacterStateManager manager)
         {

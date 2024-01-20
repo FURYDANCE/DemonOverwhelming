@@ -18,7 +18,7 @@ namespace DemonOverwhelming
         }
         public override TaskStatus OnUpdate()
         {
-            if (entity.enemiesInCheckArea.Count == 0)
+            if (entity.targetableEntities.Count == 0)
                 return TaskStatus.Running;
             else
                 return TaskStatus.Success;

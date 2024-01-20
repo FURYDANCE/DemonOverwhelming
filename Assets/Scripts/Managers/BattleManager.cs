@@ -94,6 +94,7 @@ namespace DemonOverwhelming
         /// </summary>
         public List<FormatCard> allSelectedCards;
 
+        public LayerMask unitLayer;
         private void Awake()
         {
             if (instance != null)
@@ -234,13 +235,13 @@ namespace DemonOverwhelming
             //根据所给出id的第一位判断是投射物攻击还是直接攻击，并调用相应的方法
             if (firstStr == '4')
             {
-                Debug.Log("执行普通的近战伤害");
+                //Debug.Log("执行普通的近战伤害");
                 CreateDamage(attacker, GameDataManager.instance.GetDamageDataById(attackId), target);
                 return;
             }
             if (firstStr == '3')
             {
-                Debug.Log("执行创造投射物");
+                //Debug.Log("执行创造投射物");
 
                 GenerateUnitMissile(attacker, attacker.GetMissileGeneratePos().position, attackId, target.transform);
                 return;
@@ -260,7 +261,7 @@ namespace DemonOverwhelming
         public void CreateAoeHurtArea(Vector3 center, Vector2 checkArea, Entity creater, Camp camp, DamageData damageData)
         {
 
-            Collider[] colliders = Physics.OverlapBox(center, new Vector3(checkArea.x, checkArea.y, 50));
+            Collider[] colliders = Physics.OverlapBox(center, new Vector3(checkArea.x, 1, checkArea.y));
             foreach (Collider c in colliders)
             {
                 Entity e = c.GetComponent<Entity>();
@@ -283,6 +284,10 @@ namespace DemonOverwhelming
             if (creater.camp == target.camp)
                 return 0;
             float finalDamage;
+            //Debug.Log("当前传入的vfx尺寸：" + damageData.vfxSize);
+            //创建特效
+            VfxManager.instance.CreateVfx(damageData.vfxId, target.unitCenter.position,
+               new Vector3(damageData.vfxSize, damageData.vfxSize, damageData.vfxSize), 5);
             //使其受伤
             if (target && creater)
             {
@@ -293,7 +298,7 @@ namespace DemonOverwhelming
 
                 //造成伤害
                 target.TakeDamage(damageData, creater, out finalDamage);
-                Debug.Log("造成的最终伤害：" + finalDamage);
+                //Debug.Log("造成的最终伤害：" + finalDamage);
                 //伤害输出者的攻击后词条事件
                 creater.TagEvent_AfterAttack(creater, finalDamage, target, damageData);
                 //伤害承受者的受伤后词条事件
@@ -317,7 +322,7 @@ namespace DemonOverwhelming
         /// （修改过后的）创造投射物方法
         /// </summary>
         /// <returns></returns>
-        public UnitMissile GenerateUnitMissile(Entity creater,Vector3 startPos,string missileId,Transform moveTarget)
+        public UnitMissile GenerateUnitMissile(Entity creater, Vector3 startPos, string missileId, Transform moveTarget)
         {
             GameObject go = Instantiate(GameDataManager.instance.defaultMissile, GameObject.Find("Missiles").transform);
             UnitMissile missile = go.GetComponent<UnitMissile>();

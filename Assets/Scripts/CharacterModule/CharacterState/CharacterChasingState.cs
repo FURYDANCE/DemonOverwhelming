@@ -14,7 +14,7 @@ namespace DemonOverwhelming
             //Debug.Log("进入追击状态");
 
 
-            manager.chaseScript.OnStartChase();
+  
         }
 
         public void OnExit(CharacterStateManager manager)
@@ -26,10 +26,10 @@ namespace DemonOverwhelming
         public void OnUpdate(CharacterStateManager manager)
         {
 
-            manager.chaseScript.Chase();
+       
             //如果范围内不在检测到敌方对象，重新回归到行走状态
             //如果有玩家控制脚本，则按下控制按键时也回到行走状态
-            if (manager.enemySelected.Count == 0 || (manager.moveScript.ToString().Contains("Input") && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D))))
+            if (manager.enemySelected.Count == 0 ||  (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.D)))
             {
                 manager.SetAttackTarget(null);
                 manager.ChangeState(new CharacterWalkingState());

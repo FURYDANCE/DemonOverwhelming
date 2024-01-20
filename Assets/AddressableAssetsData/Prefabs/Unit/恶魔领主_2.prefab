@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 2911107684262909261}
   - component: {fileID: 1967229306}
   - component: {fileID: 2921202980430950971}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u6076\u9B54\u9886\u4E3B_2"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,6 +592,7 @@ MonoBehaviour:
   unitCenter: {fileID: 0}
   unitGraphic: {fileID: 0}
   angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
 --- !u!114 &610548751953611334
 MonoBehaviour:
   m_ObjectHideFlags: 0

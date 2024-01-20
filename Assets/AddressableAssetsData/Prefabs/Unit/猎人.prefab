@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19087449660496900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 1.021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -451,7 +451,7 @@ GameObject:
   - component: {fileID: -1059056771459027900}
   - component: {fileID: 2003293178707509963}
   - component: {fileID: -850122558310752924}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "\u730E\u4EBA"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ MonoBehaviour:
       cost: 0
       moveSpeed: 5.5
       defence: 0
-      defence_far: 0
+      defence_far: 2
       defence_magic: 0
       haveSkill: 0
       skillId: 0
@@ -521,9 +521,9 @@ MonoBehaviour:
       attackDistance: 27
       chaseTime: 0
       attackWaitTime: 1
-      attackTime: 1
+      attackTime: 0.5
       attackIds:
-      - 33000001
+      - 31000001
       specialTags:
       - "\u94B1\u888B5"
       bloodDrop: 1
@@ -552,11 +552,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 0100000002000000
-  enemiesInCheckArea: []
-  missileGeneratePos: {fileID: 0}
-  unitCenter: {fileID: 0}
-  unitGraphic: {fileID: 0}
+  missileGeneratePos: {fileID: 4938855450468382412}
+  unitCenter: {fileID: 4627058088173262767}
+  unitGraphic: {fileID: 533539918787997607}
   angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 3794821229945149436}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!65 &610548751953611333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -838,6 +840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisEntity: {fileID: 610548751953611329}
+  collider: {fileID: 0}
 --- !u!65 &8573412484325865815
 BoxCollider:
   m_ObjectHideFlags: 0

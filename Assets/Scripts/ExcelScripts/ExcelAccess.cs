@@ -322,7 +322,7 @@ public class ExcelAccess
         //伤害变量
         for (int i = 3; i < collect_6.Count; i++)
         {
-            if (collect_5[i][0].ToString() == "") continue; //行不是空的就开始执行
+            if (collect_6[i][0].ToString() == "") continue; //行不是空的就开始执行
             DamageData dd = new DamageData
             {
                 id = collect_6[i][0].ToString(),

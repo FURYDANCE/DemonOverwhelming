@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 610548751953611329}
   - component: {fileID: 5122603914408750376}
   - component: {fileID: 7994262099243616688}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: "[WIP]\u917F\u9152\u5927\u5E08"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -550,11 +550,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 0100000002000000
-  enemiesInCheckArea: []
   missileGeneratePos: {fileID: 1951872418714271964}
   unitCenter: {fileID: 1951872418714271964}
   unitGraphic: {fileID: 533539918787997607}
   angent: {fileID: 5122603914408750376}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!195 &5122603914408750376
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -677,6 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thisEntity: {fileID: 610548751953611329}
+  collider: {fileID: 0}
 --- !u!1 &901605652658551076
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,16 +48,27 @@ namespace DemonOverwhelming
         /// </summary>
         public void Translate()
         {
-            if(attackTarget==null)
+            if (attackTarget == null)
             {
                 Debug.Log("目标不存在");
                 MissileDie();
+                return;
             }
             //位移目标存在单位组件时朝着其中心位置移动，否则直接朝着位移目标的坐标移动
-            if (attackTargetEntity != null)
-                nowTarget = attackTargetEntity.GetUnitCenter().position;
-            else
-                nowTarget = attackTarget.position;
+            if (nowTarget != null)
+            {
+                if (attackTargetEntity != null)
+                    nowTarget = attackTargetEntity.GetUnitCenter().position;
+                else
+                    nowTarget = attackTarget.position;
+            }
+            if (parameter.moveType == MissileMoveType.teleport)
+            {
+                transform.position = nowTarget;
+                EndMove();
+                return;
+            }
+         
             transform.position = Vector3.MoveTowards(transform.position, nowTarget, parameter.speed * Time.deltaTime);
         }
         /// <summary>
@@ -67,14 +78,31 @@ namespace DemonOverwhelming
         {
             if (Vector3.Distance(transform.position, nowTarget) < 0.25f)
             {
-                Debug.Log("判定投射物移动到终点");
-                if (attackTargetEntity)
+                //Debug.Log("判定投射物移动到终点");
+                EndMove();
+            }
+        }
+        /// <summary>
+        /// 结束投射物移动，触发相应方法
+        /// </summary>
+        public void EndMove()
+        {
+            if (attackTargetEntity)
+            {
+                if (!parameter.useAoe)
                 {
-                    Debug.Log("伤害目标");
-                    BattleManager.instance.CreateDamage(creater, parameter.damageData, attackTargetEntity);
+                    //Debug.Log("伤害目标");
+                    //Debug.Log("当前传入的vfx尺寸1：" + parameter.damageData.vfxSize);
 
-                    MissileDie();
+                    BattleManager.instance.CreateDamage(creater, parameter.damageData, attackTargetEntity);
                 }
+                if (parameter.useAoe)
+                {
+                    Debug.Log("创建aoe伤害区域");
+                    BattleManager.instance.CreateAoeHurtArea(attackTargetEntity.transform.position, parameter.aoeArea, creater, creater.camp, parameter.damageData);
+
+                }
+                MissileDie();
             }
         }
         //调整角度
@@ -102,7 +130,8 @@ namespace DemonOverwhelming
         }
         public void MissileDie()
         {
-            Debug.Log("投射物死亡");
+            VfxManager.instance.CreateVfx(parameter.endObjectId, transform.position, new Vector3(5, 5, 5), 5);
+            //Debug.Log("投射物死亡");
             Destroy(gameObject);
             return;
         }

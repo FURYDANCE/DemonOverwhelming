@@ -20,35 +20,35 @@ MonoBehaviour:
   - id: 2
     formation:
       soldierOffsets:
-      - {x: 0, y: 0, z: 2}
-      - {x: 0, y: 0, z: -2}
+      - {x: 0, y: 0, z: 3.5}
+      - {x: 0, y: 0, z: -3.5}
   - id: 3
     formation:
       soldierOffsets:
       - {x: 0, y: 0, z: 0}
-      - {x: -4, y: 0, z: 4}
-      - {x: -4, y: 0, z: -4}
+      - {x: -3.5, y: 0, z: 3.5}
+      - {x: -3.5, y: 0, z: -3.5}
   - id: 4
     formation:
       soldierOffsets:
-      - {x: 2, y: 0, z: 2}
-      - {x: -2, y: 0, z: -2}
-      - {x: -2, y: 0, z: 2}
-      - {x: 2, y: 0, z: -2}
+      - {x: 3.5, y: 0, z: 3.5}
+      - {x: -3.5, y: 0, z: -3.5}
+      - {x: -3.5, y: 0, z: 3.5}
+      - {x: 3.5, y: 0, z: -3.5}
   - id: 5
     formation:
       soldierOffsets:
       - {x: 0, y: 0, z: 0}
-      - {x: 2, y: 0, z: 2}
-      - {x: -2, y: 0, z: -2}
-      - {x: -2, y: 0, z: 2}
-      - {x: 2, y: 0, z: -2}
+      - {x: 3, y: 0, z: 3}
+      - {x: -3, y: 0, z: -3}
+      - {x: -3, y: 0, z: 3}
+      - {x: 3, y: 0, z: -3}
   - id: 8
     formation:
       soldierOffsets:
       - {x: 0, y: 0, z: 0}
-      - {x: 1, y: 0, z: 0}
-      - {x: 0, y: 0, z: 1}
+      - {x: 2, y: 0, z: 0}
+      - {x: 0, y: 0, z: 2}
       - {x: 1, y: 0, z: 1}
       - {x: 1.5, y: 0, z: 0}
       - {x: 0, y: 0, z: 1.5}

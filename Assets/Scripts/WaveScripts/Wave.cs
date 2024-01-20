@@ -18,7 +18,9 @@ namespace DemonOverwhelming
         {
             foreach (OneGroup group in groups)
             {
-                UnitCreateManager.instance.CreateOneTeamUnit(Camp.human, group.soldierId, group.formationId, group.offset);
+                Vector3 randomOffset = new Vector3(Random.Range(-10f, 10f), 0, Random.Range(-10f, 10f));
+                Debug.Log("Ëæ»úÆ«ÒÆ£º" + randomOffset);
+                UnitCreateManager.instance.CreateOneTeamUnit(Camp.human, group.soldierId, group.formationId, group.offset + randomOffset);
                 //BattleManager.instance.CreateSoldierWithGroup(Camp.human, group.soldierId, group.formationId, true, group.offset);
             }
         }
@@ -34,5 +36,5 @@ public class OneGroup
     public string name;
     public string soldierId;
     public string formationId;
-    public Vector2 offset;
+    public Vector3 offset;
 }
