@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4f17528bd0803ba4a89d9940f613390d, type: 3}
   m_Color: {r: 0.4, g: 0.4, b: 0.4, a: 1}
@@ -501,7 +501,7 @@ MonoBehaviour:
     type: 1
     name: "\u8981\u585E-\u6076\u9B54"
     sprite: {fileID: 0}
-    Hp: 50
+    Hp: 200
     nowHp: 0
     hurtDamage: 0
     introduct: "\u6211\u65B9\u8981\u585E"

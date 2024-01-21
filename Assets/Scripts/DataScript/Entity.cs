@@ -92,7 +92,7 @@ namespace DemonOverwhelming
         {
             if (!enemiesCheckArea)
             {
-                Debug.Log("缺少单位检测组件");
+                Debug.Log(gameObject.name + " 单位缺少单位检测组件");
                 return;
 
             }
@@ -132,7 +132,12 @@ namespace DemonOverwhelming
             {
                 spineObject = parameter.name.Split("/")[1].Contains("spine") ? true : false;
             }
-
+            //确保变量成功读入
+            if (parameter.character.id == "")
+            {
+                Debug.Log("重新根据自身id获取变量");
+                SetEntityParameter();
+            }
             ////生成血条
             //if (!hpBar)
             //{
@@ -348,7 +353,7 @@ namespace DemonOverwhelming
             if (realDamage > 0)
             {
                 StartCoroutine(HitEffect());
-                VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Hit,unitCenter.position, new Vector3(5, 5, 5), 3);
+                VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Hit, unitCenter.position, new Vector3(5, 5, 5), 3);
             }
             //如果实体上有计算dps的组件则进行计算
             if (GetComponent<DpsCaculate>())
@@ -782,7 +787,7 @@ namespace DemonOverwhelming
                 //    unitGraphic.transform.rotation = Quaternion.Euler(-45, 180, 0);
                 //如果是spine，设置左右转向
                 if (spineObject && transform.position.x < target.x)
-                    unitGraphic.transform.localEulerAngles =new Vector3(45, 0, 0);
+                    unitGraphic.transform.localEulerAngles = new Vector3(45, 0, 0);
                 if (spineObject && transform.position.x > target.x)
                     unitGraphic.transform.localEulerAngles = new Vector3(-45, 180, 0);
             }

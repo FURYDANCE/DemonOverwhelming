@@ -9,6 +9,9 @@ namespace DemonOverwhelming
         public Entity thisEntity;
         [SerializeField]
         BoxCollider collider;
+        float offsetX;
+        Vector3 offset;
+
 
         private void Start()
         {
@@ -21,14 +24,24 @@ namespace DemonOverwhelming
         }
         private void Update()
         {
-            thisEntity.enemiesInCheckArea = Physics.OverlapBox(transform.position + (collider.center * thisEntity.transform.localScale.x), collider.size * thisEntity.transform.localScale.x,
-                thisEntity.camp == Camp.demon ? Quaternion.Euler(0, 0, 0) : Quaternion.Euler(0, 180, 0), BattleManager.instance.unitLayer);
+            //改进不同阵营之间的索敌区分
+            offsetX = collider.center.x * thisEntity.transform.localScale.x;
+            offset = new Vector3(thisEntity.camp == Camp.demon ? offsetX : -offsetX
+                 , collider.center.y * thisEntity.transform.localScale.y, collider.center.z * thisEntity.transform.localScale.z);
+
+            thisEntity.enemiesInCheckArea = Physics.OverlapBox(
+                transform.position + offset, collider.size * thisEntity.transform.localScale.x, Quaternion.Euler(0, 0, 0), BattleManager.instance.unitLayer);
 
         }
         private void OnDrawGizmos()
         {
             if (collider)
-                Gizmos.DrawWireCube(transform.position + (collider.center * thisEntity.transform.localScale.x), collider.size * thisEntity.transform.localScale.x);
+            {
+                offsetX = collider.center.x * thisEntity.transform.localScale.x;
+                offset = new Vector3(thisEntity.camp == Camp.demon ? offsetX : -offsetX
+                     , collider.center.y * thisEntity.transform.localScale.y, collider.center.z * thisEntity.transform.localScale.z);
+                Gizmos.DrawWireCube(transform.position + offset, collider.size * thisEntity.transform.localScale.x);
+            }
         }
         //用Ontrigger方法，在单位死亡时无法正确执行Exit方法，所以改成了OverlapBox方法
 

@@ -45,6 +45,9 @@ TagManager:
   - name: BackGround
     uniqueID: 981344925
     locked: 0
+  - name: Decos
+    uniqueID: 1603205357
+    locked: 0
   - name: Layer1
     uniqueID: 3729727673
     locked: 0
