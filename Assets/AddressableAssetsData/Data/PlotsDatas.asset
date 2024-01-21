@@ -117,7 +117,7 @@ MonoBehaviour:
     type: 0
     name: "\u6076\u9B54\u5C0F\u5175/spine"
     sprite: {fileID: 21300000, guid: eb03074666bebb4438fe6983383c4f26, type: 3}
-    Hp: 20
+    Hp: 25
     nowHp: 0
     hurtDamage: 0
     introduct: "\u6076\u9B54\u5C0F\u5175\n\u4E00\u53EA\u6742\u9C7C"
@@ -195,7 +195,7 @@ MonoBehaviour:
     type: 0
     name: "\u72EC\u773C\u6076\u9B54/spine"
     sprite: {fileID: 21300000, guid: 9221276bfd7913b499ee7334fdb3bb53, type: 3}
-    Hp: 10
+    Hp: 15
     nowHp: 0
     hurtDamage: 0
     introduct: "\u5F13\u7BAD\u624B"
@@ -2258,11 +2258,11 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   - ID: 2000001
-    unitPrefab: {fileID: 610548751953611389, guid: 0e8de616070df7b4191281af20fd82df, type: 3}
+    unitPrefab: {fileID: 6623794187887408685, guid: 67c81e4c62c9e3742a84200b49aaffc7, type: 3}
     type: 1
     name: "\u7BAD\u5854"
     sprite: {fileID: 0}
-    Hp: 20
+    Hp: 300
     nowHp: 0
     hurtDamage: 0
     introduct: "\u7BAD\u5854\n\u653B\u51FB\u8BBE\u65BD"
@@ -2280,7 +2280,7 @@ MonoBehaviour:
       attackDistance: 35
       chaseTime: 0
       attackWaitTime: 0.5
-      attackTime: 0.5
+      attackTime: 0
       attackIds:
       - 31000001
       specialTags:
@@ -2301,7 +2301,7 @@ MonoBehaviour:
     type: 1
     name: "\u9ED1\u6697\u5821\u5792"
     sprite: {fileID: 0}
-    Hp: 30
+    Hp: 300
     nowHp: 0
     hurtDamage: 0
     introduct: "\u636E\u70B9"
@@ -2340,7 +2340,7 @@ MonoBehaviour:
     type: 1
     name: "\u4EBA\u7C7B\u57CE\u5821"
     sprite: {fileID: 0}
-    Hp: 30
+    Hp: 200
     nowHp: 0
     hurtDamage: 0
     introduct: "\u654C\u65B9\u636E\u70B9"
@@ -2379,7 +2379,7 @@ MonoBehaviour:
     type: 1
     name: "\u8981\u585E-\u4EBA\u7C7B"
     sprite: {fileID: 0}
-    Hp: 50
+    Hp: 200
     nowHp: 0
     hurtDamage: 0
     introduct: "\u654C\u65B9\u8981\u585E"
@@ -2418,7 +2418,7 @@ MonoBehaviour:
     type: 1
     name: "\u8981\u585E-\u6076\u9B54"
     sprite: {fileID: 0}
-    Hp: 50
+    Hp: 200
     nowHp: 0
     hurtDamage: 0
     introduct: "\u6211\u65B9\u8981\u585E"
@@ -3339,7 +3339,7 @@ MonoBehaviour:
     arcMoveHeight: 25
   - id: 32000003
     name: "\u8303\u56F4\u4F24\u5BB3_\u7194\u7089\u8FD1\u5904\u55B7\u706B"
-    damageDataId: 41000003
+    damageDataId: 41000023
     damageData:
       id: 
       name: 
@@ -3984,7 +3984,7 @@ MonoBehaviour:
     name: "\u4F4E\u7EA7aoe\u5355\u4F4D\u9B54\u6CD5\u653B\u51FB\uFF08\u7194\u7089\u86DE\u8753\uFF09"
     physicDamage: 0
     farDamage: 0
-    magicDamage: 3
+    magicDamage: 1
     buffs:
     - 0
     specialEffects:
