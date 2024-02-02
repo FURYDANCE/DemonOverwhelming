@@ -606,6 +606,17 @@ namespace DemonOverwhelming
         }
         public void PlayAnimation_Idle()
         {
+            if (skAni.AnimationState.GetCurrent(0) != null)
+            {
+                string aniName = skAni.AnimationName;
+                Debug.Log(aniName);
+                if (aniName.Contains("idle"))
+                {
+
+                    Debug.Log("已经在播放同名动画");
+                    return;
+                }
+            }
             if (animations != null && animations.animation_Idle != null)
                 animator.Play(animations.animation_Idle.name);
             if (skAni != null)
@@ -620,6 +631,17 @@ namespace DemonOverwhelming
         }
         public void PlayAniamtion_Walk()
         {
+            if (skAni.AnimationState.GetCurrent(0) != null)
+            {
+                string aniName = skAni.AnimationName;
+                if (aniName.Contains("run"))
+                {
+                    //Debug.Log(aniName);
+                    //Debug.Log("已经在播放同名动画");
+                    return;
+                }
+            }
+
             if (animations != null && animations.animation_Walk != null)
                 animator.Play(animations.animation_Walk.name);
             if (skAni != null)
@@ -678,19 +700,42 @@ namespace DemonOverwhelming
             if (index >= parameter.character.skills.Count)
             {
                 Debug.Log(index);
-
                 return;
-
             }
-            Debug.Log("使用技能1");
+
 
             Skill skill = parameter.character.skills[index];
             if (skill.waitTimer < skill.waitTime)
+            {
+                Debug.Log("技能冷却中");
                 return;
-            Debug.Log("使用技能2");
+            }
 
             skill.skillBase.OnUse(this, skill);
         }
+
+        /// <summary>
+        /// 检测技能可以使用
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public bool CheckSkillCanUse(int index)
+        {
+            if (index >= parameter.character.skills.Count)
+            {
+                Debug.Log("下标超出");
+                return false;
+            }
+            Skill skill = parameter.character.skills[index];
+            if (skill.waitTimer < skill.waitTime)
+            {
+                Debug.Log("技能冷却中");
+                return false;
+            }
+            Debug.Log("可以使用技能");
+            return true;
+        }
+
         #endregion
 
         #region 变量存取相关

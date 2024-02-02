@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.InputSystem;
+
 namespace DemonOverwhelming
 {
     /// <summary>
@@ -38,7 +41,7 @@ namespace DemonOverwhelming
         public bool intoWalking;
         public float start_Y;
 
-
+        public NavMeshAgent agent;
 
         SpriteRenderer spriteRenderer;
         void Start()
@@ -47,25 +50,189 @@ namespace DemonOverwhelming
             canAttack = true;
             entity = GetComponent<Entity>();
             parameter = GetComponent<Entity>().parameter;
-            ChangeState(new CharacterGeneratingState());
-            enemySelected = new List<Collider>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
-            if (spriteRenderer)
-            {
-                if (entity.camp == Camp.demon)
-                    spriteRenderer.flipX = false;
-                else
-                    spriteRenderer.flipX = true;
-            }
-      
+            agent = GetComponent<NavMeshAgent>();
+            agent.updateRotation = false;
+            //ChangeState(new CharacterGeneratingState());
+            //enemySelected = new List<Collider>();
+            //spriteRenderer = GetComponent<SpriteRenderer>();
+            //if (spriteRenderer)
+            //{
+            //    if (entity.camp == Camp.demon)
+            //        spriteRenderer.flipX = false;
+            //    else
+            //        spriteRenderer.flipX = true;
+            //}
+
 
         }
 
         void Update()
         {
-            currentState.OnUpdate(this);
-            CheckEnemy();
+
+            InputMove();
+            //currentState.OnUpdate(this);
+            //CheckEnemy();
         }
+
+
+        //inputsystem输入的各个方法
+        bool mvLeft, mvRight, mvUp, mvDown;
+        /// <summary>
+        /// 重置键入的各个方向
+        /// </summary>
+        public void ResetMovingDir()
+        {
+            mvLeft = false;
+            mvRight = false;
+            mvUp = false;
+            mvDown = false;
+        }
+        /// <summary>
+        /// 检测是否在输入移动中
+        /// </summary>
+        /// <returns></returns>
+        public bool CheckIsInputMoving()
+        {
+            if (!mvLeft && !mvRight && !mvUp && !mvDown)
+                return false;
+            else
+                return true;
+        }
+        public void OnMoveLeft(InputAction.CallbackContext context)
+        {
+            if (cantMove)
+            {
+                Debug.Log("当前不能移动");
+                return;
+            }
+            if (context.started)
+            {
+
+                entity.PlayAniamtion_Walk();
+                mvLeft = true;
+            }
+
+            if (context.canceled)
+            {
+                mvLeft = false;
+                if (!CheckIsInputMoving())
+                    entity.PlayAnimation_Idle();
+            }
+        }
+        public void OnMoveRight(InputAction.CallbackContext context)
+        {
+            if (cantMove)
+            {
+                Debug.Log("当前不能移动");
+                return;
+            }
+            if (context.started)
+            {
+                entity.PlayAniamtion_Walk();
+                mvRight = true;
+            }
+
+            if (context.canceled)
+            {
+                mvRight = false;
+                if (!CheckIsInputMoving())
+                    entity.PlayAnimation_Idle();
+            }
+        }
+        public void OnMoveUp(InputAction.CallbackContext context)
+        {
+            if (cantMove)
+            {
+                Debug.Log("当前不能移动");
+                return;
+            }
+            if (context.phase == InputActionPhase.Started)
+            {
+                entity.PlayAniamtion_Walk();
+                mvUp = true;
+            }
+
+            if (context.phase == InputActionPhase.Canceled)
+            {
+                mvUp = false;
+                if (!CheckIsInputMoving())
+                    entity.PlayAnimation_Idle();
+            }
+        }
+        public void OnMoveDown(InputAction.CallbackContext context)
+        {
+            if (cantMove)
+            {
+                Debug.Log("当前不能移动");
+                return;
+            }
+            if (context.started)
+            {
+                entity.PlayAniamtion_Walk();
+                mvDown = true;
+            }
+
+            if (context.canceled)
+            {
+                mvDown = false;
+                if (!CheckIsInputMoving())
+                    entity.PlayAnimation_Idle();
+            }
+        }
+        //使用技能的输入判定
+        bool skillInput;
+        /// <summary>
+        /// 获取是否键入技能按键
+        /// </summary>
+        /// <returns></returns>
+        public bool GetSkillInput() => skillInput;
+        /// <summary>
+        /// 行为树读取到可以使用技能之后便会执行使用技能的行为
+        /// </summary>
+        /// <param name="isTrue"></param>
+        public void SetSkillInput(bool isTrue) => skillInput = isTrue;
+        public void OnSkill(InputAction.CallbackContext context)
+        {
+            if (context.phase == InputActionPhase.Started)
+            {
+                if (entity.CheckSkillCanUse(1))
+                {
+                    SetSkillInput(true);
+                }
+                //entity.UseSkill(1);
+            }
+
+        }
+        bool cantMove;
+        public void SetCantMove(bool isTrue) => cantMove = isTrue;
+        public void InputMove()
+        {
+            if (cantMove)
+            {
+                Debug.Log("当前不能移动");
+                return;
+            }
+            float speedX = 0, speedZ = 0;
+            if (mvLeft)
+                speedX = -parameter.character.moveSpeed;
+            if (mvRight)
+                speedX = parameter.character.moveSpeed;
+            if (mvUp)
+                speedZ = parameter.character.moveSpeed;
+            if (mvDown)
+                speedZ = -parameter.character.moveSpeed;
+            Vector3 speed = new Vector3(speedX, 0, speedZ);
+            agent.velocity = speed;
+            entity.FlipTo(transform.position + speed);
+
+
+
+
+        }
+
+
+
+
         /// <summary>
         /// 改变状态
         /// </summary>

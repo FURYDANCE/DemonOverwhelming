@@ -31,5 +31,9 @@ namespace DemonOverwhelming
             skillIcon = skill.skillIcon;
             eachLevelDescriptions = skill.eachLevelDescriptions;
         }
+        public void SkillUesd()
+        {
+            waitTimer = 0;
+        }
     }
 }
