@@ -359,7 +359,7 @@ namespace DemonOverwhelming
         /// <returns></returns>
         public Missile GenerateOneMissle(Vector3 pos, string id, Camp camp, Entity creater)
         {
-            GameObject go = Instantiate(new GameObject(), GameObject.Find("Missiles").transform);
+            GameObject go = Instantiate(GameDataManager.instance.defaultMissile, GameObject.Find("Missiles").transform);
             go.transform.position = pos;
             go.transform.SetParent(GameObject.Find("Missiles").transform);
             SpriteRenderer spriteRenderer = go.AddComponent<SpriteRenderer>();
@@ -385,7 +385,7 @@ namespace DemonOverwhelming
         /// <returns></returns>
         public Missile GenerateOneMissle(Vector3 pos, string id, Camp camp, Entity creater, Entity entityNotAttack)
         {
-            GameObject go = Instantiate(new GameObject(), GameObject.Find("Missiles").transform);
+            GameObject go = Instantiate(GameDataManager.instance.defaultMissile, GameObject.Find("Missiles").transform);
             go.transform.position = pos;
             go.transform.SetParent(GameObject.Find("Missiles").transform);
             SpriteRenderer spriteRenderer = go.AddComponent<SpriteRenderer>();

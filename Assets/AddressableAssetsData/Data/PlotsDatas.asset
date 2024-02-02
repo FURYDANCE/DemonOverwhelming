@@ -2555,7 +2555,7 @@ MonoBehaviour:
       attackWaitTime: 0.6
       attackTime: 0.4
       attackIds:
-      - 33000003
+      - 41000015
       specialTags:
       - 0
       bloodDrop: 1000
