@@ -52,6 +52,7 @@ namespace DemonOverwhelming
             parameter = GetComponent<Entity>().parameter;
             agent = GetComponent<NavMeshAgent>();
             agent.updateRotation = false;
+            BattleManager.instance.SetHero(entity);
             //ChangeState(new CharacterGeneratingState());
             //enemySelected = new List<Collider>();
             //spriteRenderer = GetComponent<SpriteRenderer>();
@@ -195,14 +196,22 @@ namespace DemonOverwhelming
         {
             if (context.phase == InputActionPhase.Started)
             {
-                if (entity.CheckSkillCanUse(1))
-                {
-                    SetSkillInput(true);
-                }
+                UseSkillMethod();
                 //entity.UseSkill(1);
             }
 
         }
+        /// <summary>
+        /// 调用技能前的确保技能可以使用的方法
+        /// </summary>
+        public void UseSkillMethod()
+        {
+            if (entity.CheckSkillCanUse(0))
+            {
+                SetSkillInput(true);
+            }
+        }
+
         bool cantMove;
         public void SetCantMove(bool isTrue) => cantMove = isTrue;
         public void InputMove()

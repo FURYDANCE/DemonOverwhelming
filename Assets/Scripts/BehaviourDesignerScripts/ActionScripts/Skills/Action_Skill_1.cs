@@ -18,6 +18,7 @@ namespace DemonOverwhelming
             entity = thisEntity.Value;
             entity.GetComponent<CharacterStateManager>().ResetMovingDir();
             Skill();
+            entity.skills[0].SkillUesd();
         }
         public override TaskStatus OnUpdate()
         {
