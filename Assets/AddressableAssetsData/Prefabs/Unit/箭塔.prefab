@@ -541,7 +541,7 @@ MonoBehaviour:
     type: 1
     name: "\u7BAD\u5854"
     sprite: {fileID: 0}
-    Hp: 300
+    Hp: 150
     nowHp: 0
     hurtDamage: 0
     introduct: "\u7BAD\u5854\n\u653B\u51FB\u8BBE\u65BD"

@@ -26,7 +26,8 @@ namespace DemonOverwhelming
         }
         public override TaskStatus OnUpdate()
         {
-
+            //当目标是单位时，行动目的地应该为自身到目标碰撞体最近的点？
+            Vector3 targetPos = Vector3.zero;
             //当范围内不再有敌人时，返回failed（不进行接下来的攻击判定而是返回移动行为）
             if (entity.targetableEntities.Count == 0)
             {
@@ -46,6 +47,8 @@ namespace DemonOverwhelming
                         {
                             nearestTransform = t.transform;
                             nearestDistance = distance;
+                            Vector3 minDistanceToCollider = t.boxCollider.ClosestPoint(transform.position);
+                            targetPos = new Vector3(minDistanceToCollider.x, transform.position.y, minDistanceToCollider.z);
                         }
                     }
                 }
@@ -56,10 +59,13 @@ namespace DemonOverwhelming
                     moveTarget.SetValue(nearestTransform);
                     return TaskStatus.Success;
                 }
+
+
+
                 if (nearestTransform != null)
                 {
-                    entity.SetMoveTarget(nearestTransform.position);
-                    moveTargetVector.SetValue(nearestTransform.position);
+                    entity.SetMoveTarget(targetPos);
+                    moveTargetVector.SetValue(targetPos);
                 }
                 //其他的情况，视为正在追逐目标，返回running
                 return TaskStatus.Running;

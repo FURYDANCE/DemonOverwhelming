@@ -26,7 +26,7 @@ namespace DemonOverwhelming
         /// 英雄技能图标的填充
         /// </summary>
         public Image[] skillImage_fill;
-
+        CharacterStateManager heroStateManager;
         /// <summary>
         /// 开始英雄信息界面的运作
         /// </summary>
@@ -34,6 +34,7 @@ namespace DemonOverwhelming
         {
             //设置英雄
             this.hero = hero;
+            heroStateManager = hero.GetComponent<CharacterStateManager>();
             //设置英雄技能
             heroSkills = hero.parameter.character.skills;
             //设置英雄技能图标
@@ -56,20 +57,26 @@ namespace DemonOverwhelming
 
             }
             //添加英雄的技能事件
-            skillImage_fill[0].GetComponent<Button>().onClick.AddListener(() => hero.UseSkill(0));
-            skillImage_fill[1].GetComponent<Button>().onClick.AddListener(() => hero.UseSkill(1));
-            skillImage_fill[2].GetComponent<Button>().onClick.AddListener(() => hero.UseSkill(2));
-            skillImage_fill[3].GetComponent<Button>().onClick.AddListener(() => hero.UseSkill(3));
+            skillImage_fill[0].GetComponent<Button>().onClick.AddListener(() => heroStateManager.UseSkillMethod())/* hero.UseSkill(0))*/;
+            skillImage_fill[1].GetComponent<Button>().onClick.AddListener(() => heroStateManager.UseSkillMethod()) /*hero.UseSkill(1))*/;
+            skillImage_fill[2].GetComponent<Button>().onClick.AddListener(() => heroStateManager.UseSkillMethod())/* hero.UseSkill(2))*/;
+            skillImage_fill[3].GetComponent<Button>().onClick.AddListener(() => heroStateManager.UseSkillMethod())/* hero.UseSkill(3))*/;
         }
         private void Update()
         {
             if (!hero)
                 return;
+            //设置英雄技能
+            heroSkills = hero.parameter.character.skills;
             //计算各个技能的填充值
             for (int i = 0; i < skillImage.Length; i++)
             {
                 if (i < heroSkills.Count)
+                {
+                    //if (i == 0)
+                        //Debug.Log( "timer=" + heroSkills[i].waitTimer + "/" + "time  =  " + heroSkills[i].waitTime);
                     skillImage_fill[i].fillAmount = heroSkills[i].waitTimer / heroSkills[i].waitTime;
+                }
             }
         }
     }

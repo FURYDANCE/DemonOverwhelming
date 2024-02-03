@@ -11,6 +11,8 @@ namespace DemonOverwhelming
 
         [Header("默认状态下，有玩家输入时返回false，无输入时返回true，勾选这个之后返回相反")]
         public bool anti;
+        [Header("勾选这个，在有按键时返回running，没有时返回failed")]
+        public bool returnRunning;
         [Header("检测按下技能")]
         public bool checkSkill;
         PlayerInput input;
@@ -34,6 +36,19 @@ namespace DemonOverwhelming
                 else
                     return TaskStatus.Failure;
             }
+
+            //检测持续输入的情况
+            if (returnRunning)
+            {
+                if (stateManager.CheckIsInputMoving())
+                {
+                    return TaskStatus.Running;
+                }
+                else
+                    return TaskStatus.Failure;
+            }
+
+
 
 
             //检测移动键入的情况

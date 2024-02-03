@@ -186,11 +186,11 @@ namespace DemonOverwhelming
                 //    gameObject.AddComponent<CharacterStateManager>();
 
 
-                ////设置碰撞体(用于处理未旋转碰撞体的数值）
-                //if (!gameObject.GetComponent<BoxCollider>())
-                //    boxCollider = gameObject.AddComponent<BoxCollider>();
-                //else
-                //    boxCollider = gameObject.GetComponent<BoxCollider>();
+                //设置碰撞体(用于处理未旋转碰撞体的数值）
+                if (!gameObject.GetComponent<BoxCollider>())
+                    boxCollider = gameObject.AddComponent<BoxCollider>();
+                else
+                    boxCollider = gameObject.GetComponent<BoxCollider>();
                 //if (sprite && sprite.material.name != "Sprites-Default")
                 //    startMaterial = sprite.material;
                 character_SpecialTagBases = new List<Character_SpecialTagBase>();

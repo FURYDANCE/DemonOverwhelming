@@ -2262,7 +2262,7 @@ MonoBehaviour:
     type: 1
     name: "\u7BAD\u5854"
     sprite: {fileID: 0}
-    Hp: 300
+    Hp: 150
     nowHp: 0
     hurtDamage: 0
     introduct: "\u7BAD\u5854\n\u653B\u51FB\u8BBE\u65BD"
@@ -2535,7 +2535,7 @@ MonoBehaviour:
     type: 0
     name: "\u6076\u9B54\u9886\u4E3B"
     sprite: {fileID: 0}
-    Hp: 200
+    Hp: 9999
     nowHp: 0
     hurtDamage: 0
     introduct: "\u82F1\u96C4"
