@@ -419,7 +419,6 @@ GameObject:
   - component: {fileID: 6657540828041913202}
   - component: {fileID: 610548751953611329}
   - component: {fileID: 5122603914408750376}
-  - component: {fileID: 7994262099243616688}
   m_Layer: 10
   m_Name: "\u8981\u585E-\u6076\u9B54"
   m_TagString: Untagged
@@ -579,47 +578,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7994262099243616688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610548751953611389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d7b55c7ecdb49a4a89fa5e6f9022861, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startWhenEnabled: 1
-  asynchronousLoad: 0
-  pauseWhenDisabled: 0
-  restartWhenComplete: 0
-  logTaskChanges: 0
-  group: 0
-  resetValuesOnRestart: 0
-  externalBehavior: {fileID: 11400000, guid: dbe6b242d0a80f24ea18fff9180bda93, type: 2}
-  mBehaviorSource:
-    behaviorName: "\u57FA\u672C\u6218\u58EBai"
-    behaviorDescription: "\u57FA\u672C\u6218\u58EBai\n\u5411\u7740\u76EE\u6807\u65B9\u5411\u76F4\u7EBF\u79FB\u52A8\uFF0C\u5E76\u68C0\u6D4B\u6CBF\u9014\u7684\u654C\u4EBA\uFF0C\u68C0\u6D4B\u5230\u654C\u4EBA\u65F6\u79FB\u52A8\u76EE\u6807\u53D8\u4E3A\u654C\u4EBA\u4F4D\u7F6E\u5E76\u8FFD\u51FB"
-    mTaskData:
-      types: []
-      parentIndex: 
-      startIndex: 
-      variableStartIndex: 
-      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(568,94)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-2,124)"},"ID":1,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},"Variables":[{"Type":"DemonOverwhelming.SharedEntity","Name":"ThisEntity","IsShared":true,"Tooltip":"\u81ea\u8eab\u7684\u5b9e\u4f53\u7ec4\u4ef6","EntitymValue":0},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"MoveTarget","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"MoveTarget_Transform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedTransformList","Name":"CheckedEnemies","IsShared":true,"List`1mValue":[]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"attacStartWaitTime","IsShared":true,"Tooltip":"\u653b\u51fb\u7684\u524d\u6447\u65f6\u95f4","SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"attackAfterWaitTime","IsShared":true,"SinglemValue":0}]}'
-      fieldSerializationData:
-        typeName: []
-        fieldNameHash: 
-        startIndex: 
-        dataPosition: 
-        unityObjects:
-        - {fileID: 610548751953611329}
-        byteData: 
-        byteDataArray: 
-      Version: 1.7.4
-  gizmoViewMode: 2
-  showBehaviorDesignerGizmo: 1
 --- !u!1 &630817202691999884
 GameObject:
   m_ObjectHideFlags: 0

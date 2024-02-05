@@ -53,7 +53,7 @@ namespace DemonOverwhelming
                     }
                 }
                 //当单位距离目标地点的距离小于单位的攻击距离时，返回success（进行接下来的攻击判定）
-                if (nearestTransform != null && Vector3.Distance(transform.position, nearestTransform.position) < entity.parameter.character.attackDistance)
+                if (nearestTransform != null && Vector3.Distance(transform.position, targetPos) < entity.parameter.character.attackDistance)
                 {
                     //设置sharedTransform，用于在攻击task里面读取到
                     moveTarget.SetValue(nearestTransform);
