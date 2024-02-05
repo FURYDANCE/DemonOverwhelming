@@ -2590,7 +2590,7 @@ MonoBehaviour:
     flagSprite: {fileID: 21300000, guid: 37854454a721a3f4f87bd5c694f1d697, type: 3}
     moneyCost: 15
     bloodCost: 4
-    formationId: 1
+    formationId: 3
     soldierId: 1000003
     soldierPrefab: {fileID: 1295541026332964, guid: 17a96bfb026dfdf43aaa5ceb74e6794d, type: 3}
     formation:
