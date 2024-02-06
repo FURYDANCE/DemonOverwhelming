@@ -651,7 +651,7 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: 
+      JSONSerialization: '{"Variables":[{"Type":"DemonOverwhelming.SharedEntity","Name":"ThisEntity","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedVector3","Name":"MoveTarget","IsShared":true,"Vector3mValue":"(0,0,0)"},{"Type":"BehaviorDesigner.Runtime.SharedTransform","Name":"MoveTarget_Transform","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedTransformList","Name":"CheckedEnemies","IsShared":true,"List`1mValue":[]},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"attacStartWaitTime","IsShared":true,"SinglemValue":0},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"attackAfterWaitTime","IsShared":true,"SinglemValue":0}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -660,7 +660,7 @@ MonoBehaviour:
         unityObjects: []
         byteData: 
         byteDataArray: 
-      Version: 
+      Version: 1.7.4
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
 --- !u!208 &5418387875331467344
