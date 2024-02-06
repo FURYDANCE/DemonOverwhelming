@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 811143aa846fe194b82588aaf0ef31df, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,7 +82,7 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8005068100800150951
@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 0
   isHero: 0
   spineObject: 0
@@ -142,26 +143,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 
+    unitPrefab: {fileID: 0}
     type: 0
     name: 
     sprite: {fileID: 0}
     Hp: 0
     nowHp: 0
     hurtDamage: 0
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: 
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -169,28 +162,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 0
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -203,3 +190,10 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []

@@ -45,8 +45,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Unity.UnityNavMeshAgent
             {
                 
                 navMeshAgent.SetDestination(gameObject.transform.position);
-                if (entityMoveTarget.Value != Vector3.zero)
-                    entityMoveTarget.SetValue(gameObject.transform.position);
+                //if (entityMoveTarget.Value != Vector3.zero)
+                //    entityMoveTarget.SetValue(gameObject.transform.position);
 
                 return TaskStatus.Success;
             }

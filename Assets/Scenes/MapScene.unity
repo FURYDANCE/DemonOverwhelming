@@ -324,7 +324,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1690597444}
+  moneyOverImage: {fileID: 0}
   bloodText: {fileID: 1757327583}
+  bloodOverImage: {fileID: 0}
   allUnitParent: {fileID: 0}
   playerEntityGeneratePoint: {fileID: 1923987038}
   enemyEntityGeneratePoint: {fileID: 1541464993}
@@ -339,9 +341,13 @@ MonoBehaviour:
   playerFinalStrongHold: {fileID: 491496137}
   gameOverPanel: {fileID: 61613825}
   BattleUI: {fileID: 1733141156}
-  cardSelectUI: {fileID: 1097462394}
+  cardSelectUI: {fileID: 0}
   formationMakingUI: {fileID: 137785150}
+  formationMakingAreaCenter: {fileID: 0}
   heroInfoUI: {fileID: 1265537296}
+  btn_CreateSolider: {fileID: 0}
+  btn_Revoke: {fileID: 0}
+  btn_RevokeAll: {fileID: 0}
 --- !u!1 &35525297
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +422,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -1212037211, guid: 857095afe66e9b94fb304331acae91bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -455,11 +461,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelName: SecondLevel
-  targetSceneName: SampleScene_2
+  targetSceneName: SampleScene
   levelSprite: {fileID: 0}
   levelDescription: TEXT1
   leveltargetDescription: TEXT1
-  _gameScenePath: Assets/Scenes/SampleScene_2.unity
+  _gameScenePath: Assets/Scenes/SampleScene.unity
   Selecting: 0
 --- !u!65 &35525302
 BoxCollider:
@@ -1135,7 +1141,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1160,6 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 0
   isHero: 0
   spineObject: 0
@@ -1167,26 +1174,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 2000001
+    unitPrefab: {fileID: 0}
     type: 1
     name: "\u9632\u5FA1\u5854"
     sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -1194,29 +1193,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 1
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -1229,6 +1221,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!65 &343375691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1333,6 +1332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 1
   isHero: 0
   spineObject: 0
@@ -1340,26 +1340,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 2000003
+    unitPrefab: {fileID: 0}
     type: 1
     name: "\u9632\u5FA1\u5854"
     sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
     Hp: 10
     nowHp: 10
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -1367,29 +1359,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 1
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -1402,6 +1387,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!212 &385404996
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1441,7 +1433,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1680745063, guid: 178fa64f4ec079e46b1e18c281d16e87, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1584,6 +1576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 1
   isHero: 0
   spineObject: 0
@@ -1591,26 +1584,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 
+    unitPrefab: {fileID: 0}
     type: 1
     name: "\u8BAD\u7EC3\u5047\u4EBA"
     sprite: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
     Hp: 1e+12
     nowHp: 1e+12
     hurtDamage: 10
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -1618,29 +1603,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 1
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -1653,6 +1631,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!114 &454947320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1690,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 307850859, guid: 267f68425ed02b04f951eeb478406f61, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2042,7 +2027,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1258104761, guid: 57abd8905385524448233c6268477b4f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2080,6 +2065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 0
   isHero: 0
   spineObject: 0
@@ -2087,26 +2073,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 2000002
+    unitPrefab: {fileID: 0}
     type: 1
     name: "\u9ED1\u6697\u5821\u5792"
     sprite: {fileID: 21300000, guid: 57abd8905385524448233c6268477b4f, type: 3}
     Hp: 500
     nowHp: 500
     hurtDamage: 120
-    hpBarSize: 0
-    hpBarOffset: {x: 0, y: 0, z: 0}
     introduct: "\u636E\u70B9"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -2114,29 +2092,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 0
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -2149,6 +2120,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!65 &491496142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2254,7 +2232,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -1212037211, guid: 857095afe66e9b94fb304331acae91bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2989,12 +2967,10 @@ MonoBehaviour:
   blood: 50
   nowBloodCost: 0
   soldierCards: []
-  soliderFormatGroups: []
   debug_DontChosseEntity: 0
   nowChooseingTarget: {fileID: 0}
   nowChoosedTarget: {fileID: 0}
   unitInformationUI: {fileID: 8622467214577021552, guid: e708a9fe6604b1e43a21bddb2b703e6e, type: 3}
-  formatCards: []
   allSoldiers: []
   cameraControlMode: 0
   mouseOveringInfoUI: 0
@@ -3003,6 +2979,10 @@ MonoBehaviour:
   historyShadowPos: []
   historyX: []
   historyY: []
+  allSelectedCards: []
+  unitLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &820069712
 GameObject:
   m_ObjectHideFlags: 0
@@ -3751,6 +3731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 1
   isHero: 0
   spineObject: 0
@@ -3758,26 +3739,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 2000001
+    unitPrefab: {fileID: 0}
     type: 1
     name: "\u9632\u5FA1\u5854"
     sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -3785,29 +3758,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 1
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -3820,6 +3786,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!212 &1056600350
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3859,7 +3832,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4014,17 +3987,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1097462394 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3182893332567872055, guid: 1b3df286bdd1dd149ab96c85fa0b5c80, type: 3}
-  m_PrefabInstance: {fileID: 1275665446}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1133896457
 GameObject:
   m_ObjectHideFlags: 0
@@ -4288,7 +4250,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4313,6 +4275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 0
   isHero: 0
   spineObject: 0
@@ -4320,26 +4283,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 2000001
+    unitPrefab: {fileID: 0}
     type: 1
     name: "\u9632\u5FA1\u5854"
     sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -4347,29 +4302,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 1
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -4382,6 +4330,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!65 &1235263193
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4464,6 +4419,7 @@ MonoBehaviour:
   emptySoldierCard: {fileID: 7233710488846720462, guid: 0b8ccb7ab2b6c004daa197ce233a3d41, type: 3}
   emptyFormat: {fileID: 2845960953593243496, guid: 9351cfd52d115494cba6bfd9ad4d278d, type: 3}
   moneyBag: {fileID: 0}
+  defaultMissile: {fileID: 0}
   sceneInformation: {fileID: 0}
   a: {fileID: 7673479569266096885, guid: a5e80962b1850fb4983ff0d011b7d5da, type: 3}
   bloodSprite: {fileID: 0}
@@ -4995,6 +4951,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ec33de8d278fe4fa127e1b78a87f0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 0}
+  bound_Left: 0
+  bound_Right: 0
   slider: {fileID: 1389559446}
 --- !u!1001 &1476827624
 PrefabInstance:
@@ -5179,7 +5138,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: a0e35f6b808bb7447826cc6c69ffe448, type: 3}
   m_Color: {r: 1, g: 0.9625402, b: 0, a: 0.15686275}
@@ -5348,7 +5307,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d34bcd43c49a13c4d841d88539ef0334, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5650,6 +5609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 1
   isHero: 0
   spineObject: 0
@@ -5657,26 +5617,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 2000001
+    unitPrefab: {fileID: 0}
     type: 1
     name: "\u9632\u5FA1\u5854"
     sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
     Hp: 100
     nowHp: 100
     hurtDamage: 10
-    hpBarSize: 0.5
-    hpBarOffset: {x: 0, y: 10, z: 0}
     introduct: "\u7BAD\u5854"
     modleSize: 2
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 0
-      aiType: 0
       moveSpeed: 0
       defence: 0
       defence_far: 0
@@ -5684,29 +5636,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 0
       skillName: 
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 0
       chaseTime: 0
       attackWaitTime: 0
       attackTime: 0
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 1
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -5719,6 +5664,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!212 &1880707960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5758,7 +5710,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 470249903, guid: 06d6f7c2a2aa1074fa98fed2bfd77503, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5858,7 +5810,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -1212037211, guid: 857095afe66e9b94fb304331acae91bc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5987,7 +5939,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: -9
   m_Sprite: {fileID: 21300000, guid: a0e35f6b808bb7447826cc6c69ffe448, type: 3}
   m_Color: {r: 1, g: 0.9625402, b: 0, a: 0.15686275}
@@ -6152,7 +6104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -565239623
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6189,6 +6141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d6eebb77aac9764283fb48fed510af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 
   camp: 0
   isHero: 0
   spineObject: 0
@@ -6196,26 +6149,18 @@ MonoBehaviour:
   skills: []
   parameter:
     ID: 
+    unitPrefab: {fileID: 0}
     type: 0
     name: "\u6076\u9B54\u9886\u4E3B"
     sprite: {fileID: -1265876325, guid: f2b4cd990301f88499d90ba5f7dfb37e, type: 3}
     Hp: 500
     nowHp: 500
     hurtDamage: 3
-    hpBarSize: 0.5
-    hpBarOffset: {x: -0.5, y: 8, z: 0}
     introduct: "\u4E00\u53EA\u5E73\u5E73\u65E0\u5947\u7684\u6076\u9B54\u9886\u4E3B"
     modleSize: 0
-    shadowSize: {x: 0, y: 0, z: 0}
-    shadowOffset: 0
-    aiMode_Move: 0
-    aiMode_Check: 0
-    aiMode_Chase: 0
-    aiMode_Atk: 0
     character:
       id: 
       cost: 100
-      aiType: 0
       moveSpeed: 2
       defence: 0
       defence_far: 0
@@ -6223,29 +6168,22 @@ MonoBehaviour:
       haveSkill: 0
       skillId: 1
       skillName: 114514
-      EnemyCheckArea: {x: 0, y: 0, z: 0}
-      EnemyCheckOffset: {x: 0, y: 0, z: 0}
       attackDistance: 20
       chaseTime: 0
       attackWaitTime: 0.5
       attackTime: 0.5
-      missileId: 
+      attackIds: []
       specialTags: []
       bloodDrop: 0
       skillIds: []
       skills: []
       skillLevels: []
       descriptionAndStory: []
-    building:
-      id: 
-      building_canAttack: 0
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 0}
-  parentSoldierGroup: {fileID: 0}
   boxCollider: {fileID: 0}
   hpLock: 0
-  animator: {fileID: 0}
   animations:
     id: 
     animatorController: {fileID: 0}
@@ -6258,6 +6196,13 @@ MonoBehaviour:
   isBackingRelativePos: 0
   backingRelativeStartPos: {x: 0, y: 0, z: 0}
   skillLevels: 
+  missileGeneratePos: {fileID: 0}
+  unitCenter: {fileID: 0}
+  unitGraphic: {fileID: 0}
+  angent: {fileID: 0}
+  enemiesCheckArea: {fileID: 0}
+  enemiesInCheckArea: []
+  targetableEntities: []
 --- !u!65 &2034644083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6297,6 +6242,7 @@ MonoBehaviour:
   isDying: 0
   intoWalking: 0
   start_Y: 0
+  agent: {fileID: 0}
 --- !u!114 &2034644085
 MonoBehaviour:
   m_ObjectHideFlags: 0
