@@ -567,6 +567,9 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 610548750568959432}
+  attackAudioId: BeerToss
+  onHitAudioId: DemonLesserDeath
+  onDieAudioId: DemonLesserDeath
   boxCollider: {fileID: 0}
   hpLock: 0
   animations:
@@ -766,7 +769,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: a6a8f7f2878418649802f83db2273fcc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

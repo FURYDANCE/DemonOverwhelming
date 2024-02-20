@@ -458,8 +458,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 37.719795}
-  m_Center: {x: 0, y: 0, z: 6.0548296}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &610548751953611329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +519,9 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 610548750568959432}
+  attackAudioId: BeerToss
+  onHitAudioId: DemonLesserDeath
+  onDieAudioId: DemonLesserDeath
   boxCollider: {fileID: 0}
   hpLock: 0
   animations:
