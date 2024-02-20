@@ -576,6 +576,9 @@ MonoBehaviour:
     buffParameter:
       speedBuff: 0
   hpBar: {fileID: 6626739640933170351}
+  attackAudioId: BeerToss
+  onHitAudioId: DemonLesserDeath
+  onDieAudioId: DemonLesserDeath
   boxCollider: {fileID: 0}
   hpLock: 0
   animations:

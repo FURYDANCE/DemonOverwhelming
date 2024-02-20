@@ -38,7 +38,10 @@ namespace DemonOverwhelming
         SpriteRenderer sprite;
         bool settled;
         Material startMaterial;
-
+        [Header("攻击音效、受击音效id")]
+        public string attackAudioId;
+        public string onHitAudioId;
+        public string onDieAudioId;
         [HideInInspector]
         public BoxCollider boxCollider;
         [Header("(调试)无敌状态")]
@@ -326,7 +329,7 @@ namespace DemonOverwhelming
                 parameter.nowHp = parameter.Hp;
         }
         /// <summary>
-        /// 实体受伤时调用的方法，传入伤害信息，伤害者，输出最终伤害
+        /// 实体受伤时调用的方法，传入伤害信息，伤害者，输出最终伤害,并向行为树发送事件信号,播放对应的音效
         /// </summary>
         /// <param name="伤害信息">伤害信息</param>
         /// <param name="攻击者">攻击者</param>
@@ -338,6 +341,10 @@ namespace DemonOverwhelming
                 finalDamage = 0;
                 return;
             }
+            Debug.Log("发送了事件");
+            GetComponent<BehaviorTree>().SendEvent("OnHit");
+            //触发音效
+            SoundManager.instacne.PlaySoundEffect(onHitAudioId);
             //Debug.Log("当前生命" + parameter.nowHp);
             //根据防御计算伤害
             float realDamage_physic = Mathf.Clamp(damageData.physicDamage - parameter.character.defence, 0, 999999999);
@@ -349,11 +356,13 @@ namespace DemonOverwhelming
 
 
             finalDamage = realDamage;
-            //伤害大于零的时候会闪烁一下
+            //伤害大于零的时候会闪烁一下，播放受击音效
             if (realDamage > 0)
             {
+                //(用spine动画的话material的闪烁用不了了？
                 StartCoroutine(HitEffect());
                 VfxManager.instance.CreateVfx(VfxManager.instance.vfx_Hit, unitCenter.position, new Vector3(5, 5, 5), 3);
+                SoundManager.instacne.PlaySoundEffect(onHitAudioId);
             }
             //如果实体上有计算dps的组件则进行计算
             if (GetComponent<DpsCaculate>())
@@ -374,6 +383,8 @@ namespace DemonOverwhelming
         }
         public void Die()
         {
+            //触发音效
+            SoundManager.instacne.PlaySoundEffect(onDieAudioId);
             //计算血液掉落
             BattleManager.instance.AddBlood(parameter.character.bloodDrop);
             if (parameter.character.bloodDrop != 0)

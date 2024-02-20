@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class SoundEffectObject : ScriptableObject
 {
-    public AudioClip soundEffect_Hit;
-  
+    public List<SoundEffectData> soundEffects;
+
+}
+[System.Serializable]
+public class SoundEffectData
+{
+    public string name;
+    public string id;
+    public AudioClip clip;
 }

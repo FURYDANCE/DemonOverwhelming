@@ -9,7 +9,7 @@ namespace DemonOverwhelming
         public AudioClip clip;
         private void Start()
         {
-            SoundManager.instacne.PlayeSoundEffect(clip);
+            SoundManager.instacne.PlaySoundEffect(clip);
         }
     }
 }

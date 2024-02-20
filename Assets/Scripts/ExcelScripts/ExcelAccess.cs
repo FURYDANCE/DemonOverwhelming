@@ -188,8 +188,9 @@ public class ExcelAccess
 
                     prefab = PrefabUtility.LoadPrefabContents(path);
                     //对预制件的变量进行处理
-                    prefab.GetComponent<Entity>().id = up.ID;
-                    prefab.GetComponent<Entity>().parameter = UtilsClass.SetUnitParameterBydata(up);
+                    Entity e = prefab.GetComponent<Entity>();
+                    e.id = up.ID;
+                    e.parameter = UtilsClass.SetUnitParameterBydata(up);
                     prefab.GetComponent<BoxCollider>().size = new Vector3(0.5f, 0.5f, 0.5f);
                     prefab.GetComponent<BoxCollider>().center = Vector3.zero;
                     ////对预制件的各个对象进行处理
@@ -254,6 +255,23 @@ public class ExcelAccess
                             unitGraphic.AddComponent<SpriteRenderer>().sprite = up.sprite;
                         }
                     }
+                    //额外处理（有需求再改这里）
+                    //共同设置默认的音效（有不同的再针对单个手动改）
+                    if (e.attackAudioId == "")
+                    {
+                        e.attackAudioId = "BeerToss";
+                    }
+                    if (e.onHitAudioId == "")
+                    {
+                        e.onHitAudioId = "DemonLesserDeath";
+                    }
+                    if (e.onDieAudioId == "")
+                    {
+                        e.onDieAudioId = "DemonLesserDeath";
+                    }
+                    Debug.Log("Complete");
+
+
 
 
                     Debug.Log(path);
